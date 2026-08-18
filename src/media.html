@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title data-i18n="mediaPageTitle">Media</title>
+  <link rel="stylesheet" href="shared/ui.css">
+  <!-- No local <style> block, deliberately: the whole look is the shared
+       `.ya-media-*` grid pattern in .common/css/ui.css, the same one
+       chat-clipper's media library and podcast-extractor's gallery use. If
+       something is missing, add it THERE — never re-declare it here. -->
+</head>
+<body class="ya-media-page">
+  <header class="ya-media-bar">
+    <h1 id="page-title" data-i18n="mediaHeading">Images in this conversation</h1>
+    <div class="ya-media-meta" id="meta"></div>
+    <div class="ya-media-filters">
+      <button id="select-all" class="ya-btn ya-btn-secondary" type="button" data-i18n="mediaSelectAll">All</button>
+      <button id="select-none" class="ya-btn ya-btn-secondary" type="button" data-i18n="mediaSelectNone">None</button>
+      <button id="download-selected" class="ya-btn ya-btn-primary" type="button" data-i18n="mediaDownload" disabled>Download</button>
+    </div>
+  </header>
+
+  <div class="ya-media-grid" id="grid"></div>
+
+  <!-- Load order matters: storage defines the AiDoc namespace, then i18n, then
+       the helpers media.js calls, then the page logic. Same pattern as
+       select.html — these are IIFE globals, not ES modules. -->
+  <script src="lib/storage.js"></script>
+  <script src="lib/i18n.js"></script>
+  <script src="lib/zip.js"></script>
+  <script src="lib/download.js"></script>
+  <script src="media.js"></script>
+</body>
+</html>

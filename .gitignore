@@ -1,0 +1,11 @@
+dist/
+local/
+node_modules/
+
+# Per-artifact manifest overlays hold OUR OAuth client ids (dev + store) — never publish
+# them. A fork builds from the bare manifests/chrome.json (no client_id) and adds its own.
+manifests/*.dev.json
+manifests/*.pub.json
+
+# claude (agent worktrees, local config) — never publish
+.claude/

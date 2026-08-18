@@ -1,0 +1,538 @@
+{
+  "extDescription": {
+    "message": "Exportujte AI chaty z ChatGPT, Gemini, Claude. 32 AI webů, 9 formátů, 5 cloudových destinací.",
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+  },
+  "exportMarkdownTitle": {
+    "message": "Exportovat jako Markdown (.md)",
+    "description": "Tooltip on the Markdown export button."
+  },
+  "exportHtmlTitle": {
+    "message": "Exportovat jako HTML (.html)",
+    "description": "Tooltip on the HTML export button."
+  },
+  "exportTxtTitle": {
+    "message": "Exportovat jako prostý text (.txt)",
+    "description": "Tooltip on the plain-text export button."
+  },
+  "exportDocxTitle": {
+    "message": "Exportovat jako Word (.docx)",
+    "description": "Tooltip on the Word export button."
+  },
+  "exportOdtTitle": {
+    "message": "Exportovat jako OpenDocument (.odt)",
+    "description": "Tooltip on the OpenDocument export button."
+  },
+  "exportPdfTitle": {
+    "message": "Exportovat jako PDF (přes dialog tisku)",
+    "description": "Tooltip on the PDF export button."
+  },
+  "exportImageTitle": {
+    "message": "Exportovat jako obrázek PNG",
+    "description": "Tooltip on the Image export button - renders the conversation to a single tall PNG file."
+  },
+  "exportGdocTitle": {
+    "message": "Otevřít v Dokumentech Google",
+    "description": "Tooltip on the Google Docs export button - uploads the chat to the user's Google Drive as a native Google Doc."
+  },
+  "exportNotionTitle": {
+    "message": "Exportovat do Notion",
+    "description": "Tooltip on the Notion export button - uploads the chat to the user's Notion workspace as a native Notion page."
+  },
+  "exportMswordTitle": {
+    "message": "Otevřít ve Word Online",
+    "description": "Tooltip on the Word Online export button - uploads the chat as a .docx to OneDrive and opens it in Word Online."
+  },
+  "exportNextcloudTitle": {
+    "message": "Uložit do Nextcloud",
+    "description": "Tooltip on the Nextcloud export button - uploads the chat to the user's Nextcloud server via WebDAV."
+  },
+  "exportOnenoteTitle": {
+    "message": "Odeslat do OneNote",
+    "description": "Tooltip on the OneNote export button - creates a new page in the user's OneNote default notebook."
+  },
+  "settingsButtonTitle": {
+    "message": "Nastavení",
+    "description": "Tooltip on the gear icon that opens the settings page."
+  },
+  "popupCustomExportTitle": {
+    "message": "Vlastní export",
+    "description": "Title of the prominent button below the export icons in the popup. Opens the message selection page."
+  },
+  "selectPageTitle": {
+    "message": "{app} - Vybrat zprávy",
+    "description": "<title> of the selection page (browser tab title)."
+  },
+  "selectHeading": {
+    "message": "Vyberte zprávy k exportu",
+    "description": "Top heading of the selection page."
+  },
+  "selectStatusCount": {
+    "message": "{n} z {total} vybráno",
+    "description": "Status line on the selection page showing how many messages are checked."
+  },
+  "selectErrorNoSelection": {
+    "message": "Vyberte alespoň jednu zprávu.",
+    "description": "Error shown when the user clicks an export button with no messages selected."
+  },
+  "selectErrorNoMessages": {
+    "message": "V této konverzaci nebyly nalezeny žádné zprávy.",
+    "description": "Error shown when the selection page opens but the chat has no extractable messages."
+  },
+  "selectErrorLoadFailed": {
+    "message": "Nepodařilo se načíst konverzaci. Znovu otevřete záložku chatu a zkuste to znovu.",
+    "description": "Error shown when the selection page can't read the stashed conversation."
+  },
+  "selectRoleUser": {
+    "message": "Uživatel",
+    "description": "Role badge for user messages on the selection page."
+  },
+  "selectRoleAssistant": {
+    "message": "Asistent",
+    "description": "Role badge for assistant messages on the selection page."
+  },
+  "selectFontSizeLabel": {
+    "message": "Velikost",
+    "description": "Label preceding the font-size dropdown in the selection page toolbar."
+  },
+  "selectFontSizeSmall": {
+    "message": "Malá",
+    "description": "Smallest body-text option in the size dropdown."
+  },
+  "selectFontSizeMedium": {
+    "message": "Střední",
+    "description": "Default body-text option in the size dropdown."
+  },
+  "selectFontSizeLarge": {
+    "message": "Velká",
+    "description": "Largest body-text option in the size dropdown."
+  },
+  "selectShowTimeLabel": {
+    "message": "Čas",
+    "description": "Compact label next to the show-chat-time checkbox in the selection page toolbar."
+  },
+  "selectShowSourceLabel": {
+    "message": "Zdroj",
+    "description": "Compact label next to the show-source checkbox in the selection page toolbar."
+  },
+  "optionsHtmlSizeLabel": {
+    "message": "Velikost hlavního textu",
+    "description": "Settings → General label for the body text size dropdown (HTML / PDF exports)."
+  },
+  "optionsHtmlShowTimeLabel": {
+    "message": "Zobrazit čas chatu",
+    "description": "Settings → General label for the toggle that includes per-message timestamps in HTML / PDF exports."
+  },
+  "optionsHtmlShowSourceLabel": {
+    "message": "Zobrazit odkaz na zdroj",
+    "description": "Settings → General label for the toggle that includes the \"Source: <link>\" line at the top of HTML / PDF exports."
+  },
+  "optionsHtmlShowThinkingLabel": {
+    "message": "Zobrazit myšlenky",
+    "description": "Settings → General label for the toggle that keeps the model's thinking blockquotes in HTML / PDF exports."
+  },
+  "optionsFilenamePatternLabel": {
+    "message": "Vzor názvu souboru",
+    "description": "Settings → General label for the export filename template input."
+  },
+  "optionsFilenamePatternHint": {
+    "message": "Dostupná pole:",
+    "description": "Helper text under the filename pattern input, followed by the literal placeholder list."
+  },
+  "selectShowThinkingLabel": {
+    "message": "Myšlenky",
+    "description": "Compact label next to the show-thinking checkbox in the selection page toolbar."
+  },
+  "selectTitleFontLabel": {
+    "message": "Nadpis",
+    "description": "Compact label preceding the title-font dropdown in the selection page toolbar."
+  },
+  "selectTextFontLabel": {
+    "message": "Text",
+    "description": "Compact label preceding the text-font dropdown in the selection page toolbar."
+  },
+  "dragHint": {
+    "message": "Přetáhněte pro změnu pořadí",
+    "description": "Helper text under the AI sites grid."
+  },
+  "popupViewLauncherTitle": {
+    "message": "Přejít na web AI",
+    "description": "Tooltip on the header toggle that switches the popup from the export view to the AI-site launcher grid."
+  },
+  "popupViewExportTitle": {
+    "message": "Zpět na export",
+    "description": "Tooltip on the header toggle that switches the popup from the AI-site launcher back to the export view."
+  },
+  "popupPagePrevTitle": {
+    "message": "Předchozí stránka",
+    "description": "Tooltip on the launcher pager button that shows the previous page of AI sites."
+  },
+  "popupPageNextTitle": {
+    "message": "Další stránka",
+    "description": "Tooltip on the launcher pager button that shows the next page of AI sites."
+  },
+  "statusExtracting": {
+    "message": "Extrahuji…",
+    "description": "Status shown while the extension is reading the chat."
+  },
+  "statusGotMessagesSaving": {
+    "message": "Získáno {count} zpráv ze {site}. Ukládám…",
+    "description": "Status shown after extraction, before the file is saved."
+  },
+  "statusGotMessagesPrinting": {
+    "message": "Získáno {count} zpráv ze {site}. Otevírám dialog tisku…",
+    "description": "Status shown when exporting to PDF, before the print tab opens."
+  },
+  "statusOpenedPrintTab": {
+    "message": "Otevřena záložka tisku - vyberte „Uložit jako PDF“",
+    "description": "Status shown after the print tab is opened for PDF export."
+  },
+  "statusGotMessagesUploadingGdoc": {
+    "message": "Získáno {count} zpráv ze {site}. Nahrávám do Dokumentů Google…",
+    "description": "Status shown while the chat is being uploaded to Google Drive as a Google Doc."
+  },
+  "statusOpenedGdoc": {
+    "message": "Otevřen dokument Google v nové záložce.",
+    "description": "Status shown after the Google Docs upload succeeds and the new doc opens."
+  },
+  "statusGotMessagesUploadingNotion": {
+    "message": "Získáno {count} zpráv ze {site}. Nahrávám do Notion…",
+    "description": "Status shown while the chat is being uploaded to Notion as a native page."
+  },
+  "statusOpenedNotion": {
+    "message": "Otevřena stránka Notion v nové záložce.",
+    "description": "Status shown after the Notion upload succeeds and the new page opens."
+  },
+  "statusGotMessagesUploadingMsword": {
+    "message": "Získáno {count} zpráv ze {site}. Nahrávám do Word Online…",
+    "description": "Status shown while the chat is being uploaded to OneDrive for Word Online."
+  },
+  "statusOpenedMsword": {
+    "message": "Otevřen dokument Word Online v nové záložce.",
+    "description": "Status shown after the Word Online upload succeeds and the document opens."
+  },
+  "statusGotMessagesUploadingNextcloud": {
+    "message": "Získáno {count} zpráv ze {site}. Nahrávám do Nextcloud…",
+    "description": "Status shown while the chat is being uploaded to Nextcloud."
+  },
+  "statusOpenedNextcloud": {
+    "message": "Otevřen soubor Nextcloud v nové záložce.",
+    "description": "Status shown after the Nextcloud upload succeeds and the file opens."
+  },
+  "statusGotMessagesUploadingOnenote": {
+    "message": "Získáno {count} zpráv ze {site}. Odesílám do OneNote…",
+    "description": "Status shown while the chat is being sent to OneNote as a new page."
+  },
+  "statusOpenedOnenote": {
+    "message": "Otevřena stránka OneNote v nové záložce.",
+    "description": "Status shown after the OneNote upload succeeds and the new page opens."
+  },
+  "statusSaved": {
+    "message": "Uloženo {filename}",
+    "description": "Success message after the file is saved."
+  },
+  "errorContentScriptNotLoaded": {
+    "message": "Skript obsahu nebyl načten. Obnovte tuto záložku (F5) a zkuste to znovu.",
+    "description": "Error when the popup cannot reach the content script."
+  },
+  "errorExtractionFailed": {
+    "message": "Extrakce selhala. Je toto podporovaná stránka AI chatu?",
+    "description": "Generic extraction failure error."
+  },
+  "errorNoActiveTab": {
+    "message": "Žádná aktivní záložka.",
+    "description": "Error when no active tab is found."
+  },
+  "errorPrintTab": {
+    "message": "Nepodařilo se otevřít záložku tisku.",
+    "description": "Error when opening the print tab failed."
+  },
+  "errorDownloadFailed": {
+    "message": "Stahování selhalo.",
+    "description": "Error when the download cannot start."
+  },
+  "optionsTitle": {
+    "message": "{app} - Nastavení",
+    "description": "<title> of the settings page."
+  },
+  "optionsHeading": {
+    "message": "Nastavení",
+    "description": "Top heading of the settings page."
+  },
+  "optionsTabGeneral": {
+    "message": "Obecné",
+    "description": "Sidebar nav item for the General settings page (language)."
+  },
+  "optionsTabStyle": {
+    "message": "Styl",
+    "description": "Sidebar nav item for the Style settings page (fonts, body text size, preview)."
+  },
+  "optionsInlineButtonsHeading": {
+    "message": "Tlačítka v chatu",
+    "description": "Sub-heading on the General settings page above the three per-message inline-button visibility toggles."
+  },
+  "optionsInlineExportMenuLabel": {
+    "message": "Nabídka exportu souboru",
+    "description": "Settings checkbox label - show the per-message export-format hover menu inside the AI chat page."
+  },
+  "optionsInlineCopyMdLabel": {
+    "message": "Tlačítko Kopírovat jako Markdown",
+    "description": "Settings checkbox label - show the per-message 'Copy as Markdown' button inside the AI chat page."
+  },
+  "optionsInlineCopyHtmlLabel": {
+    "message": "Tlačítko Kopírovat jako HTML",
+    "description": "Settings checkbox label - show the per-message 'Copy as HTML' button inside the AI chat page."
+  },
+  "optionsTabSites": {
+    "message": "AI stránky",
+    "description": "Sidebar nav item for the AI Sites settings page (visibility, order)."
+  },
+  "optionsTabNotion": {
+    "message": "Notion",
+    "description": "Sidebar nav item for the Notion settings page (connect, parent page picker)."
+  },
+  "optionsNotionIntro": {
+    "message": "Připojte svůj pracovní prostor Notion pro export chatů jako nativních stránek Notion. {app} může vidět a upravovat pouze stránky, ke kterým explicitně udělíte přístup.",
+    "description": "Intro paragraph at the top of the Notion settings page."
+  },
+  "optionsNotionConnect": {
+    "message": "Připojit Notion",
+    "description": "Button label that starts the Notion OAuth flow."
+  },
+  "optionsNotionConnecting": {
+    "message": "Připojuji se k Notion…",
+    "description": "Status shown while the Notion OAuth round-trip is in progress."
+  },
+  "optionsNotionDisconnect": {
+    "message": "Odpojit",
+    "description": "Button label that clears the stored Notion access token."
+  },
+  "optionsNotionWorkspaceLabel": {
+    "message": "Pracovní prostor",
+    "description": "Label next to the Notion workspace name once connected."
+  },
+  "optionsNotionParentLabel": {
+    "message": "Nadřazená stránka",
+    "description": "Label for the dropdown that picks which Notion page new exports land in."
+  },
+  "optionsNotionParentHint": {
+    "message": "Nové stránky chatu budou vytvořeny jako podřízené stránky této stránky. Chcete-li udělit přístup k dalším stránkám: otevřete stránku v Notion → nabídka „…“ → Připojení → integrace {app}.",
+    "description": "Helper text under the parent page picker, explaining how to grant access to more pages."
+  },
+  "optionsNotionRefresh": {
+    "message": "Obnovit",
+    "description": "Button that re-fetches the list of accessible Notion pages."
+  },
+  "optionsNotionLoadingPages": {
+    "message": "Načítám stránky…",
+    "description": "Placeholder option in the parent page dropdown while pages are being fetched."
+  },
+  "optionsNotionNoPages": {
+    "message": "Žádné stránky – sdílejte alespoň jednu stránku Notion s integrací {app}",
+    "description": "Placeholder option when the Notion search returned no accessible pages."
+  },
+  "optionsNotionPagesFailed": {
+    "message": "Nepodařilo se načíst stránky",
+    "description": "Placeholder option when the Notion search call failed."
+  },
+  "optionsTabMicrosoft": {
+    "message": "Microsoft 365",
+    "description": "Sidebar nav item for the Microsoft 365 settings page (connect, account)."
+  },
+  "optionsMicrosoftIntro": {
+    "message": "Připojte svůj účet Microsoft pro export chatů jako souborů .docx do Word Online. Soubory jsou uloženy ve vašem OneDrive, ve složce aplikace pod Aplikacemi.",
+    "description": "Intro paragraph at the top of the Microsoft 365 settings page."
+  },
+  "optionsMicrosoftConnect": {
+    "message": "Připojit Microsoft 365",
+    "description": "Button label that starts the Microsoft OAuth flow."
+  },
+  "optionsMicrosoftConnecting": {
+    "message": "Připojuji se k Microsoft 365…",
+    "description": "Status shown while the Microsoft OAuth round-trip is in progress."
+  },
+  "optionsMicrosoftDisconnect": {
+    "message": "Odpojit",
+    "description": "Button label that clears the stored Microsoft tokens."
+  },
+  "optionsMicrosoftAccountLabel": {
+    "message": "Účet",
+    "description": "Label next to the signed-in Microsoft account email."
+  },
+  "optionsMicrosoftHint": {
+    "message": "Exportované soubory se objeví v OneDrive pod Aplikacemi (ve složce aplikace) a otevřou se ve Word Online v nové záložce.",
+    "description": "Helper text under the Microsoft 365 connection panel."
+  },
+  "optionsTabNextcloud": {
+    "message": "Nextcloud",
+    "description": "Sidebar nav item for the Nextcloud settings page."
+  },
+  "optionsNextcloudIntro": {
+    "message": "Uložte chaty na svůj vlastní server Nextcloud přes WebDAV. {app} používá heslo aplikace (Nextcloud → Nastavení → Zabezpečení → „Vytvořit nové heslo aplikace“) – vaše skutečné heslo účtu nikdy neopustí váš prohlížeč.",
+    "description": "Intro paragraph at the top of the Nextcloud settings page."
+  },
+  "optionsNextcloudServerLabel": {
+    "message": "URL serveru",
+    "description": "Label for the Nextcloud server URL input."
+  },
+  "optionsNextcloudUserLabel": {
+    "message": "Uživatelské jméno",
+    "description": "Label for the Nextcloud username input."
+  },
+  "optionsNextcloudPasswordLabel": {
+    "message": "Heslo aplikace",
+    "description": "Label for the Nextcloud app-password input."
+  },
+  "optionsNextcloudFolderLabel": {
+    "message": "Složka",
+    "description": "Label for the Nextcloud target folder input."
+  },
+  "optionsNextcloudFormatLabel": {
+    "message": "Výchozí formát",
+    "description": "Label for the dropdown that picks which file format gets uploaded to Nextcloud."
+  },
+  "optionsNextcloudTest": {
+    "message": "Testovat připojení",
+    "description": "Button label that probes the Nextcloud credentials with a PROPFIND request."
+  },
+  "optionsNextcloudSave": {
+    "message": "Uložit",
+    "description": "Button label that persists the Nextcloud credentials."
+  },
+  "optionsNextcloudClear": {
+    "message": "Vymazat",
+    "description": "Button label that wipes the stored Nextcloud credentials."
+  },
+  "optionsNextcloudTesting": {
+    "message": "Testuji připojení…",
+    "description": "Status shown while the extension is probing the Nextcloud server with a PROPFIND."
+  },
+  "optionsNextcloudTestOk": {
+    "message": "Připojení úspěšné.",
+    "description": "Status shown when the Nextcloud PROPFIND probe succeeds."
+  },
+  "optionsNextcloudFillFirst": {
+    "message": "Vyplňte nejprve URL serveru, uživatelské jméno a heslo aplikace.",
+    "description": "Error shown when the user clicks Test or Save with empty fields."
+  },
+  "optionsNextcloudCleared": {
+    "message": "Přihlašovací údaje Nextcloud vymazány.",
+    "description": "Status shown after the user clicks Clear."
+  },
+  "optionsLanguageLabel": {
+    "message": "Jazyk",
+    "description": "Label for the language dropdown."
+  },
+  "optionsLanguageAuto": {
+    "message": "Použít jazyk prohlížeče",
+    "description": "Default option in the language dropdown - picks the browser UI language."
+  },
+  "optionsHtmlTitleFontLabel": {
+    "message": "Písmo nadpisu",
+    "description": "Label for the dropdown that picks the heading font used in HTML / PDF exports."
+  },
+  "optionsHtmlTextFontLabel": {
+    "message": "Písmo textu",
+    "description": "Label for the dropdown that picks the body font used in HTML / PDF exports."
+  },
+  "optionsFontSystem": {
+    "message": "Systémové (výchozí)",
+    "description": "First option in both font dropdowns - the OS default font, no Google Fonts fetch."
+  },
+  "optionsHtmlMathLabel": {
+    "message": "Vykreslování matematiky (KaTeX)",
+    "description": "Label for the toggle that enables math rendering in HTML / PDF exports via the KaTeX library."
+  },
+  "optionsSavedNotice": {
+    "message": "Uloženo.",
+    "description": "Notice shown when settings are saved."
+  },
+  "optionsVisibleSitesHint": {
+    "message": "Přetáhněte pro změnu pořadí. Zrušte zaškrtnutí pro skrytí dlaždice z vyskakovacího okna.",
+    "description": "Helper text under the visible sites checklist."
+  },
+  "optionsSelectAll": {
+    "message": "Vybrat vše",
+    "description": "Button that checks every site in the visibility list."
+  },
+  "optionsSelectNone": {
+    "message": "Zrušit výběr",
+    "description": "Button that unchecks every site in the visibility list."
+  },
+  "exportJsonTitle": {
+    "message": "Exportovat jako JSON (.json)",
+    "description": "Tooltip on the JSON export button - a flat { role, content } message array for developers."
+  },
+  "exportDebugTitle": {
+    "message": "Exportovat ladicí balíček (.json)",
+    "description": "Tooltip on the Developer-mode Debug export button - saves a diagnostic file with the raw API capture, the extracted conversation, and the rendered outputs."
+  },
+  "optionsDevModeLabel": {
+    "message": "Režim pro vývojáře",
+    "description": "Settings checkbox that reveals the Debug-bundle export button in the popup."
+  },
+  "optionsAdvancedHeading": {
+    "message": "Pokročilé",
+    "description": "Heading of the Advanced block at the end of Settings - General (currently holds the Developer mode toggle)."
+  },
+  "errorSiteNotSupported": {
+    "message": "Tento web není podporován. Otevřete jeden z níže uvedených webů s umělou inteligencí a zkuste to znovu.",
+    "description": "Popup error when the active tab's domain matches none of the supported AI sites (refreshing cannot help there)."
+  },
+  "popupMediaTitle": {
+    "message": "Média",
+    "description": "Popup button — opens the media page for the current conversation."
+  },
+  "mediaPageTitle": {
+    "message": "Obrázky",
+    "description": "Browser tab title of the media page."
+  },
+  "mediaHeading": {
+    "message": "Obrázky v této konverzaci",
+    "description": "Heading of the media page."
+  },
+  "mediaSelectAll": {
+    "message": "Vše",
+    "description": "Media page — select every image."
+  },
+  "mediaSelectNone": {
+    "message": "Žádné",
+    "description": "Media page — clear the selection."
+  },
+  "mediaDownload": {
+    "message": "Stáhnout",
+    "description": "Media page — download the selected images."
+  },
+  "mediaMeta": {
+    "message": "{selected} z {count} vybráno",
+    "description": "Media page counter. {selected} and {count} are numbers."
+  },
+  "mediaEmpty": {
+    "message": "Tato konverzace neobsahuje žádné obrázky.",
+    "description": "Media page — shown when the conversation contains no pictures."
+  },
+  "mediaLoadError": {
+    "message": "Nepodařilo se načíst konverzaci. Zavřete tuto záložku a zkuste to znovu z vyskakovacího okna.",
+    "description": "Media page — the stashed conversation was missing."
+  },
+  "mediaRoleUser": {
+    "message": "Vy",
+    "description": "Media page tile label — the image came from the user's message."
+  },
+  "mediaRoleAssistant": {
+    "message": "AI",
+    "description": "Media page tile label — the image came from the AI's reply."
+  },
+  "mediaDownloadDone": {
+    "message": "{done} staženo, {failed} selhalo",
+    "description": "Media page result. {done} and {failed} are numbers."
+  },
+  "popupCustomExportSub": {
+    "message": "Vyberte zprávy, které chcete exportovat.",
+    "description": "Tooltip on the popup's Custom Export button."
+  },
+  "popupMediaSub": {
+    "message": "Procházet a stahovat obrázky v tomto chatu.",
+    "description": "Tooltip on the popup's Media button."
+  }
+}

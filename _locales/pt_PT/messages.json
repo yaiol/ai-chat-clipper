@@ -1,0 +1,538 @@
+{
+  "extDescription": {
+    "message": "Exporte conversas de IA do ChatGPT, Gemini, Claude. 32 sites de IA, 9 formatos, 5 destinos na nuvem.",
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+  },
+  "exportMarkdownTitle": {
+    "message": "Exportar como Markdown (.md)",
+    "description": "Tooltip on the Markdown export button."
+  },
+  "exportHtmlTitle": {
+    "message": "Exportar como HTML (.html)",
+    "description": "Tooltip on the HTML export button."
+  },
+  "exportTxtTitle": {
+    "message": "Exportar como texto simples (.txt)",
+    "description": "Tooltip on the plain-text export button."
+  },
+  "exportDocxTitle": {
+    "message": "Exportar como Word (.docx)",
+    "description": "Tooltip on the Word export button."
+  },
+  "exportOdtTitle": {
+    "message": "Exportar como OpenDocument (.odt)",
+    "description": "Tooltip on the OpenDocument export button."
+  },
+  "exportPdfTitle": {
+    "message": "Exportar como PDF (através da caixa de impressão)",
+    "description": "Tooltip on the PDF export button."
+  },
+  "exportImageTitle": {
+    "message": "Exportar como imagem PNG",
+    "description": "Tooltip on the Image export button - renders the conversation to a single tall PNG file."
+  },
+  "exportGdocTitle": {
+    "message": "Abrir no Google Docs",
+    "description": "Tooltip on the Google Docs export button - uploads the chat to the user's Google Drive as a native Google Doc."
+  },
+  "exportNotionTitle": {
+    "message": "Exportar para o Notion",
+    "description": "Tooltip on the Notion export button - uploads the chat to the user's Notion workspace as a native Notion page."
+  },
+  "exportMswordTitle": {
+    "message": "Abrir no Word Online",
+    "description": "Tooltip on the Word Online export button - uploads the chat as a .docx to OneDrive and opens it in Word Online."
+  },
+  "exportNextcloudTitle": {
+    "message": "Guardar no Nextcloud",
+    "description": "Tooltip on the Nextcloud export button - uploads the chat to the user's Nextcloud server via WebDAV."
+  },
+  "exportOnenoteTitle": {
+    "message": "Enviar para o OneNote",
+    "description": "Tooltip on the OneNote export button - creates a new page in the user's OneNote default notebook."
+  },
+  "settingsButtonTitle": {
+    "message": "Definições",
+    "description": "Tooltip on the gear icon that opens the settings page."
+  },
+  "popupCustomExportTitle": {
+    "message": "Exportação Personalizada",
+    "description": "Title of the prominent button below the export icons in the popup. Opens the message selection page."
+  },
+  "selectPageTitle": {
+    "message": "{app} - Selecionar mensagens",
+    "description": "<title> of the selection page (browser tab title)."
+  },
+  "selectHeading": {
+    "message": "Selecione as mensagens a exportar",
+    "description": "Top heading of the selection page."
+  },
+  "selectStatusCount": {
+    "message": "{n} de {total} selecionadas",
+    "description": "Status line on the selection page showing how many messages are checked."
+  },
+  "selectErrorNoSelection": {
+    "message": "Selecione pelo menos uma mensagem.",
+    "description": "Error shown when the user clicks an export button with no messages selected."
+  },
+  "selectErrorNoMessages": {
+    "message": "Não foram encontradas mensagens nesta conversa.",
+    "description": "Error shown when the selection page opens but the chat has no extractable messages."
+  },
+  "selectErrorLoadFailed": {
+    "message": "Não foi possível ler a conversa. Reabra o separador e tente novamente.",
+    "description": "Error shown when the selection page can't read the stashed conversation."
+  },
+  "selectRoleUser": {
+    "message": "Utilizador",
+    "description": "Role badge for user messages on the selection page."
+  },
+  "selectRoleAssistant": {
+    "message": "Assistente",
+    "description": "Role badge for assistant messages on the selection page."
+  },
+  "selectFontSizeLabel": {
+    "message": "Tamanho",
+    "description": "Label preceding the font-size dropdown in the selection page toolbar."
+  },
+  "selectFontSizeSmall": {
+    "message": "Pequeno",
+    "description": "Smallest body-text option in the size dropdown."
+  },
+  "selectFontSizeMedium": {
+    "message": "Médio",
+    "description": "Default body-text option in the size dropdown."
+  },
+  "selectFontSizeLarge": {
+    "message": "Grande",
+    "description": "Largest body-text option in the size dropdown."
+  },
+  "selectShowTimeLabel": {
+    "message": "Hora",
+    "description": "Compact label next to the show-chat-time checkbox in the selection page toolbar."
+  },
+  "selectShowSourceLabel": {
+    "message": "Origem",
+    "description": "Compact label next to the show-source checkbox in the selection page toolbar."
+  },
+  "optionsHtmlSizeLabel": {
+    "message": "Tamanho do texto",
+    "description": "Settings → General label for the body text size dropdown (HTML / PDF exports)."
+  },
+  "optionsHtmlShowTimeLabel": {
+    "message": "Mostrar hora do chat",
+    "description": "Settings → General label for the toggle that includes per-message timestamps in HTML / PDF exports."
+  },
+  "optionsHtmlShowSourceLabel": {
+    "message": "Mostrar ligação de origem",
+    "description": "Settings → General label for the toggle that includes the \"Source: <link>\" line at the top of HTML / PDF exports."
+  },
+  "optionsHtmlShowThinkingLabel": {
+    "message": "Mostrar reflexão",
+    "description": "Settings → General label for the toggle that keeps the model's thinking blockquotes in HTML / PDF exports."
+  },
+  "optionsFilenamePatternLabel": {
+    "message": "Padrão do nome do ficheiro",
+    "description": "Settings → General label for the export filename template input."
+  },
+  "optionsFilenamePatternHint": {
+    "message": "Campos disponíveis:",
+    "description": "Helper text under the filename pattern input, followed by the literal placeholder list."
+  },
+  "selectShowThinkingLabel": {
+    "message": "Reflexão",
+    "description": "Compact label next to the show-thinking checkbox in the selection page toolbar."
+  },
+  "selectTitleFontLabel": {
+    "message": "Título",
+    "description": "Compact label preceding the title-font dropdown in the selection page toolbar."
+  },
+  "selectTextFontLabel": {
+    "message": "Texto",
+    "description": "Compact label preceding the text-font dropdown in the selection page toolbar."
+  },
+  "dragHint": {
+    "message": "Arraste para reordenar",
+    "description": "Helper text under the AI sites grid."
+  },
+  "popupViewLauncherTitle": {
+    "message": "Ir para um site de IA",
+    "description": "Tooltip on the header toggle that switches the popup from the export view to the AI-site launcher grid."
+  },
+  "popupViewExportTitle": {
+    "message": "Voltar para exportar",
+    "description": "Tooltip on the header toggle that switches the popup from the AI-site launcher back to the export view."
+  },
+  "popupPagePrevTitle": {
+    "message": "Página anterior",
+    "description": "Tooltip on the launcher pager button that shows the previous page of AI sites."
+  },
+  "popupPageNextTitle": {
+    "message": "Próxima página",
+    "description": "Tooltip on the launcher pager button that shows the next page of AI sites."
+  },
+  "statusExtracting": {
+    "message": "A extrair…",
+    "description": "Status shown while the extension is reading the chat."
+  },
+  "statusGotMessagesSaving": {
+    "message": "Obtidas {count} mensagens de {site}. A guardar…",
+    "description": "Status shown after extraction, before the file is saved."
+  },
+  "statusGotMessagesPrinting": {
+    "message": "Obtidas {count} mensagens de {site}. A abrir a caixa de impressão…",
+    "description": "Status shown when exporting to PDF, before the print tab opens."
+  },
+  "statusOpenedPrintTab": {
+    "message": "Separador de impressão aberto - escolha «Guardar como PDF»",
+    "description": "Status shown after the print tab is opened for PDF export."
+  },
+  "statusGotMessagesUploadingGdoc": {
+    "message": "Obtidas {count} mensagens de {site}. A carregar para o Google Docs…",
+    "description": "Status shown while the chat is being uploaded to Google Drive as a Google Doc."
+  },
+  "statusOpenedGdoc": {
+    "message": "Documento Google Docs aberto num novo separador.",
+    "description": "Status shown after the Google Docs upload succeeds and the new doc opens."
+  },
+  "statusGotMessagesUploadingNotion": {
+    "message": "Obtidas {count} mensagens de {site}. A carregar para o Notion…",
+    "description": "Status shown while the chat is being uploaded to Notion as a native page."
+  },
+  "statusOpenedNotion": {
+    "message": "Página do Notion aberta num novo separador.",
+    "description": "Status shown after the Notion upload succeeds and the new page opens."
+  },
+  "statusGotMessagesUploadingMsword": {
+    "message": "Recebidas {count} mensagens de {site}. A carregar para o Word Online…",
+    "description": "Status shown while the chat is being uploaded to OneDrive for Word Online."
+  },
+  "statusOpenedMsword": {
+    "message": "Documento do Word Online aberto num novo separador.",
+    "description": "Status shown after the Word Online upload succeeds and the document opens."
+  },
+  "statusGotMessagesUploadingNextcloud": {
+    "message": "Recebidas {count} mensagens de {site}. A carregar para o Nextcloud…",
+    "description": "Status shown while the chat is being uploaded to Nextcloud."
+  },
+  "statusOpenedNextcloud": {
+    "message": "Ficheiro Nextcloud aberto num novo separador.",
+    "description": "Status shown after the Nextcloud upload succeeds and the file opens."
+  },
+  "statusGotMessagesUploadingOnenote": {
+    "message": "Recebidas {count} mensagens de {site}. A enviar para o OneNote…",
+    "description": "Status shown while the chat is being sent to OneNote as a new page."
+  },
+  "statusOpenedOnenote": {
+    "message": "Página do OneNote aberta num novo separador.",
+    "description": "Status shown after the OneNote upload succeeds and the new page opens."
+  },
+  "statusSaved": {
+    "message": "Guardado: {filename}",
+    "description": "Success message after the file is saved."
+  },
+  "errorContentScriptNotLoaded": {
+    "message": "Script de conteúdo não carregado. Atualize o separador (F5) e tente novamente.",
+    "description": "Error when the popup cannot reach the content script."
+  },
+  "errorExtractionFailed": {
+    "message": "Falha na extração. Esta é uma página de chat de IA suportada?",
+    "description": "Generic extraction failure error."
+  },
+  "errorNoActiveTab": {
+    "message": "Nenhum separador ativo.",
+    "description": "Error when no active tab is found."
+  },
+  "errorPrintTab": {
+    "message": "Não foi possível abrir o separador de impressão.",
+    "description": "Error when opening the print tab failed."
+  },
+  "errorDownloadFailed": {
+    "message": "Falha no download.",
+    "description": "Error when the download cannot start."
+  },
+  "optionsTitle": {
+    "message": "{app} - Definições",
+    "description": "<title> of the settings page."
+  },
+  "optionsHeading": {
+    "message": "Definições",
+    "description": "Top heading of the settings page."
+  },
+  "optionsTabGeneral": {
+    "message": "Geral",
+    "description": "Sidebar nav item for the General settings page (language)."
+  },
+  "optionsTabStyle": {
+    "message": "Estilo",
+    "description": "Sidebar nav item for the Style settings page (fonts, body text size, preview)."
+  },
+  "optionsInlineButtonsHeading": {
+    "message": "Botões de chat",
+    "description": "Sub-heading on the General settings page above the three per-message inline-button visibility toggles."
+  },
+  "optionsInlineExportMenuLabel": {
+    "message": "Menu Exportar ficheiro",
+    "description": "Settings checkbox label - show the per-message export-format hover menu inside the AI chat page."
+  },
+  "optionsInlineCopyMdLabel": {
+    "message": "Botão Copiar como Markdown",
+    "description": "Settings checkbox label - show the per-message 'Copy as Markdown' button inside the AI chat page."
+  },
+  "optionsInlineCopyHtmlLabel": {
+    "message": "Botão Copiar como HTML",
+    "description": "Settings checkbox label - show the per-message 'Copy as HTML' button inside the AI chat page."
+  },
+  "optionsTabSites": {
+    "message": "Sites de IA",
+    "description": "Sidebar nav item for the AI Sites settings page (visibility, order)."
+  },
+  "optionsTabNotion": {
+    "message": "Notion",
+    "description": "Sidebar nav item for the Notion settings page (connect, parent page picker)."
+  },
+  "optionsNotionIntro": {
+    "message": "Ligue a sua área de trabalho do Notion para exportar conversas como páginas nativas do Notion. O {app} só pode ver e modificar as páginas às quais concede acesso explicitamente.",
+    "description": "Intro paragraph at the top of the Notion settings page."
+  },
+  "optionsNotionConnect": {
+    "message": "Ligar o Notion",
+    "description": "Button label that starts the Notion OAuth flow."
+  },
+  "optionsNotionConnecting": {
+    "message": "A ligar ao Notion…",
+    "description": "Status shown while the Notion OAuth round-trip is in progress."
+  },
+  "optionsNotionDisconnect": {
+    "message": "Desligar",
+    "description": "Button label that clears the stored Notion access token."
+  },
+  "optionsNotionWorkspaceLabel": {
+    "message": "Espaço de trabalho",
+    "description": "Label next to the Notion workspace name once connected."
+  },
+  "optionsNotionParentLabel": {
+    "message": "Página principal",
+    "description": "Label for the dropdown that picks which Notion page new exports land in."
+  },
+  "optionsNotionParentHint": {
+    "message": "Novas páginas de conversas serão criadas como subpáginas desta página. Para conceder acesso a mais páginas: abra a página no Notion → menu \"…\" → Ligações → a integração {app}.",
+    "description": "Helper text under the parent page picker, explaining how to grant access to more pages."
+  },
+  "optionsNotionRefresh": {
+    "message": "Atualizar",
+    "description": "Button that re-fetches the list of accessible Notion pages."
+  },
+  "optionsNotionLoadingPages": {
+    "message": "A carregar páginas…",
+    "description": "Placeholder option in the parent page dropdown while pages are being fetched."
+  },
+  "optionsNotionNoPages": {
+    "message": "Nenhuma página – partilhe pelo menos uma página do Notion com a integração {app}",
+    "description": "Placeholder option when the Notion search returned no accessible pages."
+  },
+  "optionsNotionPagesFailed": {
+    "message": "Não foi possível carregar as páginas",
+    "description": "Placeholder option when the Notion search call failed."
+  },
+  "optionsTabMicrosoft": {
+    "message": "Microsoft 365",
+    "description": "Sidebar nav item for the Microsoft 365 settings page (connect, account)."
+  },
+  "optionsMicrosoftIntro": {
+    "message": "Ligue a sua conta Microsoft para exportar conversas como ficheiros .docx no Word Online. Os ficheiros são armazenados no seu OneDrive, na pasta da aplicação em Aplicações.",
+    "description": "Intro paragraph at the top of the Microsoft 365 settings page."
+  },
+  "optionsMicrosoftConnect": {
+    "message": "Ligar Microsoft 365",
+    "description": "Button label that starts the Microsoft OAuth flow."
+  },
+  "optionsMicrosoftConnecting": {
+    "message": "A ligar ao Microsoft 365…",
+    "description": "Status shown while the Microsoft OAuth round-trip is in progress."
+  },
+  "optionsMicrosoftDisconnect": {
+    "message": "Desligar",
+    "description": "Button label that clears the stored Microsoft tokens."
+  },
+  "optionsMicrosoftAccountLabel": {
+    "message": "Conta",
+    "description": "Label next to the signed-in Microsoft account email."
+  },
+  "optionsMicrosoftHint": {
+    "message": "Os ficheiros exportados aparecem no OneDrive em Aplicações (na pasta da aplicação) e abrem no Word Online num novo separador.",
+    "description": "Helper text under the Microsoft 365 connection panel."
+  },
+  "optionsTabNextcloud": {
+    "message": "Nextcloud",
+    "description": "Sidebar nav item for the Nextcloud settings page."
+  },
+  "optionsNextcloudIntro": {
+    "message": "Guarde conversas no seu próprio servidor Nextcloud via WebDAV. {app} utiliza uma palavra-passe de aplicação (Nextcloud → Definições → Segurança → “Criar nova palavra-passe de aplicação”) – a sua palavra-passe real nunca sai do seu navegador.",
+    "description": "Intro paragraph at the top of the Nextcloud settings page."
+  },
+  "optionsNextcloudServerLabel": {
+    "message": "URL do Servidor",
+    "description": "Label for the Nextcloud server URL input."
+  },
+  "optionsNextcloudUserLabel": {
+    "message": "Nome de Utilizador",
+    "description": "Label for the Nextcloud username input."
+  },
+  "optionsNextcloudPasswordLabel": {
+    "message": "Palavra-passe da aplicação",
+    "description": "Label for the Nextcloud app-password input."
+  },
+  "optionsNextcloudFolderLabel": {
+    "message": "Pasta",
+    "description": "Label for the Nextcloud target folder input."
+  },
+  "optionsNextcloudFormatLabel": {
+    "message": "Formato predefinido",
+    "description": "Label for the dropdown that picks which file format gets uploaded to Nextcloud."
+  },
+  "optionsNextcloudTest": {
+    "message": "Testar ligação",
+    "description": "Button label that probes the Nextcloud credentials with a PROPFIND request."
+  },
+  "optionsNextcloudSave": {
+    "message": "Guardar",
+    "description": "Button label that persists the Nextcloud credentials."
+  },
+  "optionsNextcloudClear": {
+    "message": "Limpar",
+    "description": "Button label that wipes the stored Nextcloud credentials."
+  },
+  "optionsNextcloudTesting": {
+    "message": "A testar ligação…",
+    "description": "Status shown while the extension is probing the Nextcloud server with a PROPFIND."
+  },
+  "optionsNextcloudTestOk": {
+    "message": "Ligação bem-sucedida.",
+    "description": "Status shown when the Nextcloud PROPFIND probe succeeds."
+  },
+  "optionsNextcloudFillFirst": {
+    "message": "Preencha primeiro o URL do servidor, o nome de utilizador e a palavra-passe da aplicação.",
+    "description": "Error shown when the user clicks Test or Save with empty fields."
+  },
+  "optionsNextcloudCleared": {
+    "message": "Credenciais Nextcloud limpas.",
+    "description": "Status shown after the user clicks Clear."
+  },
+  "optionsLanguageLabel": {
+    "message": "Idioma",
+    "description": "Label for the language dropdown."
+  },
+  "optionsLanguageAuto": {
+    "message": "Usar o idioma do navegador",
+    "description": "Default option in the language dropdown - picks the browser UI language."
+  },
+  "optionsHtmlTitleFontLabel": {
+    "message": "Tipo de letra do título",
+    "description": "Label for the dropdown that picks the heading font used in HTML / PDF exports."
+  },
+  "optionsHtmlTextFontLabel": {
+    "message": "Tipo de letra do texto",
+    "description": "Label for the dropdown that picks the body font used in HTML / PDF exports."
+  },
+  "optionsFontSystem": {
+    "message": "Sistema (predefinição)",
+    "description": "First option in both font dropdowns - the OS default font, no Google Fonts fetch."
+  },
+  "optionsHtmlMathLabel": {
+    "message": "Renderização matemática (KaTeX)",
+    "description": "Label for the toggle that enables math rendering in HTML / PDF exports via the KaTeX library."
+  },
+  "optionsSavedNotice": {
+    "message": "Guardado.",
+    "description": "Notice shown when settings are saved."
+  },
+  "optionsVisibleSitesHint": {
+    "message": "Arraste para reordenar. Desmarque para ocultar um mosaico do popup.",
+    "description": "Helper text under the visible sites checklist."
+  },
+  "optionsSelectAll": {
+    "message": "Selecionar tudo",
+    "description": "Button that checks every site in the visibility list."
+  },
+  "optionsSelectNone": {
+    "message": "Limpar seleção",
+    "description": "Button that unchecks every site in the visibility list."
+  },
+  "exportJsonTitle": {
+    "message": "Exportar como JSON (.json)",
+    "description": "Tooltip on the JSON export button - a flat { role, content } message array for developers."
+  },
+  "exportDebugTitle": {
+    "message": "Exportar pacote de depuração (.json)",
+    "description": "Tooltip on the Developer-mode Debug export button - saves a diagnostic file with the raw API capture, the extracted conversation, and the rendered outputs."
+  },
+  "optionsDevModeLabel": {
+    "message": "Modo de programador",
+    "description": "Settings checkbox that reveals the Debug-bundle export button in the popup."
+  },
+  "optionsAdvancedHeading": {
+    "message": "Avançadas",
+    "description": "Heading of the Advanced block at the end of Settings - General (currently holds the Developer mode toggle)."
+  },
+  "errorSiteNotSupported": {
+    "message": "Este site não é suportado. Abra um dos sites de IA listados abaixo e tente novamente.",
+    "description": "Popup error when the active tab's domain matches none of the supported AI sites (refreshing cannot help there)."
+  },
+  "popupMediaTitle": {
+    "message": "Média",
+    "description": "Popup button — opens the media page for the current conversation."
+  },
+  "mediaPageTitle": {
+    "message": "Imagens",
+    "description": "Browser tab title of the media page."
+  },
+  "mediaHeading": {
+    "message": "Imagens nesta conversa",
+    "description": "Heading of the media page."
+  },
+  "mediaSelectAll": {
+    "message": "Todos",
+    "description": "Media page — select every image."
+  },
+  "mediaSelectNone": {
+    "message": "Nenhum",
+    "description": "Media page — clear the selection."
+  },
+  "mediaDownload": {
+    "message": "Descarregar",
+    "description": "Media page — download the selected images."
+  },
+  "mediaMeta": {
+    "message": "{selected} de {count} selecionados",
+    "description": "Media page counter. {selected} and {count} are numbers."
+  },
+  "mediaEmpty": {
+    "message": "Esta conversa não tem imagens.",
+    "description": "Media page — shown when the conversation contains no pictures."
+  },
+  "mediaLoadError": {
+    "message": "Não foi possível ler a conversa. Feche este separador e tente novamente a partir do pop-up.",
+    "description": "Media page — the stashed conversation was missing."
+  },
+  "mediaRoleUser": {
+    "message": "Você",
+    "description": "Media page tile label — the image came from the user's message."
+  },
+  "mediaRoleAssistant": {
+    "message": "IA",
+    "description": "Media page tile label — the image came from the AI's reply."
+  },
+  "mediaDownloadDone": {
+    "message": "{done} descarregados, {failed} falharam",
+    "description": "Media page result. {done} and {failed} are numbers."
+  },
+  "popupCustomExportSub": {
+    "message": "Selecione as mensagens que pretende exportar.",
+    "description": "Tooltip on the popup's Custom Export button."
+  },
+  "popupMediaSub": {
+    "message": "Navegue e descarregue as imagens desta conversa.",
+    "description": "Tooltip on the popup's Media button."
+  }
+}

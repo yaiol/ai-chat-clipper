@@ -1,0 +1,538 @@
+{
+  "extDescription": {
+    "message": "Xuất cuộc trò chuyện AI từ ChatGPT, Gemini, Claude. 32 trang AI, 9 định dạng, 5 đích đến đám mây.",
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+  },
+  "exportMarkdownTitle": {
+    "message": "Xuất dưới dạng Markdown (.md)",
+    "description": "Tooltip on the Markdown export button."
+  },
+  "exportHtmlTitle": {
+    "message": "Xuất dưới dạng HTML (.html)",
+    "description": "Tooltip on the HTML export button."
+  },
+  "exportTxtTitle": {
+    "message": "Xuất dưới dạng văn bản thuần túy (.txt)",
+    "description": "Tooltip on the plain-text export button."
+  },
+  "exportDocxTitle": {
+    "message": "Xuất dưới dạng Word (.docx)",
+    "description": "Tooltip on the Word export button."
+  },
+  "exportOdtTitle": {
+    "message": "Xuất dưới dạng OpenDocument (.odt)",
+    "description": "Tooltip on the OpenDocument export button."
+  },
+  "exportPdfTitle": {
+    "message": "Xuất dưới dạng PDF (qua hộp thoại in)",
+    "description": "Tooltip on the PDF export button."
+  },
+  "exportImageTitle": {
+    "message": "Xuất dưới dạng ảnh PNG",
+    "description": "Tooltip on the Image export button - renders the conversation to a single tall PNG file."
+  },
+  "exportGdocTitle": {
+    "message": "Mở trong Google Tài liệu",
+    "description": "Tooltip on the Google Docs export button - uploads the chat to the user's Google Drive as a native Google Doc."
+  },
+  "exportNotionTitle": {
+    "message": "Xuất sang Notion",
+    "description": "Tooltip on the Notion export button - uploads the chat to the user's Notion workspace as a native Notion page."
+  },
+  "exportMswordTitle": {
+    "message": "Mở trong Word Online",
+    "description": "Tooltip on the Word Online export button - uploads the chat as a .docx to OneDrive and opens it in Word Online."
+  },
+  "exportNextcloudTitle": {
+    "message": "Lưu vào Nextcloud",
+    "description": "Tooltip on the Nextcloud export button - uploads the chat to the user's Nextcloud server via WebDAV."
+  },
+  "exportOnenoteTitle": {
+    "message": "Gửi đến OneNote",
+    "description": "Tooltip on the OneNote export button - creates a new page in the user's OneNote default notebook."
+  },
+  "settingsButtonTitle": {
+    "message": "Cài đặt",
+    "description": "Tooltip on the gear icon that opens the settings page."
+  },
+  "popupCustomExportTitle": {
+    "message": "Xuất tùy chỉnh",
+    "description": "Title of the prominent button below the export icons in the popup. Opens the message selection page."
+  },
+  "selectPageTitle": {
+    "message": "{app} - Chọn tin nhắn",
+    "description": "<title> of the selection page (browser tab title)."
+  },
+  "selectHeading": {
+    "message": "Chọn tin nhắn để xuất",
+    "description": "Top heading of the selection page."
+  },
+  "selectStatusCount": {
+    "message": "{n} trong số {total} đã chọn",
+    "description": "Status line on the selection page showing how many messages are checked."
+  },
+  "selectErrorNoSelection": {
+    "message": "Chọn ít nhất một tin nhắn.",
+    "description": "Error shown when the user clicks an export button with no messages selected."
+  },
+  "selectErrorNoMessages": {
+    "message": "Không tìm thấy tin nhắn nào trong cuộc trò chuyện này.",
+    "description": "Error shown when the selection page opens but the chat has no extractable messages."
+  },
+  "selectErrorLoadFailed": {
+    "message": "Không thể đọc cuộc trò chuyện. Mở lại tab trò chuyện và thử lại.",
+    "description": "Error shown when the selection page can't read the stashed conversation."
+  },
+  "selectRoleUser": {
+    "message": "Người dùng",
+    "description": "Role badge for user messages on the selection page."
+  },
+  "selectRoleAssistant": {
+    "message": "Trợ lý",
+    "description": "Role badge for assistant messages on the selection page."
+  },
+  "selectFontSizeLabel": {
+    "message": "Kích thước",
+    "description": "Label preceding the font-size dropdown in the selection page toolbar."
+  },
+  "selectFontSizeSmall": {
+    "message": "Nhỏ",
+    "description": "Smallest body-text option in the size dropdown."
+  },
+  "selectFontSizeMedium": {
+    "message": "Trung bình",
+    "description": "Default body-text option in the size dropdown."
+  },
+  "selectFontSizeLarge": {
+    "message": "Lớn",
+    "description": "Largest body-text option in the size dropdown."
+  },
+  "selectShowTimeLabel": {
+    "message": "Thời gian",
+    "description": "Compact label next to the show-chat-time checkbox in the selection page toolbar."
+  },
+  "selectShowSourceLabel": {
+    "message": "Nguồn",
+    "description": "Compact label next to the show-source checkbox in the selection page toolbar."
+  },
+  "optionsHtmlSizeLabel": {
+    "message": "Kích thước văn bản chính",
+    "description": "Settings → General label for the body text size dropdown (HTML / PDF exports)."
+  },
+  "optionsHtmlShowTimeLabel": {
+    "message": "Hiển thị thời gian trò chuyện",
+    "description": "Settings → General label for the toggle that includes per-message timestamps in HTML / PDF exports."
+  },
+  "optionsHtmlShowSourceLabel": {
+    "message": "Hiển thị liên kết nguồn",
+    "description": "Settings → General label for the toggle that includes the \"Source: <link>\" line at the top of HTML / PDF exports."
+  },
+  "optionsHtmlShowThinkingLabel": {
+    "message": "Hiển thị suy nghĩ",
+    "description": "Settings → General label for the toggle that keeps the model's thinking blockquotes in HTML / PDF exports."
+  },
+  "optionsFilenamePatternLabel": {
+    "message": "Mẫu tên tệp",
+    "description": "Settings → General label for the export filename template input."
+  },
+  "optionsFilenamePatternHint": {
+    "message": "Các trường có sẵn:",
+    "description": "Helper text under the filename pattern input, followed by the literal placeholder list."
+  },
+  "selectShowThinkingLabel": {
+    "message": "Suy nghĩ",
+    "description": "Compact label next to the show-thinking checkbox in the selection page toolbar."
+  },
+  "selectTitleFontLabel": {
+    "message": "Tiêu đề",
+    "description": "Compact label preceding the title-font dropdown in the selection page toolbar."
+  },
+  "selectTextFontLabel": {
+    "message": "Văn bản",
+    "description": "Compact label preceding the text-font dropdown in the selection page toolbar."
+  },
+  "dragHint": {
+    "message": "Kéo để sắp xếp lại",
+    "description": "Helper text under the AI sites grid."
+  },
+  "popupViewLauncherTitle": {
+    "message": "Chuyển đến trang web AI",
+    "description": "Tooltip on the header toggle that switches the popup from the export view to the AI-site launcher grid."
+  },
+  "popupViewExportTitle": {
+    "message": "Quay lại xuất",
+    "description": "Tooltip on the header toggle that switches the popup from the AI-site launcher back to the export view."
+  },
+  "popupPagePrevTitle": {
+    "message": "Trang trước",
+    "description": "Tooltip on the launcher pager button that shows the previous page of AI sites."
+  },
+  "popupPageNextTitle": {
+    "message": "Trang sau",
+    "description": "Tooltip on the launcher pager button that shows the next page of AI sites."
+  },
+  "statusExtracting": {
+    "message": "Đang trích xuất…",
+    "description": "Status shown while the extension is reading the chat."
+  },
+  "statusGotMessagesSaving": {
+    "message": "Đã nhận {count} tin nhắn từ {site}. Đang lưu…",
+    "description": "Status shown after extraction, before the file is saved."
+  },
+  "statusGotMessagesPrinting": {
+    "message": "Đã nhận {count} tin nhắn từ {site}. Đang mở hộp thoại in…",
+    "description": "Status shown when exporting to PDF, before the print tab opens."
+  },
+  "statusOpenedPrintTab": {
+    "message": "Đã mở tab in - chọn \"Lưu dưới dạng PDF\"",
+    "description": "Status shown after the print tab is opened for PDF export."
+  },
+  "statusGotMessagesUploadingGdoc": {
+    "message": "Đã nhận {count} tin nhắn từ {site}. Đang tải lên Google Tài liệu…",
+    "description": "Status shown while the chat is being uploaded to Google Drive as a Google Doc."
+  },
+  "statusOpenedGdoc": {
+    "message": "Đã mở Google Tài liệu trong tab mới.",
+    "description": "Status shown after the Google Docs upload succeeds and the new doc opens."
+  },
+  "statusGotMessagesUploadingNotion": {
+    "message": "Đã nhận {count} tin nhắn từ {site}. Đang tải lên Notion…",
+    "description": "Status shown while the chat is being uploaded to Notion as a native page."
+  },
+  "statusOpenedNotion": {
+    "message": "Đã mở trang Notion trong tab mới.",
+    "description": "Status shown after the Notion upload succeeds and the new page opens."
+  },
+  "statusGotMessagesUploadingMsword": {
+    "message": "Đã nhận {count} tin nhắn từ {site}. Đang tải lên Word Online…",
+    "description": "Status shown while the chat is being uploaded to OneDrive for Word Online."
+  },
+  "statusOpenedMsword": {
+    "message": "Đã mở tài liệu Word Online trong tab mới.",
+    "description": "Status shown after the Word Online upload succeeds and the document opens."
+  },
+  "statusGotMessagesUploadingNextcloud": {
+    "message": "Đã nhận {count} tin nhắn từ {site}. Đang tải lên Nextcloud…",
+    "description": "Status shown while the chat is being uploaded to Nextcloud."
+  },
+  "statusOpenedNextcloud": {
+    "message": "Đã mở tệp Nextcloud trong tab mới.",
+    "description": "Status shown after the Nextcloud upload succeeds and the file opens."
+  },
+  "statusGotMessagesUploadingOnenote": {
+    "message": "Đã nhận {count} tin nhắn từ {site}. Đang gửi đến OneNote…",
+    "description": "Status shown while the chat is being sent to OneNote as a new page."
+  },
+  "statusOpenedOnenote": {
+    "message": "Đã mở trang OneNote trong tab mới.",
+    "description": "Status shown after the OneNote upload succeeds and the new page opens."
+  },
+  "statusSaved": {
+    "message": "Đã lưu {filename}",
+    "description": "Success message after the file is saved."
+  },
+  "errorContentScriptNotLoaded": {
+    "message": "Tập lệnh nội dung chưa được tải. Làm mới tab này (F5) và thử lại.",
+    "description": "Error when the popup cannot reach the content script."
+  },
+  "errorExtractionFailed": {
+    "message": "Trích xuất thất bại. Đây có phải là trang trò chuyện AI được hỗ trợ không?",
+    "description": "Generic extraction failure error."
+  },
+  "errorNoActiveTab": {
+    "message": "Không có tab hoạt động.",
+    "description": "Error when no active tab is found."
+  },
+  "errorPrintTab": {
+    "message": "Không thể mở tab in.",
+    "description": "Error when opening the print tab failed."
+  },
+  "errorDownloadFailed": {
+    "message": "Tải xuống thất bại.",
+    "description": "Error when the download cannot start."
+  },
+  "optionsTitle": {
+    "message": "{app} - Cài đặt",
+    "description": "<title> of the settings page."
+  },
+  "optionsHeading": {
+    "message": "Cài đặt",
+    "description": "Top heading of the settings page."
+  },
+  "optionsTabGeneral": {
+    "message": "Chung",
+    "description": "Sidebar nav item for the General settings page (language)."
+  },
+  "optionsTabStyle": {
+    "message": "Kiểu dáng",
+    "description": "Sidebar nav item for the Style settings page (fonts, body text size, preview)."
+  },
+  "optionsInlineButtonsHeading": {
+    "message": "Nút trong trò chuyện",
+    "description": "Sub-heading on the General settings page above the three per-message inline-button visibility toggles."
+  },
+  "optionsInlineExportMenuLabel": {
+    "message": "Menu xuất tệp",
+    "description": "Settings checkbox label - show the per-message export-format hover menu inside the AI chat page."
+  },
+  "optionsInlineCopyMdLabel": {
+    "message": "Nút sao chép dưới dạng Markdown",
+    "description": "Settings checkbox label - show the per-message 'Copy as Markdown' button inside the AI chat page."
+  },
+  "optionsInlineCopyHtmlLabel": {
+    "message": "Nút sao chép dưới dạng HTML",
+    "description": "Settings checkbox label - show the per-message 'Copy as HTML' button inside the AI chat page."
+  },
+  "optionsTabSites": {
+    "message": "Trang web AI",
+    "description": "Sidebar nav item for the AI Sites settings page (visibility, order)."
+  },
+  "optionsTabNotion": {
+    "message": "Notion",
+    "description": "Sidebar nav item for the Notion settings page (connect, parent page picker)."
+  },
+  "optionsNotionIntro": {
+    "message": "Kết nối không gian làm việc Notion của bạn để xuất các cuộc trò chuyện dưới dạng trang Notion gốc. {app} chỉ có thể xem và sửa đổi các trang mà bạn cấp quyền truy cập rõ ràng.",
+    "description": "Intro paragraph at the top of the Notion settings page."
+  },
+  "optionsNotionConnect": {
+    "message": "Kết nối Notion",
+    "description": "Button label that starts the Notion OAuth flow."
+  },
+  "optionsNotionConnecting": {
+    "message": "Đang kết nối với Notion…",
+    "description": "Status shown while the Notion OAuth round-trip is in progress."
+  },
+  "optionsNotionDisconnect": {
+    "message": "Ngắt kết nối",
+    "description": "Button label that clears the stored Notion access token."
+  },
+  "optionsNotionWorkspaceLabel": {
+    "message": "Không gian làm việc",
+    "description": "Label next to the Notion workspace name once connected."
+  },
+  "optionsNotionParentLabel": {
+    "message": "Trang cha",
+    "description": "Label for the dropdown that picks which Notion page new exports land in."
+  },
+  "optionsNotionParentHint": {
+    "message": "Các trang trò chuyện mới sẽ được tạo làm trang con của trang này. Để cấp quyền truy cập vào nhiều trang hơn: mở trang trong Notion → menu \"…\" → Kết nối → tích hợp {app}.",
+    "description": "Helper text under the parent page picker, explaining how to grant access to more pages."
+  },
+  "optionsNotionRefresh": {
+    "message": "Làm mới",
+    "description": "Button that re-fetches the list of accessible Notion pages."
+  },
+  "optionsNotionLoadingPages": {
+    "message": "Đang tải trang…",
+    "description": "Placeholder option in the parent page dropdown while pages are being fetched."
+  },
+  "optionsNotionNoPages": {
+    "message": "Không có trang nào - hãy chia sẻ ít nhất một trang Notion với tích hợp {app}",
+    "description": "Placeholder option when the Notion search returned no accessible pages."
+  },
+  "optionsNotionPagesFailed": {
+    "message": "Không thể tải trang",
+    "description": "Placeholder option when the Notion search call failed."
+  },
+  "optionsTabMicrosoft": {
+    "message": "Microsoft 365",
+    "description": "Sidebar nav item for the Microsoft 365 settings page (connect, account)."
+  },
+  "optionsMicrosoftIntro": {
+    "message": "Kết nối tài khoản Microsoft của bạn để xuất cuộc trò chuyện dưới dạng tệp .docx trong Word Online. Các tệp được lưu trữ trong OneDrive của bạn, trong thư mục của ứng dụng dưới mục Ứng dụng.",
+    "description": "Intro paragraph at the top of the Microsoft 365 settings page."
+  },
+  "optionsMicrosoftConnect": {
+    "message": "Kết nối Microsoft 365",
+    "description": "Button label that starts the Microsoft OAuth flow."
+  },
+  "optionsMicrosoftConnecting": {
+    "message": "Đang kết nối với Microsoft 365…",
+    "description": "Status shown while the Microsoft OAuth round-trip is in progress."
+  },
+  "optionsMicrosoftDisconnect": {
+    "message": "Ngắt kết nối",
+    "description": "Button label that clears the stored Microsoft tokens."
+  },
+  "optionsMicrosoftAccountLabel": {
+    "message": "Tài khoản",
+    "description": "Label next to the signed-in Microsoft account email."
+  },
+  "optionsMicrosoftHint": {
+    "message": "Các tệp đã xuất hiện trong OneDrive dưới mục Ứng dụng (trong thư mục của ứng dụng) và mở trong Word Online trong một tab mới.",
+    "description": "Helper text under the Microsoft 365 connection panel."
+  },
+  "optionsTabNextcloud": {
+    "message": "Nextcloud",
+    "description": "Sidebar nav item for the Nextcloud settings page."
+  },
+  "optionsNextcloudIntro": {
+    "message": "Lưu cuộc trò chuyện vào máy chủ Nextcloud của riêng bạn qua WebDAV. {app} sử dụng mật khẩu ứng dụng (Nextcloud → Cài đặt → Bảo mật → “Tạo mật khẩu ứng dụng mới”) – mật khẩu tài khoản thực của bạn không bao giờ rời khỏi trình duyệt.",
+    "description": "Intro paragraph at the top of the Nextcloud settings page."
+  },
+  "optionsNextcloudServerLabel": {
+    "message": "URL máy chủ",
+    "description": "Label for the Nextcloud server URL input."
+  },
+  "optionsNextcloudUserLabel": {
+    "message": "Tên người dùng",
+    "description": "Label for the Nextcloud username input."
+  },
+  "optionsNextcloudPasswordLabel": {
+    "message": "Mật khẩu ứng dụng",
+    "description": "Label for the Nextcloud app-password input."
+  },
+  "optionsNextcloudFolderLabel": {
+    "message": "Thư mục",
+    "description": "Label for the Nextcloud target folder input."
+  },
+  "optionsNextcloudFormatLabel": {
+    "message": "Định dạng mặc định",
+    "description": "Label for the dropdown that picks which file format gets uploaded to Nextcloud."
+  },
+  "optionsNextcloudTest": {
+    "message": "Kiểm tra kết nối",
+    "description": "Button label that probes the Nextcloud credentials with a PROPFIND request."
+  },
+  "optionsNextcloudSave": {
+    "message": "Lưu",
+    "description": "Button label that persists the Nextcloud credentials."
+  },
+  "optionsNextcloudClear": {
+    "message": "Xóa",
+    "description": "Button label that wipes the stored Nextcloud credentials."
+  },
+  "optionsNextcloudTesting": {
+    "message": "Đang kiểm tra kết nối…",
+    "description": "Status shown while the extension is probing the Nextcloud server with a PROPFIND."
+  },
+  "optionsNextcloudTestOk": {
+    "message": "Kết nối thành công.",
+    "description": "Status shown when the Nextcloud PROPFIND probe succeeds."
+  },
+  "optionsNextcloudFillFirst": {
+    "message": "Trước tiên, hãy điền URL máy chủ, tên người dùng và mật khẩu ứng dụng.",
+    "description": "Error shown when the user clicks Test or Save with empty fields."
+  },
+  "optionsNextcloudCleared": {
+    "message": "Thông tin đăng nhập Nextcloud đã được xóa.",
+    "description": "Status shown after the user clicks Clear."
+  },
+  "optionsLanguageLabel": {
+    "message": "Ngôn ngữ",
+    "description": "Label for the language dropdown."
+  },
+  "optionsLanguageAuto": {
+    "message": "Sử dụng ngôn ngữ trình duyệt",
+    "description": "Default option in the language dropdown - picks the browser UI language."
+  },
+  "optionsHtmlTitleFontLabel": {
+    "message": "Phông chữ tiêu đề",
+    "description": "Label for the dropdown that picks the heading font used in HTML / PDF exports."
+  },
+  "optionsHtmlTextFontLabel": {
+    "message": "Phông chữ văn bản",
+    "description": "Label for the dropdown that picks the body font used in HTML / PDF exports."
+  },
+  "optionsFontSystem": {
+    "message": "Hệ thống (mặc định)",
+    "description": "First option in both font dropdowns - the OS default font, no Google Fonts fetch."
+  },
+  "optionsHtmlMathLabel": {
+    "message": "Hiển thị công thức toán học (KaTeX)",
+    "description": "Label for the toggle that enables math rendering in HTML / PDF exports via the KaTeX library."
+  },
+  "optionsSavedNotice": {
+    "message": "Đã lưu.",
+    "description": "Notice shown when settings are saved."
+  },
+  "optionsVisibleSitesHint": {
+    "message": "Kéo để sắp xếp lại. Bỏ chọn để ẩn một ô khỏi cửa sổ bật lên.",
+    "description": "Helper text under the visible sites checklist."
+  },
+  "optionsSelectAll": {
+    "message": "Chọn tất cả",
+    "description": "Button that checks every site in the visibility list."
+  },
+  "optionsSelectNone": {
+    "message": "Bỏ chọn tất cả",
+    "description": "Button that unchecks every site in the visibility list."
+  },
+  "exportJsonTitle": {
+    "message": "Xuất dưới dạng JSON (.json)",
+    "description": "Tooltip on the JSON export button - a flat { role, content } message array for developers."
+  },
+  "exportDebugTitle": {
+    "message": "Xuất gói gỡ lỗi (.json)",
+    "description": "Tooltip on the Developer-mode Debug export button - saves a diagnostic file with the raw API capture, the extracted conversation, and the rendered outputs."
+  },
+  "optionsDevModeLabel": {
+    "message": "Chế độ nhà phát triển",
+    "description": "Settings checkbox that reveals the Debug-bundle export button in the popup."
+  },
+  "optionsAdvancedHeading": {
+    "message": "Nâng cao",
+    "description": "Heading of the Advanced block at the end of Settings - General (currently holds the Developer mode toggle)."
+  },
+  "errorSiteNotSupported": {
+    "message": "Trang web này không được hỗ trợ. Vui lòng mở một trong các trang web AI được liệt kê bên dưới và thử lại.",
+    "description": "Popup error when the active tab's domain matches none of the supported AI sites (refreshing cannot help there)."
+  },
+  "popupMediaTitle": {
+    "message": "Phương tiện",
+    "description": "Popup button — opens the media page for the current conversation."
+  },
+  "mediaPageTitle": {
+    "message": "Hình ảnh",
+    "description": "Browser tab title of the media page."
+  },
+  "mediaHeading": {
+    "message": "Hình ảnh trong cuộc trò chuyện này",
+    "description": "Heading of the media page."
+  },
+  "mediaSelectAll": {
+    "message": "Tất cả",
+    "description": "Media page — select every image."
+  },
+  "mediaSelectNone": {
+    "message": "Không có",
+    "description": "Media page — clear the selection."
+  },
+  "mediaDownload": {
+    "message": "Tải xuống",
+    "description": "Media page — download the selected images."
+  },
+  "mediaMeta": {
+    "message": "Đã chọn {selected} trong {count}",
+    "description": "Media page counter. {selected} and {count} are numbers."
+  },
+  "mediaEmpty": {
+    "message": "Cuộc trò chuyện này không có hình ảnh.",
+    "description": "Media page — shown when the conversation contains no pictures."
+  },
+  "mediaLoadError": {
+    "message": "Không thể đọc cuộc trò chuyện. Đóng tab này và thử lại từ cửa sổ bật lên.",
+    "description": "Media page — the stashed conversation was missing."
+  },
+  "mediaRoleUser": {
+    "message": "Bạn",
+    "description": "Media page tile label — the image came from the user's message."
+  },
+  "mediaRoleAssistant": {
+    "message": "AI",
+    "description": "Media page tile label — the image came from the AI's reply."
+  },
+  "mediaDownloadDone": {
+    "message": "Đã tải xuống {done}, {failed} thất bại",
+    "description": "Media page result. {done} and {failed} are numbers."
+  },
+  "popupCustomExportSub": {
+    "message": "Chọn các tin nhắn bạn muốn xuất.",
+    "description": "Tooltip on the popup's Custom Export button."
+  },
+  "popupMediaSub": {
+    "message": "Duyệt và tải xuống hình ảnh trong cuộc trò chuyện này.",
+    "description": "Tooltip on the popup's Media button."
+  }
+}

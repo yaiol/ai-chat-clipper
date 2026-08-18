@@ -1,0 +1,244 @@
+<!doctype html>
+<!-- data-icon="yaiol:ai-chat-clipper" -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="shared/ui.css">
+  <style>
+    body { font: var(--ya-font-size)/1.4 var(--ya-font); width: 280px; margin: 0; padding: 14px; color: var(--ya-color-text); }
+    /* THREE grids, one per meaning - the row break IS the grouping, so nothing
+       straddles two ideas:
+         1. plain formats   MD / HTML / TXT / JSON / [debug]        (4, +1 in dev mode)
+         2. documents       DOCX / ODT / PDF / PNG                  (4)
+         3. cloud uploads   GDocs / Word / OneNote / Notion / Nextcloud  (5)
+       ⚠ SIX tiles per row is the maximum - hence 6 columns, which is also what
+       row 1 needs to keep the debug button on one line when developer mode turns
+       it on. A row with fewer tiles simply leaves the trailing slots empty; do
+       NOT narrow the grid to make a row fill, that resizes every tile. The
+       visual split mirrors the colour split (grey = downloads, cloud = uploads). */
+    /* Copy-to-clipboard row sits above the format grid. Two equal-width
+       buttons - Markdown writes text/plain, HTML writes a ClipboardItem
+       carrying text/html (+ plain-text fallback) so a single paste into
+       Gmail / Docs / Notion / Slack lands as formatted text. */
+    .copy-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+      margin-bottom: 8px;
+    }
+    .copy-row button {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      padding: 8px 10px;
+      border: 1px solid #d0d0d0; background: #fafafa; color: #444;
+      border-radius: 6px; cursor: pointer;
+      font: inherit;
+      transition: all .12s ease;
+    }
+    .copy-row button:hover { background: #f0f6ff; border-color: #7eb4ff; color: #111; }
+    .copy-row button:disabled { opacity: .5; cursor: default; }
+    .copy-row svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .export-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+    .export-grid + .export-grid { margin-top: 6px; }
+    .export-grid button {
+      display: flex; align-items: center; justify-content: center;
+      aspect-ratio: 1 / 1;
+      border: 1px solid #d0d0d0; background: #fafafa; color: #444;
+      border-radius: 6px; cursor: pointer;
+      padding: 0;
+      transition: all .12s ease;
+    }
+    .export-grid button:hover { background: #f0f6ff; border-color: #7eb4ff; color: #111; }
+    .export-grid button:disabled { opacity: .5; cursor: default; }
+    .export-grid svg { width: 18px; height: 18px; display: block; }
+    /* Cloud buttons reuse the standard button frame - the cloud icon
+       itself carries the visual distinction (grey cloud, brand-colored
+       letter inside). */
+    .status { font-size: 12px; color: #666; white-space: pre-wrap; }
+    .status:not(:empty) { margin-top: 10px; min-height: 1.4em; }
+    .err { color: #b00020; }
+    .ok { color: #0a7a2f; }
+    h2 { font-size: 12px; font-weight: 600; color: #666; margin: 16px 0 8px; text-transform: uppercase; letter-spacing: .04em; }
+    .sites { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+    .sites a {
+      display: flex; align-items: center; justify-content: center;
+      aspect-ratio: 1 / 1; border-radius: 6px; border: 1px solid #e5e5e5;
+      background: #fff; text-decoration: none; transition: all .12s ease;
+    }
+    .sites a:hover { background: #f0f6ff; border-color: #7eb4ff; transform: translateY(-1px); }
+    .sites a.current { background: #eaf4ff; border-color: #4a9eff; box-shadow: 0 0 0 2px rgba(74,158,255,.2); }
+    .sites a img { width: 20px; height: 20px; display: block; object-fit: contain; pointer-events: none; }
+    .sites a { cursor: grab; }
+    .sites a:active { cursor: grabbing; }
+    .sites a.dragging { opacity: .4; }
+    .sites a.drag-over { border-color: #4a9eff; box-shadow: inset 0 0 0 2px #4a9eff; }
+    .hint { font-size: 11px; color: #888; margin: 6px 0 0; }
+    /* The two page buttons (Media / Custom Export) share .copy-row's two-across
+       geometry above — same grid, padding, radius, gap and 16px icon. ONLY the
+       colour differs (blue accent = "opens a page" vs grey = clipboard), so the
+       shape is reused rather than re-invented. */
+    .page-row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 12px; }
+    .custom-export-btn {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      padding: 8px 10px;
+      background: #f0f6ff; border: 1px solid #b6d8ff;
+      border-radius: 6px; cursor: pointer;
+      transition: background .12s ease, border-color .12s ease;
+      font: inherit; color: #0a4ea8;
+    }
+    .custom-export-btn:hover { background: #e0eeff; border-color: #4a9eff; }
+    .custom-export-btn:focus { outline: 2px solid #4a9eff; outline-offset: 1px; }
+    .custom-export-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .custom-export-btn .ce-title { font-size: 12px; font-weight: 600; }
+
+    /* ── Two swapping views ──────────────────────────────────────────────
+       The popup shows one of two full-width views. On a supported AI page the
+       EXPORT view is the default and a header toggle (#view-toggle) swaps to
+       the site LAUNCHER and back. On an unsupported page there is nothing to
+       export, so the export view + toggle are hidden and the launcher is the
+       whole popup (body.unsupported). */
+    #launcher-view { display: none; }
+    body.launcher-open #export-view { display: none; }
+    body.launcher-open #launcher-view { display: block; }
+    body.unsupported #export-view { display: none; }
+    body.unsupported #launcher-view { display: block; }
+    body.unsupported #view-toggle { display: none; }
+
+    .header-actions { display: flex; align-items: center; gap: 8px; }
+    #view-toggle svg { width: 18px; height: 18px; }
+    #view-toggle .icon-back { display: none; }
+    body.launcher-open #view-toggle .icon-grid { display: none; }
+    body.launcher-open #view-toggle .icon-back { display: block; }
+
+    /* Paginated launcher — fixed rows (LAUNCHER_ROWS in popup.js), page flip.
+       Keeps the popup a constant height no matter how many sites ship. */
+    .pager { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 10px; }
+    .pager[hidden] { display: none; }
+    #page-indicator { font-size: 12px; color: #666; min-width: 46px; text-align: center; font-variant-numeric: tabular-nums; }
+    .pager .ya-footer-btn:disabled { opacity: .35; cursor: default; }
+    .pager .ya-footer-btn svg { width: 18px; height: 18px; }
+    /* Drop a tile on an arrow to send it to that page: armed for the whole drag,
+       lit while hovered. Same blue as .sites a.drag-over so both read as one idea. */
+    .pager .ya-footer-btn.drag-zone { color: #4a9eff; }
+    .pager .ya-footer-btn.drag-over { color: #4a9eff; background: #eaf4ff; box-shadow: 0 0 0 2px #4a9eff; }
+  </style>
+</head>
+<body>
+  <header class="ya-app-header">
+    <h1 id="app-name"></h1>
+    <span class="ya-app-version" id="app-version"></span>
+    <div class="header-actions">
+      <button id="view-toggle" type="button" class="ya-footer-btn" data-i18n-title="popupViewLauncherTitle" title="Jump to an AI site">
+        <svg class="icon-grid" data-icon="lucide:layout-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+        <svg class="icon-back" data-icon="lucide:arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+      </button>
+      <a class="ya-app-brand" href="https://apps.yaiol.com/" target="_blank" rel="noopener noreferrer" title="yaiol Apps">
+        <img src="assets/yaiol-logo.svg" alt="yaiol" />
+      </a>
+    </div>
+  </header>
+  <div id="views">
+  <div id="export-view">
+  <div class="copy-row">
+    <button id="copy-md" title="Copy conversation as Markdown to clipboard">
+      <svg data-icon="yaiol:copy-markdown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/><path d="M12.025 18.025h1.25v-4.75H14.6v3.175h1.25v-3.175h1.5v4.75h1.25v-5q0-.35-.325-.675T17.6 12.025h-4.575q-.35 0-.675.325t-.325.675z" fill="currentColor" stroke="none"/></svg>
+      <span>Copy as MD</span>
+    </button>
+    <button id="copy-html" title="Copy conversation as rich HTML (paste into Gmail, Docs…)">
+      <svg data-icon="yaiol:copy-html" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/><path d="m12.99 18.114-3.056-3.056 3.082-3.082.547.548-2.534 2.534 2.509 2.509zm4.049.025-.547-.547 2.534-2.534-2.509-2.509.548-.547 3.056 3.056z" fill="currentColor" stroke="none"/></svg>
+      <span>Copy as HTML</span>
+    </button>
+  </div>
+  <div class="export-grid">
+    <button id="export-md" data-i18n-title="exportMarkdownTitle" title="Export as Markdown (.md)">
+      <svg data-icon="yaiol:file-markdown" viewBox="0 -960 960 960" fill="currentColor"><path d="M220-80q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h361l219 219v521q0 24-18 42t-42 18H220Zm331-554v-186H220v680h520v-494H551ZM220-820v186-186 680-680Z"/><path d="M348.5-280h50v-190h53v127h50v-127h60v190h50v-200q0-14-13-27t-27-13H388.5q-14 0-27 13t-13 27z"/></svg>
+    </button>
+    <button id="export-html" data-i18n-title="exportHtmlTitle" title="Export as HTML (.html)">
+      <svg data-icon="yaiol:file-html" viewBox="0 -960 960 960" fill="currentColor"><path d="M220-80q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h361l219 219v521q0 24-18 42t-42 18H220Zm331-554v-186H220v680h520v-494H551ZM220-820v186-186 680-680Z"/><path d="m398.5-275.98-122.24-122.25 123.26-123.26 21.9 21.9-101.36 101.36 100.34 100.34zm161.97 1.02-21.9-21.9 101.36-101.36-100.34-100.34 21.9-21.9 122.24 122.24z"/></svg>
+    </button>
+    <button id="export-txt" data-i18n-title="exportTxtTitle" title="Export as plain text (.txt)">
+      <svg data-icon="yaiol:file-text" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-460h320v-60H320v60Zm0 120h320v-60H320v60Zm0 120h200v-60H320v60ZM220-80q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h361l219 219v521q0 24-18 42t-42 18H220Zm331-554v-186H220v680h520v-494H551ZM220-820v186-186 680-680Z"/></svg>
+    </button>
+    <button id="export-json" data-i18n-title="exportJsonTitle" title="Export as JSON (.json)">
+      <svg data-icon="yaiol:file-json" viewBox="0 -960 960 960" fill="currentColor"><path d="M560-160v-80h100q17 0 28.5-11.5T700-280v-120q0-32 19-57t51-33v-14q-32-8-51-33t-19-57v-120q0-17-11.5-28.5T660-760H560v-80h100q50 0 85 35t35 85v120q0 17 11.5 28.5T820-560h20v160h-20q-17 0-28.5 11.5T780-360v120q0 50-35 85t-85 35H560Zm-260 0q-50 0-85-35t-35-85v-120q0-17-11.5-28.5T140-400h-20v-160h20q17 0 28.5-11.5T180-600v-120q0-50 35-85t85-35h100v80H300q-17 0-28.5 11.5T260-720v120q0 32-19 57t-51 33v14q32 8 51 33t19 57v120q0 17 11.5 28.5T300-240h100v80H300Z"/></svg>
+    </button>
+    <button id="export-debug" hidden data-i18n-title="exportDebugTitle" title="Export debug bundle (.json)">
+      <svg data-icon="lucide:bug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></svg>
+    </button>
+  </div>
+  <div class="export-grid">
+    <button id="export-docx" data-i18n-title="exportDocxTitle" title="Export as Word (.docx)">
+      <svg data-icon="yaiol:file-docx" viewBox="0 -960 960 960"><path fill="#9ca3af" d="M320-460h320v-60H320v60Zm0 120h320v-60H320v60Zm0 120h200v-60H320v60ZM220-80q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h361l219 219v521q0 24-18 42t-42 18H220Zm331-554v-186H220v680h520v-494H551ZM220-820v186-186 680-680Z"/><text x="480" y="-265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="720" font-weight="800" fill="#2B579A">W</text></svg>
+    </button>
+    <button id="export-odt" data-i18n-title="exportOdtTitle" title="Export as OpenDocument (.odt)">
+      <svg data-icon="yaiol:file-odt" viewBox="0 -960 960 960"><path fill="#9ca3af" d="M320-460h320v-60H320v60Zm0 120h320v-60H320v60Zm0 120h200v-60H320v60ZM220-80q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h361l219 219v521q0 24-18 42t-42 18H220Zm331-554v-186H220v680h520v-494H551ZM220-820v186-186 680-680Z"/><text x="480" y="-265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="720" font-weight="800" fill="currentColor">O</text></svg>
+    </button>
+    <button id="export-pdf" data-i18n-title="exportPdfTitle" title="Export as PDF (via print dialog)">
+      <svg data-icon="yaiol:file-pdf" viewBox="0 -960 960 960"><path fill="#9ca3af" d="M320-460h320v-60H320v60Zm0 120h320v-60H320v60Zm0 120h200v-60H320v60ZM220-80q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h361l219 219v521q0 24-18 42t-42 18H220Zm331-554v-186H220v680h520v-494H551ZM220-820v186-186 680-680Z"/><text x="480" y="-265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="720" font-weight="800" fill="#B30B00">P</text></svg>
+    </button>
+    <button id="export-image" data-i18n-title="exportImageTitle" title="Export as PNG image">
+      <svg data-icon="lucide:image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+    </button>
+  </div>
+  <div class="export-grid">
+    <button id="export-gdoc" class="cloud" data-i18n-title="exportGdocTitle" title="Open in Google Docs">
+      <svg data-icon="yaiol:cloud-gdocs" viewBox="0 -960 960 960"><path fill="#9ca3af" d="M251-160q-88 0-149.5-61.5T40-371q0-78 50-137t127-71q20-97 94-158.5T482-799q112 0 189 81.5T748-522v24q72-2 122 46.5T920-329q0 69-50 119t-119 50H251Zm0-60h500q45 0 77-32t32-77q0-45-32-77t-77-32h-63v-84q0-91-61-154t-149-63q-88 0-149.5 63T267-522h-19q-62 0-105 43.5T100-371q0 63 44 107t107 44Zm229-260Z"/><text x="480" y="-265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="720" font-weight="800" fill="#4285F4">G</text></svg>
+    </button>
+    <button id="export-msword" class="cloud" data-i18n-title="exportMswordTitle" title="Open in Word Online">
+      <svg data-icon="yaiol:cloud-word" viewBox="0 -960 960 960"><path fill="#9ca3af" d="M251-160q-88 0-149.5-61.5T40-371q0-78 50-137t127-71q20-97 94-158.5T482-799q112 0 189 81.5T748-522v24q72-2 122 46.5T920-329q0 69-50 119t-119 50H251Zm0-60h500q45 0 77-32t32-77q0-45-32-77t-77-32h-63v-84q0-91-61-154t-149-63q-88 0-149.5 63T267-522h-19q-62 0-105 43.5T100-371q0 63 44 107t107 44Zm229-260Z"/><text x="480" y="-265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="720" font-weight="800" fill="#2B579A">W</text></svg>
+    </button>
+    <button id="export-onenote" class="cloud" data-i18n-title="exportOnenoteTitle" title="Send to OneNote">
+      <svg data-icon="yaiol:cloud-onenote" viewBox="0 -960 960 960"><path fill="#9ca3af" d="M251-160q-88 0-149.5-61.5T40-371q0-78 50-137t127-71q20-97 94-158.5T482-799q112 0 189 81.5T748-522v24q72-2 122 46.5T920-329q0 69-50 119t-119 50H251Zm0-60h500q45 0 77-32t32-77q0-45-32-77t-77-32h-63v-84q0-91-61-154t-149-63q-88 0-149.5 63T267-522h-19q-62 0-105 43.5T100-371q0 63 44 107t107 44Zm229-260Z"/><text x="480" y="-265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="720" font-weight="800" fill="#80397B">O</text></svg>
+    </button>
+    <button id="export-notion" class="cloud" data-i18n-title="exportNotionTitle" title="Export to Notion">
+      <svg data-icon="yaiol:cloud-notion" viewBox="0 -960 960 960"><path fill="#9ca3af" d="M251-160q-88 0-149.5-61.5T40-371q0-78 50-137t127-71q20-97 94-158.5T482-799q112 0 189 81.5T748-522v24q72-2 122 46.5T920-329q0 69-50 119t-119 50H251Zm0-60h500q45 0 77-32t32-77q0-45-32-77t-77-32h-63v-84q0-91-61-154t-149-63q-88 0-149.5 63T267-522h-19q-62 0-105 43.5T100-371q0 63 44 107t107 44Zm229-260Z"/><text x="480" y="-265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="720" font-weight="800" fill="#000000">N</text></svg>
+    </button>
+    <button id="export-nextcloud" class="cloud" data-i18n-title="exportNextcloudTitle" title="Save to Nextcloud">
+      <svg data-icon="brand:nextcloud" viewBox="15 10 120 120"><path fill="#0082C9" d="M 75.091,47.685 C 62.653,47.685 52.11,56.118 48.843,67.542 46.003,61.482 39.849,57.237 32.761,57.237 23.013,57.237 15,65.25 15,74.998 c 0,9.748 8.013,17.765 17.761,17.765 7.088,0 13.242,-4.248 16.082,-10.309 3.268,11.426 13.81,19.861 26.248,19.861 12.346,0 22.835,-8.308 26.186,-19.605 2.892,5.924 8.97,10.053 15.958,10.053 9.748,0 17.765,-8.017 17.765,-17.765 0,-9.748 -8.017,-17.761 -17.765,-17.761 -6.988,0 -13.065,4.127 -15.958,10.05 C 97.925,55.991 87.437,47.686 75.091,47.686 v 0 z m 0,10.425 c 9.39,0 16.89,7.497 16.89,16.887 0,9.39 -7.501,16.89 -16.89,16.89 -9.389,0 -16.887,-7.501 -16.887,-16.89 0,-9.389 7.497,-16.887 16.887,-16.887 z m -42.329,9.553 c 4.114,0 7.338,3.221 7.338,7.335 0,4.114 -3.225,7.338 -7.338,7.338 -4.113,0 -7.335,-3.225 -7.335,-7.338 0,-4.113 3.221,-7.335 7.335,-7.335 z m 84.472,0 c 4.114,0 7.338,3.221 7.338,7.335 0,4.114 -3.225,7.338 -7.338,7.338 -4.113,0 -7.335,-3.225 -7.335,-7.338 0,-4.113 3.221,-7.335 7.335,-7.335 z"/></svg>
+    </button>
+  </div>
+  <div class="page-row">
+    <button id="open-media" type="button" class="custom-export-btn" data-i18n-title="popupMediaSub" title="Browse and download the pictures in this chat.">
+      <svg data-icon="lucide:image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      <span class="ce-title" data-i18n="popupMediaTitle">Media</span>
+    </button>
+    <button id="open-select" type="button" class="custom-export-btn" data-i18n-title="popupCustomExportSub" title="Select the messages you want to export.">
+      <svg data-icon="yaiol:custom-export" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true"><path d="m162-121-42-42 326-326-185-46 192-120-16-225 173 145 209-84-85 209 146 173-226-17-119 192-46-185-327 326Zm25-544-67-67 68-68 67 67-68 68Zm372 251 63-102 120 9-78-92 45-111-111 45-92-78 9 120-102 64 117 29 29 116Zm174 294-67-68 67-67 67 68-67 67ZM578-579Z"/></svg>
+      <span class="ce-title" data-i18n="popupCustomExportTitle">Custom Export</span>
+    </button>
+  </div>
+  <div id="status" class="ya-status"></div>
+  </div><!-- /#export-view -->
+  <div id="launcher-view">
+    <div id="sites" class="sites"></div>
+    <div id="pager" class="pager" hidden>
+      <button id="page-prev" type="button" class="ya-footer-btn" data-i18n-title="popupPagePrevTitle" title="Previous page">
+        <svg data-icon="lucide:chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <span id="page-indicator"></span>
+      <button id="page-next" type="button" class="ya-footer-btn" data-i18n-title="popupPageNextTitle" title="Next page">
+        <svg data-icon="lucide:chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+    <div class="hint" data-i18n="dragHint">Drag to reorder</div>
+  </div><!-- /#launcher-view -->
+  </div><!-- /#views -->
+  <footer class="ya-app-footer">
+    <div class="ya-footer-icons">
+      <a class="ya-footer-btn" href="https://github.com/yaiol/ai-chat-clipper" target="_blank" rel="noopener noreferrer" title="Source on GitHub">
+        <svg data-icon="yaiol:github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+      <a class="ya-footer-btn" id="help-link" href="https://apps.yaiol.com/en/p/ai-chat-clipper/help/" target="_blank" rel="noopener noreferrer" title="Help">
+        <svg data-icon="lucide:circle-question-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+      </a>
+      <button id="open-settings" class="ya-footer-btn" data-i18n-title="settingsButtonTitle" title="Settings">
+        <svg data-icon="lucide:settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
+    </div>
+  </footer>
+  <script src="lib/storage.js"></script>
+  <script src="lib/debug-capture.js"></script>
+  <script src="lib/download.js"></script>
+  <script src="lib/i18n.js"></script>
+  <script src="lib/sites.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

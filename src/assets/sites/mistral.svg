@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- created by svgstack.com | Attribution is required. -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   fill="none"
+   version="1.1"
+   id="svg10"
+   sodipodi:docname="mistral.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="6.5078125"
+     inkscape:cx="63.923169"
+     inkscape:cy="64"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg10" />
+  <g
+     clip-path="url(#clip0_10019_799)"
+     id="g10"
+     transform="matrix(1.0326911,0,0,1.0326911,-2.0653823,-2.0922323)">
+    <path
+       d="M 125.948,90.4036 H 72.8252 v 17.5974 h 53.1228 z"
+       fill="#e10500"
+       id="path1" />
+    <path
+       d="M 55.1228,90.4036 H 2 v 17.5974 h 53.1228 z"
+       fill="#e10500"
+       id="path2" />
+    <path
+       d="M 108.232,72.7952 H 90.5284 V 90.393 h 17.7036 z"
+       fill="#fa500f"
+       id="path3" />
+    <path
+       d="M 72.8197,72.7952 H 55.1158 V 90.393 h 17.7039 z"
+       fill="#fa500f"
+       id="path4" />
+    <path
+       d="M 37.4072,72.7952 H 19.7034 V 90.393 h 17.7038 z"
+       fill="#fa500f"
+       id="path5" />
+    <path
+       d="M 108.232,20 H 90.5284 v 17.5978 h 17.7036 z"
+       fill="#ffd800"
+       id="path6" />
+    <path
+       d="M 108.233,37.5964 H 72.8252 v 17.5978 h 35.4078 z"
+       fill="#ffaf00"
+       id="path7" />
+    <path
+       d="M 37.4072,20 H 19.7034 v 17.5978 h 17.7038 z"
+       fill="#ffd800"
+       id="path8" />
+    <path
+       d="m 55.1114,37.5964 h -35.408 v 17.5978 h 35.408 z"
+       fill="#ffaf00"
+       id="path9" />
+    <path
+       d="M 108.234,55.1931 H 19.7034 v 17.5976 h 88.5306 z"
+       fill="#ff8205"
+       id="path10" />
+  </g>
+  <defs
+     id="defs10">
+    <clipPath
+       id="clip0_10019_799">
+      <rect
+         width="124"
+         height="88"
+         fill="white"
+         transform="translate(2 20)"
+         id="rect10" />
+    </clipPath>
+  </defs>
+</svg>

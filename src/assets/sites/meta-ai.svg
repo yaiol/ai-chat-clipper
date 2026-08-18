@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="1em"
+   style="flex:none;line-height:1"
+   viewBox="0 0 24 24"
+   width="1em"
+   version="1.1"
+   id="svg28"
+   sodipodi:docname="meta-ai.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview28"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="34.708333"
+     inkscape:cx="11.985594"
+     inkscape:cy="4.364946"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg28" />
+  <title
+     id="title1">MetaAI</title>
+  <g
+     id="g28"
+     transform="matrix(1.0477169,0,0,1.0477169,-0.5418735,-0.22876034)">
+    <path
+       d="m 10.547,0.232 c 0.776,-0.086 1.543,0.244 2.152,0.712 0.784,0.598 1.375,1.434 1.757,2.347 0.19,0.444 0.3,0.92 0.345,1.402 0.01,0.384 0.024,0.781 -0.108,1.148 -0.126,0.406 -0.362,0.795 -0.728,1.017 -0.352,0.236 -0.786,0.3 -1.199,0.288 C 11.926,7.073 11.153,6.626 10.554,6.04 10.404,5.94 10.318,5.777 10.186,5.66 9.385,4.69 8.792,3.457 8.862,2.164 8.91,1.466 9.242,0.724 9.892,0.414 10.098,0.314 10.32,0.25 10.547,0.232 Z"
+       fill="url(#lobe-icons-meta-ai-0-_R_0_)"
+       id="path1"
+       style="fill:url(#lobe-icons-meta-ai-0-_R_0_)" />
+    <path
+       d="m 18.595,3.077 c 0.52,-0.045 1.032,0.186 1.4,0.551 0.402,0.434 0.625,1.006 0.736,1.584 0.096,0.605 0.09,1.233 -0.048,1.83 a 5.97,5.97 0 0 1 -0.907,2.19 c -0.198,0.25 -0.382,0.519 -0.633,0.719 -0.493,0.45 -1.181,0.725 -1.848,0.598 C 16.875,10.469 16.476,10.243 16.21,9.903 15.696,9.312 15.523,8.5 15.496,7.733 a 6.11,6.11 0 0 1 1.03,-3.285 c 0.237,-0.314 0.49,-0.62 0.797,-0.867 0.375,-0.27 0.805,-0.486 1.272,-0.504 z"
+       fill="url(#lobe-icons-meta-ai-1-_R_0_)"
+       id="path2"
+       style="fill:url(#lobe-icons-meta-ai-1-_R_0_)" />
+    <path
+       d="M 5.038,4.172 C 5.656,4.127 6.276,4.239 6.87,4.407 7.741,4.687 8.611,5.187 9.052,6.031 9.229,6.414 9.308,6.857 9.204,7.273 9.107,7.715 8.829,8.089 8.494,8.378 7.77,8.968 6.83,9.218 5.917,9.265 A 5.356,5.356 0 0 1 3.036,8.59 C 2.646,8.342 2.271,8.051 2.011,7.66 A 1.9,1.9 0 0 1 1.684,6.377 C 1.751,5.87 2.041,5.409 2.425,5.088 3.148,4.468 4.109,4.215 5.038,4.172 Z"
+       fill="url(#lobe-icons-meta-ai-2-_R_0_)"
+       id="path3"
+       style="fill:url(#lobe-icons-meta-ai-2-_R_0_)" />
+    <path
+       d="m 4.87,10.369 c 0.69,-0.06 1.465,0.223 1.811,0.866 0.213,0.349 0.278,0.763 0.29,1.166 0.006,0.528 -0.136,1.046 -0.34,1.529 -0.34,0.793 -0.893,1.478 -1.538,2.036 -0.64,0.538 -1.42,0.951 -2.26,1.015 A 2.031,2.031 0 0 1 1.366,16.583 c -0.353,-0.281 -0.578,-0.707 -0.662,-1.15 -0.156,-0.8 0.077,-1.62 0.445,-2.327 0.196,-0.377 0.444,-0.724 0.72,-1.044 0.767,-0.886 1.814,-1.608 3.001,-1.693 z"
+       fill="url(#lobe-icons-meta-ai-3-_R_0_)"
+       id="path4"
+       style="fill:url(#lobe-icons-meta-ai-3-_R_0_)" />
+    <path
+       d="m 20.391,11.05 c 0.881,-0.087 1.872,0.116 2.477,0.822 0.473,0.58 0.534,1.425 0.239,2.102 -0.118,0.317 -0.32,0.59 -0.527,0.852 -0.877,0.962 -2.11,1.553 -3.379,1.744 -0.818,0.123 -1.723,0.036 -2.406,-0.477 -0.2,-0.161 -0.386,-0.346 -0.514,-0.573 -0.277,-0.436 -0.321,-0.994 -0.216,-1.492 0.224,-0.904 0.92,-1.594 1.676,-2.073 a 5.874,5.874 0 0 1 2.65,-0.905 z"
+       fill="url(#lobe-icons-meta-ai-4-_R_0_)"
+       id="path5"
+       style="fill:url(#lobe-icons-meta-ai-4-_R_0_)" />
+    <path
+       d="m 7.553,15.523 c 0.381,-0.052 0.775,0.004 1.118,0.184 0.344,0.154 0.613,0.427 0.866,0.702 0.866,1.097 1.267,2.549 1.146,3.944 a 4.476,4.476 0 0 1 -0.497,1.61 c -0.273,0.469 -0.663,0.91 -1.187,1.08 -0.35,0.103 -0.731,0.118 -1.077,-0.005 A 2.53,2.53 0 0 1 6.963,22.426 C 6.165,21.567 5.727,20.406 5.62,19.241 5.565,18.595 5.614,17.931 5.83,17.318 c 0.146,-0.471 0.384,-0.92 0.738,-1.265 0.261,-0.277 0.62,-0.452 0.985,-0.53 z"
+       fill="url(#lobe-icons-meta-ai-5-_R_0_)"
+       id="path6"
+       style="fill:url(#lobe-icons-meta-ai-5-_R_0_)" />
+    <path
+       d="m 13.637,16.5 a 4.237,4.237 0 0 1 1.82,0.219 c 0.795,0.286 1.542,0.724 2.148,1.323 0.535,0.504 0.963,1.162 1.099,1.899 0.055,0.379 0.038,0.785 -0.122,1.138 -0.19,0.465 -0.599,0.807 -1.051,0.996 -0.883,0.364 -1.887,0.253 -2.76,-0.082 a 5.568,5.568 0 0 1 -2.343,-1.685 c -0.347,-0.445 -0.616,-0.968 -0.697,-1.534 -0.042,-0.382 -0.036,-0.788 0.13,-1.142 0.194,-0.418 0.55,-0.76 0.978,-0.925 0.25,-0.119 0.525,-0.174 0.798,-0.207 z"
+       fill="url(#lobe-icons-meta-ai-6-_R_0_)"
+       id="path7"
+       style="fill:url(#lobe-icons-meta-ai-6-_R_0_)" />
+  </g>
+  <defs
+     id="defs28">
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       id="lobe-icons-meta-ai-0-_R_0_"
+       x1="9.789"
+       x2="13"
+       y1="0"
+       y2="7.5">
+      <stop
+         stop-color="#C65EFF"
+         id="stop7" />
+      <stop
+         offset=".5"
+         stop-color="#EA4FFF"
+         id="stop8" />
+      <stop
+         offset="1"
+         stop-color="#9553FF"
+         id="stop9" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       id="lobe-icons-meta-ai-1-_R_0_"
+       x1="19"
+       x2="17"
+       y1="3"
+       y2="10.5">
+      <stop
+         stop-color="#CF72FF"
+         id="stop10" />
+      <stop
+         offset=".5"
+         stop-color="#E541FF"
+         id="stop11" />
+      <stop
+         offset="1"
+         stop-color="#944DFF"
+         id="stop12" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       id="lobe-icons-meta-ai-2-_R_0_"
+       x1="9"
+       x2="2.5"
+       y1="6.5"
+       y2="8">
+      <stop
+         stop-color="#A555FF"
+         id="stop13" />
+      <stop
+         offset=".5"
+         stop-color="#DE67FF"
+         id="stop14" />
+      <stop
+         offset="1"
+         stop-color="#E581FF"
+         id="stop15" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       id="lobe-icons-meta-ai-3-_R_0_"
+       x1="1"
+       x2="6"
+       y1="12"
+       y2="16">
+      <stop
+         stop-color="#6C48FF"
+         id="stop16" />
+      <stop
+         offset=".309"
+         stop-color="#AA5AFF"
+         id="stop17" />
+      <stop
+         offset="1"
+         stop-color="#5145FF"
+         id="stop18" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       id="lobe-icons-meta-ai-4-_R_0_"
+       x1="19"
+       x2="21"
+       y1="11.5"
+       y2="16.5">
+      <stop
+         stop-color="#CA3EFF"
+         id="stop19" />
+      <stop
+         offset=".5"
+         stop-color="#AB5CFF"
+         id="stop20" />
+      <stop
+         offset="1"
+         stop-color="#5042FF"
+         id="stop21" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       id="lobe-icons-meta-ai-5-_R_0_"
+       x1="6"
+       x2="11"
+       y1="20.5"
+       y2="19">
+      <stop
+         stop-color="#5041FF"
+         id="stop22" />
+      <stop
+         offset=".26"
+         stop-color="#734FFF"
+         id="stop23" />
+      <stop
+         offset=".75"
+         stop-color="#6A4CFF"
+         id="stop24" />
+      <stop
+         offset="1"
+         stop-color="#483FFF"
+         id="stop25" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       id="lobe-icons-meta-ai-6-_R_0_"
+       x1="12"
+       x2="18.5"
+       y1="17.5"
+       y2="21.5">
+      <stop
+         stop-color="#7B51FF"
+         id="stop26" />
+      <stop
+         offset=".475"
+         stop-color="#6049FF"
+         id="stop27" />
+      <stop
+         offset="1"
+         stop-color="#8466FF"
+         id="stop28" />
+    </linearGradient>
+  </defs>
+</svg>

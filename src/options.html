@@ -1,0 +1,345 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title data-i18n="optionsTitle">Settings</title>
+  <link rel="stylesheet" href="shared/ui.css">
+  <style>
+    body {
+      font: var(--ya-font-size)/1.5 var(--ya-font); color: var(--ya-color-text);
+      max-width: 720px; margin: 32px auto; padding: 0 24px;
+    }
+    h1 { font-size: 18px; margin: 0 0 20px; }
+    h2 { font-size: var(--ya-font-size-h); font-weight: 600; color: var(--ya-color-text); margin: 0 0 14px; }
+
+    /* Layout: left nav + right page (ya-tab provides the nav button styling) */
+    .layout { display: grid; grid-template-columns: 160px 1fr; gap: 24px; align-items: start; }
+    .nav { position: sticky; top: 32px; }
+
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* Form row layout (the controls inside use ya-input / ya-select directly) */
+    .row { display: flex; align-items: center; gap: var(--ya-space-lg); margin: 0 0 14px; }
+    .row label { flex: 0 0 120px; color: var(--ya-color-text); font-weight: 500; }
+    .row input[type="checkbox"] { width: 16px; height: 16px; margin: 0; cursor: pointer; }
+    .row .ya-input, .row .ya-select { flex: 1; }
+    .row-hint { font-size: 11px; color: var(--ya-color-text-muted); margin: -8px 0 14px 132px; }
+    /* ── Live chat preview ─────────────────────────────────────────── */
+    .chat-preview {
+      margin: 18px 0 18px; padding: 16px 18px;
+      background: #fff; border: 1px solid #e3e6ea; border-radius: 8px;
+      color: #222; line-height: 1.55;
+      box-shadow: 0 1px 2px rgba(0,0,0,.03);
+    }
+    .chat-preview .cp-title {
+      font-family: var(--cp-title-font); font-size: 1.6em; font-weight: 700;
+      margin: 0 0 .2em;
+    }
+    .chat-preview .cp-source {
+      color: #6a7280; font-size: .9em; margin: 0 0 1.2em;
+    }
+    .chat-preview .cp-source a { color: #0a6bdc; text-decoration: none; }
+    .chat-preview .cp-msg { margin: 1em 0 1.2em; }
+    .chat-preview .cp-head {
+      font-family: var(--cp-title-font); font-size: 1.15em; font-weight: 600;
+      margin: 0 0 .3em; padding: .35em .7em;
+      border-inline-start: 4px solid #d0d7de; border-radius: 4px;
+      display: flex; align-items: baseline; justify-content: space-between; gap: .8em;
+    }
+    .chat-preview .cp-head.user { background: #eef6ff; border-inline-start-color: #4a9eff; }
+    .chat-preview .cp-head.assistant { background: #f0f9f0; border-inline-start-color: #5aaa5a; }
+    .chat-preview .cp-time { font-family: var(--cp-text-font); font-size: .8em; font-weight: normal; color: #6a7280; }
+    .chat-preview .cp-body { padding: 0 .2em; }
+    .chat-preview .cp-body p { margin: .5em 0; }
+    .chat-preview .cp-thinking {
+      margin: .6em 0; padding: .3em .9em;
+      border-inline-start: 3px solid #ccc; background: #fafafa;
+      color: #555; font-size: .95em;
+    }
+    .chat-preview[data-size="small"]  { font-size: 13px; }
+    .chat-preview[data-size="medium"] { font-size: 15px; }
+    .chat-preview[data-size="large"]  { font-size: 17px; }
+    .chat-preview .cp-body, .chat-preview .cp-source { font-family: var(--cp-text-font); }
+    code.ph { font-family: ui-monospace, "Consolas", monospace; background: #f4f6f8; padding: 1px 5px; border-radius: 3px; }
+    .notice { color: #0a7a2f; font-size: 12px; min-height: 1.4em; margin-top: 12px; }
+    .hint { font-size: 12px; color: #666; margin: 0 0 12px; }
+
+    /* ── AI Sites page ─────────────────────────────────────────────── */
+    .site-actions { display: flex; gap: var(--ya-space-md); margin-bottom: 12px; }
+
+    .sites-check { display: flex; flex-direction: column; gap: 6px; }
+    .sites-check label {
+      display: flex; align-items: center; gap: 10px;
+      padding: 8px 10px; border: 1px solid #eee; border-radius: 6px;
+      cursor: grab; user-select: none; background: #fff;
+      transition: background .12s ease, border-color .12s ease, box-shadow .12s ease;
+    }
+    .sites-check label:hover { background: #f0f6ff; border-color: #7eb4ff; }
+    .sites-check label:active { cursor: grabbing; }
+    .sites-check label.dragging { opacity: .4; }
+    .sites-check label.drag-over { border-color: #4a9eff; box-shadow: inset 0 0 0 2px #4a9eff; }
+    .sites-check input { margin: 0; cursor: pointer; }
+    .sites-check img { width: 18px; height: 18px; object-fit: contain; flex-shrink: 0; }
+    .sites-check .txt { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .sites-check .grip {
+      color: #aaa; font-size: 14px; line-height: 1; letter-spacing: -2px;
+      flex-shrink: 0; user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <h1 data-i18n="optionsHeading">Settings</h1>
+
+  <div class="layout">
+    <nav class="nav ya-tab-list" role="tablist">
+      <button id="nav-general" type="button" class="ya-tab" data-page="general" role="tab"
+              data-i18n="optionsTabGeneral">General</button>
+      <button id="nav-style" type="button" class="ya-tab" data-page="style" role="tab"
+              data-i18n="optionsTabStyle">Style</button>
+      <button id="nav-sites" type="button" class="ya-tab" data-page="sites" role="tab"
+              data-i18n="optionsTabSites">AI Sites</button>
+      <button id="nav-microsoft" type="button" class="ya-tab" data-page="microsoft" role="tab"
+              data-i18n="optionsTabMicrosoft">Microsoft 365</button>
+      <button id="nav-notion" type="button" class="ya-tab" data-page="notion" role="tab"
+              data-i18n="optionsTabNotion">Notion</button>
+      <button id="nav-nextcloud" type="button" class="ya-tab" data-page="nextcloud" role="tab"
+              data-i18n="optionsTabNextcloud">Nextcloud</button>
+    </nav>
+
+    <div>
+      <!-- General page -->
+      <section id="page-general" class="page" role="tabpanel" aria-labelledby="nav-general">
+        <div class="row">
+          <label for="lang" data-i18n="optionsLanguageLabel">Language</label>
+          <select id="lang" class="ya-select"></select>
+        </div>
+        <div class="row">
+          <label for="filename-pattern" data-i18n="optionsFilenamePatternLabel">Filename pattern</label>
+          <input id="filename-pattern" type="text" class="ya-input" placeholder="{title}">
+        </div>
+        <p class="row-hint">
+          <span data-i18n="optionsFilenamePatternHint">Available fields:</span>
+          <code class="ph">{title}</code>
+          <code class="ph">{site}</code>
+          <code class="ph">{date}</code>
+          <code class="ph">{year}</code>
+          <code class="ph">{month}</code>
+          <code class="ph">{day}</code>
+          <code class="ph">{time}</code>
+          <code class="ph">{hour}</code>
+          <code class="ph">{min}</code>
+          <code class="ph">{datetime}</code>
+        </p>
+        <h2 style="margin-top: 22px;" data-i18n="optionsInlineButtonsHeading">In-chat buttons</h2>
+        <div class="row">
+          <label for="inline-export-toggle" data-i18n="optionsInlineExportMenuLabel">Export file menu</label>
+          <input id="inline-export-toggle" type="checkbox">
+        </div>
+        <div class="row">
+          <label for="inline-copy-md-toggle" data-i18n="optionsInlineCopyMdLabel">Copy as Markdown button</label>
+          <input id="inline-copy-md-toggle" type="checkbox">
+        </div>
+        <div class="row">
+          <label for="inline-copy-html-toggle" data-i18n="optionsInlineCopyHtmlLabel">Copy as HTML button</label>
+          <input id="inline-copy-html-toggle" type="checkbox">
+        </div>
+        <h2 style="margin-top: 22px;" data-i18n="optionsAdvancedHeading">Advanced</h2>
+        <div class="row">
+          <label for="dev-mode-toggle" data-i18n="optionsDevModeLabel">Developer mode</label>
+          <input id="dev-mode-toggle" type="checkbox">
+        </div>
+      </section>
+
+      <!-- Style page - visual rendering of exported HTML/PDF -->
+      <section id="page-style" class="page" role="tabpanel" aria-labelledby="nav-style">
+        <div class="row">
+          <label for="title-font" data-i18n="optionsHtmlTitleFontLabel">Title font</label>
+          <select id="title-font" class="ya-select"></select>
+        </div>
+        <div class="row">
+          <label for="text-font" data-i18n="optionsHtmlTextFontLabel">Text font</label>
+          <select id="text-font" class="ya-select"></select>
+        </div>
+        <div class="row">
+          <label for="size-select-opt" data-i18n="optionsHtmlSizeLabel">Body text size</label>
+          <select id="size-select-opt" class="ya-select"></select>
+        </div>
+        <div class="row">
+          <label for="show-time-toggle" data-i18n="optionsHtmlShowTimeLabel">Show chat time</label>
+          <input id="show-time-toggle" type="checkbox">
+        </div>
+        <div class="row">
+          <label for="show-source-toggle" data-i18n="optionsHtmlShowSourceLabel">Show source link</label>
+          <input id="show-source-toggle" type="checkbox">
+        </div>
+        <div class="row">
+          <label for="show-thinking-toggle" data-i18n="optionsHtmlShowThinkingLabel">Show thinking</label>
+          <input id="show-thinking-toggle" type="checkbox">
+        </div>
+        <div class="row">
+          <label for="math-toggle" data-i18n="optionsHtmlMathLabel">Math rendering (KaTeX)</label>
+          <input id="math-toggle" type="checkbox">
+        </div>
+        <div id="chat-preview" class="chat-preview" data-size="medium">
+          <h1 class="cp-title">Sample chat preview</h1>
+          <p class="cp-source">Source: <a href="#">claude</a></p>
+          <div class="cp-msg">
+            <div class="cp-head user">
+              <span>User</span>
+              <span class="cp-time">2026-05-13, 14:32</span>
+            </div>
+            <div class="cp-body">
+              <p>Can you give me a quick overview of how this preview works?</p>
+            </div>
+          </div>
+          <div class="cp-msg">
+            <div class="cp-head assistant">
+              <span>Assistant</span>
+              <span class="cp-time">2026-05-13, 14:32</span>
+            </div>
+            <div class="cp-body">
+              <blockquote class="cp-thinking"><strong>Thinking</strong><br>The user wants a short explanation - keep it friendly and concrete.</blockquote>
+              <p>Sure! This box mirrors the look of an exported chat. Adjust the fonts, size, and toggles above to see them applied here in real time.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Notion page -->
+      <section id="page-notion" class="page" role="tabpanel" aria-labelledby="nav-notion">
+        <p class="hint" data-i18n="optionsNotionIntro">
+          Connect your Notion workspace to export chats as native Notion pages.
+          the extension can only see and modify pages you explicitly grant access to.
+        </p>
+
+        <div id="notion-disconnected">
+          <button id="notion-connect-btn" type="button" class="ya-btn ya-btn-primary"
+                  data-i18n="optionsNotionConnect">Connect Notion</button>
+        </div>
+
+        <div id="notion-connected" style="display: none;">
+          <div class="row">
+            <label data-i18n="optionsNotionWorkspaceLabel">Workspace</label>
+            <span id="notion-workspace-name" style="flex: 1; color: var(--ya-color-text);"></span>
+            <button id="notion-disconnect-btn" type="button" class="ya-btn ya-btn-secondary"
+                    data-i18n="optionsNotionDisconnect">Disconnect</button>
+          </div>
+          <div class="row">
+            <label for="notion-parent" data-i18n="optionsNotionParentLabel">Parent page</label>
+            <select id="notion-parent" class="ya-select"></select>
+            <button id="notion-refresh-btn" type="button" class="ya-btn ya-btn-secondary"
+                    data-i18n="optionsNotionRefresh">Refresh</button>
+          </div>
+          <p class="row-hint" data-i18n="optionsNotionParentHint">
+            New chat pages will be created as children of this page.
+            To grant access to more pages: open the page in Notion → "..." menu → Connections → the extension.
+          </p>
+        </div>
+
+        <div id="notion-status" class="notice" style="margin-top: 16px;"></div>
+      </section>
+
+      <!-- Microsoft 365 page -->
+      <section id="page-microsoft" class="page" role="tabpanel" aria-labelledby="nav-microsoft">
+        <p class="hint" data-i18n="optionsMicrosoftIntro">
+          Connect your Microsoft account to export chats as .docx files in
+          Word Online. Files are stored in OneDrive under the the extension app folder.
+        </p>
+
+        <div id="ms-disconnected">
+          <button id="ms-connect-btn" type="button" class="ya-btn ya-btn-primary"
+                  data-i18n="optionsMicrosoftConnect">Connect Microsoft 365</button>
+        </div>
+
+        <div id="ms-connected" style="display: none;">
+          <div class="row">
+            <label data-i18n="optionsMicrosoftAccountLabel">Account</label>
+            <span id="ms-account-name" style="flex: 1; color: var(--ya-color-text);"></span>
+            <button id="ms-disconnect-btn" type="button" class="ya-btn ya-btn-secondary"
+                    data-i18n="optionsMicrosoftDisconnect">Disconnect</button>
+          </div>
+          <p class="row-hint" data-i18n="optionsMicrosoftHint">
+            Word Online exports appear in OneDrive under Apps → the extension.
+            OneNote exports go to the default notebook's Quick Notes section.
+          </p>
+        </div>
+
+        <div id="ms-status" class="notice" style="margin-top: 16px;"></div>
+      </section>
+
+      <!-- Nextcloud page -->
+      <section id="page-nextcloud" class="page" role="tabpanel" aria-labelledby="nav-nextcloud">
+        <p class="hint" data-i18n="optionsNextcloudIntro">
+          Save chats to your own Nextcloud server via WebDAV. the extension uses an
+          app password (Nextcloud → Settings → Security → "Create new app
+          password") - your real account password never leaves your browser.
+        </p>
+
+        <div class="row">
+          <label for="nc-server" data-i18n="optionsNextcloudServerLabel">Server URL</label>
+          <input id="nc-server" type="text" class="ya-input" placeholder="https://cloud.example.com">
+        </div>
+        <div class="row">
+          <label for="nc-user" data-i18n="optionsNextcloudUserLabel">Username</label>
+          <input id="nc-user" type="text" class="ya-input">
+        </div>
+        <div class="row">
+          <label for="nc-pass" data-i18n="optionsNextcloudPasswordLabel">App password</label>
+          <input id="nc-pass" type="password" class="ya-input">
+        </div>
+        <div class="row">
+          <label for="nc-folder" data-i18n="optionsNextcloudFolderLabel">Folder</label>
+          <input id="nc-folder" type="text" class="ya-input" placeholder="/">
+        </div>
+        <div class="row">
+          <label for="nc-format" data-i18n="optionsNextcloudFormatLabel">Default format</label>
+          <select id="nc-format" class="ya-select">
+            <option value="markdown">Markdown (.md)</option>
+            <option value="html">HTML (.html)</option>
+            <option value="text">Plain text (.txt)</option>
+            <option value="docx">Word (.docx)</option>
+            <option value="odt">OpenDocument (.odt)</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label></label>
+          <button id="nc-test-btn" type="button" class="ya-btn ya-btn-secondary"
+                  data-i18n="optionsNextcloudTest">Test connection</button>
+          <button id="nc-save-btn" type="button" class="ya-btn ya-btn-primary"
+                  data-i18n="optionsNextcloudSave">Save</button>
+          <button id="nc-clear-btn" type="button" class="ya-link"
+                  style="margin-inline-start: auto; color: var(--ya-color-danger);"
+                  data-i18n="optionsNextcloudClear">Clear</button>
+        </div>
+
+        <div id="nc-status" class="notice" style="margin-top: 12px;"></div>
+      </section>
+
+      <!-- AI Sites page -->
+      <section id="page-sites" class="page" role="tabpanel" aria-labelledby="nav-sites">
+        <p class="hint" data-i18n="optionsVisibleSitesHint">Drag to reorder. Uncheck to hide a tile from the popup.</p>
+        <div class="site-actions">
+          <button id="select-all" type="button" class="ya-btn ya-btn-secondary" data-i18n="optionsSelectAll">Select all</button>
+          <button id="select-none" type="button" class="ya-btn ya-btn-secondary" data-i18n="optionsSelectNone">Select none</button>
+        </div>
+        <div id="sites-check" class="sites-check"></div>
+      </section>
+
+      <div id="notice" class="notice"></div>
+    </div>
+  </div>
+
+  <script src="lib/storage.js"></script>
+  <script src="lib/debug-capture.js"></script>
+  <script src="lib/download.js"></script>
+  <script src="lib/i18n.js"></script>
+  <script src="lib/fonts.js"></script>
+  <script src="lib/sites.js"></script>
+  <script src="lib/notion-auth.js"></script>
+  <script src="lib/microsoft-auth.js"></script>
+  <script src="lib/nextcloud-auth.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

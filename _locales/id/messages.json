@@ -1,0 +1,538 @@
+{
+  "extDescription": {
+    "message": "Ekspor obrolan AI dari ChatGPT, Gemini, Claude. 32 situs AI, 9 format, 5 tujuan cloud.",
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+  },
+  "exportMarkdownTitle": {
+    "message": "Ekspor sebagai Markdown (.md)",
+    "description": "Tooltip on the Markdown export button."
+  },
+  "exportHtmlTitle": {
+    "message": "Ekspor sebagai HTML (.html)",
+    "description": "Tooltip on the HTML export button."
+  },
+  "exportTxtTitle": {
+    "message": "Ekspor sebagai teks biasa (.txt)",
+    "description": "Tooltip on the plain-text export button."
+  },
+  "exportDocxTitle": {
+    "message": "Ekspor sebagai Word (.docx)",
+    "description": "Tooltip on the Word export button."
+  },
+  "exportOdtTitle": {
+    "message": "Ekspor sebagai OpenDocument (.odt)",
+    "description": "Tooltip on the OpenDocument export button."
+  },
+  "exportPdfTitle": {
+    "message": "Ekspor sebagai PDF (via dialog cetak)",
+    "description": "Tooltip on the PDF export button."
+  },
+  "exportImageTitle": {
+    "message": "Ekspor sebagai gambar PNG",
+    "description": "Tooltip on the Image export button - renders the conversation to a single tall PNG file."
+  },
+  "exportGdocTitle": {
+    "message": "Buka di Google Docs",
+    "description": "Tooltip on the Google Docs export button - uploads the chat to the user's Google Drive as a native Google Doc."
+  },
+  "exportNotionTitle": {
+    "message": "Ekspor ke Notion",
+    "description": "Tooltip on the Notion export button - uploads the chat to the user's Notion workspace as a native Notion page."
+  },
+  "exportMswordTitle": {
+    "message": "Buka di Word Online",
+    "description": "Tooltip on the Word Online export button - uploads the chat as a .docx to OneDrive and opens it in Word Online."
+  },
+  "exportNextcloudTitle": {
+    "message": "Simpan ke Nextcloud",
+    "description": "Tooltip on the Nextcloud export button - uploads the chat to the user's Nextcloud server via WebDAV."
+  },
+  "exportOnenoteTitle": {
+    "message": "Kirim ke OneNote",
+    "description": "Tooltip on the OneNote export button - creates a new page in the user's OneNote default notebook."
+  },
+  "settingsButtonTitle": {
+    "message": "Pengaturan",
+    "description": "Tooltip on the gear icon that opens the settings page."
+  },
+  "popupCustomExportTitle": {
+    "message": "Ekspor Kustom",
+    "description": "Title of the prominent button below the export icons in the popup. Opens the message selection page."
+  },
+  "selectPageTitle": {
+    "message": "{app} - Pilih pesan",
+    "description": "<title> of the selection page (browser tab title)."
+  },
+  "selectHeading": {
+    "message": "Pilih pesan untuk diekspor",
+    "description": "Top heading of the selection page."
+  },
+  "selectStatusCount": {
+    "message": "{n} dari {total} terpilih",
+    "description": "Status line on the selection page showing how many messages are checked."
+  },
+  "selectErrorNoSelection": {
+    "message": "Pilih setidaknya satu pesan.",
+    "description": "Error shown when the user clicks an export button with no messages selected."
+  },
+  "selectErrorNoMessages": {
+    "message": "Tidak ada pesan ditemukan dalam percakapan ini.",
+    "description": "Error shown when the selection page opens but the chat has no extractable messages."
+  },
+  "selectErrorLoadFailed": {
+    "message": "Tidak dapat membaca percakapan. Buka kembali tab obrolan dan coba lagi.",
+    "description": "Error shown when the selection page can't read the stashed conversation."
+  },
+  "selectRoleUser": {
+    "message": "Pengguna",
+    "description": "Role badge for user messages on the selection page."
+  },
+  "selectRoleAssistant": {
+    "message": "Asisten",
+    "description": "Role badge for assistant messages on the selection page."
+  },
+  "selectFontSizeLabel": {
+    "message": "Ukuran",
+    "description": "Label preceding the font-size dropdown in the selection page toolbar."
+  },
+  "selectFontSizeSmall": {
+    "message": "Kecil",
+    "description": "Smallest body-text option in the size dropdown."
+  },
+  "selectFontSizeMedium": {
+    "message": "Sedang",
+    "description": "Default body-text option in the size dropdown."
+  },
+  "selectFontSizeLarge": {
+    "message": "Besar",
+    "description": "Largest body-text option in the size dropdown."
+  },
+  "selectShowTimeLabel": {
+    "message": "Waktu",
+    "description": "Compact label next to the show-chat-time checkbox in the selection page toolbar."
+  },
+  "selectShowSourceLabel": {
+    "message": "Sumber",
+    "description": "Compact label next to the show-source checkbox in the selection page toolbar."
+  },
+  "optionsHtmlSizeLabel": {
+    "message": "Ukuran teks isi",
+    "description": "Settings → General label for the body text size dropdown (HTML / PDF exports)."
+  },
+  "optionsHtmlShowTimeLabel": {
+    "message": "Tampilkan waktu obrolan",
+    "description": "Settings → General label for the toggle that includes per-message timestamps in HTML / PDF exports."
+  },
+  "optionsHtmlShowSourceLabel": {
+    "message": "Tampilkan tautan sumber",
+    "description": "Settings → General label for the toggle that includes the \"Source: <link>\" line at the top of HTML / PDF exports."
+  },
+  "optionsHtmlShowThinkingLabel": {
+    "message": "Tampilkan pemikiran",
+    "description": "Settings → General label for the toggle that keeps the model's thinking blockquotes in HTML / PDF exports."
+  },
+  "optionsFilenamePatternLabel": {
+    "message": "Pola nama berkas",
+    "description": "Settings → General label for the export filename template input."
+  },
+  "optionsFilenamePatternHint": {
+    "message": "Bidang yang tersedia:",
+    "description": "Helper text under the filename pattern input, followed by the literal placeholder list."
+  },
+  "selectShowThinkingLabel": {
+    "message": "Pemikiran",
+    "description": "Compact label next to the show-thinking checkbox in the selection page toolbar."
+  },
+  "selectTitleFontLabel": {
+    "message": "Judul",
+    "description": "Compact label preceding the title-font dropdown in the selection page toolbar."
+  },
+  "selectTextFontLabel": {
+    "message": "Teks",
+    "description": "Compact label preceding the text-font dropdown in the selection page toolbar."
+  },
+  "dragHint": {
+    "message": "Seret untuk menyusun ulang",
+    "description": "Helper text under the AI sites grid."
+  },
+  "popupViewLauncherTitle": {
+    "message": "Buka situs AI",
+    "description": "Tooltip on the header toggle that switches the popup from the export view to the AI-site launcher grid."
+  },
+  "popupViewExportTitle": {
+    "message": "Kembali ke ekspor",
+    "description": "Tooltip on the header toggle that switches the popup from the AI-site launcher back to the export view."
+  },
+  "popupPagePrevTitle": {
+    "message": "Halaman sebelumnya",
+    "description": "Tooltip on the launcher pager button that shows the previous page of AI sites."
+  },
+  "popupPageNextTitle": {
+    "message": "Halaman berikutnya",
+    "description": "Tooltip on the launcher pager button that shows the next page of AI sites."
+  },
+  "statusExtracting": {
+    "message": "Mengekstrak…",
+    "description": "Status shown while the extension is reading the chat."
+  },
+  "statusGotMessagesSaving": {
+    "message": "Mendapatkan {count} pesan dari {site}. Menyimpan…",
+    "description": "Status shown after extraction, before the file is saved."
+  },
+  "statusGotMessagesPrinting": {
+    "message": "Mendapatkan {count} pesan dari {site}. Membuka dialog cetak…",
+    "description": "Status shown when exporting to PDF, before the print tab opens."
+  },
+  "statusOpenedPrintTab": {
+    "message": "Tab cetak dibuka - pilih \"Simpan sebagai PDF\"",
+    "description": "Status shown after the print tab is opened for PDF export."
+  },
+  "statusGotMessagesUploadingGdoc": {
+    "message": "Mendapatkan {count} pesan dari {site}. Mengunggah ke Google Docs…",
+    "description": "Status shown while the chat is being uploaded to Google Drive as a Google Doc."
+  },
+  "statusOpenedGdoc": {
+    "message": "Google Doc dibuka di tab baru.",
+    "description": "Status shown after the Google Docs upload succeeds and the new doc opens."
+  },
+  "statusGotMessagesUploadingNotion": {
+    "message": "Mendapatkan {count} pesan dari {site}. Mengunggah ke Notion…",
+    "description": "Status shown while the chat is being uploaded to Notion as a native page."
+  },
+  "statusOpenedNotion": {
+    "message": "Halaman Notion dibuka di tab baru.",
+    "description": "Status shown after the Notion upload succeeds and the new page opens."
+  },
+  "statusGotMessagesUploadingMsword": {
+    "message": "Mendapatkan {count} pesan dari {site}. Mengunggah ke Word Online…",
+    "description": "Status shown while the chat is being uploaded to OneDrive for Word Online."
+  },
+  "statusOpenedMsword": {
+    "message": "Dokumen Word Online dibuka di tab baru.",
+    "description": "Status shown after the Word Online upload succeeds and the document opens."
+  },
+  "statusGotMessagesUploadingNextcloud": {
+    "message": "Mendapatkan {count} pesan dari {site}. Mengunggah ke Nextcloud…",
+    "description": "Status shown while the chat is being uploaded to Nextcloud."
+  },
+  "statusOpenedNextcloud": {
+    "message": "Berkas Nextcloud dibuka di tab baru.",
+    "description": "Status shown after the Nextcloud upload succeeds and the file opens."
+  },
+  "statusGotMessagesUploadingOnenote": {
+    "message": "Mendapatkan {count} pesan dari {site}. Mengirim ke OneNote…",
+    "description": "Status shown while the chat is being sent to OneNote as a new page."
+  },
+  "statusOpenedOnenote": {
+    "message": "Halaman OneNote dibuka di tab baru.",
+    "description": "Status shown after the OneNote upload succeeds and the new page opens."
+  },
+  "statusSaved": {
+    "message": "Tersimpan {filename}",
+    "description": "Success message after the file is saved."
+  },
+  "errorContentScriptNotLoaded": {
+    "message": "Skrip konten tidak dimuat. Segarkan tab ini (F5) dan coba lagi.",
+    "description": "Error when the popup cannot reach the content script."
+  },
+  "errorExtractionFailed": {
+    "message": "Ekstraksi gagal. Apakah ini halaman obrolan AI yang didukung?",
+    "description": "Generic extraction failure error."
+  },
+  "errorNoActiveTab": {
+    "message": "Tidak ada tab aktif.",
+    "description": "Error when no active tab is found."
+  },
+  "errorPrintTab": {
+    "message": "Tidak dapat membuka tab cetak.",
+    "description": "Error when opening the print tab failed."
+  },
+  "errorDownloadFailed": {
+    "message": "Unduhan gagal.",
+    "description": "Error when the download cannot start."
+  },
+  "optionsTitle": {
+    "message": "{app} - Pengaturan",
+    "description": "<title> of the settings page."
+  },
+  "optionsHeading": {
+    "message": "Pengaturan",
+    "description": "Top heading of the settings page."
+  },
+  "optionsTabGeneral": {
+    "message": "Umum",
+    "description": "Sidebar nav item for the General settings page (language)."
+  },
+  "optionsTabStyle": {
+    "message": "Gaya",
+    "description": "Sidebar nav item for the Style settings page (fonts, body text size, preview)."
+  },
+  "optionsInlineButtonsHeading": {
+    "message": "Tombol dalam obrolan",
+    "description": "Sub-heading on the General settings page above the three per-message inline-button visibility toggles."
+  },
+  "optionsInlineExportMenuLabel": {
+    "message": "Menu ekspor berkas",
+    "description": "Settings checkbox label - show the per-message export-format hover menu inside the AI chat page."
+  },
+  "optionsInlineCopyMdLabel": {
+    "message": "Tombol Salin sebagai Markdown",
+    "description": "Settings checkbox label - show the per-message 'Copy as Markdown' button inside the AI chat page."
+  },
+  "optionsInlineCopyHtmlLabel": {
+    "message": "Tombol Salin sebagai HTML",
+    "description": "Settings checkbox label - show the per-message 'Copy as HTML' button inside the AI chat page."
+  },
+  "optionsTabSites": {
+    "message": "Situs AI",
+    "description": "Sidebar nav item for the AI Sites settings page (visibility, order)."
+  },
+  "optionsTabNotion": {
+    "message": "Notion",
+    "description": "Sidebar nav item for the Notion settings page (connect, parent page picker)."
+  },
+  "optionsNotionIntro": {
+    "message": "Hubungkan ruang kerja Notion Anda untuk mengekspor obrolan sebagai halaman Notion asli. {app} hanya dapat melihat dan memodifikasi halaman yang Anda berikan akses secara eksplisit.",
+    "description": "Intro paragraph at the top of the Notion settings page."
+  },
+  "optionsNotionConnect": {
+    "message": "Hubungkan Notion",
+    "description": "Button label that starts the Notion OAuth flow."
+  },
+  "optionsNotionConnecting": {
+    "message": "Menghubungkan ke Notion…",
+    "description": "Status shown while the Notion OAuth round-trip is in progress."
+  },
+  "optionsNotionDisconnect": {
+    "message": "Putuskan",
+    "description": "Button label that clears the stored Notion access token."
+  },
+  "optionsNotionWorkspaceLabel": {
+    "message": "Ruang kerja",
+    "description": "Label next to the Notion workspace name once connected."
+  },
+  "optionsNotionParentLabel": {
+    "message": "Halaman induk",
+    "description": "Label for the dropdown that picks which Notion page new exports land in."
+  },
+  "optionsNotionParentHint": {
+    "message": "Halaman obrolan baru akan dibuat sebagai turunan dari halaman ini. Untuk memberikan akses ke lebih banyak halaman: buka halaman di Notion → menu \"…\" → Koneksi → integrasi {app}.",
+    "description": "Helper text under the parent page picker, explaining how to grant access to more pages."
+  },
+  "optionsNotionRefresh": {
+    "message": "Segarkan",
+    "description": "Button that re-fetches the list of accessible Notion pages."
+  },
+  "optionsNotionLoadingPages": {
+    "message": "Memuat halaman…",
+    "description": "Placeholder option in the parent page dropdown while pages are being fetched."
+  },
+  "optionsNotionNoPages": {
+    "message": "Tidak ada halaman - bagikan setidaknya satu halaman Notion dengan integrasi {app}",
+    "description": "Placeholder option when the Notion search returned no accessible pages."
+  },
+  "optionsNotionPagesFailed": {
+    "message": "Tidak dapat memuat halaman",
+    "description": "Placeholder option when the Notion search call failed."
+  },
+  "optionsTabMicrosoft": {
+    "message": "Microsoft 365",
+    "description": "Sidebar nav item for the Microsoft 365 settings page (connect, account)."
+  },
+  "optionsMicrosoftIntro": {
+    "message": "Hubungkan akun Microsoft Anda untuk mengekspor obrolan sebagai file .docx di Word Online. File disimpan di OneDrive Anda, di folder aplikasi di bawah Aplikasi.",
+    "description": "Intro paragraph at the top of the Microsoft 365 settings page."
+  },
+  "optionsMicrosoftConnect": {
+    "message": "Hubungkan Microsoft 365",
+    "description": "Button label that starts the Microsoft OAuth flow."
+  },
+  "optionsMicrosoftConnecting": {
+    "message": "Menghubungkan ke Microsoft 365…",
+    "description": "Status shown while the Microsoft OAuth round-trip is in progress."
+  },
+  "optionsMicrosoftDisconnect": {
+    "message": "Putuskan",
+    "description": "Button label that clears the stored Microsoft tokens."
+  },
+  "optionsMicrosoftAccountLabel": {
+    "message": "Akun",
+    "description": "Label next to the signed-in Microsoft account email."
+  },
+  "optionsMicrosoftHint": {
+    "message": "File yang diekspor muncul di OneDrive di bawah Aplikasi (di folder aplikasi), dan terbuka di Word Online di tab baru.",
+    "description": "Helper text under the Microsoft 365 connection panel."
+  },
+  "optionsTabNextcloud": {
+    "message": "Nextcloud",
+    "description": "Sidebar nav item for the Nextcloud settings page."
+  },
+  "optionsNextcloudIntro": {
+    "message": "Simpan obrolan ke server Nextcloud Anda sendiri melalui WebDAV. {app} menggunakan kata sandi aplikasi (Nextcloud → Pengaturan → Keamanan → “Buat kata sandi aplikasi baru”) – kata sandi akun asli Anda tidak pernah meninggalkan browser Anda.",
+    "description": "Intro paragraph at the top of the Nextcloud settings page."
+  },
+  "optionsNextcloudServerLabel": {
+    "message": "URL Server",
+    "description": "Label for the Nextcloud server URL input."
+  },
+  "optionsNextcloudUserLabel": {
+    "message": "Nama pengguna",
+    "description": "Label for the Nextcloud username input."
+  },
+  "optionsNextcloudPasswordLabel": {
+    "message": "Kata sandi aplikasi",
+    "description": "Label for the Nextcloud app-password input."
+  },
+  "optionsNextcloudFolderLabel": {
+    "message": "Folder",
+    "description": "Label for the Nextcloud target folder input."
+  },
+  "optionsNextcloudFormatLabel": {
+    "message": "Format bawaan",
+    "description": "Label for the dropdown that picks which file format gets uploaded to Nextcloud."
+  },
+  "optionsNextcloudTest": {
+    "message": "Uji koneksi",
+    "description": "Button label that probes the Nextcloud credentials with a PROPFIND request."
+  },
+  "optionsNextcloudSave": {
+    "message": "Simpan",
+    "description": "Button label that persists the Nextcloud credentials."
+  },
+  "optionsNextcloudClear": {
+    "message": "Bersihkan",
+    "description": "Button label that wipes the stored Nextcloud credentials."
+  },
+  "optionsNextcloudTesting": {
+    "message": "Menguji koneksi…",
+    "description": "Status shown while the extension is probing the Nextcloud server with a PROPFIND."
+  },
+  "optionsNextcloudTestOk": {
+    "message": "Koneksi berhasil.",
+    "description": "Status shown when the Nextcloud PROPFIND probe succeeds."
+  },
+  "optionsNextcloudFillFirst": {
+    "message": "Isi URL server, nama pengguna, dan kata sandi aplikasi terlebih dahulu.",
+    "description": "Error shown when the user clicks Test or Save with empty fields."
+  },
+  "optionsNextcloudCleared": {
+    "message": "Kredensial Nextcloud dibersihkan.",
+    "description": "Status shown after the user clicks Clear."
+  },
+  "optionsLanguageLabel": {
+    "message": "Bahasa",
+    "description": "Label for the language dropdown."
+  },
+  "optionsLanguageAuto": {
+    "message": "Gunakan bahasa peramban",
+    "description": "Default option in the language dropdown - picks the browser UI language."
+  },
+  "optionsHtmlTitleFontLabel": {
+    "message": "Font judul",
+    "description": "Label for the dropdown that picks the heading font used in HTML / PDF exports."
+  },
+  "optionsHtmlTextFontLabel": {
+    "message": "Font teks",
+    "description": "Label for the dropdown that picks the body font used in HTML / PDF exports."
+  },
+  "optionsFontSystem": {
+    "message": "Sistem (bawaan)",
+    "description": "First option in both font dropdowns - the OS default font, no Google Fonts fetch."
+  },
+  "optionsHtmlMathLabel": {
+    "message": "Render matematika (KaTeX)",
+    "description": "Label for the toggle that enables math rendering in HTML / PDF exports via the KaTeX library."
+  },
+  "optionsSavedNotice": {
+    "message": "Tersimpan.",
+    "description": "Notice shown when settings are saved."
+  },
+  "optionsVisibleSitesHint": {
+    "message": "Seret untuk menyusun ulang. Hapus centang untuk menyembunyikan ubin dari pop-up.",
+    "description": "Helper text under the visible sites checklist."
+  },
+  "optionsSelectAll": {
+    "message": "Pilih semua",
+    "description": "Button that checks every site in the visibility list."
+  },
+  "optionsSelectNone": {
+    "message": "Tidak pilih apa pun",
+    "description": "Button that unchecks every site in the visibility list."
+  },
+  "exportJsonTitle": {
+    "message": "Ekspor sebagai JSON (.json)",
+    "description": "Tooltip on the JSON export button - a flat { role, content } message array for developers."
+  },
+  "exportDebugTitle": {
+    "message": "Ekspor bundel debug (.json)",
+    "description": "Tooltip on the Developer-mode Debug export button - saves a diagnostic file with the raw API capture, the extracted conversation, and the rendered outputs."
+  },
+  "optionsDevModeLabel": {
+    "message": "Mode pengembang",
+    "description": "Settings checkbox that reveals the Debug-bundle export button in the popup."
+  },
+  "optionsAdvancedHeading": {
+    "message": "Lanjutan",
+    "description": "Heading of the Advanced block at the end of Settings - General (currently holds the Developer mode toggle)."
+  },
+  "errorSiteNotSupported": {
+    "message": "Situs ini tidak didukung. Buka salah satu situs AI yang tercantum di bawah ini dan coba lagi.",
+    "description": "Popup error when the active tab's domain matches none of the supported AI sites (refreshing cannot help there)."
+  },
+  "popupMediaTitle": {
+    "message": "Media",
+    "description": "Popup button — opens the media page for the current conversation."
+  },
+  "mediaPageTitle": {
+    "message": "Gambar",
+    "description": "Browser tab title of the media page."
+  },
+  "mediaHeading": {
+    "message": "Gambar dalam percakapan ini",
+    "description": "Heading of the media page."
+  },
+  "mediaSelectAll": {
+    "message": "Semua",
+    "description": "Media page — select every image."
+  },
+  "mediaSelectNone": {
+    "message": "Tidak Ada",
+    "description": "Media page — clear the selection."
+  },
+  "mediaDownload": {
+    "message": "Unduh",
+    "description": "Media page — download the selected images."
+  },
+  "mediaMeta": {
+    "message": "{selected} dari {count} terpilih",
+    "description": "Media page counter. {selected} and {count} are numbers."
+  },
+  "mediaEmpty": {
+    "message": "Percakapan ini tidak memiliki gambar.",
+    "description": "Media page — shown when the conversation contains no pictures."
+  },
+  "mediaLoadError": {
+    "message": "Tidak dapat membaca percakapan. Tutup tab ini dan coba lagi dari pop-up.",
+    "description": "Media page — the stashed conversation was missing."
+  },
+  "mediaRoleUser": {
+    "message": "Anda",
+    "description": "Media page tile label — the image came from the user's message."
+  },
+  "mediaRoleAssistant": {
+    "message": "AI",
+    "description": "Media page tile label — the image came from the AI's reply."
+  },
+  "mediaDownloadDone": {
+    "message": "{done} diunduh, {failed} gagal",
+    "description": "Media page result. {done} and {failed} are numbers."
+  },
+  "popupCustomExportSub": {
+    "message": "Pilih pesan yang ingin Anda ekspor.",
+    "description": "Tooltip on the popup's Custom Export button."
+  },
+  "popupMediaSub": {
+    "message": "Jelajahi dan unduh gambar di obrolan ini.",
+    "description": "Tooltip on the popup's Media button."
+  }
+}

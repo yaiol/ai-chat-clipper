@@ -1,0 +1,538 @@
+{
+  "extDescription": {
+    "message": "Экспорт чатов ИИ из ChatGPT, Gemini, Claude. 32 ИИ-сайта, 9 форматов, 5 облачных хранилищ.",
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+  },
+  "exportMarkdownTitle": {
+    "message": "Экспорт в Markdown (.md)",
+    "description": "Tooltip on the Markdown export button."
+  },
+  "exportHtmlTitle": {
+    "message": "Экспорт в HTML (.html)",
+    "description": "Tooltip on the HTML export button."
+  },
+  "exportTxtTitle": {
+    "message": "Экспорт в обычный текст (.txt)",
+    "description": "Tooltip on the plain-text export button."
+  },
+  "exportDocxTitle": {
+    "message": "Экспорт в Word (.docx)",
+    "description": "Tooltip on the Word export button."
+  },
+  "exportOdtTitle": {
+    "message": "Экспорт в OpenDocument (.odt)",
+    "description": "Tooltip on the OpenDocument export button."
+  },
+  "exportPdfTitle": {
+    "message": "Экспорт в PDF (через диалог печати)",
+    "description": "Tooltip on the PDF export button."
+  },
+  "exportImageTitle": {
+    "message": "Экспортировать как изображение PNG",
+    "description": "Tooltip on the Image export button - renders the conversation to a single tall PNG file."
+  },
+  "exportGdocTitle": {
+    "message": "Открыть в Google Документах",
+    "description": "Tooltip on the Google Docs export button - uploads the chat to the user's Google Drive as a native Google Doc."
+  },
+  "exportNotionTitle": {
+    "message": "Экспорт в Notion",
+    "description": "Tooltip on the Notion export button - uploads the chat to the user's Notion workspace as a native Notion page."
+  },
+  "exportMswordTitle": {
+    "message": "Открыть в Word Online",
+    "description": "Tooltip on the Word Online export button - uploads the chat as a .docx to OneDrive and opens it in Word Online."
+  },
+  "exportNextcloudTitle": {
+    "message": "Сохранить в Nextcloud",
+    "description": "Tooltip on the Nextcloud export button - uploads the chat to the user's Nextcloud server via WebDAV."
+  },
+  "exportOnenoteTitle": {
+    "message": "Отправить в OneNote",
+    "description": "Tooltip on the OneNote export button - creates a new page in the user's OneNote default notebook."
+  },
+  "settingsButtonTitle": {
+    "message": "Настройки",
+    "description": "Tooltip on the gear icon that opens the settings page."
+  },
+  "popupCustomExportTitle": {
+    "message": "Пользовательский экспорт",
+    "description": "Title of the prominent button below the export icons in the popup. Opens the message selection page."
+  },
+  "selectPageTitle": {
+    "message": "{app} - Выбрать сообщения",
+    "description": "<title> of the selection page (browser tab title)."
+  },
+  "selectHeading": {
+    "message": "Выберите сообщения для экспорта",
+    "description": "Top heading of the selection page."
+  },
+  "selectStatusCount": {
+    "message": "Выбрано {n} из {total}",
+    "description": "Status line on the selection page showing how many messages are checked."
+  },
+  "selectErrorNoSelection": {
+    "message": "Выберите хотя бы одно сообщение.",
+    "description": "Error shown when the user clicks an export button with no messages selected."
+  },
+  "selectErrorNoMessages": {
+    "message": "В этом чате нет сообщений.",
+    "description": "Error shown when the selection page opens but the chat has no extractable messages."
+  },
+  "selectErrorLoadFailed": {
+    "message": "Не удалось прочитать чат. Снова откройте вкладку и попробуйте.",
+    "description": "Error shown when the selection page can't read the stashed conversation."
+  },
+  "selectRoleUser": {
+    "message": "Пользователь",
+    "description": "Role badge for user messages on the selection page."
+  },
+  "selectRoleAssistant": {
+    "message": "Ассистент",
+    "description": "Role badge for assistant messages on the selection page."
+  },
+  "selectFontSizeLabel": {
+    "message": "Размер",
+    "description": "Label preceding the font-size dropdown in the selection page toolbar."
+  },
+  "selectFontSizeSmall": {
+    "message": "Маленький",
+    "description": "Smallest body-text option in the size dropdown."
+  },
+  "selectFontSizeMedium": {
+    "message": "Средний",
+    "description": "Default body-text option in the size dropdown."
+  },
+  "selectFontSizeLarge": {
+    "message": "Большой",
+    "description": "Largest body-text option in the size dropdown."
+  },
+  "selectShowTimeLabel": {
+    "message": "Время",
+    "description": "Compact label next to the show-chat-time checkbox in the selection page toolbar."
+  },
+  "selectShowSourceLabel": {
+    "message": "Источник",
+    "description": "Compact label next to the show-source checkbox in the selection page toolbar."
+  },
+  "optionsHtmlSizeLabel": {
+    "message": "Размер текста",
+    "description": "Settings → General label for the body text size dropdown (HTML / PDF exports)."
+  },
+  "optionsHtmlShowTimeLabel": {
+    "message": "Показывать время сообщения",
+    "description": "Settings → General label for the toggle that includes per-message timestamps in HTML / PDF exports."
+  },
+  "optionsHtmlShowSourceLabel": {
+    "message": "Показывать ссылку на источник",
+    "description": "Settings → General label for the toggle that includes the \"Source: <link>\" line at the top of HTML / PDF exports."
+  },
+  "optionsHtmlShowThinkingLabel": {
+    "message": "Показывать рассуждение",
+    "description": "Settings → General label for the toggle that keeps the model's thinking blockquotes in HTML / PDF exports."
+  },
+  "optionsFilenamePatternLabel": {
+    "message": "Шаблон имени файла",
+    "description": "Settings → General label for the export filename template input."
+  },
+  "optionsFilenamePatternHint": {
+    "message": "Доступные поля:",
+    "description": "Helper text under the filename pattern input, followed by the literal placeholder list."
+  },
+  "selectShowThinkingLabel": {
+    "message": "Мышление",
+    "description": "Compact label next to the show-thinking checkbox in the selection page toolbar."
+  },
+  "selectTitleFontLabel": {
+    "message": "Заголовок",
+    "description": "Compact label preceding the title-font dropdown in the selection page toolbar."
+  },
+  "selectTextFontLabel": {
+    "message": "Текст",
+    "description": "Compact label preceding the text-font dropdown in the selection page toolbar."
+  },
+  "dragHint": {
+    "message": "Перетащите, чтобы изменить порядок",
+    "description": "Helper text under the AI sites grid."
+  },
+  "popupViewLauncherTitle": {
+    "message": "Перейти на сайт ИИ",
+    "description": "Tooltip on the header toggle that switches the popup from the export view to the AI-site launcher grid."
+  },
+  "popupViewExportTitle": {
+    "message": "Назад к экспорту",
+    "description": "Tooltip on the header toggle that switches the popup from the AI-site launcher back to the export view."
+  },
+  "popupPagePrevTitle": {
+    "message": "Предыдущая страница",
+    "description": "Tooltip on the launcher pager button that shows the previous page of AI sites."
+  },
+  "popupPageNextTitle": {
+    "message": "Следующая страница",
+    "description": "Tooltip on the launcher pager button that shows the next page of AI sites."
+  },
+  "statusExtracting": {
+    "message": "Извлечение…",
+    "description": "Status shown while the extension is reading the chat."
+  },
+  "statusGotMessagesSaving": {
+    "message": "Получено {count} сообщений с {site}. Сохранение…",
+    "description": "Status shown after extraction, before the file is saved."
+  },
+  "statusGotMessagesPrinting": {
+    "message": "Получено {count} сообщений с {site}. Открытие диалога печати…",
+    "description": "Status shown when exporting to PDF, before the print tab opens."
+  },
+  "statusOpenedPrintTab": {
+    "message": "Вкладка печати открыта - выберите «Сохранить как PDF»",
+    "description": "Status shown after the print tab is opened for PDF export."
+  },
+  "statusGotMessagesUploadingGdoc": {
+    "message": "Получено {count} сообщений из {site}. Загрузка в Google Документы…",
+    "description": "Status shown while the chat is being uploaded to Google Drive as a Google Doc."
+  },
+  "statusOpenedGdoc": {
+    "message": "Google Документ открыт в новой вкладке.",
+    "description": "Status shown after the Google Docs upload succeeds and the new doc opens."
+  },
+  "statusGotMessagesUploadingNotion": {
+    "message": "Получено {count} сообщений из {site}. Загрузка в Notion…",
+    "description": "Status shown while the chat is being uploaded to Notion as a native page."
+  },
+  "statusOpenedNotion": {
+    "message": "Страница Notion открыта в новой вкладке.",
+    "description": "Status shown after the Notion upload succeeds and the new page opens."
+  },
+  "statusGotMessagesUploadingMsword": {
+    "message": "Получено {count} сообщений от {site}. Загрузка в Word Online…",
+    "description": "Status shown while the chat is being uploaded to OneDrive for Word Online."
+  },
+  "statusOpenedMsword": {
+    "message": "Документ Word Online открыт в новой вкладке.",
+    "description": "Status shown after the Word Online upload succeeds and the document opens."
+  },
+  "statusGotMessagesUploadingNextcloud": {
+    "message": "Получено {count} сообщений с {site}. Загрузка в Nextcloud…",
+    "description": "Status shown while the chat is being uploaded to Nextcloud."
+  },
+  "statusOpenedNextcloud": {
+    "message": "Файл Nextcloud открыт в новой вкладке.",
+    "description": "Status shown after the Nextcloud upload succeeds and the file opens."
+  },
+  "statusGotMessagesUploadingOnenote": {
+    "message": "Получено {count} сообщений от {site}. Отправка в OneNote…",
+    "description": "Status shown while the chat is being sent to OneNote as a new page."
+  },
+  "statusOpenedOnenote": {
+    "message": "Страница OneNote открыта в новой вкладке.",
+    "description": "Status shown after the OneNote upload succeeds and the new page opens."
+  },
+  "statusSaved": {
+    "message": "Сохранено: {filename}",
+    "description": "Success message after the file is saved."
+  },
+  "errorContentScriptNotLoaded": {
+    "message": "Скрипт страницы не загружен. Обновите вкладку (F5) и повторите попытку.",
+    "description": "Error when the popup cannot reach the content script."
+  },
+  "errorExtractionFailed": {
+    "message": "Извлечение не удалось. Это поддерживаемая страница чата ИИ?",
+    "description": "Generic extraction failure error."
+  },
+  "errorNoActiveTab": {
+    "message": "Нет активной вкладки.",
+    "description": "Error when no active tab is found."
+  },
+  "errorPrintTab": {
+    "message": "Не удалось открыть вкладку печати.",
+    "description": "Error when opening the print tab failed."
+  },
+  "errorDownloadFailed": {
+    "message": "Не удалось загрузить файл.",
+    "description": "Error when the download cannot start."
+  },
+  "optionsTitle": {
+    "message": "{app} - Настройки",
+    "description": "<title> of the settings page."
+  },
+  "optionsHeading": {
+    "message": "Настройки",
+    "description": "Top heading of the settings page."
+  },
+  "optionsTabGeneral": {
+    "message": "Общие",
+    "description": "Sidebar nav item for the General settings page (language)."
+  },
+  "optionsTabStyle": {
+    "message": "Стиль",
+    "description": "Sidebar nav item for the Style settings page (fonts, body text size, preview)."
+  },
+  "optionsInlineButtonsHeading": {
+    "message": "Кнопки чата",
+    "description": "Sub-heading on the General settings page above the three per-message inline-button visibility toggles."
+  },
+  "optionsInlineExportMenuLabel": {
+    "message": "Меню экспорта файла",
+    "description": "Settings checkbox label - show the per-message export-format hover menu inside the AI chat page."
+  },
+  "optionsInlineCopyMdLabel": {
+    "message": "Кнопка 'Копировать как Markdown'",
+    "description": "Settings checkbox label - show the per-message 'Copy as Markdown' button inside the AI chat page."
+  },
+  "optionsInlineCopyHtmlLabel": {
+    "message": "Кнопка 'Копировать как HTML'",
+    "description": "Settings checkbox label - show the per-message 'Copy as HTML' button inside the AI chat page."
+  },
+  "optionsTabSites": {
+    "message": "Сайты ИИ",
+    "description": "Sidebar nav item for the AI Sites settings page (visibility, order)."
+  },
+  "optionsTabNotion": {
+    "message": "Notion",
+    "description": "Sidebar nav item for the Notion settings page (connect, parent page picker)."
+  },
+  "optionsNotionIntro": {
+    "message": "Подключите рабочее пространство Notion, чтобы экспортировать чаты как нативные страницы Notion. {app} может видеть и изменять только те страницы, к которым вы явно предоставите доступ.",
+    "description": "Intro paragraph at the top of the Notion settings page."
+  },
+  "optionsNotionConnect": {
+    "message": "Подключить Notion",
+    "description": "Button label that starts the Notion OAuth flow."
+  },
+  "optionsNotionConnecting": {
+    "message": "Подключение к Notion…",
+    "description": "Status shown while the Notion OAuth round-trip is in progress."
+  },
+  "optionsNotionDisconnect": {
+    "message": "Отключить",
+    "description": "Button label that clears the stored Notion access token."
+  },
+  "optionsNotionWorkspaceLabel": {
+    "message": "Рабочая область",
+    "description": "Label next to the Notion workspace name once connected."
+  },
+  "optionsNotionParentLabel": {
+    "message": "Родительская страница",
+    "description": "Label for the dropdown that picks which Notion page new exports land in."
+  },
+  "optionsNotionParentHint": {
+    "message": "Новые страницы чатов будут создаваться как дочерние страницы этой страницы. Чтобы предоставить доступ к другим страницам: откройте страницу в Notion → меню «…» → Подключения → интеграция {app}.",
+    "description": "Helper text under the parent page picker, explaining how to grant access to more pages."
+  },
+  "optionsNotionRefresh": {
+    "message": "Обновить",
+    "description": "Button that re-fetches the list of accessible Notion pages."
+  },
+  "optionsNotionLoadingPages": {
+    "message": "Загрузка страниц…",
+    "description": "Placeholder option in the parent page dropdown while pages are being fetched."
+  },
+  "optionsNotionNoPages": {
+    "message": "Нет страниц – поделитесь хотя бы одной страницей Notion с интеграцией {app}",
+    "description": "Placeholder option when the Notion search returned no accessible pages."
+  },
+  "optionsNotionPagesFailed": {
+    "message": "Не удалось загрузить страницы",
+    "description": "Placeholder option when the Notion search call failed."
+  },
+  "optionsTabMicrosoft": {
+    "message": "Microsoft 365",
+    "description": "Sidebar nav item for the Microsoft 365 settings page (connect, account)."
+  },
+  "optionsMicrosoftIntro": {
+    "message": "Подключите свою учетную запись Microsoft, чтобы экспортировать чаты в виде файлов .docx в Word Online. Файлы хранятся в вашем OneDrive, в папке приложения в разделе «Приложения».",
+    "description": "Intro paragraph at the top of the Microsoft 365 settings page."
+  },
+  "optionsMicrosoftConnect": {
+    "message": "Подключить Microsoft 365",
+    "description": "Button label that starts the Microsoft OAuth flow."
+  },
+  "optionsMicrosoftConnecting": {
+    "message": "Подключение к Microsoft 365…",
+    "description": "Status shown while the Microsoft OAuth round-trip is in progress."
+  },
+  "optionsMicrosoftDisconnect": {
+    "message": "Отключить",
+    "description": "Button label that clears the stored Microsoft tokens."
+  },
+  "optionsMicrosoftAccountLabel": {
+    "message": "Учетная запись",
+    "description": "Label next to the signed-in Microsoft account email."
+  },
+  "optionsMicrosoftHint": {
+    "message": "Экспортированные файлы появляются в OneDrive в разделе «Приложения» (в папке приложения) и открываются в Word Online в новой вкладке.",
+    "description": "Helper text under the Microsoft 365 connection panel."
+  },
+  "optionsTabNextcloud": {
+    "message": "Nextcloud",
+    "description": "Sidebar nav item for the Nextcloud settings page."
+  },
+  "optionsNextcloudIntro": {
+    "message": "Сохраняйте чаты на свой сервер Nextcloud через WebDAV. {app} использует пароль приложения (Nextcloud → Настройки → Безопасность → «Создать новый пароль приложения») – ваш настоящий пароль учетной записи никогда не покидает ваш браузер.",
+    "description": "Intro paragraph at the top of the Nextcloud settings page."
+  },
+  "optionsNextcloudServerLabel": {
+    "message": "URL сервера",
+    "description": "Label for the Nextcloud server URL input."
+  },
+  "optionsNextcloudUserLabel": {
+    "message": "Имя пользователя",
+    "description": "Label for the Nextcloud username input."
+  },
+  "optionsNextcloudPasswordLabel": {
+    "message": "Пароль приложения",
+    "description": "Label for the Nextcloud app-password input."
+  },
+  "optionsNextcloudFolderLabel": {
+    "message": "Папка",
+    "description": "Label for the Nextcloud target folder input."
+  },
+  "optionsNextcloudFormatLabel": {
+    "message": "Формат по умолчанию",
+    "description": "Label for the dropdown that picks which file format gets uploaded to Nextcloud."
+  },
+  "optionsNextcloudTest": {
+    "message": "Проверить соединение",
+    "description": "Button label that probes the Nextcloud credentials with a PROPFIND request."
+  },
+  "optionsNextcloudSave": {
+    "message": "Сохранить",
+    "description": "Button label that persists the Nextcloud credentials."
+  },
+  "optionsNextcloudClear": {
+    "message": "Очистить",
+    "description": "Button label that wipes the stored Nextcloud credentials."
+  },
+  "optionsNextcloudTesting": {
+    "message": "Проверка соединения…",
+    "description": "Status shown while the extension is probing the Nextcloud server with a PROPFIND."
+  },
+  "optionsNextcloudTestOk": {
+    "message": "Соединение установлено.",
+    "description": "Status shown when the Nextcloud PROPFIND probe succeeds."
+  },
+  "optionsNextcloudFillFirst": {
+    "message": "Сначала заполните URL сервера, имя пользователя и пароль приложения.",
+    "description": "Error shown when the user clicks Test or Save with empty fields."
+  },
+  "optionsNextcloudCleared": {
+    "message": "Учетные данные Nextcloud очищены.",
+    "description": "Status shown after the user clicks Clear."
+  },
+  "optionsLanguageLabel": {
+    "message": "Язык",
+    "description": "Label for the language dropdown."
+  },
+  "optionsLanguageAuto": {
+    "message": "Использовать язык браузера",
+    "description": "Default option in the language dropdown - picks the browser UI language."
+  },
+  "optionsHtmlTitleFontLabel": {
+    "message": "Шрифт заголовка",
+    "description": "Label for the dropdown that picks the heading font used in HTML / PDF exports."
+  },
+  "optionsHtmlTextFontLabel": {
+    "message": "Шрифт текста",
+    "description": "Label for the dropdown that picks the body font used in HTML / PDF exports."
+  },
+  "optionsFontSystem": {
+    "message": "Системный (по умолчанию)",
+    "description": "First option in both font dropdowns - the OS default font, no Google Fonts fetch."
+  },
+  "optionsHtmlMathLabel": {
+    "message": "Отображение формул (KaTeX)",
+    "description": "Label for the toggle that enables math rendering in HTML / PDF exports via the KaTeX library."
+  },
+  "optionsSavedNotice": {
+    "message": "Сохранено.",
+    "description": "Notice shown when settings are saved."
+  },
+  "optionsVisibleSitesHint": {
+    "message": "Перетащите, чтобы изменить порядок. Снимите флажок, чтобы скрыть плитку.",
+    "description": "Helper text under the visible sites checklist."
+  },
+  "optionsSelectAll": {
+    "message": "Выбрать все",
+    "description": "Button that checks every site in the visibility list."
+  },
+  "optionsSelectNone": {
+    "message": "Снять выбор",
+    "description": "Button that unchecks every site in the visibility list."
+  },
+  "exportJsonTitle": {
+    "message": "Экспортировать как JSON (.json)",
+    "description": "Tooltip on the JSON export button - a flat { role, content } message array for developers."
+  },
+  "exportDebugTitle": {
+    "message": "Экспортировать отладочный пакет (.json)",
+    "description": "Tooltip on the Developer-mode Debug export button - saves a diagnostic file with the raw API capture, the extracted conversation, and the rendered outputs."
+  },
+  "optionsDevModeLabel": {
+    "message": "Режим разработчика",
+    "description": "Settings checkbox that reveals the Debug-bundle export button in the popup."
+  },
+  "optionsAdvancedHeading": {
+    "message": "Расширенные",
+    "description": "Heading of the Advanced block at the end of Settings - General (currently holds the Developer mode toggle)."
+  },
+  "errorSiteNotSupported": {
+    "message": "Этот сайт не поддерживается. Откройте один из перечисленных ниже сайтов ИИ и повторите попытку.",
+    "description": "Popup error when the active tab's domain matches none of the supported AI sites (refreshing cannot help there)."
+  },
+  "popupMediaTitle": {
+    "message": "Медиа",
+    "description": "Popup button — opens the media page for the current conversation."
+  },
+  "mediaPageTitle": {
+    "message": "Изображения",
+    "description": "Browser tab title of the media page."
+  },
+  "mediaHeading": {
+    "message": "Изображения в этой беседе",
+    "description": "Heading of the media page."
+  },
+  "mediaSelectAll": {
+    "message": "Все",
+    "description": "Media page — select every image."
+  },
+  "mediaSelectNone": {
+    "message": "Ничего",
+    "description": "Media page — clear the selection."
+  },
+  "mediaDownload": {
+    "message": "Скачать",
+    "description": "Media page — download the selected images."
+  },
+  "mediaMeta": {
+    "message": "Выбрано: {selected} из {count}",
+    "description": "Media page counter. {selected} and {count} are numbers."
+  },
+  "mediaEmpty": {
+    "message": "В этой беседе нет изображений.",
+    "description": "Media page — shown when the conversation contains no pictures."
+  },
+  "mediaLoadError": {
+    "message": "Не удалось прочитать беседу. Закройте эту вкладку и попробуйте снова из всплывающего окна.",
+    "description": "Media page — the stashed conversation was missing."
+  },
+  "mediaRoleUser": {
+    "message": "Вы",
+    "description": "Media page tile label — the image came from the user's message."
+  },
+  "mediaRoleAssistant": {
+    "message": "ИИ",
+    "description": "Media page tile label — the image came from the AI's reply."
+  },
+  "mediaDownloadDone": {
+    "message": "Загружено: {done}, не удалось: {failed}",
+    "description": "Media page result. {done} and {failed} are numbers."
+  },
+  "popupCustomExportSub": {
+    "message": "Выберите сообщения, которые вы хотите экспортировать.",
+    "description": "Tooltip on the popup's Custom Export button."
+  },
+  "popupMediaSub": {
+    "message": "Просматривайте и загружайте изображения из этого чата.",
+    "description": "Tooltip on the popup's Media button."
+  }
+}

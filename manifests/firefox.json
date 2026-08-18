@@ -1,0 +1,212 @@
+{
+  "manifest_version": 3,
+  "name": "AI Chat Clipper",
+  "version": "1.0.0",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ai-doc@yaiol.dev",
+      "strict_min_version": "128.0"
+    }
+  },
+  "permissions": [
+    "identity",
+    "scripting",
+    "storage",
+    "unlimitedStorage",
+    "webRequest",
+    "activeTab"
+  ],
+  "optional_host_permissions": [
+    "https://*/*"
+  ],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "https://claude.ai/*",
+    "https://gemini.google.com/*",
+    "https://chat.deepseek.com/*",
+    "https://grok.com/*",
+    "https://x.com/i/grok*",
+    "https://copilot.microsoft.com/*",
+    "https://www.perplexity.ai/*",
+    "https://perplexity.ai/*",
+    "https://chat.mistral.ai/*",
+    "https://www.kimi.com/*",
+    "https://kimi.com/*",
+    "https://kimi.moonshot.cn/*",
+    "https://poe.com/*",
+    "https://www.poe.com/*",
+    "https://www.meta.ai/*",
+    "https://meta.ai/*",
+    "https://yuanbao.tencent.com/*",
+    "https://notebooklm.google.com/*",
+    "https://aistudio.google.com/*",
+    "https://github.com/copilot/*",
+    "https://api.individual.githubcopilot.com/*",
+    "https://huggingface.co/chat/*",
+    "https://chat.groq.com/*",
+    "https://pi.ai/*",
+    "https://www.pi.ai/*",
+    "https://duckduckgo.com/aichat/*",
+    "https://app.reve.com/*",
+    "https://*.googleusercontent.com/*",
+    "https://lh3.google.com/*",
+    "https://api.notion.com/*",
+    "https://api.yaiol.com/*",
+    "https://login.microsoftonline.com/*",
+    "https://graph.microsoft.com/*",
+    "https://chat.qwen.ai/*",
+    "https://agent.minimax.io/*",
+    "https://www.google.com/search*",
+    "https://app.lobehub.com/*",
+    "https://www.getmerlin.in/*",
+    "https://getmerlin.in/*",
+    "https://chat.z.ai/*",
+    "https://www.dola.com/*",
+    "https://m365.cloud.microsoft/*",
+    "https://chatglm.cn/*",
+    "https://arena.ai/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/app.svg"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "assets/app-16.png",
+    "32": "assets/app-32.png",
+    "48": "assets/app-48.png",
+    "128": "assets/app-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AI Chat Clipper",
+    "default_icon": {
+      "16": "assets/app-16.png",
+      "32": "assets/app-32.png",
+      "48": "assets/app-48.png",
+      "128": "assets/app-128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*",
+        "https://chat.deepseek.com/*",
+        "https://grok.com/*",
+        "https://x.com/i/grok*",
+        "https://copilot.microsoft.com/*",
+        "https://www.perplexity.ai/*",
+        "https://perplexity.ai/*",
+        "https://chat.mistral.ai/*",
+        "https://www.kimi.com/*",
+        "https://kimi.com/*",
+        "https://kimi.moonshot.cn/*",
+        "https://poe.com/*",
+        "https://www.poe.com/*",
+        "https://www.meta.ai/*",
+        "https://meta.ai/*",
+        "https://yuanbao.tencent.com/*",
+        "https://notebooklm.google.com/*",
+        "https://aistudio.google.com/*",
+        "https://github.com/copilot/*",
+        "https://huggingface.co/chat/*",
+        "https://chat.groq.com/*",
+        "https://pi.ai/*",
+        "https://www.pi.ai/*",
+        "https://duckduckgo.com/aichat/*",
+        "https://app.reve.com/*",
+        "https://chat.qwen.ai/*",
+        "https://agent.minimax.io/*",
+        "https://www.google.com/search*",
+        "https://app.lobehub.com/*",
+        "https://www.getmerlin.in/*",
+        "https://getmerlin.in/*",
+        "https://chat.z.ai/*",
+        "https://www.dola.com/*",
+        "https://m365.cloud.microsoft/*",
+        "https://chatglm.cn/*",
+        "https://arena.ai/*"
+      ],
+      "js": [
+        "lib/storage.js",
+        "lib/sites.js",
+        "lib/debug-capture.js",
+        "lib/download.js",
+        "lib/fonts.js",
+        "lib/dom-time.js",
+        "lib/html-to-md.js",
+        "lib/md-to-html.js",
+        "lib/zip.js",
+        "sites/chatgpt.js",
+        "sites/claude.js",
+        "sites/google-gemini.js",
+        "sites/deepseek.js",
+        "sites/grok.js",
+        "sites/copilot.js",
+        "sites/perplexity.js",
+        "sites/mistral.js",
+        "sites/kimi.js",
+        "sites/poe.js",
+        "sites/meta-ai.js",
+        "sites/yuanbao.js",
+        "sites/google-notebooklm.js",
+        "sites/google-aistudio.js",
+        "sites/github-copilot.js",
+        "sites/huggingchat.js",
+        "sites/groq.js",
+        "sites/pi.js",
+        "sites/duckduckgo.js",
+        "sites/reve.js",
+        "sites/qwen.js",
+        "sites/minimax.js",
+        "sites/google-aisearch.js",
+        "sites/google-search.js",
+        "sites/lobehub.js",
+        "sites/merlin.js",
+        "sites/z-ai.js",
+        "sites/dola.js",
+        "sites/copilot-m365.js",
+        "sites/chatglm.js",
+        "sites/arena.js",
+        "sites/registry.js",
+        "exporters/markdown.js",
+        "exporters/html.js",
+        "exporters/text.js",
+        "exporters/json.js",
+        "exporters/docx.js",
+        "exporters/odt.js",
+        "exporters/image.js",
+        "lib/md-to-notion-blocks.js",
+        "exporters/notion.js",
+        "exporters/msword.js",
+        "exporters/nextcloud.js",
+        "lib/export-flow.js",
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

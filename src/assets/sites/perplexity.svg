@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- created by svgstack.com | Attribution is required. -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   fill="none"
+   version="1.1"
+   id="svg7"
+   sodipodi:docname="perplexity.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs7" />
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="6.5078125"
+     inkscape:cx="63.923169"
+     inkscape:cy="64"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg7" />
+  <g
+     id="g7"
+     transform="matrix(1.2187688,0,0,1.2187688,-14.00102,-13.628465)">
+    <path
+       d="M 94.3463,72.9856 63.9072,44.9961 v 38.8098 l 30.4391,27.1411 z"
+       stroke="#21b8cd"
+       stroke-width="4.7137"
+       id="path1" />
+    <path
+       d="M 63.9072,44.9961 94.3463,72.9855 V 85.5814 H 107.029 V 44.9961 Z"
+       stroke="#21b8cd"
+       stroke-width="4.7137"
+       id="path2" />
+    <path
+       d="M 33.4678,72.9856 63.9069,44.9961 V 83.8059 L 33.4678,110.947 Z"
+       stroke="#21b8cd"
+       stroke-width="4.7137"
+       id="path3" />
+    <path
+       d="M 20.9707,44.9961 V 85.5815 H 33.461 V 72.9856 L 63.9072,44.9961 Z"
+       stroke="#21b8cd"
+       stroke-width="4.7137"
+       id="path4" />
+    <path
+       d="M 63.9072,44.9958 94.3463,16.6035 v 28.3923 z"
+       stroke="#21b8cd"
+       stroke-width="4.7137"
+       id="path5" />
+    <path
+       d="M 63.9068,44.9957 33.4678,16.6035 v 28.3922 z"
+       stroke="#21b8cd"
+       stroke-width="4.7137"
+       id="path6" />
+    <path
+       d="M 63.9072,12 V 116"
+       stroke="#21b8cd"
+       stroke-width="4.7137"
+       id="path7" />
+  </g>
+</svg>

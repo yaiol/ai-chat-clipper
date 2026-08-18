@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title data-i18n="selectPageTitle">Select messages</title>
+  <style>
+    body {
+      font: 13px/1.5 system-ui, sans-serif; color: #222;
+      margin: 0; padding: 0;
+      /* Defaults - replaced live by select.js when the user picks fonts/size. */
+      --preview-title-font: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      --preview-text-font:  -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      --preview-text-size:  13px;
+    }
+    .page { max-width: 880px; margin: 24px auto; padding: 0 24px 60px; }
+    h1 { font-size: 18px; margin: 0 0 4px; }
+    .source { color: #6a7280; font-size: 12px; margin: 0 0 16px; }
+    .source a { color: #0a6bdc; text-decoration: none; }
+    .source a:hover { text-decoration: underline; }
+
+    /* ── Toolbar (sticky, full-width strip; rows centered) ────────── */
+    .toolbar {
+      position: sticky; top: 0; z-index: 10;
+      background: #fff; border-bottom: 1px solid #eee;
+      padding: 8px 0;
+    }
+    .toolbar .row {
+      padding: 0 24px;
+      display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px;
+    }
+    .toolbar .actions { display: flex; gap: 6px; align-items: center; }
+    /* Selection group sits at the far right of the first row. */
+    .toolbar .selection { margin-inline-start: auto; display: flex; gap: 8px; align-items: center; }
+    .select-toggle { width: 16px; height: 16px; margin: 0; cursor: pointer; }
+    .toolbar button {
+      font: inherit; font-size: 12px; padding: 5px 12px;
+      background: #fafafa; border: 1px solid #d0d0d0; color: #444;
+      border-radius: 6px; cursor: pointer;
+      transition: background .12s ease, border-color .12s ease, color .12s ease;
+    }
+    .toolbar button:hover { background: #f0f6ff; border-color: #7eb4ff; color: #111; }
+    .toolbar button:focus { outline: 2px solid #4a9eff; outline-offset: 1px; }
+    .toolbar .status { color: #6a7280; font-size: 12px; white-space: nowrap; }
+
+    .style-group { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    .style-group label {
+      font-size: 12px; color: #444;
+    }
+    .style-group input[type="checkbox"] { margin: 0; cursor: pointer; }
+    .style-group select {
+      font: inherit; font-size: 12px; padding: 4px 6px; max-width: 140px;
+      background: #fafafa; color: #444; border: 1px solid #d0d0d0; border-radius: 6px;
+    }
+    .style-group select:hover { background: #f0f6ff; border-color: #7eb4ff; color: #111; }
+    .style-group select:focus { outline: 2px solid #4a9eff; outline-offset: 1px; border-color: #4a9eff; }
+
+    .export-buttons { display: flex; gap: 6px; }
+    .export-buttons button {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 32px; height: 32px; padding: 0;
+      background: #fafafa; border: 1px solid #d0d0d0; color: #444;
+      border-radius: 6px; cursor: pointer;
+    }
+    .export-buttons button:hover { background: #f0f6ff; border-color: #7eb4ff; color: #111; }
+    .export-buttons button:disabled { opacity: .4; cursor: default; }
+    .export-buttons svg { width: 18px; height: 18px; display: block; }
+    /* Slim divider between local-file and cloud-upload groups. */
+    .export-buttons .sep {
+      width: 1px; height: 22px; background: #e2e2e2; margin: 0 2px; align-self: center;
+    }
+
+    /* ── Message list ─────────────────────────────────────────────── */
+    .messages { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
+    .msg {
+      display: grid; grid-template-columns: 24px 1fr; gap: 12px;
+      padding: 12px 14px; border: 1px solid #e5e5e5; border-radius: 8px;
+      background: #fff; transition: background .12s ease, border-color .12s ease;
+    }
+    .msg:hover { border-color: #b6d8ff; }
+    .msg.selected { background: #f0f6ff; border-color: #4a9eff; }
+    .msg input[type="checkbox"] { margin: 4px 0 0; cursor: pointer; }
+
+    .msg-head {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 11px; text-transform: uppercase; letter-spacing: .04em;
+      color: #6a7280; margin-bottom: 4px;
+    }
+    .role {
+      display: inline-block; padding: 1px 7px; border-radius: 999px;
+      background: #eef6ff; color: #0a4ea8; font-weight: 600;
+    }
+    .role.assistant { background: #f0f9f0; color: #1f6b1f; }
+    .index { color: #9aa1ac; }
+    /* Per-message timestamp; hidden unless body has the show-time class. */
+    .msg-time {
+      color: #9aa1ac; font-size: 11px;
+      font-family: var(--preview-text-font);
+      letter-spacing: 0; text-transform: none;
+    }
+    body:not(.show-time) .msg-time { display: none; }
+    /* Source line visibility - toggled by the same CSS trick. */
+    body:not(.show-source) .source { display: none; }
+
+    /* Live-preview typography - mirrors what the HTML / PDF export will emit. */
+    .msg .role { font-family: var(--preview-title-font); }
+    .msg-body {
+      font-family: var(--preview-text-font);
+      font-size: var(--preview-text-size);
+      line-height: 1.5; color: #222;
+      white-space: pre-wrap; word-wrap: break-word;
+      max-height: 220px; overflow: hidden; position: relative;
+      cursor: pointer;
+    }
+    .msg-body.expanded { max-height: none; }
+    .msg-body:not(.expanded)::after {
+      content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 36px;
+      background: linear-gradient(transparent, #fff);
+      pointer-events: none;
+    }
+    .msg.selected .msg-body:not(.expanded)::after {
+      background: linear-gradient(transparent, #f0f6ff);
+    }
+
+    .notice { color: #b00020; font-size: 13px; margin-top: 14px; min-height: 1.4em; }
+    .notice.ok { color: #0a7a2f; }
+  </style>
+</head>
+<body>
+  <header class="toolbar">
+    <div class="row">
+      <div class="style-group">
+        <label for="size-select" data-i18n="selectFontSizeLabel">Size</label>
+        <select id="size-select"></select>
+      </div>
+      <div class="style-group">
+        <label for="title-font-select" data-i18n="selectTitleFontLabel">Title</label>
+        <select id="title-font-select"></select>
+      </div>
+      <div class="style-group">
+        <label for="text-font-select" data-i18n="selectTextFontLabel">Text</label>
+        <select id="text-font-select"></select>
+      </div>
+      <div class="style-group">
+        <input id="show-time" type="checkbox">
+        <label for="show-time" data-i18n="selectShowTimeLabel">Time</label>
+      </div>
+      <div class="style-group">
+        <input id="show-source" type="checkbox">
+        <label for="show-source" data-i18n="selectShowSourceLabel">Source</label>
+      </div>
+      <div class="style-group">
+        <input id="show-thinking" type="checkbox">
+        <label for="show-thinking" data-i18n="selectShowThinkingLabel">Thinking</label>
+      </div>
+
+      <div class="export-buttons">
+        <button id="copy-md" type="button" title="Copy selection as Markdown to clipboard">
+          <svg data-icon="yaiol:copy-markdown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/><path d="M12.025 18.025h1.25v-4.75H14.6v3.175h1.25v-3.175h1.5v4.75h1.25v-5q0-.35-.325-.675T17.6 12.025h-4.575q-.35 0-.675.325t-.325.675z" fill="currentColor" stroke="none"/></svg>
+        </button>
+        <button id="copy-html" type="button" title="Copy selection as rich HTML (paste into Gmail, Docs…)">
+          <svg data-icon="yaiol:copy-html" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/><path d="m12.99 18.114-3.056-3.056 3.082-3.082.547.548-2.534 2.534 2.509 2.509zm4.049.025-.547-.547 2.534-2.534-2.509-2.509.548-.547 3.056 3.056z" fill="currentColor" stroke="none"/></svg>
+        </button>
+        <span class="sep" aria-hidden="true"></span>
+        <button id="export-md"   type="button" data-i18n-title="exportMarkdownTitle">
+          <svg data-icon="yaiol:file-markdown" viewBox="0 -960 960 960" fill="currentColor"><path d="M220-80q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h361l219 219v521q0 24-18 42t-42 18H220Zm331-554v-186H220v680h520v-494H551ZM220-820v186-186 680-680Z"/><path d="M348.5-280h50v-190h53v127h50v-127h60v190h50v-200q0-14-13-27t-27-13H388.5q-14 0-27 13t-13 27z"/></svg>
+        </button>
+        <button id="export-html" type="button" data-i18n-title="exportHtmlTitle">
+          <svg data-icon="yaiol:file-html" viewBox="0 -960 960 960" fill="currentColor"><path d="M220-80q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h361l219 219v521q0 24-18 42t-42 18H220Zm331-554v-186H220v680h520v-494H551ZM220-820v186-186 680-680Z"/><path d="m398.5-275.98-122.24-122.25 123.26-123.26 21.9 21.9-101.36 101.36 100.34 100.34zm161.97 1.02-21.9-21.9 101.36-101.36-100.34-100.34 21.9-21.9 122.24 122.24z"/></svg>
+        </button>
+        <button id="export-txt"  type="button" data-i18n-title="exportTxtTitle">
+          <svg data-icon="yaiol:file-text" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-460h320v-60H320v60Zm0 120h320v-60H320v60Zm0 120h200v-60H320v60ZM220-80q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h361l219 219v521q0 24-18 42t-42 18H220Zm331-554v-186H220v680h520v-494H551ZM220-820v186-186 680-680Z"/></svg>
+        </button>
+        <button id="export-docx" type="button" data-i18n-title="exportDocxTitle">
+          <svg data-icon="yaiol:file-docx" viewBox="0 -960 960 960"><path fill="#9ca3af" d="M320-460h320v-60H320v60Zm0 120h320v-60H320v60Zm0 120h200v-60H320v60ZM220-80q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h361l219 219v521q0 24-18 42t-42 18H220Zm331-554v-186H220v680h520v-494H551ZM220-820v186-186 680-680Z"/><text x="480" y="-265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="720" font-weight="800" fill="#2B579A">W</text></svg>
+        </button>
+        <button id="export-odt"  type="button" data-i18n-title="exportOdtTitle">
+          <svg data-icon="yaiol:file-odt" viewBox="0 -960 960 960"><path fill="#9ca3af" d="M320-460h320v-60H320v60Zm0 120h320v-60H320v60Zm0 120h200v-60H320v60ZM220-80q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h361l219 219v521q0 24-18 42t-42 18H220Zm331-554v-186H220v680h520v-494H551ZM220-820v186-186 680-680Z"/><text x="480" y="-265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="720" font-weight="800" fill="currentColor">O</text></svg>
+        </button>
+        <button id="export-pdf"  type="button" data-i18n-title="exportPdfTitle">
+          <svg data-icon="yaiol:file-pdf" viewBox="0 -960 960 960"><path fill="#9ca3af" d="M320-460h320v-60H320v60Zm0 120h320v-60H320v60Zm0 120h200v-60H320v60ZM220-80q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h361l219 219v521q0 24-18 42t-42 18H220Zm331-554v-186H220v680h520v-494H551ZM220-820v186-186 680-680Z"/><text x="480" y="-265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="720" font-weight="800" fill="#B30B00">P</text></svg>
+        </button>
+        <button id="export-image" type="button" data-i18n-title="exportImageTitle">
+          <svg data-icon="lucide:image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        </button>
+        <span class="sep" aria-hidden="true"></span>
+        <button id="export-gdoc"   class="cloud" type="button" data-i18n-title="exportGdocTitle">
+          <svg data-icon="yaiol:cloud-gdocs" viewBox="0 -960 960 960"><path fill="#9ca3af" d="M251-160q-88 0-149.5-61.5T40-371q0-78 50-137t127-71q20-97 94-158.5T482-799q112 0 189 81.5T748-522v24q72-2 122 46.5T920-329q0 69-50 119t-119 50H251Zm0-60h500q45 0 77-32t32-77q0-45-32-77t-77-32h-63v-84q0-91-61-154t-149-63q-88 0-149.5 63T267-522h-19q-62 0-105 43.5T100-371q0 63 44 107t107 44Zm229-260Z"/><text x="480" y="-265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="720" font-weight="800" fill="#4285F4">G</text></svg>
+        </button>
+        <button id="export-msword" class="cloud" type="button" data-i18n-title="exportMswordTitle">
+          <svg data-icon="yaiol:cloud-word" viewBox="0 -960 960 960"><path fill="#9ca3af" d="M251-160q-88 0-149.5-61.5T40-371q0-78 50-137t127-71q20-97 94-158.5T482-799q112 0 189 81.5T748-522v24q72-2 122 46.5T920-329q0 69-50 119t-119 50H251Zm0-60h500q45 0 77-32t32-77q0-45-32-77t-77-32h-63v-84q0-91-61-154t-149-63q-88 0-149.5 63T267-522h-19q-62 0-105 43.5T100-371q0 63 44 107t107 44Zm229-260Z"/><text x="480" y="-265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="720" font-weight="800" fill="#2B579A">W</text></svg>
+        </button>
+        <button id="export-onenote" class="cloud" type="button" data-i18n-title="exportOnenoteTitle">
+          <svg data-icon="yaiol:cloud-onenote" viewBox="0 -960 960 960"><path fill="#9ca3af" d="M251-160q-88 0-149.5-61.5T40-371q0-78 50-137t127-71q20-97 94-158.5T482-799q112 0 189 81.5T748-522v24q72-2 122 46.5T920-329q0 69-50 119t-119 50H251Zm0-60h500q45 0 77-32t32-77q0-45-32-77t-77-32h-63v-84q0-91-61-154t-149-63q-88 0-149.5 63T267-522h-19q-62 0-105 43.5T100-371q0 63 44 107t107 44Zm229-260Z"/><text x="480" y="-265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="720" font-weight="800" fill="#80397B">O</text></svg>
+        </button>
+        <button id="export-notion" class="cloud" type="button" data-i18n-title="exportNotionTitle">
+          <svg data-icon="yaiol:cloud-notion" viewBox="0 -960 960 960"><path fill="#9ca3af" d="M251-160q-88 0-149.5-61.5T40-371q0-78 50-137t127-71q20-97 94-158.5T482-799q112 0 189 81.5T748-522v24q72-2 122 46.5T920-329q0 69-50 119t-119 50H251Zm0-60h500q45 0 77-32t32-77q0-45-32-77t-77-32h-63v-84q0-91-61-154t-149-63q-88 0-149.5 63T267-522h-19q-62 0-105 43.5T100-371q0 63 44 107t107 44Zm229-260Z"/><text x="480" y="-265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="720" font-weight="800" fill="#000000">N</text></svg>
+        </button>
+        <button id="export-nextcloud" class="cloud" type="button" data-i18n-title="exportNextcloudTitle">
+          <svg data-icon="brand:nextcloud" viewBox="15 10 120 120"><path fill="#0082C9" d="M 75.091,47.685 C 62.653,47.685 52.11,56.118 48.843,67.542 46.003,61.482 39.849,57.237 32.761,57.237 23.013,57.237 15,65.25 15,74.998 c 0,9.748 8.013,17.765 17.761,17.765 7.088,0 13.242,-4.248 16.082,-10.309 3.268,11.426 13.81,19.861 26.248,19.861 12.346,0 22.835,-8.308 26.186,-19.605 2.892,5.924 8.97,10.053 15.958,10.053 9.748,0 17.765,-8.017 17.765,-17.765 0,-9.748 -8.017,-17.761 -17.765,-17.761 -6.988,0 -13.065,4.127 -15.958,10.05 C 97.925,55.991 87.437,47.686 75.091,47.686 v 0 z m 0,10.425 c 9.39,0 16.89,7.497 16.89,16.887 0,9.39 -7.501,16.89 -16.89,16.89 -9.389,0 -16.887,-7.501 -16.887,-16.89 0,-9.389 7.497,-16.887 16.887,-16.887 z m -42.329,9.553 c 4.114,0 7.338,3.221 7.338,7.335 0,4.114 -3.225,7.338 -7.338,7.338 -4.113,0 -7.335,-3.225 -7.335,-7.338 0,-4.113 3.221,-7.335 7.335,-7.335 z m 84.472,0 c 4.114,0 7.338,3.221 7.338,7.335 0,4.114 -3.225,7.338 -7.338,7.338 -4.113,0 -7.335,-3.225 -7.335,-7.338 0,-4.113 3.221,-7.335 7.335,-7.335 z"/></svg>
+        </button>
+      </div>
+
+      <div class="selection">
+        <input id="select-toggle" type="checkbox" class="select-toggle">
+        <span class="status" id="status">-</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1 id="title" data-i18n="selectHeading">Select messages to export</h1>
+    <p class="source" id="source"></p>
+
+    <div id="messages" class="messages"></div>
+    <div id="notice" class="notice"></div>
+  </main>
+
+  <!-- Load order matters: storage + i18n first, then format helpers, then the page logic. -->
+  <script src="lib/storage.js"></script>
+  <script src="lib/download.js"></script>
+  <script src="lib/i18n.js"></script>
+  <script src="lib/fonts.js"></script>
+  <script src="lib/zip.js"></script>
+  <script src="lib/md-to-html.js"></script>
+  <script src="exporters/markdown.js"></script>
+  <script src="exporters/text.js"></script>
+  <script src="exporters/html.js"></script>
+  <script src="exporters/docx.js"></script>
+  <script src="exporters/odt.js"></script>
+  <script src="exporters/image.js"></script>
+  <script src="lib/md-to-notion-blocks.js"></script>
+  <script src="exporters/notion.js"></script>
+  <script src="exporters/msword.js"></script>
+  <script src="exporters/nextcloud.js"></script>
+  <script src="lib/export-flow.js"></script>
+  <script src="select.js"></script>
+</body>
+</html>

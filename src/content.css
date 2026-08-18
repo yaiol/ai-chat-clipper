@@ -1,0 +1,89 @@
+.adx-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin: 0 2px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  color: inherit;
+  opacity: .7;
+  vertical-align: middle;
+}
+.adx-btn:hover { background: rgba(127,127,127,.15); opacity: 1; }
+/* Sites whose action row is a flex container stretch their children by
+   default, which left our buttons floating above the native icons' baseline
+   (Google AI Mode). Ignored anywhere the parent is not flex. */
+.adx-btn { align-self: center; flex: 0 0 auto; }
+
+.adx-btn svg,
+.adx-btn img { width: 16px; height: 16px; display: block; }
+/* The main button is now a full-color image, so flash via a background tint
+   (a color rule wouldn't affect <img>). The hover-menu icons stay strokeable. */
+.adx-btn.adx-ok { background: rgba(10,122,47,.22); opacity: 1; box-shadow: 0 0 0 1px rgba(10,122,47,.5) inset; }
+.adx-btn.adx-err { background: rgba(176,0,32,.22); opacity: 1; box-shadow: 0 0 0 1px rgba(176,0,32,.5) inset; }
+
+/* NotebookLM uses Material icon buttons (40x40) - match their size & icon scale */
+chat-actions .adx-btn,
+mat-card-actions .adx-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  align-self: center;
+}
+chat-actions .adx-btn svg,
+mat-card-actions .adx-btn svg,
+chat-actions .adx-btn img,
+mat-card-actions .adx-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.adx-menu {
+  position: fixed;
+  z-index: 2147483647;
+  min-width: 160px;
+  background: #fff;
+  color: #222;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.16);
+  padding: 4px;
+  font: 13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+.adx-menu-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: #6a7280;
+  padding: 6px 10px 4px;
+}
+.adx-menu button {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: inherit;
+  padding: 7px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font: inherit;
+}
+.adx-menu button:hover { background: #eef2f7; }
+.adx-menu button .adx-menu-icon {
+  width: 18px; height: 18px;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #555;
+}
+@media (prefers-color-scheme: dark) {
+  .adx-menu { background: #232529; color: #e5e7eb; border-color: #3a3d42; }
+  .adx-menu-title { color: #8a929c; }
+  .adx-menu button:hover { background: #2c3036; }
+  .adx-menu button .adx-menu-icon { color: #b8bcc4; }
+}

@@ -1,0 +1,538 @@
+{
+  "extDescription": {
+    "message": "ส่งออกแชท AI จาก ChatGPT, Gemini, Claude. 32 เว็บไซต์ AI, 9 รูปแบบ, 5 ปลายทางคลาวด์.",
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+  },
+  "exportMarkdownTitle": {
+    "message": "ส่งออกเป็น Markdown (.md)",
+    "description": "Tooltip on the Markdown export button."
+  },
+  "exportHtmlTitle": {
+    "message": "ส่งออกเป็น HTML (.html)",
+    "description": "Tooltip on the HTML export button."
+  },
+  "exportTxtTitle": {
+    "message": "ส่งออกเป็นข้อความธรรมดา (.txt)",
+    "description": "Tooltip on the plain-text export button."
+  },
+  "exportDocxTitle": {
+    "message": "ส่งออกเป็น Word (.docx)",
+    "description": "Tooltip on the Word export button."
+  },
+  "exportOdtTitle": {
+    "message": "ส่งออกเป็น OpenDocument (.odt)",
+    "description": "Tooltip on the OpenDocument export button."
+  },
+  "exportPdfTitle": {
+    "message": "ส่งออกเป็น PDF (ผ่านกล่องโต้ตอบการพิมพ์)",
+    "description": "Tooltip on the PDF export button."
+  },
+  "exportImageTitle": {
+    "message": "ส่งออกเป็นรูปภาพ PNG",
+    "description": "Tooltip on the Image export button - renders the conversation to a single tall PNG file."
+  },
+  "exportGdocTitle": {
+    "message": "เปิดใน Google Docs",
+    "description": "Tooltip on the Google Docs export button - uploads the chat to the user's Google Drive as a native Google Doc."
+  },
+  "exportNotionTitle": {
+    "message": "ส่งออกไปยัง Notion",
+    "description": "Tooltip on the Notion export button - uploads the chat to the user's Notion workspace as a native Notion page."
+  },
+  "exportMswordTitle": {
+    "message": "เปิดใน Word Online",
+    "description": "Tooltip on the Word Online export button - uploads the chat as a .docx to OneDrive and opens it in Word Online."
+  },
+  "exportNextcloudTitle": {
+    "message": "บันทึกลง Nextcloud",
+    "description": "Tooltip on the Nextcloud export button - uploads the chat to the user's Nextcloud server via WebDAV."
+  },
+  "exportOnenoteTitle": {
+    "message": "ส่งไปยัง OneNote",
+    "description": "Tooltip on the OneNote export button - creates a new page in the user's OneNote default notebook."
+  },
+  "settingsButtonTitle": {
+    "message": "การตั้งค่า",
+    "description": "Tooltip on the gear icon that opens the settings page."
+  },
+  "popupCustomExportTitle": {
+    "message": "ส่งออกแบบกำหนดเอง",
+    "description": "Title of the prominent button below the export icons in the popup. Opens the message selection page."
+  },
+  "selectPageTitle": {
+    "message": "{app} - เลือกข้อความ",
+    "description": "<title> of the selection page (browser tab title)."
+  },
+  "selectHeading": {
+    "message": "เลือกข้อความที่จะส่งออก",
+    "description": "Top heading of the selection page."
+  },
+  "selectStatusCount": {
+    "message": "เลือกแล้ว {n} จาก {total}",
+    "description": "Status line on the selection page showing how many messages are checked."
+  },
+  "selectErrorNoSelection": {
+    "message": "โปรดเลือกอย่างน้อยหนึ่งข้อความ",
+    "description": "Error shown when the user clicks an export button with no messages selected."
+  },
+  "selectErrorNoMessages": {
+    "message": "ไม่พบข้อความในการสนทนานี้",
+    "description": "Error shown when the selection page opens but the chat has no extractable messages."
+  },
+  "selectErrorLoadFailed": {
+    "message": "ไม่สามารถอ่านการสนทนาได้ โปรดเปิดแท็บแชทใหม่แล้วลองอีกครั้ง",
+    "description": "Error shown when the selection page can't read the stashed conversation."
+  },
+  "selectRoleUser": {
+    "message": "ผู้ใช้",
+    "description": "Role badge for user messages on the selection page."
+  },
+  "selectRoleAssistant": {
+    "message": "ผู้ช่วย",
+    "description": "Role badge for assistant messages on the selection page."
+  },
+  "selectFontSizeLabel": {
+    "message": "ขนาด",
+    "description": "Label preceding the font-size dropdown in the selection page toolbar."
+  },
+  "selectFontSizeSmall": {
+    "message": "เล็ก",
+    "description": "Smallest body-text option in the size dropdown."
+  },
+  "selectFontSizeMedium": {
+    "message": "ปานกลาง",
+    "description": "Default body-text option in the size dropdown."
+  },
+  "selectFontSizeLarge": {
+    "message": "ใหญ่",
+    "description": "Largest body-text option in the size dropdown."
+  },
+  "selectShowTimeLabel": {
+    "message": "เวลา",
+    "description": "Compact label next to the show-chat-time checkbox in the selection page toolbar."
+  },
+  "selectShowSourceLabel": {
+    "message": "แหล่งที่มา",
+    "description": "Compact label next to the show-source checkbox in the selection page toolbar."
+  },
+  "optionsHtmlSizeLabel": {
+    "message": "ขนาดข้อความเนื้อหา",
+    "description": "Settings → General label for the body text size dropdown (HTML / PDF exports)."
+  },
+  "optionsHtmlShowTimeLabel": {
+    "message": "แสดงเวลาแชท",
+    "description": "Settings → General label for the toggle that includes per-message timestamps in HTML / PDF exports."
+  },
+  "optionsHtmlShowSourceLabel": {
+    "message": "แสดงลิงก์แหล่งที่มา",
+    "description": "Settings → General label for the toggle that includes the \"Source: <link>\" line at the top of HTML / PDF exports."
+  },
+  "optionsHtmlShowThinkingLabel": {
+    "message": "แสดงการคิด",
+    "description": "Settings → General label for the toggle that keeps the model's thinking blockquotes in HTML / PDF exports."
+  },
+  "optionsFilenamePatternLabel": {
+    "message": "รูปแบบชื่อไฟล์",
+    "description": "Settings → General label for the export filename template input."
+  },
+  "optionsFilenamePatternHint": {
+    "message": "ฟิลด์ที่ใช้ได้:",
+    "description": "Helper text under the filename pattern input, followed by the literal placeholder list."
+  },
+  "selectShowThinkingLabel": {
+    "message": "กำลังคิด",
+    "description": "Compact label next to the show-thinking checkbox in the selection page toolbar."
+  },
+  "selectTitleFontLabel": {
+    "message": "หัวเรื่อง",
+    "description": "Compact label preceding the title-font dropdown in the selection page toolbar."
+  },
+  "selectTextFontLabel": {
+    "message": "ข้อความ",
+    "description": "Compact label preceding the text-font dropdown in the selection page toolbar."
+  },
+  "dragHint": {
+    "message": "ลากเพื่อจัดลำดับใหม่",
+    "description": "Helper text under the AI sites grid."
+  },
+  "popupViewLauncherTitle": {
+    "message": "ไปยังเว็บไซต์ AI",
+    "description": "Tooltip on the header toggle that switches the popup from the export view to the AI-site launcher grid."
+  },
+  "popupViewExportTitle": {
+    "message": "กลับไปที่การส่งออก",
+    "description": "Tooltip on the header toggle that switches the popup from the AI-site launcher back to the export view."
+  },
+  "popupPagePrevTitle": {
+    "message": "หน้าก่อนหน้า",
+    "description": "Tooltip on the launcher pager button that shows the previous page of AI sites."
+  },
+  "popupPageNextTitle": {
+    "message": "หน้าถัดไป",
+    "description": "Tooltip on the launcher pager button that shows the next page of AI sites."
+  },
+  "statusExtracting": {
+    "message": "กำลังดึงข้อมูล…",
+    "description": "Status shown while the extension is reading the chat."
+  },
+  "statusGotMessagesSaving": {
+    "message": "ได้รับ {count} ข้อความจาก {site} กำลังบันทึก…",
+    "description": "Status shown after extraction, before the file is saved."
+  },
+  "statusGotMessagesPrinting": {
+    "message": "ได้รับ {count} ข้อความจาก {site} กำลังเปิดกล่องโต้ตอบการพิมพ์…",
+    "description": "Status shown when exporting to PDF, before the print tab opens."
+  },
+  "statusOpenedPrintTab": {
+    "message": "เปิดแท็บพิมพ์แล้ว - เลือก \"บันทึกเป็น PDF\"",
+    "description": "Status shown after the print tab is opened for PDF export."
+  },
+  "statusGotMessagesUploadingGdoc": {
+    "message": "ได้รับ {count} ข้อความจาก {site} กำลังอัปโหลดไปยัง Google Docs…",
+    "description": "Status shown while the chat is being uploaded to Google Drive as a Google Doc."
+  },
+  "statusOpenedGdoc": {
+    "message": "เปิด Google Doc ในแท็บใหม่แล้ว",
+    "description": "Status shown after the Google Docs upload succeeds and the new doc opens."
+  },
+  "statusGotMessagesUploadingNotion": {
+    "message": "ได้รับ {count} ข้อความจาก {site} กำลังอัปโหลดไปยัง Notion…",
+    "description": "Status shown while the chat is being uploaded to Notion as a native page."
+  },
+  "statusOpenedNotion": {
+    "message": "เปิดหน้า Notion ในแท็บใหม่แล้ว",
+    "description": "Status shown after the Notion upload succeeds and the new page opens."
+  },
+  "statusGotMessagesUploadingMsword": {
+    "message": "ได้รับ {count} ข้อความจาก {site} กำลังอัปโหลดไปยัง Word Online…",
+    "description": "Status shown while the chat is being uploaded to OneDrive for Word Online."
+  },
+  "statusOpenedMsword": {
+    "message": "เปิดเอกสาร Word Online ในแท็บใหม่แล้ว",
+    "description": "Status shown after the Word Online upload succeeds and the document opens."
+  },
+  "statusGotMessagesUploadingNextcloud": {
+    "message": "ได้รับ {count} ข้อความจาก {site} กำลังอัปโหลดไปยัง Nextcloud…",
+    "description": "Status shown while the chat is being uploaded to Nextcloud."
+  },
+  "statusOpenedNextcloud": {
+    "message": "เปิดไฟล์ Nextcloud ในแท็บใหม่แล้ว",
+    "description": "Status shown after the Nextcloud upload succeeds and the file opens."
+  },
+  "statusGotMessagesUploadingOnenote": {
+    "message": "ได้รับ {count} ข้อความจาก {site} กำลังส่งไปยัง OneNote…",
+    "description": "Status shown while the chat is being sent to OneNote as a new page."
+  },
+  "statusOpenedOnenote": {
+    "message": "เปิดหน้า OneNote ในแท็บใหม่แล้ว",
+    "description": "Status shown after the OneNote upload succeeds and the new page opens."
+  },
+  "statusSaved": {
+    "message": "บันทึกแล้ว: {filename}",
+    "description": "Success message after the file is saved."
+  },
+  "errorContentScriptNotLoaded": {
+    "message": "สคริปต์เนื้อหาไม่โหลด โปรดรีเฟรชแท็บนี้ (F5) แล้วลองอีกครั้ง",
+    "description": "Error when the popup cannot reach the content script."
+  },
+  "errorExtractionFailed": {
+    "message": "การดึงข้อมูลล้มเหลว หน้านี้เป็นหน้าแชท AI ที่รองรับหรือไม่?",
+    "description": "Generic extraction failure error."
+  },
+  "errorNoActiveTab": {
+    "message": "ไม่มีแท็บที่ใช้งานอยู่",
+    "description": "Error when no active tab is found."
+  },
+  "errorPrintTab": {
+    "message": "ไม่สามารถเปิดแท็บพิมพ์ได้",
+    "description": "Error when opening the print tab failed."
+  },
+  "errorDownloadFailed": {
+    "message": "ดาวน์โหลดล้มเหลว",
+    "description": "Error when the download cannot start."
+  },
+  "optionsTitle": {
+    "message": "{app} - การตั้งค่า",
+    "description": "<title> of the settings page."
+  },
+  "optionsHeading": {
+    "message": "การตั้งค่า",
+    "description": "Top heading of the settings page."
+  },
+  "optionsTabGeneral": {
+    "message": "ทั่วไป",
+    "description": "Sidebar nav item for the General settings page (language)."
+  },
+  "optionsTabStyle": {
+    "message": "สไตล์",
+    "description": "Sidebar nav item for the Style settings page (fonts, body text size, preview)."
+  },
+  "optionsInlineButtonsHeading": {
+    "message": "ปุ่มในแชท",
+    "description": "Sub-heading on the General settings page above the three per-message inline-button visibility toggles."
+  },
+  "optionsInlineExportMenuLabel": {
+    "message": "เมนูส่งออกไฟล์",
+    "description": "Settings checkbox label - show the per-message export-format hover menu inside the AI chat page."
+  },
+  "optionsInlineCopyMdLabel": {
+    "message": "ปุ่มคัดลอกเป็น Markdown",
+    "description": "Settings checkbox label - show the per-message 'Copy as Markdown' button inside the AI chat page."
+  },
+  "optionsInlineCopyHtmlLabel": {
+    "message": "ปุ่มคัดลอกเป็น HTML",
+    "description": "Settings checkbox label - show the per-message 'Copy as HTML' button inside the AI chat page."
+  },
+  "optionsTabSites": {
+    "message": "เว็บไซต์ AI",
+    "description": "Sidebar nav item for the AI Sites settings page (visibility, order)."
+  },
+  "optionsTabNotion": {
+    "message": "Notion",
+    "description": "Sidebar nav item for the Notion settings page (connect, parent page picker)."
+  },
+  "optionsNotionIntro": {
+    "message": "เชื่อมต่อพื้นที่ทำงาน Notion ของคุณเพื่อส่งออกแชทเป็นหน้า Notion ดั้งเดิม {app} สามารถดูและแก้ไขได้เฉพาะหน้าที่คุณให้สิทธิ์เข้าถึงอย่างชัดเจนเท่านั้น",
+    "description": "Intro paragraph at the top of the Notion settings page."
+  },
+  "optionsNotionConnect": {
+    "message": "เชื่อมต่อ Notion",
+    "description": "Button label that starts the Notion OAuth flow."
+  },
+  "optionsNotionConnecting": {
+    "message": "กำลังเชื่อมต่อกับ Notion…",
+    "description": "Status shown while the Notion OAuth round-trip is in progress."
+  },
+  "optionsNotionDisconnect": {
+    "message": "ยกเลิกการเชื่อมต่อ",
+    "description": "Button label that clears the stored Notion access token."
+  },
+  "optionsNotionWorkspaceLabel": {
+    "message": "พื้นที่ทำงาน",
+    "description": "Label next to the Notion workspace name once connected."
+  },
+  "optionsNotionParentLabel": {
+    "message": "หน้าหลัก",
+    "description": "Label for the dropdown that picks which Notion page new exports land in."
+  },
+  "optionsNotionParentHint": {
+    "message": "หน้าแชทใหม่จะถูกสร้างเป็นหน้าย่อยของหน้านี้ หากต้องการให้สิทธิ์เข้าถึงหน้าเพิ่มเติม: เปิดหน้าใน Notion → เมนู \"…\" → การเชื่อมต่อ → การผสานรวม {app}",
+    "description": "Helper text under the parent page picker, explaining how to grant access to more pages."
+  },
+  "optionsNotionRefresh": {
+    "message": "รีเฟรช",
+    "description": "Button that re-fetches the list of accessible Notion pages."
+  },
+  "optionsNotionLoadingPages": {
+    "message": "กำลังโหลดหน้า…",
+    "description": "Placeholder option in the parent page dropdown while pages are being fetched."
+  },
+  "optionsNotionNoPages": {
+    "message": "ไม่มีหน้า - แชร์หน้า Notion อย่างน้อยหนึ่งหน้ากับการผสานรวม {app}",
+    "description": "Placeholder option when the Notion search returned no accessible pages."
+  },
+  "optionsNotionPagesFailed": {
+    "message": "ไม่สามารถโหลดหน้าได้",
+    "description": "Placeholder option when the Notion search call failed."
+  },
+  "optionsTabMicrosoft": {
+    "message": "Microsoft 365",
+    "description": "Sidebar nav item for the Microsoft 365 settings page (connect, account)."
+  },
+  "optionsMicrosoftIntro": {
+    "message": "เชื่อมต่อบัญชี Microsoft ของคุณเพื่อส่งออกแชทเป็นไฟล์ .docx ใน Word Online ไฟล์จะถูกเก็บไว้ใน OneDrive ของคุณ ในโฟลเดอร์ของแอปภายใต้แอป",
+    "description": "Intro paragraph at the top of the Microsoft 365 settings page."
+  },
+  "optionsMicrosoftConnect": {
+    "message": "เชื่อมต่อ Microsoft 365",
+    "description": "Button label that starts the Microsoft OAuth flow."
+  },
+  "optionsMicrosoftConnecting": {
+    "message": "กำลังเชื่อมต่อกับ Microsoft 365…",
+    "description": "Status shown while the Microsoft OAuth round-trip is in progress."
+  },
+  "optionsMicrosoftDisconnect": {
+    "message": "ยกเลิกการเชื่อมต่อ",
+    "description": "Button label that clears the stored Microsoft tokens."
+  },
+  "optionsMicrosoftAccountLabel": {
+    "message": "บัญชี",
+    "description": "Label next to the signed-in Microsoft account email."
+  },
+  "optionsMicrosoftHint": {
+    "message": "ไฟล์ที่ส่งออกจะปรากฏใน OneDrive ภายใต้แอป (ในโฟลเดอร์ของแอป) และเปิดใน Word Online ในแท็บใหม่",
+    "description": "Helper text under the Microsoft 365 connection panel."
+  },
+  "optionsTabNextcloud": {
+    "message": "Nextcloud",
+    "description": "Sidebar nav item for the Nextcloud settings page."
+  },
+  "optionsNextcloudIntro": {
+    "message": "บันทึกแชทไปยังเซิร์ฟเวอร์ Nextcloud ของคุณเองผ่าน WebDAV {app} ใช้รหัสผ่านแอป (Nextcloud → การตั้งค่า → ความปลอดภัย → “สร้างรหัสผ่านแอปใหม่”) – รหัสผ่านบัญชีจริงของคุณจะไม่ออกจากเบราว์เซอร์ของคุณ",
+    "description": "Intro paragraph at the top of the Nextcloud settings page."
+  },
+  "optionsNextcloudServerLabel": {
+    "message": "URL เซิร์ฟเวอร์",
+    "description": "Label for the Nextcloud server URL input."
+  },
+  "optionsNextcloudUserLabel": {
+    "message": "ชื่อผู้ใช้",
+    "description": "Label for the Nextcloud username input."
+  },
+  "optionsNextcloudPasswordLabel": {
+    "message": "รหัสผ่านแอป",
+    "description": "Label for the Nextcloud app-password input."
+  },
+  "optionsNextcloudFolderLabel": {
+    "message": "โฟลเดอร์",
+    "description": "Label for the Nextcloud target folder input."
+  },
+  "optionsNextcloudFormatLabel": {
+    "message": "รูปแบบเริ่มต้น",
+    "description": "Label for the dropdown that picks which file format gets uploaded to Nextcloud."
+  },
+  "optionsNextcloudTest": {
+    "message": "ทดสอบการเชื่อมต่อ",
+    "description": "Button label that probes the Nextcloud credentials with a PROPFIND request."
+  },
+  "optionsNextcloudSave": {
+    "message": "บันทึก",
+    "description": "Button label that persists the Nextcloud credentials."
+  },
+  "optionsNextcloudClear": {
+    "message": "ล้างข้อมูล",
+    "description": "Button label that wipes the stored Nextcloud credentials."
+  },
+  "optionsNextcloudTesting": {
+    "message": "กำลังทดสอบการเชื่อมต่อ…",
+    "description": "Status shown while the extension is probing the Nextcloud server with a PROPFIND."
+  },
+  "optionsNextcloudTestOk": {
+    "message": "เชื่อมต่อสำเร็จ",
+    "description": "Status shown when the Nextcloud PROPFIND probe succeeds."
+  },
+  "optionsNextcloudFillFirst": {
+    "message": "โปรดกรอก URL เซิร์ฟเวอร์ ชื่อผู้ใช้ และรหัสผ่านแอปก่อน",
+    "description": "Error shown when the user clicks Test or Save with empty fields."
+  },
+  "optionsNextcloudCleared": {
+    "message": "ล้างข้อมูลรับรอง Nextcloud แล้ว",
+    "description": "Status shown after the user clicks Clear."
+  },
+  "optionsLanguageLabel": {
+    "message": "ภาษา",
+    "description": "Label for the language dropdown."
+  },
+  "optionsLanguageAuto": {
+    "message": "ใช้ภาษาของเบราว์เซอร์",
+    "description": "Default option in the language dropdown - picks the browser UI language."
+  },
+  "optionsHtmlTitleFontLabel": {
+    "message": "ฟอนต์หัวเรื่อง",
+    "description": "Label for the dropdown that picks the heading font used in HTML / PDF exports."
+  },
+  "optionsHtmlTextFontLabel": {
+    "message": "ฟอนต์ข้อความ",
+    "description": "Label for the dropdown that picks the body font used in HTML / PDF exports."
+  },
+  "optionsFontSystem": {
+    "message": "ระบบ (ค่าเริ่มต้น)",
+    "description": "First option in both font dropdowns - the OS default font, no Google Fonts fetch."
+  },
+  "optionsHtmlMathLabel": {
+    "message": "การแสดงผลคณิตศาสตร์ (KaTeX)",
+    "description": "Label for the toggle that enables math rendering in HTML / PDF exports via the KaTeX library."
+  },
+  "optionsSavedNotice": {
+    "message": "บันทึกแล้ว",
+    "description": "Notice shown when settings are saved."
+  },
+  "optionsVisibleSitesHint": {
+    "message": "ลากเพื่อจัดลำดับใหม่ ยกเลิกการเลือกเพื่อซ่อนไทล์จากป๊อปอัป",
+    "description": "Helper text under the visible sites checklist."
+  },
+  "optionsSelectAll": {
+    "message": "เลือกทั้งหมด",
+    "description": "Button that checks every site in the visibility list."
+  },
+  "optionsSelectNone": {
+    "message": "ไม่เลือกเลย",
+    "description": "Button that unchecks every site in the visibility list."
+  },
+  "exportJsonTitle": {
+    "message": "ส่งออกเป็น JSON (.json)",
+    "description": "Tooltip on the JSON export button - a flat { role, content } message array for developers."
+  },
+  "exportDebugTitle": {
+    "message": "ส่งออกชุดดีบัก (.json)",
+    "description": "Tooltip on the Developer-mode Debug export button - saves a diagnostic file with the raw API capture, the extracted conversation, and the rendered outputs."
+  },
+  "optionsDevModeLabel": {
+    "message": "โหมดนักพัฒนา",
+    "description": "Settings checkbox that reveals the Debug-bundle export button in the popup."
+  },
+  "optionsAdvancedHeading": {
+    "message": "ขั้นสูง",
+    "description": "Heading of the Advanced block at the end of Settings - General (currently holds the Developer mode toggle)."
+  },
+  "errorSiteNotSupported": {
+    "message": "เว็บไซต์นี้ไม่รองรับ โปรดเปิดเว็บไซต์ AI ที่ระบุไว้ด้านล่างแล้วลองอีกครั้ง",
+    "description": "Popup error when the active tab's domain matches none of the supported AI sites (refreshing cannot help there)."
+  },
+  "popupMediaTitle": {
+    "message": "สื่อ",
+    "description": "Popup button — opens the media page for the current conversation."
+  },
+  "mediaPageTitle": {
+    "message": "รูปภาพ",
+    "description": "Browser tab title of the media page."
+  },
+  "mediaHeading": {
+    "message": "รูปภาพในการสนทนานี้",
+    "description": "Heading of the media page."
+  },
+  "mediaSelectAll": {
+    "message": "ทั้งหมด",
+    "description": "Media page — select every image."
+  },
+  "mediaSelectNone": {
+    "message": "ไม่มี",
+    "description": "Media page — clear the selection."
+  },
+  "mediaDownload": {
+    "message": "ดาวน์โหลด",
+    "description": "Media page — download the selected images."
+  },
+  "mediaMeta": {
+    "message": "เลือก {selected} จาก {count}",
+    "description": "Media page counter. {selected} and {count} are numbers."
+  },
+  "mediaEmpty": {
+    "message": "การสนทนานี้ไม่มีรูปภาพ",
+    "description": "Media page — shown when the conversation contains no pictures."
+  },
+  "mediaLoadError": {
+    "message": "ไม่สามารถอ่านการสนทนาได้ โปรดปิดแท็บนี้แล้วลองอีกครั้งจากป๊อปอัป",
+    "description": "Media page — the stashed conversation was missing."
+  },
+  "mediaRoleUser": {
+    "message": "คุณ",
+    "description": "Media page tile label — the image came from the user's message."
+  },
+  "mediaRoleAssistant": {
+    "message": "AI",
+    "description": "Media page tile label — the image came from the AI's reply."
+  },
+  "mediaDownloadDone": {
+    "message": "ดาวน์โหลดแล้ว {done} รายการ, ล้มเหลว {failed} รายการ",
+    "description": "Media page result. {done} and {failed} are numbers."
+  },
+  "popupCustomExportSub": {
+    "message": "เลือกข้อความที่คุณต้องการส่งออก",
+    "description": "Tooltip on the popup's Custom Export button."
+  },
+  "popupMediaSub": {
+    "message": "เรียกดูและดาวน์โหลดรูปภาพในการแชทนี้",
+    "description": "Tooltip on the popup's Media button."
+  }
+}

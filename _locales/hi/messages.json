@@ -1,0 +1,538 @@
+{
+  "extDescription": {
+    "message": "ChatGPT, Gemini, Claude से AI चैट निर्यात करें। 32 AI साइटें, 9 प्रारूप, 5 क्लाउड गंतव्य।",
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+  },
+  "exportMarkdownTitle": {
+    "message": "Markdown (.md) के रूप में निर्यात करें",
+    "description": "Tooltip on the Markdown export button."
+  },
+  "exportHtmlTitle": {
+    "message": "HTML (.html) के रूप में निर्यात करें",
+    "description": "Tooltip on the HTML export button."
+  },
+  "exportTxtTitle": {
+    "message": "सादे टेक्स्ट (.txt) के रूप में निर्यात करें",
+    "description": "Tooltip on the plain-text export button."
+  },
+  "exportDocxTitle": {
+    "message": "Word (.docx) के रूप में निर्यात करें",
+    "description": "Tooltip on the Word export button."
+  },
+  "exportOdtTitle": {
+    "message": "OpenDocument (.odt) के रूप में निर्यात करें",
+    "description": "Tooltip on the OpenDocument export button."
+  },
+  "exportPdfTitle": {
+    "message": "PDF के रूप में निर्यात करें (प्रिंट डायलॉग के माध्यम से)",
+    "description": "Tooltip on the PDF export button."
+  },
+  "exportImageTitle": {
+    "message": "PNG इमेज के रूप में निर्यात करें",
+    "description": "Tooltip on the Image export button - renders the conversation to a single tall PNG file."
+  },
+  "exportGdocTitle": {
+    "message": "Google Docs में खोलें",
+    "description": "Tooltip on the Google Docs export button - uploads the chat to the user's Google Drive as a native Google Doc."
+  },
+  "exportNotionTitle": {
+    "message": "Notion में निर्यात करें",
+    "description": "Tooltip on the Notion export button - uploads the chat to the user's Notion workspace as a native Notion page."
+  },
+  "exportMswordTitle": {
+    "message": "Word Online में खोलें",
+    "description": "Tooltip on the Word Online export button - uploads the chat as a .docx to OneDrive and opens it in Word Online."
+  },
+  "exportNextcloudTitle": {
+    "message": "Nextcloud में सहेजें",
+    "description": "Tooltip on the Nextcloud export button - uploads the chat to the user's Nextcloud server via WebDAV."
+  },
+  "exportOnenoteTitle": {
+    "message": "OneNote को भेजें",
+    "description": "Tooltip on the OneNote export button - creates a new page in the user's OneNote default notebook."
+  },
+  "settingsButtonTitle": {
+    "message": "सेटिंग्स",
+    "description": "Tooltip on the gear icon that opens the settings page."
+  },
+  "popupCustomExportTitle": {
+    "message": "कस्टम निर्यात",
+    "description": "Title of the prominent button below the export icons in the popup. Opens the message selection page."
+  },
+  "selectPageTitle": {
+    "message": "{app} - संदेश चुनें",
+    "description": "<title> of the selection page (browser tab title)."
+  },
+  "selectHeading": {
+    "message": "निर्यात करने के लिए संदेश चुनें",
+    "description": "Top heading of the selection page."
+  },
+  "selectStatusCount": {
+    "message": "{total} में से {n} चुने गए",
+    "description": "Status line on the selection page showing how many messages are checked."
+  },
+  "selectErrorNoSelection": {
+    "message": "कम से कम एक संदेश चुनें।",
+    "description": "Error shown when the user clicks an export button with no messages selected."
+  },
+  "selectErrorNoMessages": {
+    "message": "इस बातचीत में कोई संदेश नहीं मिला।",
+    "description": "Error shown when the selection page opens but the chat has no extractable messages."
+  },
+  "selectErrorLoadFailed": {
+    "message": "बातचीत को पढ़ा नहीं जा सका। चैट टैब को फिर से खोलें और दोबारा प्रयास करें।",
+    "description": "Error shown when the selection page can't read the stashed conversation."
+  },
+  "selectRoleUser": {
+    "message": "उपयोगकर्ता",
+    "description": "Role badge for user messages on the selection page."
+  },
+  "selectRoleAssistant": {
+    "message": "सहायक",
+    "description": "Role badge for assistant messages on the selection page."
+  },
+  "selectFontSizeLabel": {
+    "message": "आकार",
+    "description": "Label preceding the font-size dropdown in the selection page toolbar."
+  },
+  "selectFontSizeSmall": {
+    "message": "छोटा",
+    "description": "Smallest body-text option in the size dropdown."
+  },
+  "selectFontSizeMedium": {
+    "message": "मध्यम",
+    "description": "Default body-text option in the size dropdown."
+  },
+  "selectFontSizeLarge": {
+    "message": "बड़ा",
+    "description": "Largest body-text option in the size dropdown."
+  },
+  "selectShowTimeLabel": {
+    "message": "समय",
+    "description": "Compact label next to the show-chat-time checkbox in the selection page toolbar."
+  },
+  "selectShowSourceLabel": {
+    "message": "स्रोत",
+    "description": "Compact label next to the show-source checkbox in the selection page toolbar."
+  },
+  "optionsHtmlSizeLabel": {
+    "message": "मुख्य टेक्स्ट का आकार",
+    "description": "Settings → General label for the body text size dropdown (HTML / PDF exports)."
+  },
+  "optionsHtmlShowTimeLabel": {
+    "message": "चैट का समय दिखाएं",
+    "description": "Settings → General label for the toggle that includes per-message timestamps in HTML / PDF exports."
+  },
+  "optionsHtmlShowSourceLabel": {
+    "message": "स्रोत लिंक दिखाएं",
+    "description": "Settings → General label for the toggle that includes the \"Source: <link>\" line at the top of HTML / PDF exports."
+  },
+  "optionsHtmlShowThinkingLabel": {
+    "message": "सोच दिखाएं",
+    "description": "Settings → General label for the toggle that keeps the model's thinking blockquotes in HTML / PDF exports."
+  },
+  "optionsFilenamePatternLabel": {
+    "message": "फ़ाइल नाम पैटर्न",
+    "description": "Settings → General label for the export filename template input."
+  },
+  "optionsFilenamePatternHint": {
+    "message": "उपलब्ध फ़ील्ड:",
+    "description": "Helper text under the filename pattern input, followed by the literal placeholder list."
+  },
+  "selectShowThinkingLabel": {
+    "message": "सोच",
+    "description": "Compact label next to the show-thinking checkbox in the selection page toolbar."
+  },
+  "selectTitleFontLabel": {
+    "message": "शीर्षक",
+    "description": "Compact label preceding the title-font dropdown in the selection page toolbar."
+  },
+  "selectTextFontLabel": {
+    "message": "टेक्स्ट",
+    "description": "Compact label preceding the text-font dropdown in the selection page toolbar."
+  },
+  "dragHint": {
+    "message": "पुनर्व्यवस्थित करने के लिए खींचें",
+    "description": "Helper text under the AI sites grid."
+  },
+  "popupViewLauncherTitle": {
+    "message": "किसी AI साइट पर जाएँ",
+    "description": "Tooltip on the header toggle that switches the popup from the export view to the AI-site launcher grid."
+  },
+  "popupViewExportTitle": {
+    "message": "निर्यात पर वापस जाएँ",
+    "description": "Tooltip on the header toggle that switches the popup from the AI-site launcher back to the export view."
+  },
+  "popupPagePrevTitle": {
+    "message": "पिछला पृष्ठ",
+    "description": "Tooltip on the launcher pager button that shows the previous page of AI sites."
+  },
+  "popupPageNextTitle": {
+    "message": "अगला पृष्ठ",
+    "description": "Tooltip on the launcher pager button that shows the next page of AI sites."
+  },
+  "statusExtracting": {
+    "message": "निकाला जा रहा है…",
+    "description": "Status shown while the extension is reading the chat."
+  },
+  "statusGotMessagesSaving": {
+    "message": "{site} से {count} संदेश प्राप्त हुए। सहेजा जा रहा है…",
+    "description": "Status shown after extraction, before the file is saved."
+  },
+  "statusGotMessagesPrinting": {
+    "message": "{site} से {count} संदेश प्राप्त हुए। प्रिंट डायलॉग खोला जा रहा है…",
+    "description": "Status shown when exporting to PDF, before the print tab opens."
+  },
+  "statusOpenedPrintTab": {
+    "message": "प्रिंट टैब खोला गया - \"PDF के रूप में सहेजें\" चुनें",
+    "description": "Status shown after the print tab is opened for PDF export."
+  },
+  "statusGotMessagesUploadingGdoc": {
+    "message": "{site} से {count} संदेश प्राप्त हुए। Google Docs पर अपलोड किया जा रहा है…",
+    "description": "Status shown while the chat is being uploaded to Google Drive as a Google Doc."
+  },
+  "statusOpenedGdoc": {
+    "message": "एक नए टैब में Google Doc खोला गया।",
+    "description": "Status shown after the Google Docs upload succeeds and the new doc opens."
+  },
+  "statusGotMessagesUploadingNotion": {
+    "message": "{site} से {count} संदेश प्राप्त हुए। Notion पर अपलोड किया जा रहा है…",
+    "description": "Status shown while the chat is being uploaded to Notion as a native page."
+  },
+  "statusOpenedNotion": {
+    "message": "एक नए टैब में Notion पेज खोला गया।",
+    "description": "Status shown after the Notion upload succeeds and the new page opens."
+  },
+  "statusGotMessagesUploadingMsword": {
+    "message": "{site} से {count} संदेश प्राप्त हुए। Word Online पर अपलोड किया जा रहा है…",
+    "description": "Status shown while the chat is being uploaded to OneDrive for Word Online."
+  },
+  "statusOpenedMsword": {
+    "message": "एक नए टैब में Word Online दस्तावेज़ खोला गया।",
+    "description": "Status shown after the Word Online upload succeeds and the document opens."
+  },
+  "statusGotMessagesUploadingNextcloud": {
+    "message": "{site} से {count} संदेश प्राप्त हुए। Nextcloud पर अपलोड किया जा रहा है…",
+    "description": "Status shown while the chat is being uploaded to Nextcloud."
+  },
+  "statusOpenedNextcloud": {
+    "message": "एक नए टैब में Nextcloud फ़ाइल खोली गई।",
+    "description": "Status shown after the Nextcloud upload succeeds and the file opens."
+  },
+  "statusGotMessagesUploadingOnenote": {
+    "message": "{site} से {count} संदेश प्राप्त हुए। OneNote को भेजा जा रहा है…",
+    "description": "Status shown while the chat is being sent to OneNote as a new page."
+  },
+  "statusOpenedOnenote": {
+    "message": "एक नए टैब में OneNote पेज खोला गया।",
+    "description": "Status shown after the OneNote upload succeeds and the new page opens."
+  },
+  "statusSaved": {
+    "message": "{filename} सहेजा गया",
+    "description": "Success message after the file is saved."
+  },
+  "errorContentScriptNotLoaded": {
+    "message": "सामग्री स्क्रिप्ट लोड नहीं हुई। इस टैब को रीफ़्रेश करें (F5) और दोबारा प्रयास करें।",
+    "description": "Error when the popup cannot reach the content script."
+  },
+  "errorExtractionFailed": {
+    "message": "निष्कर्षण विफल रहा। क्या यह एक समर्थित AI चैट पेज है?",
+    "description": "Generic extraction failure error."
+  },
+  "errorNoActiveTab": {
+    "message": "कोई सक्रिय टैब नहीं।",
+    "description": "Error when no active tab is found."
+  },
+  "errorPrintTab": {
+    "message": "प्रिंट टैब नहीं खोला जा सका।",
+    "description": "Error when opening the print tab failed."
+  },
+  "errorDownloadFailed": {
+    "message": "डाउनलोड विफल रहा।",
+    "description": "Error when the download cannot start."
+  },
+  "optionsTitle": {
+    "message": "{app} - सेटिंग्स",
+    "description": "<title> of the settings page."
+  },
+  "optionsHeading": {
+    "message": "सेटिंग्स",
+    "description": "Top heading of the settings page."
+  },
+  "optionsTabGeneral": {
+    "message": "सामान्य",
+    "description": "Sidebar nav item for the General settings page (language)."
+  },
+  "optionsTabStyle": {
+    "message": "शैली",
+    "description": "Sidebar nav item for the Style settings page (fonts, body text size, preview)."
+  },
+  "optionsInlineButtonsHeading": {
+    "message": "चैट के अंदर के बटन",
+    "description": "Sub-heading on the General settings page above the three per-message inline-button visibility toggles."
+  },
+  "optionsInlineExportMenuLabel": {
+    "message": "फ़ाइल निर्यात मेनू",
+    "description": "Settings checkbox label - show the per-message export-format hover menu inside the AI chat page."
+  },
+  "optionsInlineCopyMdLabel": {
+    "message": "Markdown के रूप में कॉपी करें बटन",
+    "description": "Settings checkbox label - show the per-message 'Copy as Markdown' button inside the AI chat page."
+  },
+  "optionsInlineCopyHtmlLabel": {
+    "message": "HTML के रूप में कॉपी करें बटन",
+    "description": "Settings checkbox label - show the per-message 'Copy as HTML' button inside the AI chat page."
+  },
+  "optionsTabSites": {
+    "message": "AI साइटें",
+    "description": "Sidebar nav item for the AI Sites settings page (visibility, order)."
+  },
+  "optionsTabNotion": {
+    "message": "Notion",
+    "description": "Sidebar nav item for the Notion settings page (connect, parent page picker)."
+  },
+  "optionsNotionIntro": {
+    "message": "चैट को मूल Notion पृष्ठों के रूप में निर्यात करने के लिए अपने Notion कार्यक्षेत्र को कनेक्ट करें। {app} केवल उन पृष्ठों को देख और संशोधित कर सकता है जिन्हें आप स्पष्ट रूप से एक्सेस प्रदान करते हैं।",
+    "description": "Intro paragraph at the top of the Notion settings page."
+  },
+  "optionsNotionConnect": {
+    "message": "Notion कनेक्ट करें",
+    "description": "Button label that starts the Notion OAuth flow."
+  },
+  "optionsNotionConnecting": {
+    "message": "Notion से कनेक्ट किया जा रहा है…",
+    "description": "Status shown while the Notion OAuth round-trip is in progress."
+  },
+  "optionsNotionDisconnect": {
+    "message": "डिस्कनेक्ट करें",
+    "description": "Button label that clears the stored Notion access token."
+  },
+  "optionsNotionWorkspaceLabel": {
+    "message": "वर्कस्पेस",
+    "description": "Label next to the Notion workspace name once connected."
+  },
+  "optionsNotionParentLabel": {
+    "message": "पैरेंट पेज",
+    "description": "Label for the dropdown that picks which Notion page new exports land in."
+  },
+  "optionsNotionParentHint": {
+    "message": "नए चैट पृष्ठ इस पृष्ठ के उप-पृष्ठों के रूप में बनाए जाएंगे। अधिक पृष्ठों तक पहुंच प्रदान करने के लिए: Notion में पृष्ठ खोलें → \"...\" मेनू → कनेक्शन → {app} एकीकरण।",
+    "description": "Helper text under the parent page picker, explaining how to grant access to more pages."
+  },
+  "optionsNotionRefresh": {
+    "message": "रीफ़्रेश करें",
+    "description": "Button that re-fetches the list of accessible Notion pages."
+  },
+  "optionsNotionLoadingPages": {
+    "message": "पेज लोड हो रहे हैं…",
+    "description": "Placeholder option in the parent page dropdown while pages are being fetched."
+  },
+  "optionsNotionNoPages": {
+    "message": "कोई पृष्ठ नहीं - {app} एकीकरण के साथ कम से कम एक Notion पृष्ठ साझा करें",
+    "description": "Placeholder option when the Notion search returned no accessible pages."
+  },
+  "optionsNotionPagesFailed": {
+    "message": "पेज लोड नहीं किए जा सके",
+    "description": "Placeholder option when the Notion search call failed."
+  },
+  "optionsTabMicrosoft": {
+    "message": "Microsoft 365",
+    "description": "Sidebar nav item for the Microsoft 365 settings page (connect, account)."
+  },
+  "optionsMicrosoftIntro": {
+    "message": "चैट को Word Online में .docx फ़ाइलों के रूप में निर्यात करने के लिए अपने Microsoft खाते को कनेक्ट करें। फ़ाइलें आपके OneDrive में, ऐप्स के अंतर्गत ऐप के फ़ोल्डर में संग्रहीत होती हैं।",
+    "description": "Intro paragraph at the top of the Microsoft 365 settings page."
+  },
+  "optionsMicrosoftConnect": {
+    "message": "Microsoft 365 कनेक्ट करें",
+    "description": "Button label that starts the Microsoft OAuth flow."
+  },
+  "optionsMicrosoftConnecting": {
+    "message": "Microsoft 365 से कनेक्ट किया जा रहा है…",
+    "description": "Status shown while the Microsoft OAuth round-trip is in progress."
+  },
+  "optionsMicrosoftDisconnect": {
+    "message": "डिस्कनेक्ट करें",
+    "description": "Button label that clears the stored Microsoft tokens."
+  },
+  "optionsMicrosoftAccountLabel": {
+    "message": "खाता",
+    "description": "Label next to the signed-in Microsoft account email."
+  },
+  "optionsMicrosoftHint": {
+    "message": "निर्यात की गई फ़ाइलें OneDrive में ऐप्स के अंतर्गत (ऐप के फ़ोल्डर में) दिखाई देती हैं, और Word Online में एक नए टैब में खुलती हैं।",
+    "description": "Helper text under the Microsoft 365 connection panel."
+  },
+  "optionsTabNextcloud": {
+    "message": "Nextcloud",
+    "description": "Sidebar nav item for the Nextcloud settings page."
+  },
+  "optionsNextcloudIntro": {
+    "message": "WebDAV के माध्यम से अपनी चैट को अपने Nextcloud सर्वर पर सहेजें। {app} एक ऐप पासवर्ड का उपयोग करता है (Nextcloud → सेटिंग्स → सुरक्षा → \"नया ऐप पासवर्ड बनाएं\") - आपका वास्तविक खाता पासवर्ड कभी भी आपके ब्राउज़र को नहीं छोड़ता।",
+    "description": "Intro paragraph at the top of the Nextcloud settings page."
+  },
+  "optionsNextcloudServerLabel": {
+    "message": "सर्वर URL",
+    "description": "Label for the Nextcloud server URL input."
+  },
+  "optionsNextcloudUserLabel": {
+    "message": "उपयोगकर्ता नाम",
+    "description": "Label for the Nextcloud username input."
+  },
+  "optionsNextcloudPasswordLabel": {
+    "message": "ऐप पासवर्ड",
+    "description": "Label for the Nextcloud app-password input."
+  },
+  "optionsNextcloudFolderLabel": {
+    "message": "फ़ोल्डर",
+    "description": "Label for the Nextcloud target folder input."
+  },
+  "optionsNextcloudFormatLabel": {
+    "message": "डिफ़ॉल्ट प्रारूप",
+    "description": "Label for the dropdown that picks which file format gets uploaded to Nextcloud."
+  },
+  "optionsNextcloudTest": {
+    "message": "कनेक्शन का परीक्षण करें",
+    "description": "Button label that probes the Nextcloud credentials with a PROPFIND request."
+  },
+  "optionsNextcloudSave": {
+    "message": "सहेजें",
+    "description": "Button label that persists the Nextcloud credentials."
+  },
+  "optionsNextcloudClear": {
+    "message": "साफ़ करें",
+    "description": "Button label that wipes the stored Nextcloud credentials."
+  },
+  "optionsNextcloudTesting": {
+    "message": "कनेक्शन का परीक्षण किया जा रहा है…",
+    "description": "Status shown while the extension is probing the Nextcloud server with a PROPFIND."
+  },
+  "optionsNextcloudTestOk": {
+    "message": "कनेक्शन सफल रहा।",
+    "description": "Status shown when the Nextcloud PROPFIND probe succeeds."
+  },
+  "optionsNextcloudFillFirst": {
+    "message": "पहले सर्वर URL, उपयोगकर्ता नाम और ऐप पासवर्ड भरें।",
+    "description": "Error shown when the user clicks Test or Save with empty fields."
+  },
+  "optionsNextcloudCleared": {
+    "message": "Nextcloud क्रेडेंशियल साफ़ किए गए।",
+    "description": "Status shown after the user clicks Clear."
+  },
+  "optionsLanguageLabel": {
+    "message": "भाषा",
+    "description": "Label for the language dropdown."
+  },
+  "optionsLanguageAuto": {
+    "message": "ब्राउज़र भाषा का उपयोग करें",
+    "description": "Default option in the language dropdown - picks the browser UI language."
+  },
+  "optionsHtmlTitleFontLabel": {
+    "message": "शीर्षक फ़ॉन्ट",
+    "description": "Label for the dropdown that picks the heading font used in HTML / PDF exports."
+  },
+  "optionsHtmlTextFontLabel": {
+    "message": "टेक्स्ट फ़ॉन्ट",
+    "description": "Label for the dropdown that picks the body font used in HTML / PDF exports."
+  },
+  "optionsFontSystem": {
+    "message": "सिस्टम (डिफ़ॉल्ट)",
+    "description": "First option in both font dropdowns - the OS default font, no Google Fonts fetch."
+  },
+  "optionsHtmlMathLabel": {
+    "message": "गणित रेंडरिंग (KaTeX)",
+    "description": "Label for the toggle that enables math rendering in HTML / PDF exports via the KaTeX library."
+  },
+  "optionsSavedNotice": {
+    "message": "सहेजा गया।",
+    "description": "Notice shown when settings are saved."
+  },
+  "optionsVisibleSitesHint": {
+    "message": "पुनर्व्यवस्थित करने के लिए खींचें। पॉपअप से एक टाइल छिपाने के लिए अनचेक करें।",
+    "description": "Helper text under the visible sites checklist."
+  },
+  "optionsSelectAll": {
+    "message": "सभी चुनें",
+    "description": "Button that checks every site in the visibility list."
+  },
+  "optionsSelectNone": {
+    "message": "कोई नहीं चुनें",
+    "description": "Button that unchecks every site in the visibility list."
+  },
+  "exportJsonTitle": {
+    "message": "JSON के रूप में निर्यात करें (.json)",
+    "description": "Tooltip on the JSON export button - a flat { role, content } message array for developers."
+  },
+  "exportDebugTitle": {
+    "message": "डीबग बंडल निर्यात करें (.json)",
+    "description": "Tooltip on the Developer-mode Debug export button - saves a diagnostic file with the raw API capture, the extracted conversation, and the rendered outputs."
+  },
+  "optionsDevModeLabel": {
+    "message": "डेवलपर मोड",
+    "description": "Settings checkbox that reveals the Debug-bundle export button in the popup."
+  },
+  "optionsAdvancedHeading": {
+    "message": "उन्नत",
+    "description": "Heading of the Advanced block at the end of Settings - General (currently holds the Developer mode toggle)."
+  },
+  "errorSiteNotSupported": {
+    "message": "यह साइट समर्थित नहीं है। नीचे सूचीबद्ध AI साइटों में से किसी एक को खोलें और पुनः प्रयास करें।",
+    "description": "Popup error when the active tab's domain matches none of the supported AI sites (refreshing cannot help there)."
+  },
+  "popupMediaTitle": {
+    "message": "मीडिया",
+    "description": "Popup button — opens the media page for the current conversation."
+  },
+  "mediaPageTitle": {
+    "message": "चित्र",
+    "description": "Browser tab title of the media page."
+  },
+  "mediaHeading": {
+    "message": "इस बातचीत में चित्र",
+    "description": "Heading of the media page."
+  },
+  "mediaSelectAll": {
+    "message": "सभी",
+    "description": "Media page — select every image."
+  },
+  "mediaSelectNone": {
+    "message": "कोई नहीं",
+    "description": "Media page — clear the selection."
+  },
+  "mediaDownload": {
+    "message": "डाउनलोड करें",
+    "description": "Media page — download the selected images."
+  },
+  "mediaMeta": {
+    "message": "{count} में से {selected} चयनित",
+    "description": "Media page counter. {selected} and {count} are numbers."
+  },
+  "mediaEmpty": {
+    "message": "इस बातचीत में कोई चित्र नहीं हैं।",
+    "description": "Media page — shown when the conversation contains no pictures."
+  },
+  "mediaLoadError": {
+    "message": "बातचीत को पढ़ा नहीं जा सका। इस टैब को बंद करें और पॉपअप से फिर से प्रयास करें।",
+    "description": "Media page — the stashed conversation was missing."
+  },
+  "mediaRoleUser": {
+    "message": "आप",
+    "description": "Media page tile label — the image came from the user's message."
+  },
+  "mediaRoleAssistant": {
+    "message": "एआई",
+    "description": "Media page tile label — the image came from the AI's reply."
+  },
+  "mediaDownloadDone": {
+    "message": "{done} डाउनलोड किए गए, {failed} विफल रहे",
+    "description": "Media page result. {done} and {failed} are numbers."
+  },
+  "popupCustomExportSub": {
+    "message": "उन संदेशों का चयन करें जिन्हें आप निर्यात करना चाहते हैं।",
+    "description": "Tooltip on the popup's Custom Export button."
+  },
+  "popupMediaSub": {
+    "message": "इस चैट में तस्वीरें ब्राउज़ करें और डाउनलोड करें।",
+    "description": "Tooltip on the popup's Media button."
+  }
+}
