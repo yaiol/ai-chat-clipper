@@ -392,43 +392,84 @@
         }
         return out;
       }
-      const selectors = [
-        "main button[aria-label='Read Aloud']",
-        "main button[aria-label*='Read Aloud' i]",
-        "main button[aria-label*='Copy' i]",
-        "main button[aria-label*='Regenerate' i]",
-        "main [role='toolbar'] button"
-      ];
-      const anchors = new Set();
-      for (const sel of selectors) {
-        document.querySelectorAll(sel).forEach(a => anchors.add(a));
-      }
-      const out = [];
-      const seenBars = new Set();
-      for (const a of anchors) {
-        const bar = a.parentElement;
-        if (!bar || seenBars.has(bar)) continue;
-        seenBars.add(bar);
-        const msg = a.closest('[data-message-id], [class*="message"]') || bar.parentElement;
-        if (msg) out.push({ bar, msg });
-      }
+      return this.grokcomTurns();
+    },
+
+    // ── grok.com DOM anchors ──────────────────────────────────────────────
+    //
+    // A turn is `div[id^="response-"]` and its parts are SIBLINGS, not nested:
+    //   div#response-…
+    //     |- div.message-bubble[data-testid="assistant-message"|"user-message"]
+    //     |- div            (the hover rail)
+    //     +- div.action-buttons > div.flex.items-center   (the native buttons)
+    //
+    // ⚠ The mount used to anchor on aria-labels ("Read Aloud", "Copy",
+    // "Regenerate") and climb from the button with
+    // `closest('[data-message-id], [class*="message"]')`. grok.com has NO
+    // `data-message-id` anywhere, and `.message-bubble` is the action bar's
+    // SIBLING, never its ancestor — so `msg` fell through to
+    // `bar.parentElement`, i.e. `div.action-buttons`, whose textContent is
+    // EMPTY. Every inline copy and every inline export therefore raised
+    // "Empty message" and flashed the button red. Two of those aria-labels
+    // are localized too ("Copier" on a French account), so which turns even
+    // mounted depended on the UI language. Anchor on the message instead —
+    // `data-testid` is not localized — and walk DOWN to its bar.
+    GROKCOM_MSG_SEL: '[data-testid="assistant-message"], [data-testid="user-message"]',
+
+    grokcomTurns() {
+      return [...document.querySelectorAll(this.GROKCOM_MSG_SEL)].map(msg => {
+        const turn = msg.closest('[id^="response-"]') || msg.parentElement;
+        const holder = turn?.querySelector(".action-buttons");
+        // The buttons sit in a flex row inside `.action-buttons`; ours are
+        // inserted at its front edge, so mount on that row, not the wrapper.
+        return { msg, bar: holder?.querySelector(":scope > div") || holder };
+      }).filter(t => t.bar);
+    },
+
+    // One message straight from the live DOM — the inline buttons only. The
+    // full-conversation export goes through the API above; this path just has
+    // to agree with it.
+    extractGrokcomMessage(el) {
+      const role = el.getAttribute("data-testid") === "user-message" ? "user" : "assistant";
+      const clean = el.cloneNode(true);
+
+      // The thinking pill is collapsed chrome: the container holds the
+      // "Réflexion : 12s" caption and nothing else — the reasoning text is not
+      // in the DOM until the panel is expanded, so there is nothing to keep.
+      clean.querySelectorAll(".thinking-container").forEach(n => n.remove());
+
+      // grok marks its own chrome `print:hidden` — the "45 sources" pill row,
+      // the action bar — which is exactly what an export must drop. Matched as
+      // an attribute substring: the class needs a CSS escape for its colon.
+      clean.querySelectorAll('[class*="print:hidden"]').forEach(n => n.remove());
+
+      // A code block wraps a header (language label + copy button) above the
+      // <pre>. Keep the <pre> alone, or the header glues the language name
+      // onto the first line of the listing.
+      clean.querySelectorAll("pre").forEach(pre => {
+        const wrap = pre.parentElement;
+        if (wrap && wrap !== clean && wrap.querySelector("button")) wrap.replaceWith(pre);
+      });
+
+      // Whatever is still a button is chrome (media controls, expanders).
+      clean.querySelectorAll("button, [role='button']").forEach(b => b.remove());
+
+      const md = this.preprocess(NS.htmlToMarkdown(clean));
+      if (!md || !md.trim()) return null;
+      const out = { role, markdown: md.trim() };
+      const time = NS.findMessageTime?.(el);
+      if (time) out.time = time;
       return out;
     },
 
     // Single-message extraction (DOM - for inline button)
     findMessages() {
       if (location.host === "x.com") return this.xcomTurns();
-      return document.querySelectorAll('[data-message-id]');
+      return document.querySelectorAll(this.GROKCOM_MSG_SEL);
     },
     extractOne(el) {
       if (location.host === "x.com") return this.extractXcomTurn(el);
-      const role = el.getAttribute("data-sender") === "human" ? "user" : "assistant";
-      const md = NS.htmlToMarkdown(el);
-      if (!md) return null;
-      const out = { role: role, markdown: md };
-      const time = NS.findMessageTime?.(el);
-      if (time) out.time = time;
-      return out;
+      return this.extractGrokcomMessage(el);
     }
   };
 })();

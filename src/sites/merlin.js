@@ -95,6 +95,70 @@
         }
       }
       return { title, url: location.href, site: "merlin", messages };
+    },
+
+    // ── Inline buttons (DOM) ─────────────────────────────────────────────
+    //
+    // Merlin had no inline support, so the in-chat buttons never appeared.
+    // Layout, confirmed live 2026-08-22 (20 turns, 10/10):
+    //   article.group/message[data-message-id]     one turn
+    //     div (assistant only)                       model name + relative time
+    //     div.grid                                   content, then the action row
+    //
+    // ⚠ Role is layout-only: a user turn is right-aligned (`ml-auto`), an
+    // assistant turn is not. Nothing else marks it — there is no data-role, the
+    // header carries the MODEL name ("Gemini 2.5 Flash Lite") rather than a
+    // role, and its timestamp is localized ("17 minutes ago" / "il y a 17
+    // minutes"), so neither can be matched. Cross-check if this ever drifts:
+    // only assistant turns render `[data-streamdown]` nodes.
+    MERLIN_TURN_SEL: "article.group\\/message[data-message-id]",
+
+    // The action row: `opacity-0` + `group-hover/message:opacity-100`, i.e.
+    // revealed when the turn is hovered. `select-none` is what separates it
+    // from the citations row, which carries the same hover classes but no
+    // buttons.
+    MERLIN_BAR_SEL: '[class*="group-hover/message:opacity-100"][class*="select-none"]',
+
+    // ⚠ Our buttons DO fade with Merlin's here, unlike lobehub.js where they
+    // are pinned visible. The difference is what sits one level up: LobeHub's
+    // action row has a permanently visible parent ON the action line, so ours
+    // could be raised into it. Merlin's parent is the CONTENT block — raising
+    // them there would print two buttons above the message text. Since every
+    // native control on Merlin (copy included) is hover-only, staying in the
+    // row matches the site instead of floating loose. The row keeps
+    // `pointer-events: auto`, so ours stay clickable the moment they show.
+    findMountPoints() {
+      const out = [];
+      for (const msg of document.querySelectorAll(this.MERLIN_TURN_SEL)) {
+        const bar = msg.querySelector(this.MERLIN_BAR_SEL);
+        if (bar) out.push({ bar, msg });
+      }
+      return out;
+    },
+
+    findMessages() {
+      return document.querySelectorAll(this.MERLIN_TURN_SEL);
+    },
+
+    extractOne(el) {
+      // The LAST element child is the content block for both roles — which is
+      // exactly how the assistant's model/time header gets dropped without
+      // having to recognise it (it is the FIRST child, and localized).
+      const src = el.lastElementChild || el;
+      const clean = src.cloneNode(true);
+      // Both hover rows (actions + citations) and anything clickable.
+      clean.querySelectorAll(
+        '[class*="group-hover/message:opacity-100"], button, [role="button"]'
+      ).forEach(n => n.remove());
+      const md = NS.htmlToMarkdown(clean);
+      if (!md || !md.trim()) return null;
+      const out = {
+        role: el.classList.contains("ml-auto") ? "user" : "assistant",
+        markdown: NS.normalizeLatexDelimiters(md.trim())
+      };
+      const time = NS.findMessageTime?.(el);
+      if (time) out.time = time;
+      return out;
     }
   };
 })();

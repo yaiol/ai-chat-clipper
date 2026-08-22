@@ -27,6 +27,15 @@
 .adx-btn.adx-ok { background: rgba(10,122,47,.22); opacity: 1; box-shadow: 0 0 0 1px rgba(10,122,47,.5) inset; }
 .adx-btn.adx-err { background: rgba(176,0,32,.22); opacity: 1; box-shadow: 0 0 0 1px rgba(176,0,32,.5) inset; }
 
+/* DeepSeek paints `color: purple` on <body> (rgb(128,0,128), measured live
+   2026-08-22). Nothing of theirs ever shows it — every `.ds-icon` sets its own
+   grey — but our buttons take `color: inherit` so their `currentColor` strokes
+   came out pink. Borrow DeepSeek's own icon token instead of hardcoding a grey,
+   so we keep following their light/dark theme; the fallback is that token's
+   light value. Scoped on `.ds-flex` (their design-system class) rather than the
+   `._965abe9` hash the adapter mounts on, which churns on every redeploy. */
+.ds-flex .adx-btn { color: var(--dsw-alias-label-tertiary, #81858c); }
+
 /* NotebookLM uses Material icon buttons (40x40) - match their size & icon scale */
 chat-actions .adx-btn,
 mat-card-actions .adx-btn {

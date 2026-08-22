@@ -10,6 +10,19 @@
   // the fetch still sends it via credentials:"include", so a null here is NOT
   // fatal (the old code threw on null, which broke the whole API path whenever
   // the cookie wasn't script-visible).
+  //
+  // ⚠ On kimi.ai (measured 2026-08-22) there is NO readable `kimi-auth` cookie
+  // and the session cookie ALONE is refused — ListMessages answers 401
+  // REASON_INVALID_AUTH_TOKEN. What works is `Bearer <localStorage
+  // access_token>`, the second key below, so the list order matters.
+  //
+  // ⚠ That access_token is a JWT with a 900-second (15 min) lifetime; the SPA
+  // silently refreshes it while the tab is live. Export from a tab left idle
+  // past the expiry and the API 401s, `extract()` swallows it and drops to the
+  // DOM path — same messages, but Kimi's KaTeX loses its `$…$` source and the
+  // search citations/refs are gone. A "why is this export poorer than usual?"
+  // report on Kimi is almost always a stale token, not a broken selector:
+  // reload the chat tab and re-export before touching anything here.
   function getAuthToken() {
     const m = document.cookie.match(/kimi-auth=([^;]+)/);
     if (m) return `Bearer ${m[1]}`;
@@ -67,8 +80,13 @@
   sites.kimi = {
     id: "kimi",
     label: "Kimi",
+    // ⚠ FOUR hosts, one app. The product now serves from kimi.ai — that is the
+    // launcher URL in lib/sites.js — while kimi.com and kimi.moonshot.cn stay
+    // matched because older links and pinned tabs still land there.
     matches(host) {
-      return host === "www.kimi.com"
+      return host === "www.kimi.ai"
+          || host === "kimi.ai"
+          || host === "www.kimi.com"
           || host === "kimi.com"
           || host === "kimi.moonshot.cn";
     },

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "AI Chat Clipper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "__MSG_extDescription__",
   "default_locale": "en",
   "options_ui": {
@@ -37,6 +37,8 @@
     "https://www.perplexity.ai/*",
     "https://perplexity.ai/*",
     "https://chat.mistral.ai/*",
+    "https://www.kimi.ai/*",
+    "https://kimi.ai/*",
     "https://www.kimi.com/*",
     "https://kimi.com/*",
     "https://kimi.moonshot.cn/*",
@@ -118,6 +120,8 @@
         "https://www.perplexity.ai/*",
         "https://perplexity.ai/*",
         "https://chat.mistral.ai/*",
+        "https://www.kimi.ai/*",
+        "https://kimi.ai/*",
         "https://www.kimi.com/*",
         "https://kimi.com/*",
         "https://kimi.moonshot.cn/*",

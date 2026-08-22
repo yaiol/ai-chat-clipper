@@ -93,6 +93,80 @@
         }
       }
       return { title, url: location.href, site: "lobehub", messages };
+    },
+
+    // ── Inline buttons (DOM) ─────────────────────────────────────────────
+    //
+    // LobeHub had no inline support, so the in-chat buttons never appeared.
+    // Layout, confirmed live 2026-08-22:
+    //   div.message-wrapper[data-message-id]     one turn
+    //     div.message-header                       avatar + time
+    //     div.message-body                         the content
+    //     div > div[role="menubar"]                the action row
+    //
+    // ⚠ The list is VIRTUALIZED (react-virtuoso): only the turns near the
+    // viewport exist in the DOM — one at a time when a reply is long. That is
+    // fine for per-message buttons (the MutationObserver re-injects as rows
+    // mount) but it is why findMessages() must never be used for a whole
+    // conversation: extract() goes through the tRPC API for that.
+    LOBE_TURN_SEL: ".message-wrapper[data-message-id]",
+
+    // ⚠ Role is in NO class: user and assistant wrappers share one hashed
+    // class (acss-…). The only non-localized marker is the inline layout
+    // variable — `--lobe-flex-align: flex-end` on a user turn, `flex-start` on
+    // an assistant one. The avatar is NOT a discriminator: an account with a
+    // user avatar renders an <img> in both headers.
+    domRole(el) {
+      return /--lobe-flex-align:\s*flex-end/.test(el.getAttribute("style") || "") ? "user" : "assistant";
+    },
+
+    // ⚠ TWO traps in one action row, both measured 2026-08-22:
+    //
+    // 1. NEVER mount inside `[data-singleton-message-action-bar-host]`:
+    //    LobeHub keeps ONE action bar and portals it into whichever turn is
+    //    hovered, so a button injected there stays bound to the first turn it
+    //    was built for and silently copies the WRONG message.
+    // 2. NEVER mount on `[role="menubar"]` itself: it is `opacity: 0;
+    //    pointer-events: none` at rest and only a real CSS :hover lifts it, so
+    //    our buttons would be invisible and unclickable until the turn is
+    //    hovered — the very "the buttons aren't there" failure this work is
+    //    fixing. Its PARENT row is opacity 1, so mounting one level up keeps
+    //    ours on the action line and always visible, with LobeHub's own
+    //    controls fading in beside them on hover.
+    findMountPoints() {
+      const out = [];
+      for (const msg of document.querySelectorAll(this.LOBE_TURN_SEL)) {
+        const menubar = msg.querySelector('[role="menubar"]');
+        const bar = menubar?.parentElement;
+        if (bar && msg.contains(bar)) out.push({ bar, msg });
+      }
+      return out;
+    },
+
+    findMessages() {
+      return document.querySelectorAll(this.LOBE_TURN_SEL);
+    },
+
+    extractOne(el) {
+      const body = el.querySelector(".message-body");
+      if (!body) return null;
+      const clean = body.cloneNode(true);
+      // Collapsed reasoning / tool-step accordions ("Réflexion terminée",
+      // "2 étapes effectuées (20s)") hold a caption and nothing else — the
+      // trace itself is not in the DOM. The API path lifts `reasoning.content`
+      // into a `> **Thinking**` block; this path has nothing to lift.
+      clean.querySelectorAll(".accordion-item").forEach(n => n.remove());
+      // The action row and any hover-rendered code-block control.
+      clean.querySelectorAll('[role="menubar"], button, [role="button"]').forEach(n => n.remove());
+      // Math survives here: LobeHub ships real KaTeX with an
+      // `annotation[encoding="application/x-tex"]`, which html-to-md.js reads —
+      // so the DOM path keeps `$…$` instead of degrading to glyphs.
+      const md = NS.htmlToMarkdown(clean);
+      if (!md || !md.trim()) return null;
+      const out = { role: this.domRole(el), markdown: md.trim() };
+      const time = NS.findMessageTime?.(el);
+      if (time) out.time = time;
+      return out;
     }
   };
 })();

@@ -111,6 +111,77 @@
         }
       }
       return { title, url: location.href, site: "qwen", messages };
+    },
+
+    // ── Inline buttons (DOM) ─────────────────────────────────────────────
+    //
+    // Qwen had NO inline support at all — no findMountPoints, no extractOne —
+    // so the in-chat buttons simply never appeared here (same for lobehub,
+    // merlin, minimax and reve). Layout:
+    //   div.qwen-chat-message.qwen-chat-message-{user|assistant}
+    //     ├─ …                       (the bubble / .response-message-content)
+    //     └─ div.message-hoc-container
+    //          └─ … div.qwen-chat-package-comp-new-action-control-icons
+    //                                (the native copy / vote / share buttons)
+    //
+    // ⚠ Role comes from the modifier CLASS, never from the action bar's
+    // aria-labels ("Copy", "Edit", "Regenerate"): those follow the UI
+    // language, so anchoring on them mounts a different set of turns on a
+    // French or Chinese account.
+    QWEN_TURN_SEL: ".qwen-chat-message",
+    QWEN_BAR_SEL: ".qwen-chat-package-comp-new-action-control-icons",
+
+    findMountPoints() {
+      const out = [];
+      for (const msg of document.querySelectorAll(this.QWEN_TURN_SEL)) {
+        // The row of icon buttons, not its `…-control` wrapper: the wrapper
+        // also holds the "+8 sources" pill, and our buttons go at the front
+        // edge of the icon row where the native ones are.
+        const bar = msg.querySelector(this.QWEN_BAR_SEL);
+        if (bar) out.push({ bar, msg });
+      }
+      return out;
+    },
+
+    findMessages() {
+      return document.querySelectorAll(this.QWEN_TURN_SEL);
+    },
+
+    // One turn from the live DOM. The full-conversation export uses the API
+    // above; this only has to agree with it.
+    extractOne(el) {
+      const role = el.classList.contains("qwen-chat-message-user") ? "user" : "assistant";
+      const clean = el.cloneNode(true);
+
+      // The footer carries the action bar and the sources pill — chrome, and
+      // the very node our own buttons are injected into, so leaving it in
+      // would copy the caption of the button that was just clicked.
+      clean.querySelectorAll(".message-hoc-container").forEach(n => n.remove());
+
+      // Collapsed thinking card: it holds the status caption ("Thinking
+      // completed") and nothing else — the reasoning text is not in the DOM,
+      // so there is nothing to lift into a `> **Thinking**` block the way the
+      // API path does.
+      clean.querySelectorAll(".qwen-chat-thinking-tool-status-card-wraper").forEach(n => n.remove());
+
+      // A code block puts a header (language label + copy/preview) above the
+      // <pre>; keep the <pre> alone or the language name is glued onto the
+      // first line of the listing.
+      clean.querySelectorAll("pre").forEach(pre => {
+        const wrap = pre.parentElement;
+        if (wrap && wrap !== clean && wrap.querySelector("button")) wrap.replaceWith(pre);
+      });
+
+      // Anything still a button is chrome. Inline <svg> is left to
+      // html-to-md.js, which already tells an icon from a content drawing.
+      clean.querySelectorAll("button, [role='button']").forEach(b => b.remove());
+
+      const md = NS.htmlToMarkdown(clean);
+      if (!md || !md.trim()) return null;
+      const out = { role, markdown: md.trim() };
+      const time = NS.findMessageTime?.(el);
+      if (time) out.time = time;
+      return out;
     }
   };
 })();

@@ -19,7 +19,7 @@
     { id: "grok-x",            label: "Grok on X",              url: "https://x.com/i/grok",            hosts: ["x.com"], icon: "assets/sites/grok-x.svg" },
     { id: "perplexity",        label: "Perplexity",             url: "https://www.perplexity.ai/",      hosts: ["www.perplexity.ai", "perplexity.ai"], icon: "assets/sites/perplexity.svg" },
     { id: "mistral",           label: "Mistral",                url: "https://chat.mistral.ai/",        hosts: ["chat.mistral.ai"], icon: "assets/sites/mistral.svg" },
-    { id: "kimi",              label: "Kimi",                   url: "https://www.kimi.com/",           hosts: ["www.kimi.com", "kimi.com", "kimi.moonshot.cn"], icon: "assets/sites/kimi.svg" },
+    { id: "kimi",              label: "Kimi",                   url: "https://www.kimi.ai/",            hosts: ["www.kimi.ai", "kimi.ai", "www.kimi.com", "kimi.com", "kimi.moonshot.cn"], icon: "assets/sites/kimi.svg" },
     { id: "pi",                label: "Pi",                     url: "https://pi.ai/",                  hosts: ["pi.ai", "www.pi.ai"], icon: "assets/sites/pi.svg" },
     { id: "poe",               label: "Poe",                    url: "https://poe.com/",                hosts: ["poe.com", "www.poe.com"], icon: "assets/sites/poe.svg" },
     { id: "meta-ai",           label: "Meta AI",                url: "https://www.meta.ai/",            hosts: ["www.meta.ai", "meta.ai"], icon: "assets/sites/meta-ai.svg" },
