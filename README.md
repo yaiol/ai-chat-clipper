@@ -1,30 +1,88 @@
-# AI Chat eXtractor
+<p align="center">
+  <img src="docs/assets/logo.png" alt="AI Chat Clipper" width="110" height="110">
+</p>
 
-Export your AI chats as real documents - read 32 chat sites and hand each conversation off as seven file formats, five cloud services, or the clipboard.
+<h1 align="center">AI Chat Clipper</h1>
 
-## What it is
+<div align="center">
+  <strong>Your AI chats, as real documents.</strong><br>
+  Reads <b>32</b> chat sites; exports to <b>7</b> file formats, <b>5</b> cloud services, or the clipboard.
+</div>
 
-AI Chat eXtractor is a Chrome / Edge / Firefox (MV3) browser extension that turns an AI conversation into a real document. Instead of copy-pasting a chat out of the browser - losing its formatting, code blocks, and math - you click once and get a clean Markdown / Word / PDF file, a copy in a cloud service, or the conversation on your clipboard ready to paste. It reads the conversation straight from the page (or the site's own API), so there is no separate API key to manage.
+<br>
 
-## Features
+<!-- readme:nav -->
 
-- **Works on 32 AI sites** - ChatGPT, Claude, Google (Search, Search AI Mode, Gemini, Gemini Notebook, AI Studio), Copilot, DeepSeek, Grok (including on X), Perplexity, Mistral, Kimi, Qwen, MiniMax, Pi, Poe, Meta AI, Yuanbao, GitHub Copilot, HuggingChat, Groq, DuckDuckGo AI Chat, LobeHub, Merlin, Reve, Z.ai, Dola, M365 Copilot, ChatGLM, Arena.
-- **Images** - browse every picture in a conversation in a grid, pick the ones you want, and download them in one go.
-- **Seven file formats** - Markdown, HTML, plain text, Word (.docx), OpenDocument (.odt), PDF, and a full-page PNG image.
-- **Five cloud destinations** - send a chat straight to Google Docs, Word Online, OneNote, Notion, or your own Nextcloud.
-- **Copy to the clipboard** - grab the conversation as Markdown, or as rich HTML that pastes cleanly into Gmail, Docs, and Word.
-- **Whole chat or one message** - export the full thread from the popup, a single answer from each reply's inline button, or a hand-picked selection.
-- **27 languages** - the popup and settings pages are localized, chosen independently of your browser.
+<div align="center">
+  <a href="../../releases/latest"><img src="https://img.shields.io/github/v/release/yaiol/ai-chat-clipper?color=5a4fff&label=release&style=flat-square" alt="Release"></a>
+  <a href="../../releases"><img src="https://img.shields.io/github/downloads/yaiol/ai-chat-clipper/total?color=5a4fff&label=downloads&style=flat-square" alt="Downloads"></a>
+</div>
+
+<h3 align="center">
+  <a href="https://apps.yaiol.com/en/p/ai-chat-clipper/">Website</a>
+  <span>&nbsp;·&nbsp;</span>
+  <a href="#install">Install</a>
+  <span>&nbsp;·&nbsp;</span>
+  <a href="#what-it-is">Features</a>
+  <span>&nbsp;·&nbsp;</span>
+  <a href="#documentation">Documentation</a>
+  <span>&nbsp;·&nbsp;</span>
+  <a href="#build-from-source">Development</a>
+</h3>
+
+<div align="center">
+  <sub><a href="https://apps.yaiol.com/en/p/ai-chat-clipper/help/"><b>Help in 28 languages</b></a></sub>
+</div>
+
+<!-- /readme:nav -->
+
+---
+
+<p align="center">
+  <img src="docs/assets/hero.png" alt="AI Chat Clipper exporting a conversation from its toolbar popup" width="900">
+</p>
+
+---
 
 ## Install
 
 Not yet on the Web Store. To run it unpacked:
 
-1. Build `dist/chrome/` (see below).
+1. Build `dist/chrome/` (see [Build from source](#build-from-source)).
 2. Open `chrome://extensions`, enable **Developer mode**.
 3. **Load unpacked** → pick `dist/chrome/`.
 
 For Edge use `dist/edge/`, for Firefox `dist/firefox/`.
+
+---
+
+## What it is
+
+AI Chat Clipper is a Chrome / Edge / Firefox (MV3) browser extension that turns an AI conversation into a real document. Instead of copy-pasting a chat out of the browser - losing its formatting, code blocks, and math - you click once and get a clean Markdown / Word / PDF file, a copy in a cloud service, or the conversation on your clipboard ready to paste. It reads the conversation straight from the page (or the site's own API), so there is no separate API key to manage.
+
+---
+
+## Features
+
+- **Works on 32 AI sites** - ChatGPT, Claude, Google (Search, Search AI Mode, Gemini, Gemini Notebook, AI Studio), Copilot, DeepSeek, Grok (including on X), Perplexity, Mistral, Kimi, Qwen, MiniMax, Pi, Poe, Meta AI, Yuanbao, GitHub Copilot, HuggingChat, Groq, DuckDuckGo AI Chat, LobeHub, Merlin, Reve, Z.ai, Dola, M365 Copilot, ChatGLM, Arena.
+- **Seven file formats** - Markdown, HTML, plain text, Word (.docx), OpenDocument (.odt), PDF, and a full-page PNG image.
+- **Five cloud destinations** - send a chat straight to Google Docs, Word Online, OneNote, Notion, or your own Nextcloud.
+- **Images** - browse every picture in a conversation in a grid, pick the ones you want, and download them in one go.
+- **Copy to the clipboard** - grab the conversation as Markdown, or as rich HTML that pastes cleanly into Gmail, Docs, and Word.
+- **Whole chat or one message** - export the full thread from the popup, a single answer from each reply's inline button, or a hand-picked selection.
+- **28 languages** - the popup and settings pages are localized, chosen independently of your browser.
+
+---
+
+## Documentation
+
+| | |
+|---|---|
+| **User manual** | [Read it online](https://apps.yaiol.com/en/p/ai-chat-clipper/help/) |
+| **What's new** | [Release notes](https://apps.yaiol.com/en/p/ai-chat-clipper/help/releases/) |
+| **Product page** | [apps.yaiol.com](https://apps.yaiol.com/en/p/ai-chat-clipper/) |
+
+---
 
 ## Build from source
 
@@ -37,7 +95,7 @@ node app-build.mjs chrome     # builds only chrome
 
 Edit anything under `src/`, re-run `app-build.mjs`, then reload the extension card at `chrome://extensions`.
 
-## Cloud exports — bring your own OAuth (forks)
+### Cloud exports — bring your own OAuth
 
 The cloud export targets (Google Drive, Microsoft Word Online / OneNote, Notion) sign in with
 OAuth, and OAuth credentials are bound to a specific extension. **This repo ships with no OAuth
@@ -66,7 +124,10 @@ To enable **Google Drive** export in your own build:
 Microsoft and Notion work the same way (their own app registration + `https://<your-ext-id>.chromiumapp.org/…`
 redirect URIs); see the code in `src/lib/microsoft-auth.js` / `src/lib/notion-auth.js`.
 
-## Overview
+---
+
+## Architecture
+
 The extension is a thin orchestration shell around a per-site adapter layer and a set of pure format exporters.
 
 | Piece | Role |
@@ -80,7 +141,8 @@ The extension is a thin orchestration shell around a per-site adapter layer and 
 | `exporters/<format>.js` | Pure converters from the canonical conversation shape to each output |
 | `lib/*.js` | Shared helpers - storage, i18n, ZIP, HTML↔Markdown, fonts, the cloud auth/upload flows |
 
-### Data flow
+<details>
+<summary><b>Data flow, and the API-vs-DOM rule</b></summary>
 
 Every adapter normalizes a conversation to one canonical shape:
 
@@ -91,11 +153,17 @@ adapter.extract() → { title, url, site, messages: [{ role, markdown }] }
 
 An adapter prefers the site's own API where one exists (ChatGPT, Claude, Gemini, Copilot, DeepSeek, Grok, Perplexity, Kimi, Yuanbao, GitHub Copilot) and **always falls back to scraping the rendered DOM** if the API call fails. The rest are DOM-only. Z.ai sits between the two: it has an API, but its stored document lags the conversation, so the adapter only accepts an API result that is demonstrably complete and otherwise reads the DOM.
 
-### Supported sites
+</details>
+
+<details>
+<summary><b>Supported sites</b></summary>
 
 32 sites: Arena, ChatGLM, ChatGPT, Claude, Copilot, DeepSeek, Dola, DuckDuckGo AI Chat, GitHub Copilot, Google AI Studio, Google Gemini, Google Gemini Notebook, Google Search, Google Search AI Mode, Grok, Grok on X, Groq, HuggingChat, Kimi, LobeHub, M365 Copilot, Merlin, Meta AI, MiniMax, Mistral, Perplexity, Pi, Poe, Qwen, Reve, Yuanbao, Z.ai.
 
-### Export pipeline
+</details>
+
+<details>
+<summary><b>Export pipeline</b></summary>
 
 | Output | Implemented by | Notes |
 |---|---|---|
@@ -111,7 +179,14 @@ An adapter prefers the site's own API where one exists (ChatGPT, Claude, Gemini,
 | Nextcloud | `exporters/nextcloud.js` + `lib/nextcloud-auth.js` | cloud upload |
 | Clipboard | `content.js` | Markdown or rich HTML |
 
-## License / links
-AI Chat eXtractor is part of [yaiol Applications](https://apps.yaiol.com).
+</details>
+
+---
+
+## License
 
 Released under the [MIT License](LICENSE).
+
+<div align="center">
+  <sub>AI Chat Clipper is part of <a href="https://apps.yaiol.com">yaiol Applications</a>.</sub>
+</div>
