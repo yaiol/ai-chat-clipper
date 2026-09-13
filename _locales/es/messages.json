@@ -1,7 +1,7 @@
 {
   "extDescription": {
     "message": "Exporta chats de IA de ChatGPT, Gemini, Claude. 32 sitios de IA, 9 formatos, 5 destinos en la nube.",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
   },
   "exportMarkdownTitle": {
     "message": "Exportar como Markdown (.md)",

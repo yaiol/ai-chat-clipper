@@ -1,7 +1,7 @@
 {
   "extDescription": {
     "message": "ChatGPT, Gemini, Claude'dan yapay zeka sohbetlerini dışa aktarın. 32 yapay zeka sitesi, 9 format, 5 bulut hedefi.",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
   },
   "exportMarkdownTitle": {
     "message": "Markdown (.md) olarak dışa aktar",

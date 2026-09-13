@@ -15,7 +15,7 @@
 
   // Folder names match Chrome's locale convention (underscore, region capitals).
   const SUPPORTED = [
-    "ar", "cs", "da", "de", "en", "es", "fi", "fr", "hi", "hu", "id", "it",
+    "ar", "cs", "da", "de", "el", "en", "es", "fi", "fr", "hi", "hu", "id", "it",
     "ja", "ko", "nb", "nl", "pl", "pt_BR", "pt_PT", "ru", "sv", "th", "tr",
     "uk", "vi", "zh_CN", "zh_TW"
   ];
@@ -27,6 +27,7 @@
     cs:    "Čeština",
     da:    "Dansk",
     de:    "Deutsch",
+    el:    "Ελληνικά",
     en:    "English",
     es:    "Español",
     fi:    "Suomi",

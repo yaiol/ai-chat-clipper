@@ -1,7 +1,7 @@
 {
   "extDescription": {
     "message": "从ChatGPT、Gemini、Claude导出AI聊天。32个AI网站，9种格式，5个云目的地。",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
   },
   "exportMarkdownTitle": {
     "message": "导出为 Markdown (.md)",

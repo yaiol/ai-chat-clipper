@@ -1,7 +1,7 @@
 {
   "extDescription": {
     "message": "ส่งออกแชท AI จาก ChatGPT, Gemini, Claude. 32 เว็บไซต์ AI, 9 รูปแบบ, 5 ปลายทางคลาวด์.",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
   },
   "exportMarkdownTitle": {
     "message": "ส่งออกเป็น Markdown (.md)",

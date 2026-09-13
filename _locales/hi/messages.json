@@ -1,7 +1,7 @@
 {
   "extDescription": {
     "message": "ChatGPT, Gemini, Claude से AI चैट निर्यात करें। 32 AI साइटें, 9 प्रारूप, 5 क्लाउड गंतव्य।",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
   },
   "exportMarkdownTitle": {
     "message": "Markdown (.md) के रूप में निर्यात करें",

@@ -1,290 +1,290 @@
 {
   "extDescription": {
-    "message": "AI csevegések exportálása ChatGPT-ből, Geminiből, Claude-ból. 32 AI oldal, 9 formátum, 5 felhő cél.",
+    "message": "Εξαγωγή συνομιλιών AI από ChatGPT, Gemini, Claude. 32 ιστότοποι AI, 9 μορφές, 5 προορισμοί cloud.",
     "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
   },
   "exportMarkdownTitle": {
-    "message": "Exportálás Markdown (.md) formátumban",
+    "message": "Εξαγωγή ως Markdown (.md)",
     "description": "Tooltip on the Markdown export button."
   },
   "exportHtmlTitle": {
-    "message": "Exportálás HTML (.html) formátumban",
+    "message": "Εξαγωγή ως HTML (.html)",
     "description": "Tooltip on the HTML export button."
   },
   "exportTxtTitle": {
-    "message": "Exportálás egyszerű szöveg (.txt) formátumban",
+    "message": "Εξαγωγή ως απλό κείμενο (.txt)",
     "description": "Tooltip on the plain-text export button."
   },
   "exportDocxTitle": {
-    "message": "Exportálás Word (.docx) formátumban",
+    "message": "Εξαγωγή ως Word (.docx)",
     "description": "Tooltip on the Word export button."
   },
   "exportOdtTitle": {
-    "message": "Exportálás OpenDocument (.odt) formátumban",
+    "message": "Εξαγωγή ως OpenDocument (.odt)",
     "description": "Tooltip on the OpenDocument export button."
   },
   "exportPdfTitle": {
-    "message": "Exportálás PDF-ként (nyomtatási párbeszédpanelen keresztül)",
+    "message": "Εξαγωγή ως PDF (μέσω διαλόγου εκτύπωσης)",
     "description": "Tooltip on the PDF export button."
   },
   "exportImageTitle": {
-    "message": "Exportálás PNG képként",
+    "message": "Εξαγωγή ως εικόνα PNG",
     "description": "Tooltip on the Image export button - renders the conversation to a single tall PNG file."
   },
   "exportGdocTitle": {
-    "message": "Megnyitás Google Docsban",
+    "message": "Άνοιγμα στα Έγγραφα Google",
     "description": "Tooltip on the Google Docs export button - uploads the chat to the user's Google Drive as a native Google Doc."
   },
   "exportNotionTitle": {
-    "message": "Exportálás Notionbe",
+    "message": "Εξαγωγή στο Notion",
     "description": "Tooltip on the Notion export button - uploads the chat to the user's Notion workspace as a native Notion page."
   },
   "exportMswordTitle": {
-    "message": "Megnyitás Word Online-ban",
+    "message": "Άνοιγμα στο Word Online",
     "description": "Tooltip on the Word Online export button - uploads the chat as a .docx to OneDrive and opens it in Word Online."
   },
   "exportNextcloudTitle": {
-    "message": "Mentés Nextcloudba",
+    "message": "Αποθήκευση στο Nextcloud",
     "description": "Tooltip on the Nextcloud export button - uploads the chat to the user's Nextcloud server via WebDAV."
   },
   "exportOnenoteTitle": {
-    "message": "Küldés OneNote-ba",
+    "message": "Αποστολή στο OneNote",
     "description": "Tooltip on the OneNote export button - creates a new page in the user's OneNote default notebook."
   },
   "settingsButtonTitle": {
-    "message": "Beállítások",
+    "message": "Ρυθμίσεις",
     "description": "Tooltip on the gear icon that opens the settings page."
   },
   "popupCustomExportTitle": {
-    "message": "Egyéni exportálás",
+    "message": "Προσαρμοσμένη Εξαγωγή",
     "description": "Title of the prominent button below the export icons in the popup. Opens the message selection page."
   },
   "selectPageTitle": {
-    "message": "{app} - Üzenetek kiválasztása",
+    "message": "{app} - Επιλογή μηνυμάτων",
     "description": "<title> of the selection page (browser tab title)."
   },
   "selectHeading": {
-    "message": "Válassza ki az exportálandó üzeneteket",
+    "message": "Επιλέξτε μηνύματα για εξαγωγή",
     "description": "Top heading of the selection page."
   },
   "selectStatusCount": {
-    "message": "{n} kiválasztva {total} közül",
+    "message": "{n} από {total} επιλεγμένα",
     "description": "Status line on the selection page showing how many messages are checked."
   },
   "selectErrorNoSelection": {
-    "message": "Válasszon ki legalább egy üzenetet.",
+    "message": "Επιλέξτε τουλάχιστον ένα μήνυμα.",
     "description": "Error shown when the user clicks an export button with no messages selected."
   },
   "selectErrorNoMessages": {
-    "message": "Nincsenek üzenetek ebben a beszélgetésben.",
+    "message": "Δεν βρέθηκαν μηνύματα σε αυτή τη συνομιλία.",
     "description": "Error shown when the selection page opens but the chat has no extractable messages."
   },
   "selectErrorLoadFailed": {
-    "message": "Nem sikerült beolvasni a beszélgetést. Nyissa meg újra a csevegési lapot, és próbálja újra.",
+    "message": "Δεν ήταν δυνατή η ανάγνωση της συνομιλίας. Ανοίξτε ξανά την καρτέλα συνομιλίας και δοκιμάστε ξανά.",
     "description": "Error shown when the selection page can't read the stashed conversation."
   },
   "selectRoleUser": {
-    "message": "Felhasználó",
+    "message": "Χρήστης",
     "description": "Role badge for user messages on the selection page."
   },
   "selectRoleAssistant": {
-    "message": "Asszisztens",
+    "message": "Βοηθός",
     "description": "Role badge for assistant messages on the selection page."
   },
   "selectFontSizeLabel": {
-    "message": "Méret",
+    "message": "Μέγεθος",
     "description": "Label preceding the font-size dropdown in the selection page toolbar."
   },
   "selectFontSizeSmall": {
-    "message": "Kicsi",
+    "message": "Μικρό",
     "description": "Smallest body-text option in the size dropdown."
   },
   "selectFontSizeMedium": {
-    "message": "Közepes",
+    "message": "Μεσαίο",
     "description": "Default body-text option in the size dropdown."
   },
   "selectFontSizeLarge": {
-    "message": "Nagy",
+    "message": "Μεγάλο",
     "description": "Largest body-text option in the size dropdown."
   },
   "selectShowTimeLabel": {
-    "message": "Idő",
+    "message": "Ώρα",
     "description": "Compact label next to the show-chat-time checkbox in the selection page toolbar."
   },
   "selectShowSourceLabel": {
-    "message": "Forrás",
+    "message": "Πηγή",
     "description": "Compact label next to the show-source checkbox in the selection page toolbar."
   },
   "optionsHtmlSizeLabel": {
-    "message": "Törzsszöveg mérete",
+    "message": "Μέγεθος κειμένου σώματος",
     "description": "Settings → General label for the body text size dropdown (HTML / PDF exports)."
   },
   "optionsHtmlShowTimeLabel": {
-    "message": "Csevegés idejének megjelenítése",
+    "message": "Εμφάνιση ώρας συνομιλίας",
     "description": "Settings → General label for the toggle that includes per-message timestamps in HTML / PDF exports."
   },
   "optionsHtmlShowSourceLabel": {
-    "message": "Forráslink megjelenítése",
+    "message": "Εμφάνιση συνδέσμου πηγής",
     "description": "Settings → General label for the toggle that includes the \"Source: <link>\" line at the top of HTML / PDF exports."
   },
   "optionsHtmlShowThinkingLabel": {
-    "message": "Gondolkodás megjelenítése",
+    "message": "Εμφάνιση σκέψης",
     "description": "Settings → General label for the toggle that keeps the model's thinking blockquotes in HTML / PDF exports."
   },
   "optionsFilenamePatternLabel": {
-    "message": "Fájlnév minta",
+    "message": "Μοτίβο ονόματος αρχείου",
     "description": "Settings → General label for the export filename template input."
   },
   "optionsFilenamePatternHint": {
-    "message": "Elérhető mezők:",
+    "message": "Διαθέσιμα πεδία:",
     "description": "Helper text under the filename pattern input, followed by the literal placeholder list."
   },
   "selectShowThinkingLabel": {
-    "message": "Gondolkodás",
+    "message": "Σκέψη",
     "description": "Compact label next to the show-thinking checkbox in the selection page toolbar."
   },
   "selectTitleFontLabel": {
-    "message": "Cím",
+    "message": "Τίτλος",
     "description": "Compact label preceding the title-font dropdown in the selection page toolbar."
   },
   "selectTextFontLabel": {
-    "message": "Szöveg",
+    "message": "Κείμενο",
     "description": "Compact label preceding the text-font dropdown in the selection page toolbar."
   },
   "dragHint": {
-    "message": "Húzza az átrendezéshez",
+    "message": "Σύρετε για αναδιάταξη",
     "description": "Helper text under the AI sites grid."
   },
   "popupViewLauncherTitle": {
-    "message": "Ugrás AI oldalra",
+    "message": "Μετάβαση σε ιστότοπο AI",
     "description": "Tooltip on the header toggle that switches the popup from the export view to the AI-site launcher grid."
   },
   "popupViewExportTitle": {
-    "message": "Vissza az exportáláshoz",
+    "message": "Επιστροφή στην εξαγωγή",
     "description": "Tooltip on the header toggle that switches the popup from the AI-site launcher back to the export view."
   },
   "popupPagePrevTitle": {
-    "message": "Előző oldal",
+    "message": "Προηγούμενη σελίδα",
     "description": "Tooltip on the launcher pager button that shows the previous page of AI sites."
   },
   "popupPageNextTitle": {
-    "message": "Következő oldal",
+    "message": "Επόμενη σελίδα",
     "description": "Tooltip on the launcher pager button that shows the next page of AI sites."
   },
   "statusExtracting": {
-    "message": "Kivonás…",
+    "message": "Εξαγωγή…",
     "description": "Status shown while the extension is reading the chat."
   },
   "statusGotMessagesSaving": {
-    "message": "{count} üzenet érkezett a(z) {site} oldalról. Mentés…",
+    "message": "Λήφθηκαν {count} μηνύματα από {site}. Αποθήκευση…",
     "description": "Status shown after extraction, before the file is saved."
   },
   "statusGotMessagesPrinting": {
-    "message": "{count} üzenet érkezett a(z) {site} oldalról. Nyomtatási párbeszédpanel megnyitása…",
+    "message": "Λήφθηκαν {count} μηνύματα από {site}. Άνοιγμα διαλόγου εκτύπωσης…",
     "description": "Status shown when exporting to PDF, before the print tab opens."
   },
   "statusOpenedPrintTab": {
-    "message": "Nyomtatási lap megnyitva - válassza a „Mentés PDF-ként” lehetőséget",
+    "message": "Άνοιξε καρτέλα εκτύπωσης - επιλέξτε \"Αποθήκευση ως PDF\"",
     "description": "Status shown after the print tab is opened for PDF export."
   },
   "statusGotMessagesUploadingGdoc": {
-    "message": "{count} üzenet érkezett a(z) {site} oldalról. Feltöltés Google Docsba…",
+    "message": "Λήφθηκαν {count} μηνύματα από {site}. Ανεβαίνουν στα Έγγραφα Google…",
     "description": "Status shown while the chat is being uploaded to Google Drive as a Google Doc."
   },
   "statusOpenedGdoc": {
-    "message": "Google Doc megnyitva új lapon.",
+    "message": "Άνοιξε Έγγραφο Google σε νέα καρτέλα.",
     "description": "Status shown after the Google Docs upload succeeds and the new doc opens."
   },
   "statusGotMessagesUploadingNotion": {
-    "message": "{count} üzenet érkezett a(z) {site} oldalról. Feltöltés Notionbe…",
+    "message": "Λήφθηκαν {count} μηνύματα από {site}. Ανεβαίνουν στο Notion…",
     "description": "Status shown while the chat is being uploaded to Notion as a native page."
   },
   "statusOpenedNotion": {
-    "message": "Notion oldal megnyitva új lapon.",
+    "message": "Άνοιξε σελίδα Notion σε νέα καρτέλα.",
     "description": "Status shown after the Notion upload succeeds and the new page opens."
   },
   "statusGotMessagesUploadingMsword": {
-    "message": "{count} üzenet érkezett a(z) {site} oldalról. Feltöltés Word Online-ba…",
+    "message": "Λήφθηκαν {count} μηνύματα από {site}. Ανεβαίνουν στο Word Online…",
     "description": "Status shown while the chat is being uploaded to OneDrive for Word Online."
   },
   "statusOpenedMsword": {
-    "message": "Word Online dokumentum megnyitva új lapon.",
+    "message": "Άνοιξε έγγραφο Word Online σε νέα καρτέλα.",
     "description": "Status shown after the Word Online upload succeeds and the document opens."
   },
   "statusGotMessagesUploadingNextcloud": {
-    "message": "{count} üzenet érkezett a(z) {site} oldalról. Feltöltés Nextcloudba…",
+    "message": "Λήφθηκαν {count} μηνύματα από {site}. Ανεβαίνουν στο Nextcloud…",
     "description": "Status shown while the chat is being uploaded to Nextcloud."
   },
   "statusOpenedNextcloud": {
-    "message": "Nextcloud fájl megnyitva új lapon.",
+    "message": "Άνοιξε αρχείο Nextcloud σε νέα καρτέλα.",
     "description": "Status shown after the Nextcloud upload succeeds and the file opens."
   },
   "statusGotMessagesUploadingOnenote": {
-    "message": "{count} üzenet érkezett a(z) {site} oldalról. Küldés OneNote-ba…",
+    "message": "Λήφθηκαν {count} μηνύματα από {site}. Αποστολή στο OneNote…",
     "description": "Status shown while the chat is being sent to OneNote as a new page."
   },
   "statusOpenedOnenote": {
-    "message": "OneNote oldal megnyitva új lapon.",
+    "message": "Άνοιξε σελίδα OneNote σε νέα καρτέλα.",
     "description": "Status shown after the OneNote upload succeeds and the new page opens."
   },
   "statusSaved": {
-    "message": "{filename} mentve",
+    "message": "Αποθηκεύτηκε {filename}",
     "description": "Success message after the file is saved."
   },
   "errorContentScriptNotLoaded": {
-    "message": "A tartalom szkript nem töltődött be. Frissítse ezt a lapot (F5), és próbálja újra.",
+    "message": "Το script περιεχομένου δεν φορτώθηκε. Ανανεώστε αυτήν την καρτέλα (F5) και δοκιμάστε ξανά.",
     "description": "Error when the popup cannot reach the content script."
   },
   "errorExtractionFailed": {
-    "message": "A kivonás sikertelen. Ez egy támogatott AI csevegőoldal?",
+    "message": "Η εξαγωγή απέτυχε. Είναι αυτή μια υποστηριζόμενη σελίδα συνομιλίας AI;",
     "description": "Generic extraction failure error."
   },
   "errorNoActiveTab": {
-    "message": "Nincs aktív lap.",
+    "message": "Δεν υπάρχει ενεργή καρτέλα.",
     "description": "Error when no active tab is found."
   },
   "errorPrintTab": {
-    "message": "Nem sikerült megnyitni a nyomtatási lapot.",
+    "message": "Δεν ήταν δυνατή η άνοιγμα της καρτέλας εκτύπωσης.",
     "description": "Error when opening the print tab failed."
   },
   "errorDownloadFailed": {
-    "message": "Letöltés sikertelen.",
+    "message": "Η λήψη απέτυχε.",
     "description": "Error when the download cannot start."
   },
   "optionsTitle": {
-    "message": "{app} - Beállítások",
+    "message": "{app} - Ρυθμίσεις",
     "description": "<title> of the settings page."
   },
   "optionsHeading": {
-    "message": "Beállítások",
+    "message": "Ρυθμίσεις",
     "description": "Top heading of the settings page."
   },
   "optionsTabGeneral": {
-    "message": "Általános",
+    "message": "Γενικά",
     "description": "Sidebar nav item for the General settings page (language)."
   },
   "optionsTabStyle": {
-    "message": "Stílus",
+    "message": "Στυλ",
     "description": "Sidebar nav item for the Style settings page (fonts, body text size, preview)."
   },
   "optionsInlineButtonsHeading": {
-    "message": "Csevegésen belüli gombok",
+    "message": "Κουμπιά εντός συνομιλίας",
     "description": "Sub-heading on the General settings page above the three per-message inline-button visibility toggles."
   },
   "optionsInlineExportMenuLabel": {
-    "message": "Fájlexport menü",
+    "message": "Μενού εξαγωγής αρχείου",
     "description": "Settings checkbox label - show the per-message export-format hover menu inside the AI chat page."
   },
   "optionsInlineCopyMdLabel": {
-    "message": "Másolás Markdownként gomb",
+    "message": "Κουμπί αντιγραφής ως Markdown",
     "description": "Settings checkbox label - show the per-message 'Copy as Markdown' button inside the AI chat page."
   },
   "optionsInlineCopyHtmlLabel": {
-    "message": "Másolás HTML-ként gomb",
+    "message": "Κουμπί αντιγραφής ως HTML",
     "description": "Settings checkbox label - show the per-message 'Copy as HTML' button inside the AI chat page."
   },
   "optionsTabSites": {
-    "message": "AI oldalak",
+    "message": "Ιστότοποι AI",
     "description": "Sidebar nav item for the AI Sites settings page (visibility, order)."
   },
   "optionsTabNotion": {
@@ -292,47 +292,47 @@
     "description": "Sidebar nav item for the Notion settings page (connect, parent page picker)."
   },
   "optionsNotionIntro": {
-    "message": "Csatlakoztassa Notion munkaterületét a csevegések natív Notion oldalaként történő exportálásához. Az {app} csak azokat az oldalakat láthatja és módosíthatja, amelyekhez Ön kifejezetten hozzáférést biztosít.",
+    "message": "Συνδέστε τον χώρο εργασίας σας στο Notion για να εξάγετε συνομιλίες ως εγγενείς σελίδες Notion. Το {app} μπορεί να δει και να τροποποιήσει μόνο σελίδες στις οποίες του παραχωρείτε ρητά πρόσβαση.",
     "description": "Intro paragraph at the top of the Notion settings page."
   },
   "optionsNotionConnect": {
-    "message": "Notion csatlakoztatása",
+    "message": "Σύνδεση Notion",
     "description": "Button label that starts the Notion OAuth flow."
   },
   "optionsNotionConnecting": {
-    "message": "Csatlakozás Notionhöz…",
+    "message": "Σύνδεση στο Notion…",
     "description": "Status shown while the Notion OAuth round-trip is in progress."
   },
   "optionsNotionDisconnect": {
-    "message": "Leválasztás",
+    "message": "Αποσύνδεση",
     "description": "Button label that clears the stored Notion access token."
   },
   "optionsNotionWorkspaceLabel": {
-    "message": "Munkaterület",
+    "message": "Χώρος εργασίας",
     "description": "Label next to the Notion workspace name once connected."
   },
   "optionsNotionParentLabel": {
-    "message": "Szülőoldal",
+    "message": "Γονική σελίδα",
     "description": "Label for the dropdown that picks which Notion page new exports land in."
   },
   "optionsNotionParentHint": {
-    "message": "Az új csevegőoldalak ennek az oldalnak az aloldalaiként jönnek létre. További oldalakhoz való hozzáférés biztosításához: nyissa meg az oldalt a Notionben → „…” menü → Kapcsolatok → az {app} integráció.",
+    "message": "Οι νέες σελίδες συνομιλίας θα δημιουργηθούν ως θυγατρικές αυτής της σελίδας. Για να παραχωρήσετε πρόσβαση σε περισσότερες σελίδες: ανοίξτε τη σελίδα στο Notion → μενού \"…\" → Συνδέσεις → την ενσωμάτωση {app}.",
     "description": "Helper text under the parent page picker, explaining how to grant access to more pages."
   },
   "optionsNotionRefresh": {
-    "message": "Frissítés",
+    "message": "Ανανέωση",
     "description": "Button that re-fetches the list of accessible Notion pages."
   },
   "optionsNotionLoadingPages": {
-    "message": "Oldalak betöltése…",
+    "message": "Φόρτωση σελίδων…",
     "description": "Placeholder option in the parent page dropdown while pages are being fetched."
   },
   "optionsNotionNoPages": {
-    "message": "Nincsenek oldalak – osszon meg legalább egy Notion oldalt az {app} integrációval",
+    "message": "Καμία σελίδα - μοιραστείτε τουλάχιστον μία σελίδα Notion με την ενσωμάτωση {app}",
     "description": "Placeholder option when the Notion search returned no accessible pages."
   },
   "optionsNotionPagesFailed": {
-    "message": "Nem sikerült betölteni az oldalakat",
+    "message": "Δεν ήταν δυνατή η φόρτωση σελίδων",
     "description": "Placeholder option when the Notion search call failed."
   },
   "optionsTabMicrosoft": {
@@ -340,27 +340,27 @@
     "description": "Sidebar nav item for the Microsoft 365 settings page (connect, account)."
   },
   "optionsMicrosoftIntro": {
-    "message": "Csatlakoztassa Microsoft-fiókját a csevegések .docx fájlként történő exportálásához a Word Online-ban. A fájlok a OneDrive-ban, az alkalmazás mappájában, az Alkalmazások alatt tárolódnak.",
+    "message": "Συνδέστε τον λογαριασμό σας Microsoft για να εξάγετε συνομιλίες ως αρχεία .docx στο Word Online. Τα αρχεία αποθηκεύονται στο OneDrive σας, στον φάκελο της εφαρμογής κάτω από τις Εφαρμογές.",
     "description": "Intro paragraph at the top of the Microsoft 365 settings page."
   },
   "optionsMicrosoftConnect": {
-    "message": "Microsoft 365 csatlakoztatása",
+    "message": "Σύνδεση Microsoft 365",
     "description": "Button label that starts the Microsoft OAuth flow."
   },
   "optionsMicrosoftConnecting": {
-    "message": "Csatlakozás Microsoft 365-höz…",
+    "message": "Σύνδεση στο Microsoft 365…",
     "description": "Status shown while the Microsoft OAuth round-trip is in progress."
   },
   "optionsMicrosoftDisconnect": {
-    "message": "Leválasztás",
+    "message": "Αποσύνδεση",
     "description": "Button label that clears the stored Microsoft tokens."
   },
   "optionsMicrosoftAccountLabel": {
-    "message": "Fiók",
+    "message": "Λογαριασμός",
     "description": "Label next to the signed-in Microsoft account email."
   },
   "optionsMicrosoftHint": {
-    "message": "Az exportált fájlok a OneDrive-ban, az Alkalmazások alatt (az alkalmazás mappájában) jelennek meg, és új lapon nyílnak meg a Word Online-ban.",
+    "message": "Τα εξαγόμενα αρχεία εμφανίζονται στο OneDrive κάτω από τις Εφαρμογές (στον φάκελο της εφαρμογής) και ανοίγουν στο Word Online σε νέα καρτέλα.",
     "description": "Helper text under the Microsoft 365 connection panel."
   },
   "optionsTabNextcloud": {
@@ -368,155 +368,155 @@
     "description": "Sidebar nav item for the Nextcloud settings page."
   },
   "optionsNextcloudIntro": {
-    "message": "Mentse a csevegéseket saját Nextcloud szerverére WebDAV-on keresztül. Az {app} alkalmazásjelszót használ (Nextcloud → Beállítások → Biztonság → „Új alkalmazásjelszó létrehozása”) – valódi fiókjelszava soha nem hagyja el a böngészőjét.",
+    "message": "Αποθηκεύστε συνομιλίες στον δικό σας διακομιστή Nextcloud μέσω WebDAV. Το {app} χρησιμοποιεί κωδικό πρόσβασης εφαρμογής (Nextcloud → Ρυθμίσεις → Ασφάλεια → «Δημιουργία νέου κωδικού πρόσβασης εφαρμογής») - ο πραγματικός κωδικός πρόσβασης του λογαριασμού σας δεν φεύγει ποτέ από το πρόγραμμα περιήγησής σας.",
     "description": "Intro paragraph at the top of the Nextcloud settings page."
   },
   "optionsNextcloudServerLabel": {
-    "message": "Szerver URL",
+    "message": "URL διακομιστή",
     "description": "Label for the Nextcloud server URL input."
   },
   "optionsNextcloudUserLabel": {
-    "message": "Felhasználónév",
+    "message": "Όνομα χρήστη",
     "description": "Label for the Nextcloud username input."
   },
   "optionsNextcloudPasswordLabel": {
-    "message": "Alkalmazásjelszó",
+    "message": "Κωδικός πρόσβασης εφαρμογής",
     "description": "Label for the Nextcloud app-password input."
   },
   "optionsNextcloudFolderLabel": {
-    "message": "Mappa",
+    "message": "Φάκελος",
     "description": "Label for the Nextcloud target folder input."
   },
   "optionsNextcloudFormatLabel": {
-    "message": "Alapértelmezett formátum",
+    "message": "Προεπιλεγμένη μορφή",
     "description": "Label for the dropdown that picks which file format gets uploaded to Nextcloud."
   },
   "optionsNextcloudTest": {
-    "message": "Kapcsolat tesztelése",
+    "message": "Δοκιμή σύνδεσης",
     "description": "Button label that probes the Nextcloud credentials with a PROPFIND request."
   },
   "optionsNextcloudSave": {
-    "message": "Mentés",
+    "message": "Αποθήκευση",
     "description": "Button label that persists the Nextcloud credentials."
   },
   "optionsNextcloudClear": {
-    "message": "Törlés",
+    "message": "Εκκαθάριση",
     "description": "Button label that wipes the stored Nextcloud credentials."
   },
   "optionsNextcloudTesting": {
-    "message": "Kapcsolat tesztelése…",
+    "message": "Δοκιμή σύνδεσης…",
     "description": "Status shown while the extension is probing the Nextcloud server with a PROPFIND."
   },
   "optionsNextcloudTestOk": {
-    "message": "Sikeres kapcsolat.",
+    "message": "Η σύνδεση ήταν επιτυχής.",
     "description": "Status shown when the Nextcloud PROPFIND probe succeeds."
   },
   "optionsNextcloudFillFirst": {
-    "message": "Először töltse ki a szerver URL-t, felhasználónevet és alkalmazásjelszót.",
+    "message": "Συμπληρώστε πρώτα το URL του διακομιστή, το όνομα χρήστη και τον κωδικό πρόσβασης εφαρμογής.",
     "description": "Error shown when the user clicks Test or Save with empty fields."
   },
   "optionsNextcloudCleared": {
-    "message": "Nextcloud hitelesítő adatok törölve.",
+    "message": "Τα διαπιστευτήρια Nextcloud εκκαθαρίστηκαν.",
     "description": "Status shown after the user clicks Clear."
   },
   "optionsLanguageLabel": {
-    "message": "Nyelv",
+    "message": "Γλώσσα",
     "description": "Label for the language dropdown."
   },
   "optionsLanguageAuto": {
-    "message": "Böngésző nyelvének használata",
+    "message": "Χρήση γλώσσας προγράμματος περιήγησης",
     "description": "Default option in the language dropdown - picks the browser UI language."
   },
   "optionsHtmlTitleFontLabel": {
-    "message": "Cím betűtípusa",
+    "message": "Γραμματοσειρά τίτλου",
     "description": "Label for the dropdown that picks the heading font used in HTML / PDF exports."
   },
   "optionsHtmlTextFontLabel": {
-    "message": "Szöveg betűtípusa",
+    "message": "Γραμματοσειρά κειμένου",
     "description": "Label for the dropdown that picks the body font used in HTML / PDF exports."
   },
   "optionsFontSystem": {
-    "message": "Rendszer (alapértelmezett)",
+    "message": "Σύστημα (προεπιλογή)",
     "description": "First option in both font dropdowns - the OS default font, no Google Fonts fetch."
   },
   "optionsHtmlMathLabel": {
-    "message": "Matematikai megjelenítés (KaTeX)",
+    "message": "Απόδοση μαθηματικών (KaTeX)",
     "description": "Label for the toggle that enables math rendering in HTML / PDF exports via the KaTeX library."
   },
   "optionsSavedNotice": {
-    "message": "Mentve.",
+    "message": "Αποθηκεύτηκε.",
     "description": "Notice shown when settings are saved."
   },
   "optionsVisibleSitesHint": {
-    "message": "Húzza az átrendezéshez. Szüntesse meg a jelölést a csempe elrejtéséhez az előugró ablakból.",
+    "message": "Σύρετε για αναδιάταξη. Καταργήστε την επιλογή για να αποκρύψετε ένα πλακίδιο από το αναδυόμενο παράθυρο.",
     "description": "Helper text under the visible sites checklist."
   },
   "optionsSelectAll": {
-    "message": "Összes kijelölése",
+    "message": "Επιλογή όλων",
     "description": "Button that checks every site in the visibility list."
   },
   "optionsSelectNone": {
-    "message": "Egyik sem",
+    "message": "Καμία επιλογή",
     "description": "Button that unchecks every site in the visibility list."
   },
   "exportJsonTitle": {
-    "message": "Exportálás JSON-ként (.json)",
+    "message": "Εξαγωγή ως JSON (.json)",
     "description": "Tooltip on the JSON export button - a flat { role, content } message array for developers."
   },
   "exportDebugTitle": {
-    "message": "Hibakereső csomag exportálása (.json)",
+    "message": "Εξαγωγή πακέτου εντοπισμού σφαλμάτων (.json)",
     "description": "Tooltip on the Developer-mode Debug export button - saves a diagnostic file with the raw API capture, the extracted conversation, and the rendered outputs."
   },
   "optionsDevModeLabel": {
-    "message": "Fejlesztői mód",
+    "message": "Λειτουργία προγραμματιστή",
     "description": "Settings checkbox that reveals the Debug-bundle export button in the popup."
   },
   "optionsAdvancedHeading": {
-    "message": "Advanced // TODO: translate to hu",
+    "message": "Για προχωρημένους",
     "description": "Heading of the Advanced block at the end of Settings - General (currently holds the Developer mode toggle)."
   },
   "errorSiteNotSupported": {
-    "message": "Ez az oldal nem támogatott. Nyisson meg egyet az alább felsorolt AI-oldalak közül, és próbálja újra.",
+    "message": "Αυτός ο ιστότοπος δεν υποστηρίζεται. Ανοίξτε έναν από τους ιστότοπους AI που αναφέρονται παρακάτω και δοκιμάστε ξανά.",
     "description": "Popup error when the active tab's domain matches none of the supported AI sites (refreshing cannot help there)."
   },
   "popupMediaTitle": {
-    "message": "Média",
+    "message": "Μέσα",
     "description": "Popup button — opens the media page for the current conversation."
   },
   "mediaPageTitle": {
-    "message": "Képek",
+    "message": "Εικόνες",
     "description": "Browser tab title of the media page."
   },
   "mediaHeading": {
-    "message": "Képek ebben a beszélgetésben",
+    "message": "Εικόνες σε αυτή τη συνομιλία",
     "description": "Heading of the media page."
   },
   "mediaSelectAll": {
-    "message": "Összes",
+    "message": "Όλα",
     "description": "Media page — select every image."
   },
   "mediaSelectNone": {
-    "message": "Egyik sem",
+    "message": "Κανένα",
     "description": "Media page — clear the selection."
   },
   "mediaDownload": {
-    "message": "Letöltés",
+    "message": "Λήψη",
     "description": "Media page — download the selected images."
   },
   "mediaMeta": {
-    "message": "{selected} / {count} kiválasztva",
+    "message": "{selected} από {count} επιλεγμένα",
     "description": "Media page counter. {selected} and {count} are numbers."
   },
   "mediaEmpty": {
-    "message": "Ez a beszélgetés nem tartalmaz képeket.",
+    "message": "Αυτή η συνομιλία δεν έχει εικόνες.",
     "description": "Media page — shown when the conversation contains no pictures."
   },
   "mediaLoadError": {
-    "message": "Nem sikerült beolvasni a beszélgetést. Zárja be ezt a lapot, és próbálja újra az előugró ablakból.",
+    "message": "Δεν ήταν δυνατή η ανάγνωση της συνομιλίας. Κλείστε αυτήν την καρτέλα και δοκιμάστε ξανά από το αναδυόμενο παράθυρο.",
     "description": "Media page — the stashed conversation was missing."
   },
   "mediaRoleUser": {
-    "message": "Ön",
+    "message": "Εσείς",
     "description": "Media page tile label — the image came from the user's message."
   },
   "mediaRoleAssistant": {
@@ -524,15 +524,15 @@
     "description": "Media page tile label — the image came from the AI's reply."
   },
   "mediaDownloadDone": {
-    "message": "{done} letöltve, {failed} sikertelen",
+    "message": "{done} λήφθηκαν, {failed} απέτυχαν",
     "description": "Media page result. {done} and {failed} are numbers."
   },
   "popupCustomExportSub": {
-    "message": "Válassza ki az exportálni kívánt üzeneteket.",
+    "message": "Επιλέξτε τα μηνύματα που θέλετε να εξαγάγετε.",
     "description": "Tooltip on the popup's Custom Export button."
   },
   "popupMediaSub": {
-    "message": "Böngéssze és töltse le a képeket ebből a csevegésből.",
+    "message": "Περιηγηθείτε και κατεβάστε τις εικόνες σε αυτή τη συνομιλία.",
     "description": "Tooltip on the popup's Media button."
   }
 }

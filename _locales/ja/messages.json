@@ -1,7 +1,7 @@
 {
   "extDescription": {
     "message": "ChatGPT、Gemini、ClaudeからAIチャットをエクスポート。32のAIサイト、9つの形式、5つのクラウド保存先。",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
   },
   "exportMarkdownTitle": {
     "message": "Markdown (.md) としてエクスポート",

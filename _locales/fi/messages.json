@@ -1,7 +1,7 @@
 {
   "extDescription": {
     "message": "Vie tekoälykeskusteluja ChatGPT:stä, Geministä, Claudesta. 32 tekoälysivustoa, 9 muotoa, 5 pilvikohtaa.",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
   },
   "exportMarkdownTitle": {
     "message": "Vie Markdown-muodossa (.md)",

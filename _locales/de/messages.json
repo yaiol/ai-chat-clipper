@@ -1,7 +1,7 @@
 {
   "extDescription": {
     "message": "KI-Chats von ChatGPT, Gemini, Claude exportieren. 32 KI-Seiten, 9 Formate, 5 Cloud-Ziele.",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
   },
   "exportMarkdownTitle": {
     "message": "Als Markdown (.md) exportieren",

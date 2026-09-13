@@ -1,7 +1,7 @@
 {
   "extDescription": {
     "message": "ChatGPT, Gemini, Claude에서 AI 채팅 내보내기. 32개 AI 사이트, 9개 형식, 5개 클라우드 저장소.",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
   },
   "exportMarkdownTitle": {
     "message": "Markdown(.md)으로 내보내기",

@@ -1,7 +1,7 @@
 {
   "extDescription": {
     "message": "Експорт чатів ШІ з ChatGPT, Gemini, Claude. 32 ШІ-сайти, 9 форматів, 5 хмарних сховищ.",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
   },
   "exportMarkdownTitle": {
     "message": "Експортувати як Markdown (.md)",

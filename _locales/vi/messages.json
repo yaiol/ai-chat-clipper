@@ -1,7 +1,7 @@
 {
   "extDescription": {
     "message": "Xuất cuộc trò chuyện AI từ ChatGPT, Gemini, Claude. 32 trang AI, 9 định dạng, 5 đích đến đám mây.",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
   },
   "exportMarkdownTitle": {
     "message": "Xuất dưới dạng Markdown (.md)",

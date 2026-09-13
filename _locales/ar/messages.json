@@ -1,7 +1,7 @@
 {
   "extDescription": {
     "message": "تصدير محادثات الذكاء الاصطناعي من ChatGPT، Gemini، Claude. 32 موقع ذكاء اصطناعي، 9 تنسيقات، 5 وجهات سحابية.",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists (see CLAUDE.md → Store copy)."
+    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
   },
   "exportMarkdownTitle": {
     "message": "تصدير كـ Markdown (.md)",

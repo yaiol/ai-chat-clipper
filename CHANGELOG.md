@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.2 — 2026-09-13
+
+- Greek added — the interface is now available in 28 languages, chosen independently of the browser's language
+- The Nextcloud server field's placeholder now reads nextcloud.example.com, so the example no longer implies a Nextcloud must live at a host called "cloud"
+- Rewrite the README as a proper GitHub front page — logo, release and download badges, and a nav row to the website, install, features, documentation and build
+- Fix the punctuation of the store-description translator note in every locale file
+
 ## 1.0.1 — 2026-08-22
 
 - Inline per-message buttons now appear on LobeHub, Merlin, MiniMax and Qwen — these sites had no in-chat buttons at all, so Copy as Markdown, Copy as HTML and the per-message Export file menu were unavailable there
