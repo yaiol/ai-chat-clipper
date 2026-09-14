@@ -1,538 +1,404 @@
 {
   "extDescription": {
-    "message": "ChatGPT、Gemini、ClaudeからAIチャットをエクスポート。32のAIサイト、9つの形式、5つのクラウド保存先。",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
+    "message": "ChatGPT、Gemini、ClaudeからAIチャットをエクスポート。32のAIサイト、9つの形式、5つのクラウド保存先。"
   },
   "exportMarkdownTitle": {
-    "message": "Markdown (.md) としてエクスポート",
-    "description": "Tooltip on the Markdown export button."
+    "message": "Markdown (.md) としてエクスポート"
   },
   "exportHtmlTitle": {
-    "message": "HTML (.html) としてエクスポート",
-    "description": "Tooltip on the HTML export button."
+    "message": "HTML (.html) としてエクスポート"
   },
   "exportTxtTitle": {
-    "message": "テキスト (.txt) としてエクスポート",
-    "description": "Tooltip on the plain-text export button."
+    "message": "テキスト (.txt) としてエクスポート"
   },
   "exportDocxTitle": {
-    "message": "Word (.docx) としてエクスポート",
-    "description": "Tooltip on the Word export button."
+    "message": "Word (.docx) としてエクスポート"
   },
   "exportOdtTitle": {
-    "message": "OpenDocument (.odt) としてエクスポート",
-    "description": "Tooltip on the OpenDocument export button."
+    "message": "OpenDocument (.odt) としてエクスポート"
   },
   "exportPdfTitle": {
-    "message": "PDF として書き出し(印刷ダイアログ経由)",
-    "description": "Tooltip on the PDF export button."
+    "message": "PDF として書き出し(印刷ダイアログ経由)"
   },
   "exportImageTitle": {
-    "message": "PNG画像としてエクスポート",
-    "description": "Tooltip on the Image export button - renders the conversation to a single tall PNG file."
+    "message": "PNG画像としてエクスポート"
   },
   "exportGdocTitle": {
-    "message": "Google Docs で開く",
-    "description": "Tooltip on the Google Docs export button - uploads the chat to the user's Google Drive as a native Google Doc."
+    "message": "Google Docs で開く"
   },
   "exportNotionTitle": {
-    "message": "Notion にエクスポート",
-    "description": "Tooltip on the Notion export button - uploads the chat to the user's Notion workspace as a native Notion page."
+    "message": "Notion にエクスポート"
   },
   "exportMswordTitle": {
-    "message": "Word Online で開く",
-    "description": "Tooltip on the Word Online export button - uploads the chat as a .docx to OneDrive and opens it in Word Online."
+    "message": "Word Online で開く"
   },
   "exportNextcloudTitle": {
-    "message": "Nextcloudに保存",
-    "description": "Tooltip on the Nextcloud export button - uploads the chat to the user's Nextcloud server via WebDAV."
+    "message": "Nextcloudに保存"
   },
   "exportOnenoteTitle": {
-    "message": "OneNoteに送信",
-    "description": "Tooltip on the OneNote export button - creates a new page in the user's OneNote default notebook."
+    "message": "OneNoteに送信"
   },
   "settingsButtonTitle": {
-    "message": "設定",
-    "description": "Tooltip on the gear icon that opens the settings page."
+    "message": "設定"
   },
   "popupCustomExportTitle": {
-    "message": "カスタムエクスポート",
-    "description": "Title of the prominent button below the export icons in the popup. Opens the message selection page."
+    "message": "カスタムエクスポート"
   },
   "selectPageTitle": {
-    "message": "{app} - メッセージを選択",
-    "description": "<title> of the selection page (browser tab title)."
+    "message": "{app} - メッセージを選択"
   },
   "selectHeading": {
-    "message": "エクスポートするメッセージを選択",
-    "description": "Top heading of the selection page."
+    "message": "エクスポートするメッセージを選択"
   },
   "selectStatusCount": {
-    "message": "{n} / {total} 件 選択中",
-    "description": "Status line on the selection page showing how many messages are checked."
+    "message": "{n} / {total} 件 選択中"
   },
   "selectErrorNoSelection": {
-    "message": "メッセージを 1 件以上選択してください。",
-    "description": "Error shown when the user clicks an export button with no messages selected."
+    "message": "メッセージを 1 件以上選択してください。"
   },
   "selectErrorNoMessages": {
-    "message": "このチャットにメッセージは見つかりませんでした。",
-    "description": "Error shown when the selection page opens but the chat has no extractable messages."
+    "message": "このチャットにメッセージは見つかりませんでした。"
   },
   "selectErrorLoadFailed": {
-    "message": "チャットを読み込めませんでした。タブを開き直してください。",
-    "description": "Error shown when the selection page can't read the stashed conversation."
+    "message": "チャットを読み込めませんでした。タブを開き直してください。"
   },
   "selectRoleUser": {
-    "message": "ユーザー",
-    "description": "Role badge for user messages on the selection page."
+    "message": "ユーザー"
   },
   "selectRoleAssistant": {
-    "message": "アシスタント",
-    "description": "Role badge for assistant messages on the selection page."
+    "message": "アシスタント"
   },
   "selectFontSizeLabel": {
-    "message": "サイズ",
-    "description": "Label preceding the font-size dropdown in the selection page toolbar."
+    "message": "サイズ"
   },
   "selectFontSizeSmall": {
-    "message": "小",
-    "description": "Smallest body-text option in the size dropdown."
+    "message": "小"
   },
   "selectFontSizeMedium": {
-    "message": "中",
-    "description": "Default body-text option in the size dropdown."
+    "message": "中"
   },
   "selectFontSizeLarge": {
-    "message": "大",
-    "description": "Largest body-text option in the size dropdown."
+    "message": "大"
   },
   "selectShowTimeLabel": {
-    "message": "時刻",
-    "description": "Compact label next to the show-chat-time checkbox in the selection page toolbar."
+    "message": "時刻"
   },
   "selectShowSourceLabel": {
-    "message": "ソース",
-    "description": "Compact label next to the show-source checkbox in the selection page toolbar."
+    "message": "ソース"
   },
   "optionsHtmlSizeLabel": {
-    "message": "本文サイズ",
-    "description": "Settings → General label for the body text size dropdown (HTML / PDF exports)."
+    "message": "本文サイズ"
   },
   "optionsHtmlShowTimeLabel": {
-    "message": "チャット時刻を表示",
-    "description": "Settings → General label for the toggle that includes per-message timestamps in HTML / PDF exports."
+    "message": "チャット時刻を表示"
   },
   "optionsHtmlShowSourceLabel": {
-    "message": "ソースリンクを表示",
-    "description": "Settings → General label for the toggle that includes the \"Source: <link>\" line at the top of HTML / PDF exports."
+    "message": "ソースリンクを表示"
   },
   "optionsHtmlShowThinkingLabel": {
-    "message": "思考過程を表示",
-    "description": "Settings → General label for the toggle that keeps the model's thinking blockquotes in HTML / PDF exports."
+    "message": "思考過程を表示"
   },
   "optionsFilenamePatternLabel": {
-    "message": "ファイル名のパターン",
-    "description": "Settings → General label for the export filename template input."
+    "message": "ファイル名のパターン"
   },
   "optionsFilenamePatternHint": {
-    "message": "利用可能なフィールド:",
-    "description": "Helper text under the filename pattern input, followed by the literal placeholder list."
+    "message": "利用可能なフィールド:"
   },
   "selectShowThinkingLabel": {
-    "message": "思考",
-    "description": "Compact label next to the show-thinking checkbox in the selection page toolbar."
+    "message": "思考"
   },
   "selectTitleFontLabel": {
-    "message": "タイトル",
-    "description": "Compact label preceding the title-font dropdown in the selection page toolbar."
+    "message": "タイトル"
   },
   "selectTextFontLabel": {
-    "message": "本文",
-    "description": "Compact label preceding the text-font dropdown in the selection page toolbar."
+    "message": "本文"
   },
   "dragHint": {
-    "message": "ドラッグで並べ替え",
-    "description": "Helper text under the AI sites grid."
+    "message": "ドラッグで並べ替え"
   },
   "popupViewLauncherTitle": {
-    "message": "AIサイトへ移動",
-    "description": "Tooltip on the header toggle that switches the popup from the export view to the AI-site launcher grid."
+    "message": "AIサイトへ移動"
   },
   "popupViewExportTitle": {
-    "message": "エクスポートに戻る",
-    "description": "Tooltip on the header toggle that switches the popup from the AI-site launcher back to the export view."
+    "message": "エクスポートに戻る"
   },
   "popupPagePrevTitle": {
-    "message": "前のページ",
-    "description": "Tooltip on the launcher pager button that shows the previous page of AI sites."
+    "message": "前のページ"
   },
   "popupPageNextTitle": {
-    "message": "次のページ",
-    "description": "Tooltip on the launcher pager button that shows the next page of AI sites."
+    "message": "次のページ"
   },
   "statusExtracting": {
-    "message": "抽出中…",
-    "description": "Status shown while the extension is reading the chat."
+    "message": "抽出中…"
   },
   "statusGotMessagesSaving": {
-    "message": "{site} から {count} 件のメッセージを取得しました。保存中…",
-    "description": "Status shown after extraction, before the file is saved."
+    "message": "{site} から {count} 件のメッセージを取得しました。保存中…"
   },
   "statusGotMessagesPrinting": {
-    "message": "{site} から {count} 件のメッセージを取得しました。印刷ダイアログを開いています…",
-    "description": "Status shown when exporting to PDF, before the print tab opens."
+    "message": "{site} から {count} 件のメッセージを取得しました。印刷ダイアログを開いています…"
   },
   "statusOpenedPrintTab": {
-    "message": "印刷タブを開きました - 「PDFに保存」を選択してください",
-    "description": "Status shown after the print tab is opened for PDF export."
+    "message": "印刷タブを開きました - 「PDFに保存」を選択してください"
   },
   "statusGotMessagesUploadingGdoc": {
-    "message": "{site} から {count} 件のメッセージを取得。Google Docs にアップロード中…",
-    "description": "Status shown while the chat is being uploaded to Google Drive as a Google Doc."
+    "message": "{site} から {count} 件のメッセージを取得。Google Docs にアップロード中…"
   },
   "statusOpenedGdoc": {
-    "message": "新しいタブで Google Doc を開きました。",
-    "description": "Status shown after the Google Docs upload succeeds and the new doc opens."
+    "message": "新しいタブで Google Doc を開きました。"
   },
   "statusGotMessagesUploadingNotion": {
-    "message": "{site} から {count} 件のメッセージを取得。Notion にアップロード中…",
-    "description": "Status shown while the chat is being uploaded to Notion as a native page."
+    "message": "{site} から {count} 件のメッセージを取得。Notion にアップロード中…"
   },
   "statusOpenedNotion": {
-    "message": "新しいタブで Notion ページを開きました。",
-    "description": "Status shown after the Notion upload succeeds and the new page opens."
+    "message": "新しいタブで Notion ページを開きました。"
   },
   "statusGotMessagesUploadingMsword": {
-    "message": "{site} から {count} 件のメッセージを受信しました。Word Online にアップロード中…",
-    "description": "Status shown while the chat is being uploaded to OneDrive for Word Online."
+    "message": "{site} から {count} 件のメッセージを受信しました。Word Online にアップロード中…"
   },
   "statusOpenedMsword": {
-    "message": "Word Online ドキュメントを新しいタブで開きました。",
-    "description": "Status shown after the Word Online upload succeeds and the document opens."
+    "message": "Word Online ドキュメントを新しいタブで開きました。"
   },
   "statusGotMessagesUploadingNextcloud": {
-    "message": "{site}から{count}件のメッセージを受信しました。Nextcloudにアップロード中…",
-    "description": "Status shown while the chat is being uploaded to Nextcloud."
+    "message": "{site}から{count}件のメッセージを受信しました。Nextcloudにアップロード中…"
   },
   "statusOpenedNextcloud": {
-    "message": "Nextcloudファイルを新しいタブで開きました。",
-    "description": "Status shown after the Nextcloud upload succeeds and the file opens."
+    "message": "Nextcloudファイルを新しいタブで開きました。"
   },
   "statusGotMessagesUploadingOnenote": {
-    "message": "{site} から {count} 件のメッセージを受信しました。OneNoteに送信中…",
-    "description": "Status shown while the chat is being sent to OneNote as a new page."
+    "message": "{site} から {count} 件のメッセージを受信しました。OneNoteに送信中…"
   },
   "statusOpenedOnenote": {
-    "message": "OneNoteページを新しいタブで開きました。",
-    "description": "Status shown after the OneNote upload succeeds and the new page opens."
+    "message": "OneNoteページを新しいタブで開きました。"
   },
   "statusSaved": {
-    "message": "保存しました: {filename}",
-    "description": "Success message after the file is saved."
+    "message": "保存しました: {filename}"
   },
   "errorContentScriptNotLoaded": {
-    "message": "コンテンツスクリプトが読み込まれていません。タブを更新(F5)して再試行してください。",
-    "description": "Error when the popup cannot reach the content script."
+    "message": "コンテンツスクリプトが読み込まれていません。タブを更新(F5)して再試行してください。"
   },
   "errorExtractionFailed": {
-    "message": "抽出に失敗しました。これは対応するAIチャットページですか?",
-    "description": "Generic extraction failure error."
+    "message": "抽出に失敗しました。これは対応するAIチャットページですか?"
   },
   "errorNoActiveTab": {
-    "message": "アクティブなタブがありません。",
-    "description": "Error when no active tab is found."
+    "message": "アクティブなタブがありません。"
   },
   "errorPrintTab": {
-    "message": "印刷タブを開けませんでした。",
-    "description": "Error when opening the print tab failed."
+    "message": "印刷タブを開けませんでした。"
   },
   "errorDownloadFailed": {
-    "message": "ダウンロードに失敗しました。",
-    "description": "Error when the download cannot start."
+    "message": "ダウンロードに失敗しました。"
   },
   "optionsTitle": {
-    "message": "{app} - 設定",
-    "description": "<title> of the settings page."
+    "message": "{app} - 設定"
   },
   "optionsHeading": {
-    "message": "設定",
-    "description": "Top heading of the settings page."
+    "message": "設定"
   },
   "optionsTabGeneral": {
-    "message": "一般",
-    "description": "Sidebar nav item for the General settings page (language)."
+    "message": "一般"
   },
   "optionsTabStyle": {
-    "message": "スタイル",
-    "description": "Sidebar nav item for the Style settings page (fonts, body text size, preview)."
+    "message": "スタイル"
   },
   "optionsInlineButtonsHeading": {
-    "message": "チャットボタン",
-    "description": "Sub-heading on the General settings page above the three per-message inline-button visibility toggles."
+    "message": "チャットボタン"
   },
   "optionsInlineExportMenuLabel": {
-    "message": "ファイルエクスポートメニュー",
-    "description": "Settings checkbox label - show the per-message export-format hover menu inside the AI chat page."
+    "message": "ファイルエクスポートメニュー"
   },
   "optionsInlineCopyMdLabel": {
-    "message": "Markdownとしてコピーボタン",
-    "description": "Settings checkbox label - show the per-message 'Copy as Markdown' button inside the AI chat page."
+    "message": "Markdownとしてコピーボタン"
   },
   "optionsInlineCopyHtmlLabel": {
-    "message": "HTMLとしてコピーボタン",
-    "description": "Settings checkbox label - show the per-message 'Copy as HTML' button inside the AI chat page."
+    "message": "HTMLとしてコピーボタン"
   },
   "optionsTabSites": {
-    "message": "AIサイト",
-    "description": "Sidebar nav item for the AI Sites settings page (visibility, order)."
+    "message": "AIサイト"
   },
   "optionsTabNotion": {
-    "message": "Notion",
-    "description": "Sidebar nav item for the Notion settings page (connect, parent page picker)."
+    "message": "Notion"
   },
   "optionsNotionIntro": {
-    "message": "Notionワークスペースを接続して、チャットをネイティブのNotionページとしてエクスポートします。{app}は、明示的にアクセスを許可したページのみを表示および変更できます。",
-    "description": "Intro paragraph at the top of the Notion settings page."
+    "message": "Notionワークスペースを接続して、チャットをネイティブのNotionページとしてエクスポートします。{app}は、明示的にアクセスを許可したページのみを表示および変更できます。"
   },
   "optionsNotionConnect": {
-    "message": "Notion に接続",
-    "description": "Button label that starts the Notion OAuth flow."
+    "message": "Notion に接続"
   },
   "optionsNotionConnecting": {
-    "message": "Notion に接続中…",
-    "description": "Status shown while the Notion OAuth round-trip is in progress."
+    "message": "Notion に接続中…"
   },
   "optionsNotionDisconnect": {
-    "message": "切断",
-    "description": "Button label that clears the stored Notion access token."
+    "message": "切断"
   },
   "optionsNotionWorkspaceLabel": {
-    "message": "ワークスペース",
-    "description": "Label next to the Notion workspace name once connected."
+    "message": "ワークスペース"
   },
   "optionsNotionParentLabel": {
-    "message": "親ページ",
-    "description": "Label for the dropdown that picks which Notion page new exports land in."
+    "message": "親ページ"
   },
   "optionsNotionParentHint": {
-    "message": "新しいチャットページは、このページの子として作成されます。さらに多くのページへのアクセスを許可するには：Notionでページを開く → 「…」メニュー → 接続 → {app}連携。",
-    "description": "Helper text under the parent page picker, explaining how to grant access to more pages."
+    "message": "新しいチャットページは、このページの子として作成されます。さらに多くのページへのアクセスを許可するには：Notionでページを開く → 「…」メニュー → 接続 → {app}連携。"
   },
   "optionsNotionRefresh": {
-    "message": "更新",
-    "description": "Button that re-fetches the list of accessible Notion pages."
+    "message": "更新"
   },
   "optionsNotionLoadingPages": {
-    "message": "ページを読み込み中…",
-    "description": "Placeholder option in the parent page dropdown while pages are being fetched."
+    "message": "ページを読み込み中…"
   },
   "optionsNotionNoPages": {
-    "message": "ページがありません - 少なくとも1つのNotionページを{app}連携と共有してください",
-    "description": "Placeholder option when the Notion search returned no accessible pages."
+    "message": "ページがありません - 少なくとも1つのNotionページを{app}連携と共有してください"
   },
   "optionsNotionPagesFailed": {
-    "message": "ページを読み込めませんでした",
-    "description": "Placeholder option when the Notion search call failed."
+    "message": "ページを読み込めませんでした"
   },
   "optionsTabMicrosoft": {
-    "message": "Microsoft 365",
-    "description": "Sidebar nav item for the Microsoft 365 settings page (connect, account)."
+    "message": "Microsoft 365"
   },
   "optionsMicrosoftIntro": {
-    "message": "Microsoft アカウントを接続して、チャットを Word Online で .docx ファイルとしてエクスポートします。ファイルは OneDrive の「アプリ」の下にあるアプリのフォルダーに保存されます。",
-    "description": "Intro paragraph at the top of the Microsoft 365 settings page."
+    "message": "Microsoft アカウントを接続して、チャットを Word Online で .docx ファイルとしてエクスポートします。ファイルは OneDrive の「アプリ」の下にあるアプリのフォルダーに保存されます。"
   },
   "optionsMicrosoftConnect": {
-    "message": "Microsoft 365 に接続",
-    "description": "Button label that starts the Microsoft OAuth flow."
+    "message": "Microsoft 365 に接続"
   },
   "optionsMicrosoftConnecting": {
-    "message": "Microsoft 365 に接続中…",
-    "description": "Status shown while the Microsoft OAuth round-trip is in progress."
+    "message": "Microsoft 365 に接続中…"
   },
   "optionsMicrosoftDisconnect": {
-    "message": "切断",
-    "description": "Button label that clears the stored Microsoft tokens."
+    "message": "切断"
   },
   "optionsMicrosoftAccountLabel": {
-    "message": "アカウント",
-    "description": "Label next to the signed-in Microsoft account email."
+    "message": "アカウント"
   },
   "optionsMicrosoftHint": {
-    "message": "エクスポートされたファイルは OneDrive の「アプリ」の下（アプリのフォルダー内）に表示され、Word Online で新しいタブで開きます。",
-    "description": "Helper text under the Microsoft 365 connection panel."
+    "message": "エクスポートされたファイルは OneDrive の「アプリ」の下（アプリのフォルダー内）に表示され、Word Online で新しいタブで開きます。"
   },
   "optionsTabNextcloud": {
-    "message": "Nextcloud",
-    "description": "Sidebar nav item for the Nextcloud settings page."
+    "message": "Nextcloud"
   },
   "optionsNextcloudIntro": {
-    "message": "WebDAV 経由でチャットを独自の Nextcloud サーバーに保存します。{app} はアプリパスワードを使用します（Nextcloud → 設定 → セキュリティ → 「新しいアプリパスワードを作成」） – 実際のパスワードがブラウザから離れることはありません。",
-    "description": "Intro paragraph at the top of the Nextcloud settings page."
+    "message": "WebDAV 経由でチャットを独自の Nextcloud サーバーに保存します。{app} はアプリパスワードを使用します（Nextcloud → 設定 → セキュリティ → 「新しいアプリパスワードを作成」） – 実際のパスワードがブラウザから離れることはありません。"
   },
   "optionsNextcloudServerLabel": {
-    "message": "サーバーURL",
-    "description": "Label for the Nextcloud server URL input."
+    "message": "サーバーURL"
   },
   "optionsNextcloudUserLabel": {
-    "message": "ユーザー名",
-    "description": "Label for the Nextcloud username input."
+    "message": "ユーザー名"
   },
   "optionsNextcloudPasswordLabel": {
-    "message": "アプリパスワード",
-    "description": "Label for the Nextcloud app-password input."
+    "message": "アプリパスワード"
   },
   "optionsNextcloudFolderLabel": {
-    "message": "フォルダー",
-    "description": "Label for the Nextcloud target folder input."
+    "message": "フォルダー"
   },
   "optionsNextcloudFormatLabel": {
-    "message": "デフォルト形式",
-    "description": "Label for the dropdown that picks which file format gets uploaded to Nextcloud."
+    "message": "デフォルト形式"
   },
   "optionsNextcloudTest": {
-    "message": "接続をテスト",
-    "description": "Button label that probes the Nextcloud credentials with a PROPFIND request."
+    "message": "接続をテスト"
   },
   "optionsNextcloudSave": {
-    "message": "保存",
-    "description": "Button label that persists the Nextcloud credentials."
+    "message": "保存"
   },
   "optionsNextcloudClear": {
-    "message": "クリア",
-    "description": "Button label that wipes the stored Nextcloud credentials."
+    "message": "クリア"
   },
   "optionsNextcloudTesting": {
-    "message": "接続をテスト中…",
-    "description": "Status shown while the extension is probing the Nextcloud server with a PROPFIND."
+    "message": "接続をテスト中…"
   },
   "optionsNextcloudTestOk": {
-    "message": "接続成功。",
-    "description": "Status shown when the Nextcloud PROPFIND probe succeeds."
+    "message": "接続成功。"
   },
   "optionsNextcloudFillFirst": {
-    "message": "まず、サーバーURL、ユーザー名、アプリパスワードを入力してください。",
-    "description": "Error shown when the user clicks Test or Save with empty fields."
+    "message": "まず、サーバーURL、ユーザー名、アプリパスワードを入力してください。"
   },
   "optionsNextcloudCleared": {
-    "message": "Nextcloudの認証情報がクリアされました。",
-    "description": "Status shown after the user clicks Clear."
+    "message": "Nextcloudの認証情報がクリアされました。"
   },
   "optionsLanguageLabel": {
-    "message": "言語",
-    "description": "Label for the language dropdown."
+    "message": "言語"
   },
   "optionsLanguageAuto": {
-    "message": "ブラウザの言語を使用",
-    "description": "Default option in the language dropdown - picks the browser UI language."
+    "message": "ブラウザの言語を使用"
   },
   "optionsHtmlTitleFontLabel": {
-    "message": "タイトルのフォント",
-    "description": "Label for the dropdown that picks the heading font used in HTML / PDF exports."
+    "message": "タイトルのフォント"
   },
   "optionsHtmlTextFontLabel": {
-    "message": "本文のフォント",
-    "description": "Label for the dropdown that picks the body font used in HTML / PDF exports."
+    "message": "本文のフォント"
   },
   "optionsFontSystem": {
-    "message": "システム(既定)",
-    "description": "First option in both font dropdowns - the OS default font, no Google Fonts fetch."
+    "message": "システム(既定)"
   },
   "optionsHtmlMathLabel": {
-    "message": "数式レンダリング(KaTeX)",
-    "description": "Label for the toggle that enables math rendering in HTML / PDF exports via the KaTeX library."
+    "message": "数式レンダリング(KaTeX)"
   },
   "optionsSavedNotice": {
-    "message": "保存しました。",
-    "description": "Notice shown when settings are saved."
+    "message": "保存しました。"
   },
   "optionsVisibleSitesHint": {
-    "message": "ドラッグで並べ替え。チェックを外すとポップアップからタイルが非表示になります。",
-    "description": "Helper text under the visible sites checklist."
+    "message": "ドラッグで並べ替え。チェックを外すとポップアップからタイルが非表示になります。"
   },
   "optionsSelectAll": {
-    "message": "すべて選択",
-    "description": "Button that checks every site in the visibility list."
+    "message": "すべて選択"
   },
   "optionsSelectNone": {
-    "message": "すべて解除",
-    "description": "Button that unchecks every site in the visibility list."
+    "message": "すべて解除"
   },
   "exportJsonTitle": {
-    "message": "JSONとしてエクスポート (.json)",
-    "description": "Tooltip on the JSON export button - a flat { role, content } message array for developers."
+    "message": "JSONとしてエクスポート (.json)"
   },
   "exportDebugTitle": {
-    "message": "デバッグバンドルをエクスポート (.json)",
-    "description": "Tooltip on the Developer-mode Debug export button - saves a diagnostic file with the raw API capture, the extracted conversation, and the rendered outputs."
+    "message": "デバッグバンドルをエクスポート (.json)"
   },
   "optionsDevModeLabel": {
-    "message": "開発者モード",
-    "description": "Settings checkbox that reveals the Debug-bundle export button in the popup."
+    "message": "開発者モード"
   },
   "optionsAdvancedHeading": {
-    "message": "詳細設定",
-    "description": "Heading of the Advanced block at the end of Settings - General (currently holds the Developer mode toggle)."
+    "message": "詳細設定"
   },
   "errorSiteNotSupported": {
-    "message": "このサイトはサポートされていません。下記のAIサイトのいずれかを開いて、もう一度お試しください。",
-    "description": "Popup error when the active tab's domain matches none of the supported AI sites (refreshing cannot help there)."
+    "message": "このサイトはサポートされていません。下記のAIサイトのいずれかを開いて、もう一度お試しください。"
   },
   "popupMediaTitle": {
-    "message": "メディア",
-    "description": "Popup button — opens the media page for the current conversation."
+    "message": "メディア"
   },
   "mediaPageTitle": {
-    "message": "画像",
-    "description": "Browser tab title of the media page."
+    "message": "画像"
   },
   "mediaHeading": {
-    "message": "この会話内の画像",
-    "description": "Heading of the media page."
+    "message": "この会話内の画像"
   },
   "mediaSelectAll": {
-    "message": "すべて",
-    "description": "Media page — select every image."
+    "message": "すべて"
   },
   "mediaSelectNone": {
-    "message": "なし",
-    "description": "Media page — clear the selection."
+    "message": "なし"
   },
   "mediaDownload": {
-    "message": "ダウンロード",
-    "description": "Media page — download the selected images."
+    "message": "ダウンロード"
   },
   "mediaMeta": {
-    "message": "{count}件中{selected}件選択済み",
-    "description": "Media page counter. {selected} and {count} are numbers."
+    "message": "{count}件中{selected}件選択済み"
   },
   "mediaEmpty": {
-    "message": "この会話には画像がありません。",
-    "description": "Media page — shown when the conversation contains no pictures."
+    "message": "この会話には画像がありません。"
   },
   "mediaLoadError": {
-    "message": "会話を読み取れませんでした。このタブを閉じて、ポップアップから再度お試しください。",
-    "description": "Media page — the stashed conversation was missing."
+    "message": "会話を読み取れませんでした。このタブを閉じて、ポップアップから再度お試しください。"
   },
   "mediaRoleUser": {
-    "message": "あなた",
-    "description": "Media page tile label — the image came from the user's message."
+    "message": "あなた"
   },
   "mediaRoleAssistant": {
-    "message": "AI",
-    "description": "Media page tile label — the image came from the AI's reply."
+    "message": "AI"
   },
   "mediaDownloadDone": {
-    "message": "{done}件ダウンロード、{failed}件失敗",
-    "description": "Media page result. {done} and {failed} are numbers."
+    "message": "{done}件ダウンロード、{failed}件失敗"
   },
   "popupCustomExportSub": {
-    "message": "エクスポートしたいメッセージを選択してください。",
-    "description": "Tooltip on the popup's Custom Export button."
+    "message": "エクスポートしたいメッセージを選択してください。"
   },
   "popupMediaSub": {
-    "message": "このチャットの画像を閲覧・ダウンロードします。",
-    "description": "Tooltip on the popup's Media button."
+    "message": "このチャットの画像を閲覧・ダウンロードします。"
   }
 }

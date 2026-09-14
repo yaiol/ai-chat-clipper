@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3 — 2026-09-14
+
+- Stop duplicating the English translator notes into the other 27 locale files. The `description` field is context about a string, never a translated value — Chrome ignores it at runtime and every tooling script reads it from English — so the copies were write-only. The locale files are roughly half the size; no translated text changed
+
 ## 1.0.2 — 2026-09-13
 
 - Greek added — the interface is now available in 28 languages, chosen independently of the browser's language

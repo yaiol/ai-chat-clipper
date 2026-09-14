@@ -1,538 +1,404 @@
 {
   "extDescription": {
-    "message": "Εξαγωγή συνομιλιών AI από ChatGPT, Gemini, Claude. 32 ιστότοποι AI, 9 μορφές, 5 προορισμοί cloud.",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
+    "message": "Εξαγωγή συνομιλιών AI από ChatGPT, Gemini, Claude. 32 ιστότοποι AI, 9 μορφές, 5 προορισμοί cloud."
   },
   "exportMarkdownTitle": {
-    "message": "Εξαγωγή ως Markdown (.md)",
-    "description": "Tooltip on the Markdown export button."
+    "message": "Εξαγωγή ως Markdown (.md)"
   },
   "exportHtmlTitle": {
-    "message": "Εξαγωγή ως HTML (.html)",
-    "description": "Tooltip on the HTML export button."
+    "message": "Εξαγωγή ως HTML (.html)"
   },
   "exportTxtTitle": {
-    "message": "Εξαγωγή ως απλό κείμενο (.txt)",
-    "description": "Tooltip on the plain-text export button."
+    "message": "Εξαγωγή ως απλό κείμενο (.txt)"
   },
   "exportDocxTitle": {
-    "message": "Εξαγωγή ως Word (.docx)",
-    "description": "Tooltip on the Word export button."
+    "message": "Εξαγωγή ως Word (.docx)"
   },
   "exportOdtTitle": {
-    "message": "Εξαγωγή ως OpenDocument (.odt)",
-    "description": "Tooltip on the OpenDocument export button."
+    "message": "Εξαγωγή ως OpenDocument (.odt)"
   },
   "exportPdfTitle": {
-    "message": "Εξαγωγή ως PDF (μέσω διαλόγου εκτύπωσης)",
-    "description": "Tooltip on the PDF export button."
+    "message": "Εξαγωγή ως PDF (μέσω διαλόγου εκτύπωσης)"
   },
   "exportImageTitle": {
-    "message": "Εξαγωγή ως εικόνα PNG",
-    "description": "Tooltip on the Image export button - renders the conversation to a single tall PNG file."
+    "message": "Εξαγωγή ως εικόνα PNG"
   },
   "exportGdocTitle": {
-    "message": "Άνοιγμα στα Έγγραφα Google",
-    "description": "Tooltip on the Google Docs export button - uploads the chat to the user's Google Drive as a native Google Doc."
+    "message": "Άνοιγμα στα Έγγραφα Google"
   },
   "exportNotionTitle": {
-    "message": "Εξαγωγή στο Notion",
-    "description": "Tooltip on the Notion export button - uploads the chat to the user's Notion workspace as a native Notion page."
+    "message": "Εξαγωγή στο Notion"
   },
   "exportMswordTitle": {
-    "message": "Άνοιγμα στο Word Online",
-    "description": "Tooltip on the Word Online export button - uploads the chat as a .docx to OneDrive and opens it in Word Online."
+    "message": "Άνοιγμα στο Word Online"
   },
   "exportNextcloudTitle": {
-    "message": "Αποθήκευση στο Nextcloud",
-    "description": "Tooltip on the Nextcloud export button - uploads the chat to the user's Nextcloud server via WebDAV."
+    "message": "Αποθήκευση στο Nextcloud"
   },
   "exportOnenoteTitle": {
-    "message": "Αποστολή στο OneNote",
-    "description": "Tooltip on the OneNote export button - creates a new page in the user's OneNote default notebook."
+    "message": "Αποστολή στο OneNote"
   },
   "settingsButtonTitle": {
-    "message": "Ρυθμίσεις",
-    "description": "Tooltip on the gear icon that opens the settings page."
+    "message": "Ρυθμίσεις"
   },
   "popupCustomExportTitle": {
-    "message": "Προσαρμοσμένη Εξαγωγή",
-    "description": "Title of the prominent button below the export icons in the popup. Opens the message selection page."
+    "message": "Προσαρμοσμένη Εξαγωγή"
   },
   "selectPageTitle": {
-    "message": "{app} - Επιλογή μηνυμάτων",
-    "description": "<title> of the selection page (browser tab title)."
+    "message": "{app} - Επιλογή μηνυμάτων"
   },
   "selectHeading": {
-    "message": "Επιλέξτε μηνύματα για εξαγωγή",
-    "description": "Top heading of the selection page."
+    "message": "Επιλέξτε μηνύματα για εξαγωγή"
   },
   "selectStatusCount": {
-    "message": "{n} από {total} επιλεγμένα",
-    "description": "Status line on the selection page showing how many messages are checked."
+    "message": "{n} από {total} επιλεγμένα"
   },
   "selectErrorNoSelection": {
-    "message": "Επιλέξτε τουλάχιστον ένα μήνυμα.",
-    "description": "Error shown when the user clicks an export button with no messages selected."
+    "message": "Επιλέξτε τουλάχιστον ένα μήνυμα."
   },
   "selectErrorNoMessages": {
-    "message": "Δεν βρέθηκαν μηνύματα σε αυτή τη συνομιλία.",
-    "description": "Error shown when the selection page opens but the chat has no extractable messages."
+    "message": "Δεν βρέθηκαν μηνύματα σε αυτή τη συνομιλία."
   },
   "selectErrorLoadFailed": {
-    "message": "Δεν ήταν δυνατή η ανάγνωση της συνομιλίας. Ανοίξτε ξανά την καρτέλα συνομιλίας και δοκιμάστε ξανά.",
-    "description": "Error shown when the selection page can't read the stashed conversation."
+    "message": "Δεν ήταν δυνατή η ανάγνωση της συνομιλίας. Ανοίξτε ξανά την καρτέλα συνομιλίας και δοκιμάστε ξανά."
   },
   "selectRoleUser": {
-    "message": "Χρήστης",
-    "description": "Role badge for user messages on the selection page."
+    "message": "Χρήστης"
   },
   "selectRoleAssistant": {
-    "message": "Βοηθός",
-    "description": "Role badge for assistant messages on the selection page."
+    "message": "Βοηθός"
   },
   "selectFontSizeLabel": {
-    "message": "Μέγεθος",
-    "description": "Label preceding the font-size dropdown in the selection page toolbar."
+    "message": "Μέγεθος"
   },
   "selectFontSizeSmall": {
-    "message": "Μικρό",
-    "description": "Smallest body-text option in the size dropdown."
+    "message": "Μικρό"
   },
   "selectFontSizeMedium": {
-    "message": "Μεσαίο",
-    "description": "Default body-text option in the size dropdown."
+    "message": "Μεσαίο"
   },
   "selectFontSizeLarge": {
-    "message": "Μεγάλο",
-    "description": "Largest body-text option in the size dropdown."
+    "message": "Μεγάλο"
   },
   "selectShowTimeLabel": {
-    "message": "Ώρα",
-    "description": "Compact label next to the show-chat-time checkbox in the selection page toolbar."
+    "message": "Ώρα"
   },
   "selectShowSourceLabel": {
-    "message": "Πηγή",
-    "description": "Compact label next to the show-source checkbox in the selection page toolbar."
+    "message": "Πηγή"
   },
   "optionsHtmlSizeLabel": {
-    "message": "Μέγεθος κειμένου σώματος",
-    "description": "Settings → General label for the body text size dropdown (HTML / PDF exports)."
+    "message": "Μέγεθος κειμένου σώματος"
   },
   "optionsHtmlShowTimeLabel": {
-    "message": "Εμφάνιση ώρας συνομιλίας",
-    "description": "Settings → General label for the toggle that includes per-message timestamps in HTML / PDF exports."
+    "message": "Εμφάνιση ώρας συνομιλίας"
   },
   "optionsHtmlShowSourceLabel": {
-    "message": "Εμφάνιση συνδέσμου πηγής",
-    "description": "Settings → General label for the toggle that includes the \"Source: <link>\" line at the top of HTML / PDF exports."
+    "message": "Εμφάνιση συνδέσμου πηγής"
   },
   "optionsHtmlShowThinkingLabel": {
-    "message": "Εμφάνιση σκέψης",
-    "description": "Settings → General label for the toggle that keeps the model's thinking blockquotes in HTML / PDF exports."
+    "message": "Εμφάνιση σκέψης"
   },
   "optionsFilenamePatternLabel": {
-    "message": "Μοτίβο ονόματος αρχείου",
-    "description": "Settings → General label for the export filename template input."
+    "message": "Μοτίβο ονόματος αρχείου"
   },
   "optionsFilenamePatternHint": {
-    "message": "Διαθέσιμα πεδία:",
-    "description": "Helper text under the filename pattern input, followed by the literal placeholder list."
+    "message": "Διαθέσιμα πεδία:"
   },
   "selectShowThinkingLabel": {
-    "message": "Σκέψη",
-    "description": "Compact label next to the show-thinking checkbox in the selection page toolbar."
+    "message": "Σκέψη"
   },
   "selectTitleFontLabel": {
-    "message": "Τίτλος",
-    "description": "Compact label preceding the title-font dropdown in the selection page toolbar."
+    "message": "Τίτλος"
   },
   "selectTextFontLabel": {
-    "message": "Κείμενο",
-    "description": "Compact label preceding the text-font dropdown in the selection page toolbar."
+    "message": "Κείμενο"
   },
   "dragHint": {
-    "message": "Σύρετε για αναδιάταξη",
-    "description": "Helper text under the AI sites grid."
+    "message": "Σύρετε για αναδιάταξη"
   },
   "popupViewLauncherTitle": {
-    "message": "Μετάβαση σε ιστότοπο AI",
-    "description": "Tooltip on the header toggle that switches the popup from the export view to the AI-site launcher grid."
+    "message": "Μετάβαση σε ιστότοπο AI"
   },
   "popupViewExportTitle": {
-    "message": "Επιστροφή στην εξαγωγή",
-    "description": "Tooltip on the header toggle that switches the popup from the AI-site launcher back to the export view."
+    "message": "Επιστροφή στην εξαγωγή"
   },
   "popupPagePrevTitle": {
-    "message": "Προηγούμενη σελίδα",
-    "description": "Tooltip on the launcher pager button that shows the previous page of AI sites."
+    "message": "Προηγούμενη σελίδα"
   },
   "popupPageNextTitle": {
-    "message": "Επόμενη σελίδα",
-    "description": "Tooltip on the launcher pager button that shows the next page of AI sites."
+    "message": "Επόμενη σελίδα"
   },
   "statusExtracting": {
-    "message": "Εξαγωγή…",
-    "description": "Status shown while the extension is reading the chat."
+    "message": "Εξαγωγή…"
   },
   "statusGotMessagesSaving": {
-    "message": "Λήφθηκαν {count} μηνύματα από {site}. Αποθήκευση…",
-    "description": "Status shown after extraction, before the file is saved."
+    "message": "Λήφθηκαν {count} μηνύματα από {site}. Αποθήκευση…"
   },
   "statusGotMessagesPrinting": {
-    "message": "Λήφθηκαν {count} μηνύματα από {site}. Άνοιγμα διαλόγου εκτύπωσης…",
-    "description": "Status shown when exporting to PDF, before the print tab opens."
+    "message": "Λήφθηκαν {count} μηνύματα από {site}. Άνοιγμα διαλόγου εκτύπωσης…"
   },
   "statusOpenedPrintTab": {
-    "message": "Άνοιξε καρτέλα εκτύπωσης - επιλέξτε \"Αποθήκευση ως PDF\"",
-    "description": "Status shown after the print tab is opened for PDF export."
+    "message": "Άνοιξε καρτέλα εκτύπωσης - επιλέξτε \"Αποθήκευση ως PDF\""
   },
   "statusGotMessagesUploadingGdoc": {
-    "message": "Λήφθηκαν {count} μηνύματα από {site}. Ανεβαίνουν στα Έγγραφα Google…",
-    "description": "Status shown while the chat is being uploaded to Google Drive as a Google Doc."
+    "message": "Λήφθηκαν {count} μηνύματα από {site}. Ανεβαίνουν στα Έγγραφα Google…"
   },
   "statusOpenedGdoc": {
-    "message": "Άνοιξε Έγγραφο Google σε νέα καρτέλα.",
-    "description": "Status shown after the Google Docs upload succeeds and the new doc opens."
+    "message": "Άνοιξε Έγγραφο Google σε νέα καρτέλα."
   },
   "statusGotMessagesUploadingNotion": {
-    "message": "Λήφθηκαν {count} μηνύματα από {site}. Ανεβαίνουν στο Notion…",
-    "description": "Status shown while the chat is being uploaded to Notion as a native page."
+    "message": "Λήφθηκαν {count} μηνύματα από {site}. Ανεβαίνουν στο Notion…"
   },
   "statusOpenedNotion": {
-    "message": "Άνοιξε σελίδα Notion σε νέα καρτέλα.",
-    "description": "Status shown after the Notion upload succeeds and the new page opens."
+    "message": "Άνοιξε σελίδα Notion σε νέα καρτέλα."
   },
   "statusGotMessagesUploadingMsword": {
-    "message": "Λήφθηκαν {count} μηνύματα από {site}. Ανεβαίνουν στο Word Online…",
-    "description": "Status shown while the chat is being uploaded to OneDrive for Word Online."
+    "message": "Λήφθηκαν {count} μηνύματα από {site}. Ανεβαίνουν στο Word Online…"
   },
   "statusOpenedMsword": {
-    "message": "Άνοιξε έγγραφο Word Online σε νέα καρτέλα.",
-    "description": "Status shown after the Word Online upload succeeds and the document opens."
+    "message": "Άνοιξε έγγραφο Word Online σε νέα καρτέλα."
   },
   "statusGotMessagesUploadingNextcloud": {
-    "message": "Λήφθηκαν {count} μηνύματα από {site}. Ανεβαίνουν στο Nextcloud…",
-    "description": "Status shown while the chat is being uploaded to Nextcloud."
+    "message": "Λήφθηκαν {count} μηνύματα από {site}. Ανεβαίνουν στο Nextcloud…"
   },
   "statusOpenedNextcloud": {
-    "message": "Άνοιξε αρχείο Nextcloud σε νέα καρτέλα.",
-    "description": "Status shown after the Nextcloud upload succeeds and the file opens."
+    "message": "Άνοιξε αρχείο Nextcloud σε νέα καρτέλα."
   },
   "statusGotMessagesUploadingOnenote": {
-    "message": "Λήφθηκαν {count} μηνύματα από {site}. Αποστολή στο OneNote…",
-    "description": "Status shown while the chat is being sent to OneNote as a new page."
+    "message": "Λήφθηκαν {count} μηνύματα από {site}. Αποστολή στο OneNote…"
   },
   "statusOpenedOnenote": {
-    "message": "Άνοιξε σελίδα OneNote σε νέα καρτέλα.",
-    "description": "Status shown after the OneNote upload succeeds and the new page opens."
+    "message": "Άνοιξε σελίδα OneNote σε νέα καρτέλα."
   },
   "statusSaved": {
-    "message": "Αποθηκεύτηκε {filename}",
-    "description": "Success message after the file is saved."
+    "message": "Αποθηκεύτηκε {filename}"
   },
   "errorContentScriptNotLoaded": {
-    "message": "Το script περιεχομένου δεν φορτώθηκε. Ανανεώστε αυτήν την καρτέλα (F5) και δοκιμάστε ξανά.",
-    "description": "Error when the popup cannot reach the content script."
+    "message": "Το script περιεχομένου δεν φορτώθηκε. Ανανεώστε αυτήν την καρτέλα (F5) και δοκιμάστε ξανά."
   },
   "errorExtractionFailed": {
-    "message": "Η εξαγωγή απέτυχε. Είναι αυτή μια υποστηριζόμενη σελίδα συνομιλίας AI;",
-    "description": "Generic extraction failure error."
+    "message": "Η εξαγωγή απέτυχε. Είναι αυτή μια υποστηριζόμενη σελίδα συνομιλίας AI;"
   },
   "errorNoActiveTab": {
-    "message": "Δεν υπάρχει ενεργή καρτέλα.",
-    "description": "Error when no active tab is found."
+    "message": "Δεν υπάρχει ενεργή καρτέλα."
   },
   "errorPrintTab": {
-    "message": "Δεν ήταν δυνατή η άνοιγμα της καρτέλας εκτύπωσης.",
-    "description": "Error when opening the print tab failed."
+    "message": "Δεν ήταν δυνατή η άνοιγμα της καρτέλας εκτύπωσης."
   },
   "errorDownloadFailed": {
-    "message": "Η λήψη απέτυχε.",
-    "description": "Error when the download cannot start."
+    "message": "Η λήψη απέτυχε."
   },
   "optionsTitle": {
-    "message": "{app} - Ρυθμίσεις",
-    "description": "<title> of the settings page."
+    "message": "{app} - Ρυθμίσεις"
   },
   "optionsHeading": {
-    "message": "Ρυθμίσεις",
-    "description": "Top heading of the settings page."
+    "message": "Ρυθμίσεις"
   },
   "optionsTabGeneral": {
-    "message": "Γενικά",
-    "description": "Sidebar nav item for the General settings page (language)."
+    "message": "Γενικά"
   },
   "optionsTabStyle": {
-    "message": "Στυλ",
-    "description": "Sidebar nav item for the Style settings page (fonts, body text size, preview)."
+    "message": "Στυλ"
   },
   "optionsInlineButtonsHeading": {
-    "message": "Κουμπιά εντός συνομιλίας",
-    "description": "Sub-heading on the General settings page above the three per-message inline-button visibility toggles."
+    "message": "Κουμπιά εντός συνομιλίας"
   },
   "optionsInlineExportMenuLabel": {
-    "message": "Μενού εξαγωγής αρχείου",
-    "description": "Settings checkbox label - show the per-message export-format hover menu inside the AI chat page."
+    "message": "Μενού εξαγωγής αρχείου"
   },
   "optionsInlineCopyMdLabel": {
-    "message": "Κουμπί αντιγραφής ως Markdown",
-    "description": "Settings checkbox label - show the per-message 'Copy as Markdown' button inside the AI chat page."
+    "message": "Κουμπί αντιγραφής ως Markdown"
   },
   "optionsInlineCopyHtmlLabel": {
-    "message": "Κουμπί αντιγραφής ως HTML",
-    "description": "Settings checkbox label - show the per-message 'Copy as HTML' button inside the AI chat page."
+    "message": "Κουμπί αντιγραφής ως HTML"
   },
   "optionsTabSites": {
-    "message": "Ιστότοποι AI",
-    "description": "Sidebar nav item for the AI Sites settings page (visibility, order)."
+    "message": "Ιστότοποι AI"
   },
   "optionsTabNotion": {
-    "message": "Notion",
-    "description": "Sidebar nav item for the Notion settings page (connect, parent page picker)."
+    "message": "Notion"
   },
   "optionsNotionIntro": {
-    "message": "Συνδέστε τον χώρο εργασίας σας στο Notion για να εξάγετε συνομιλίες ως εγγενείς σελίδες Notion. Το {app} μπορεί να δει και να τροποποιήσει μόνο σελίδες στις οποίες του παραχωρείτε ρητά πρόσβαση.",
-    "description": "Intro paragraph at the top of the Notion settings page."
+    "message": "Συνδέστε τον χώρο εργασίας σας στο Notion για να εξάγετε συνομιλίες ως εγγενείς σελίδες Notion. Το {app} μπορεί να δει και να τροποποιήσει μόνο σελίδες στις οποίες του παραχωρείτε ρητά πρόσβαση."
   },
   "optionsNotionConnect": {
-    "message": "Σύνδεση Notion",
-    "description": "Button label that starts the Notion OAuth flow."
+    "message": "Σύνδεση Notion"
   },
   "optionsNotionConnecting": {
-    "message": "Σύνδεση στο Notion…",
-    "description": "Status shown while the Notion OAuth round-trip is in progress."
+    "message": "Σύνδεση στο Notion…"
   },
   "optionsNotionDisconnect": {
-    "message": "Αποσύνδεση",
-    "description": "Button label that clears the stored Notion access token."
+    "message": "Αποσύνδεση"
   },
   "optionsNotionWorkspaceLabel": {
-    "message": "Χώρος εργασίας",
-    "description": "Label next to the Notion workspace name once connected."
+    "message": "Χώρος εργασίας"
   },
   "optionsNotionParentLabel": {
-    "message": "Γονική σελίδα",
-    "description": "Label for the dropdown that picks which Notion page new exports land in."
+    "message": "Γονική σελίδα"
   },
   "optionsNotionParentHint": {
-    "message": "Οι νέες σελίδες συνομιλίας θα δημιουργηθούν ως θυγατρικές αυτής της σελίδας. Για να παραχωρήσετε πρόσβαση σε περισσότερες σελίδες: ανοίξτε τη σελίδα στο Notion → μενού \"…\" → Συνδέσεις → την ενσωμάτωση {app}.",
-    "description": "Helper text under the parent page picker, explaining how to grant access to more pages."
+    "message": "Οι νέες σελίδες συνομιλίας θα δημιουργηθούν ως θυγατρικές αυτής της σελίδας. Για να παραχωρήσετε πρόσβαση σε περισσότερες σελίδες: ανοίξτε τη σελίδα στο Notion → μενού \"…\" → Συνδέσεις → την ενσωμάτωση {app}."
   },
   "optionsNotionRefresh": {
-    "message": "Ανανέωση",
-    "description": "Button that re-fetches the list of accessible Notion pages."
+    "message": "Ανανέωση"
   },
   "optionsNotionLoadingPages": {
-    "message": "Φόρτωση σελίδων…",
-    "description": "Placeholder option in the parent page dropdown while pages are being fetched."
+    "message": "Φόρτωση σελίδων…"
   },
   "optionsNotionNoPages": {
-    "message": "Καμία σελίδα - μοιραστείτε τουλάχιστον μία σελίδα Notion με την ενσωμάτωση {app}",
-    "description": "Placeholder option when the Notion search returned no accessible pages."
+    "message": "Καμία σελίδα - μοιραστείτε τουλάχιστον μία σελίδα Notion με την ενσωμάτωση {app}"
   },
   "optionsNotionPagesFailed": {
-    "message": "Δεν ήταν δυνατή η φόρτωση σελίδων",
-    "description": "Placeholder option when the Notion search call failed."
+    "message": "Δεν ήταν δυνατή η φόρτωση σελίδων"
   },
   "optionsTabMicrosoft": {
-    "message": "Microsoft 365",
-    "description": "Sidebar nav item for the Microsoft 365 settings page (connect, account)."
+    "message": "Microsoft 365"
   },
   "optionsMicrosoftIntro": {
-    "message": "Συνδέστε τον λογαριασμό σας Microsoft για να εξάγετε συνομιλίες ως αρχεία .docx στο Word Online. Τα αρχεία αποθηκεύονται στο OneDrive σας, στον φάκελο της εφαρμογής κάτω από τις Εφαρμογές.",
-    "description": "Intro paragraph at the top of the Microsoft 365 settings page."
+    "message": "Συνδέστε τον λογαριασμό σας Microsoft για να εξάγετε συνομιλίες ως αρχεία .docx στο Word Online. Τα αρχεία αποθηκεύονται στο OneDrive σας, στον φάκελο της εφαρμογής κάτω από τις Εφαρμογές."
   },
   "optionsMicrosoftConnect": {
-    "message": "Σύνδεση Microsoft 365",
-    "description": "Button label that starts the Microsoft OAuth flow."
+    "message": "Σύνδεση Microsoft 365"
   },
   "optionsMicrosoftConnecting": {
-    "message": "Σύνδεση στο Microsoft 365…",
-    "description": "Status shown while the Microsoft OAuth round-trip is in progress."
+    "message": "Σύνδεση στο Microsoft 365…"
   },
   "optionsMicrosoftDisconnect": {
-    "message": "Αποσύνδεση",
-    "description": "Button label that clears the stored Microsoft tokens."
+    "message": "Αποσύνδεση"
   },
   "optionsMicrosoftAccountLabel": {
-    "message": "Λογαριασμός",
-    "description": "Label next to the signed-in Microsoft account email."
+    "message": "Λογαριασμός"
   },
   "optionsMicrosoftHint": {
-    "message": "Τα εξαγόμενα αρχεία εμφανίζονται στο OneDrive κάτω από τις Εφαρμογές (στον φάκελο της εφαρμογής) και ανοίγουν στο Word Online σε νέα καρτέλα.",
-    "description": "Helper text under the Microsoft 365 connection panel."
+    "message": "Τα εξαγόμενα αρχεία εμφανίζονται στο OneDrive κάτω από τις Εφαρμογές (στον φάκελο της εφαρμογής) και ανοίγουν στο Word Online σε νέα καρτέλα."
   },
   "optionsTabNextcloud": {
-    "message": "Nextcloud",
-    "description": "Sidebar nav item for the Nextcloud settings page."
+    "message": "Nextcloud"
   },
   "optionsNextcloudIntro": {
-    "message": "Αποθηκεύστε συνομιλίες στον δικό σας διακομιστή Nextcloud μέσω WebDAV. Το {app} χρησιμοποιεί κωδικό πρόσβασης εφαρμογής (Nextcloud → Ρυθμίσεις → Ασφάλεια → «Δημιουργία νέου κωδικού πρόσβασης εφαρμογής») - ο πραγματικός κωδικός πρόσβασης του λογαριασμού σας δεν φεύγει ποτέ από το πρόγραμμα περιήγησής σας.",
-    "description": "Intro paragraph at the top of the Nextcloud settings page."
+    "message": "Αποθηκεύστε συνομιλίες στον δικό σας διακομιστή Nextcloud μέσω WebDAV. Το {app} χρησιμοποιεί κωδικό πρόσβασης εφαρμογής (Nextcloud → Ρυθμίσεις → Ασφάλεια → «Δημιουργία νέου κωδικού πρόσβασης εφαρμογής») - ο πραγματικός κωδικός πρόσβασης του λογαριασμού σας δεν φεύγει ποτέ από το πρόγραμμα περιήγησής σας."
   },
   "optionsNextcloudServerLabel": {
-    "message": "URL διακομιστή",
-    "description": "Label for the Nextcloud server URL input."
+    "message": "URL διακομιστή"
   },
   "optionsNextcloudUserLabel": {
-    "message": "Όνομα χρήστη",
-    "description": "Label for the Nextcloud username input."
+    "message": "Όνομα χρήστη"
   },
   "optionsNextcloudPasswordLabel": {
-    "message": "Κωδικός πρόσβασης εφαρμογής",
-    "description": "Label for the Nextcloud app-password input."
+    "message": "Κωδικός πρόσβασης εφαρμογής"
   },
   "optionsNextcloudFolderLabel": {
-    "message": "Φάκελος",
-    "description": "Label for the Nextcloud target folder input."
+    "message": "Φάκελος"
   },
   "optionsNextcloudFormatLabel": {
-    "message": "Προεπιλεγμένη μορφή",
-    "description": "Label for the dropdown that picks which file format gets uploaded to Nextcloud."
+    "message": "Προεπιλεγμένη μορφή"
   },
   "optionsNextcloudTest": {
-    "message": "Δοκιμή σύνδεσης",
-    "description": "Button label that probes the Nextcloud credentials with a PROPFIND request."
+    "message": "Δοκιμή σύνδεσης"
   },
   "optionsNextcloudSave": {
-    "message": "Αποθήκευση",
-    "description": "Button label that persists the Nextcloud credentials."
+    "message": "Αποθήκευση"
   },
   "optionsNextcloudClear": {
-    "message": "Εκκαθάριση",
-    "description": "Button label that wipes the stored Nextcloud credentials."
+    "message": "Εκκαθάριση"
   },
   "optionsNextcloudTesting": {
-    "message": "Δοκιμή σύνδεσης…",
-    "description": "Status shown while the extension is probing the Nextcloud server with a PROPFIND."
+    "message": "Δοκιμή σύνδεσης…"
   },
   "optionsNextcloudTestOk": {
-    "message": "Η σύνδεση ήταν επιτυχής.",
-    "description": "Status shown when the Nextcloud PROPFIND probe succeeds."
+    "message": "Η σύνδεση ήταν επιτυχής."
   },
   "optionsNextcloudFillFirst": {
-    "message": "Συμπληρώστε πρώτα το URL του διακομιστή, το όνομα χρήστη και τον κωδικό πρόσβασης εφαρμογής.",
-    "description": "Error shown when the user clicks Test or Save with empty fields."
+    "message": "Συμπληρώστε πρώτα το URL του διακομιστή, το όνομα χρήστη και τον κωδικό πρόσβασης εφαρμογής."
   },
   "optionsNextcloudCleared": {
-    "message": "Τα διαπιστευτήρια Nextcloud εκκαθαρίστηκαν.",
-    "description": "Status shown after the user clicks Clear."
+    "message": "Τα διαπιστευτήρια Nextcloud εκκαθαρίστηκαν."
   },
   "optionsLanguageLabel": {
-    "message": "Γλώσσα",
-    "description": "Label for the language dropdown."
+    "message": "Γλώσσα"
   },
   "optionsLanguageAuto": {
-    "message": "Χρήση γλώσσας προγράμματος περιήγησης",
-    "description": "Default option in the language dropdown - picks the browser UI language."
+    "message": "Χρήση γλώσσας προγράμματος περιήγησης"
   },
   "optionsHtmlTitleFontLabel": {
-    "message": "Γραμματοσειρά τίτλου",
-    "description": "Label for the dropdown that picks the heading font used in HTML / PDF exports."
+    "message": "Γραμματοσειρά τίτλου"
   },
   "optionsHtmlTextFontLabel": {
-    "message": "Γραμματοσειρά κειμένου",
-    "description": "Label for the dropdown that picks the body font used in HTML / PDF exports."
+    "message": "Γραμματοσειρά κειμένου"
   },
   "optionsFontSystem": {
-    "message": "Σύστημα (προεπιλογή)",
-    "description": "First option in both font dropdowns - the OS default font, no Google Fonts fetch."
+    "message": "Σύστημα (προεπιλογή)"
   },
   "optionsHtmlMathLabel": {
-    "message": "Απόδοση μαθηματικών (KaTeX)",
-    "description": "Label for the toggle that enables math rendering in HTML / PDF exports via the KaTeX library."
+    "message": "Απόδοση μαθηματικών (KaTeX)"
   },
   "optionsSavedNotice": {
-    "message": "Αποθηκεύτηκε.",
-    "description": "Notice shown when settings are saved."
+    "message": "Αποθηκεύτηκε."
   },
   "optionsVisibleSitesHint": {
-    "message": "Σύρετε για αναδιάταξη. Καταργήστε την επιλογή για να αποκρύψετε ένα πλακίδιο από το αναδυόμενο παράθυρο.",
-    "description": "Helper text under the visible sites checklist."
+    "message": "Σύρετε για αναδιάταξη. Καταργήστε την επιλογή για να αποκρύψετε ένα πλακίδιο από το αναδυόμενο παράθυρο."
   },
   "optionsSelectAll": {
-    "message": "Επιλογή όλων",
-    "description": "Button that checks every site in the visibility list."
+    "message": "Επιλογή όλων"
   },
   "optionsSelectNone": {
-    "message": "Καμία επιλογή",
-    "description": "Button that unchecks every site in the visibility list."
+    "message": "Καμία επιλογή"
   },
   "exportJsonTitle": {
-    "message": "Εξαγωγή ως JSON (.json)",
-    "description": "Tooltip on the JSON export button - a flat { role, content } message array for developers."
+    "message": "Εξαγωγή ως JSON (.json)"
   },
   "exportDebugTitle": {
-    "message": "Εξαγωγή πακέτου εντοπισμού σφαλμάτων (.json)",
-    "description": "Tooltip on the Developer-mode Debug export button - saves a diagnostic file with the raw API capture, the extracted conversation, and the rendered outputs."
+    "message": "Εξαγωγή πακέτου εντοπισμού σφαλμάτων (.json)"
   },
   "optionsDevModeLabel": {
-    "message": "Λειτουργία προγραμματιστή",
-    "description": "Settings checkbox that reveals the Debug-bundle export button in the popup."
+    "message": "Λειτουργία προγραμματιστή"
   },
   "optionsAdvancedHeading": {
-    "message": "Για προχωρημένους",
-    "description": "Heading of the Advanced block at the end of Settings - General (currently holds the Developer mode toggle)."
+    "message": "Για προχωρημένους"
   },
   "errorSiteNotSupported": {
-    "message": "Αυτός ο ιστότοπος δεν υποστηρίζεται. Ανοίξτε έναν από τους ιστότοπους AI που αναφέρονται παρακάτω και δοκιμάστε ξανά.",
-    "description": "Popup error when the active tab's domain matches none of the supported AI sites (refreshing cannot help there)."
+    "message": "Αυτός ο ιστότοπος δεν υποστηρίζεται. Ανοίξτε έναν από τους ιστότοπους AI που αναφέρονται παρακάτω και δοκιμάστε ξανά."
   },
   "popupMediaTitle": {
-    "message": "Μέσα",
-    "description": "Popup button — opens the media page for the current conversation."
+    "message": "Μέσα"
   },
   "mediaPageTitle": {
-    "message": "Εικόνες",
-    "description": "Browser tab title of the media page."
+    "message": "Εικόνες"
   },
   "mediaHeading": {
-    "message": "Εικόνες σε αυτή τη συνομιλία",
-    "description": "Heading of the media page."
+    "message": "Εικόνες σε αυτή τη συνομιλία"
   },
   "mediaSelectAll": {
-    "message": "Όλα",
-    "description": "Media page — select every image."
+    "message": "Όλα"
   },
   "mediaSelectNone": {
-    "message": "Κανένα",
-    "description": "Media page — clear the selection."
+    "message": "Κανένα"
   },
   "mediaDownload": {
-    "message": "Λήψη",
-    "description": "Media page — download the selected images."
+    "message": "Λήψη"
   },
   "mediaMeta": {
-    "message": "{selected} από {count} επιλεγμένα",
-    "description": "Media page counter. {selected} and {count} are numbers."
+    "message": "{selected} από {count} επιλεγμένα"
   },
   "mediaEmpty": {
-    "message": "Αυτή η συνομιλία δεν έχει εικόνες.",
-    "description": "Media page — shown when the conversation contains no pictures."
+    "message": "Αυτή η συνομιλία δεν έχει εικόνες."
   },
   "mediaLoadError": {
-    "message": "Δεν ήταν δυνατή η ανάγνωση της συνομιλίας. Κλείστε αυτήν την καρτέλα και δοκιμάστε ξανά από το αναδυόμενο παράθυρο.",
-    "description": "Media page — the stashed conversation was missing."
+    "message": "Δεν ήταν δυνατή η ανάγνωση της συνομιλίας. Κλείστε αυτήν την καρτέλα και δοκιμάστε ξανά από το αναδυόμενο παράθυρο."
   },
   "mediaRoleUser": {
-    "message": "Εσείς",
-    "description": "Media page tile label — the image came from the user's message."
+    "message": "Εσείς"
   },
   "mediaRoleAssistant": {
-    "message": "AI",
-    "description": "Media page tile label — the image came from the AI's reply."
+    "message": "AI"
   },
   "mediaDownloadDone": {
-    "message": "{done} λήφθηκαν, {failed} απέτυχαν",
-    "description": "Media page result. {done} and {failed} are numbers."
+    "message": "{done} λήφθηκαν, {failed} απέτυχαν"
   },
   "popupCustomExportSub": {
-    "message": "Επιλέξτε τα μηνύματα που θέλετε να εξαγάγετε.",
-    "description": "Tooltip on the popup's Custom Export button."
+    "message": "Επιλέξτε τα μηνύματα που θέλετε να εξαγάγετε."
   },
   "popupMediaSub": {
-    "message": "Περιηγηθείτε και κατεβάστε τις εικόνες σε αυτή τη συνομιλία.",
-    "description": "Tooltip on the popup's Media button."
+    "message": "Περιηγηθείτε και κατεβάστε τις εικόνες σε αυτή τη συνομιλία."
   }
 }

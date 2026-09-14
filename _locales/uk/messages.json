@@ -1,538 +1,404 @@
 {
   "extDescription": {
-    "message": "Експорт чатів ШІ з ChatGPT, Gemini, Claude. 32 ШІ-сайти, 9 форматів, 5 хмарних сховищ.",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
+    "message": "Експорт чатів ШІ з ChatGPT, Gemini, Claude. 32 ШІ-сайти, 9 форматів, 5 хмарних сховищ."
   },
   "exportMarkdownTitle": {
-    "message": "Експортувати як Markdown (.md)",
-    "description": "Tooltip on the Markdown export button."
+    "message": "Експортувати як Markdown (.md)"
   },
   "exportHtmlTitle": {
-    "message": "Експортувати як HTML (.html)",
-    "description": "Tooltip on the HTML export button."
+    "message": "Експортувати як HTML (.html)"
   },
   "exportTxtTitle": {
-    "message": "Експортувати як звичайний текст (.txt)",
-    "description": "Tooltip on the plain-text export button."
+    "message": "Експортувати як звичайний текст (.txt)"
   },
   "exportDocxTitle": {
-    "message": "Експортувати як Word (.docx)",
-    "description": "Tooltip on the Word export button."
+    "message": "Експортувати як Word (.docx)"
   },
   "exportOdtTitle": {
-    "message": "Експортувати як OpenDocument (.odt)",
-    "description": "Tooltip on the OpenDocument export button."
+    "message": "Експортувати як OpenDocument (.odt)"
   },
   "exportPdfTitle": {
-    "message": "Експортувати як PDF (через діалогове вікно друку)",
-    "description": "Tooltip on the PDF export button."
+    "message": "Експортувати як PDF (через діалогове вікно друку)"
   },
   "exportImageTitle": {
-    "message": "Експортувати як зображення PNG",
-    "description": "Tooltip on the Image export button - renders the conversation to a single tall PNG file."
+    "message": "Експортувати як зображення PNG"
   },
   "exportGdocTitle": {
-    "message": "Відкрити в Google Документах",
-    "description": "Tooltip on the Google Docs export button - uploads the chat to the user's Google Drive as a native Google Doc."
+    "message": "Відкрити в Google Документах"
   },
   "exportNotionTitle": {
-    "message": "Експортувати в Notion",
-    "description": "Tooltip on the Notion export button - uploads the chat to the user's Notion workspace as a native Notion page."
+    "message": "Експортувати в Notion"
   },
   "exportMswordTitle": {
-    "message": "Відкрити в Word Online",
-    "description": "Tooltip on the Word Online export button - uploads the chat as a .docx to OneDrive and opens it in Word Online."
+    "message": "Відкрити в Word Online"
   },
   "exportNextcloudTitle": {
-    "message": "Зберегти в Nextcloud",
-    "description": "Tooltip on the Nextcloud export button - uploads the chat to the user's Nextcloud server via WebDAV."
+    "message": "Зберегти в Nextcloud"
   },
   "exportOnenoteTitle": {
-    "message": "Надіслати в OneNote",
-    "description": "Tooltip on the OneNote export button - creates a new page in the user's OneNote default notebook."
+    "message": "Надіслати в OneNote"
   },
   "settingsButtonTitle": {
-    "message": "Налаштування",
-    "description": "Tooltip on the gear icon that opens the settings page."
+    "message": "Налаштування"
   },
   "popupCustomExportTitle": {
-    "message": "Вибірковий експорт",
-    "description": "Title of the prominent button below the export icons in the popup. Opens the message selection page."
+    "message": "Вибірковий експорт"
   },
   "selectPageTitle": {
-    "message": "{app} - Вибрати повідомлення",
-    "description": "<title> of the selection page (browser tab title)."
+    "message": "{app} - Вибрати повідомлення"
   },
   "selectHeading": {
-    "message": "Виберіть повідомлення для експорту",
-    "description": "Top heading of the selection page."
+    "message": "Виберіть повідомлення для експорту"
   },
   "selectStatusCount": {
-    "message": "Вибрано {n} з {total}",
-    "description": "Status line on the selection page showing how many messages are checked."
+    "message": "Вибрано {n} з {total}"
   },
   "selectErrorNoSelection": {
-    "message": "Виберіть хоча б одне повідомлення.",
-    "description": "Error shown when the user clicks an export button with no messages selected."
+    "message": "Виберіть хоча б одне повідомлення."
   },
   "selectErrorNoMessages": {
-    "message": "У цій розмові не знайдено повідомлень.",
-    "description": "Error shown when the selection page opens but the chat has no extractable messages."
+    "message": "У цій розмові не знайдено повідомлень."
   },
   "selectErrorLoadFailed": {
-    "message": "Не вдалося прочитати розмову. Відкрийте вкладку чату знову та спробуйте ще раз.",
-    "description": "Error shown when the selection page can't read the stashed conversation."
+    "message": "Не вдалося прочитати розмову. Відкрийте вкладку чату знову та спробуйте ще раз."
   },
   "selectRoleUser": {
-    "message": "Користувач",
-    "description": "Role badge for user messages on the selection page."
+    "message": "Користувач"
   },
   "selectRoleAssistant": {
-    "message": "Асистент",
-    "description": "Role badge for assistant messages on the selection page."
+    "message": "Асистент"
   },
   "selectFontSizeLabel": {
-    "message": "Розмір",
-    "description": "Label preceding the font-size dropdown in the selection page toolbar."
+    "message": "Розмір"
   },
   "selectFontSizeSmall": {
-    "message": "Малий",
-    "description": "Smallest body-text option in the size dropdown."
+    "message": "Малий"
   },
   "selectFontSizeMedium": {
-    "message": "Середній",
-    "description": "Default body-text option in the size dropdown."
+    "message": "Середній"
   },
   "selectFontSizeLarge": {
-    "message": "Великий",
-    "description": "Largest body-text option in the size dropdown."
+    "message": "Великий"
   },
   "selectShowTimeLabel": {
-    "message": "Час",
-    "description": "Compact label next to the show-chat-time checkbox in the selection page toolbar."
+    "message": "Час"
   },
   "selectShowSourceLabel": {
-    "message": "Джерело",
-    "description": "Compact label next to the show-source checkbox in the selection page toolbar."
+    "message": "Джерело"
   },
   "optionsHtmlSizeLabel": {
-    "message": "Розмір основного тексту",
-    "description": "Settings → General label for the body text size dropdown (HTML / PDF exports)."
+    "message": "Розмір основного тексту"
   },
   "optionsHtmlShowTimeLabel": {
-    "message": "Показувати час чату",
-    "description": "Settings → General label for the toggle that includes per-message timestamps in HTML / PDF exports."
+    "message": "Показувати час чату"
   },
   "optionsHtmlShowSourceLabel": {
-    "message": "Показувати посилання на джерело",
-    "description": "Settings → General label for the toggle that includes the \"Source: <link>\" line at the top of HTML / PDF exports."
+    "message": "Показувати посилання на джерело"
   },
   "optionsHtmlShowThinkingLabel": {
-    "message": "Показувати процес мислення",
-    "description": "Settings → General label for the toggle that keeps the model's thinking blockquotes in HTML / PDF exports."
+    "message": "Показувати процес мислення"
   },
   "optionsFilenamePatternLabel": {
-    "message": "Шаблон імені файлу",
-    "description": "Settings → General label for the export filename template input."
+    "message": "Шаблон імені файлу"
   },
   "optionsFilenamePatternHint": {
-    "message": "Доступні поля:",
-    "description": "Helper text under the filename pattern input, followed by the literal placeholder list."
+    "message": "Доступні поля:"
   },
   "selectShowThinkingLabel": {
-    "message": "Роздуми",
-    "description": "Compact label next to the show-thinking checkbox in the selection page toolbar."
+    "message": "Роздуми"
   },
   "selectTitleFontLabel": {
-    "message": "Заголовок",
-    "description": "Compact label preceding the title-font dropdown in the selection page toolbar."
+    "message": "Заголовок"
   },
   "selectTextFontLabel": {
-    "message": "Текст",
-    "description": "Compact label preceding the text-font dropdown in the selection page toolbar."
+    "message": "Текст"
   },
   "dragHint": {
-    "message": "Перетягніть, щоб змінити порядок",
-    "description": "Helper text under the AI sites grid."
+    "message": "Перетягніть, щоб змінити порядок"
   },
   "popupViewLauncherTitle": {
-    "message": "Перейти на сайт ШІ",
-    "description": "Tooltip on the header toggle that switches the popup from the export view to the AI-site launcher grid."
+    "message": "Перейти на сайт ШІ"
   },
   "popupViewExportTitle": {
-    "message": "Назад до експорту",
-    "description": "Tooltip on the header toggle that switches the popup from the AI-site launcher back to the export view."
+    "message": "Назад до експорту"
   },
   "popupPagePrevTitle": {
-    "message": "Попередня сторінка",
-    "description": "Tooltip on the launcher pager button that shows the previous page of AI sites."
+    "message": "Попередня сторінка"
   },
   "popupPageNextTitle": {
-    "message": "Наступна сторінка",
-    "description": "Tooltip on the launcher pager button that shows the next page of AI sites."
+    "message": "Наступна сторінка"
   },
   "statusExtracting": {
-    "message": "Витягування…",
-    "description": "Status shown while the extension is reading the chat."
+    "message": "Витягування…"
   },
   "statusGotMessagesSaving": {
-    "message": "Отримано {count} повідомлень із {site}. Збереження…",
-    "description": "Status shown after extraction, before the file is saved."
+    "message": "Отримано {count} повідомлень із {site}. Збереження…"
   },
   "statusGotMessagesPrinting": {
-    "message": "Отримано {count} повідомлень із {site}. Відкриття діалогового вікна друку…",
-    "description": "Status shown when exporting to PDF, before the print tab opens."
+    "message": "Отримано {count} повідомлень із {site}. Відкриття діалогового вікна друку…"
   },
   "statusOpenedPrintTab": {
-    "message": "Відкрито вкладку друку - виберіть \"Зберегти як PDF\"",
-    "description": "Status shown after the print tab is opened for PDF export."
+    "message": "Відкрито вкладку друку - виберіть \"Зберегти як PDF\""
   },
   "statusGotMessagesUploadingGdoc": {
-    "message": "Отримано {count} повідомлень із {site}. Завантаження в Google Документи…",
-    "description": "Status shown while the chat is being uploaded to Google Drive as a Google Doc."
+    "message": "Отримано {count} повідомлень із {site}. Завантаження в Google Документи…"
   },
   "statusOpenedGdoc": {
-    "message": "Відкрито документ Google Документів у новій вкладці.",
-    "description": "Status shown after the Google Docs upload succeeds and the new doc opens."
+    "message": "Відкрито документ Google Документів у новій вкладці."
   },
   "statusGotMessagesUploadingNotion": {
-    "message": "Отримано {count} повідомлень із {site}. Завантаження в Notion…",
-    "description": "Status shown while the chat is being uploaded to Notion as a native page."
+    "message": "Отримано {count} повідомлень із {site}. Завантаження в Notion…"
   },
   "statusOpenedNotion": {
-    "message": "Відкрито сторінку Notion у новій вкладці.",
-    "description": "Status shown after the Notion upload succeeds and the new page opens."
+    "message": "Відкрито сторінку Notion у новій вкладці."
   },
   "statusGotMessagesUploadingMsword": {
-    "message": "Отримано {count} повідомлень із {site}. Завантаження в Word Online…",
-    "description": "Status shown while the chat is being uploaded to OneDrive for Word Online."
+    "message": "Отримано {count} повідомлень із {site}. Завантаження в Word Online…"
   },
   "statusOpenedMsword": {
-    "message": "Відкрито документ Word Online у новій вкладці.",
-    "description": "Status shown after the Word Online upload succeeds and the document opens."
+    "message": "Відкрито документ Word Online у новій вкладці."
   },
   "statusGotMessagesUploadingNextcloud": {
-    "message": "Отримано {count} повідомлень із {site}. Завантаження в Nextcloud…",
-    "description": "Status shown while the chat is being uploaded to Nextcloud."
+    "message": "Отримано {count} повідомлень із {site}. Завантаження в Nextcloud…"
   },
   "statusOpenedNextcloud": {
-    "message": "Відкрито файл Nextcloud у новій вкладці.",
-    "description": "Status shown after the Nextcloud upload succeeds and the file opens."
+    "message": "Відкрито файл Nextcloud у новій вкладці."
   },
   "statusGotMessagesUploadingOnenote": {
-    "message": "Отримано {count} повідомлень із {site}. Надсилання в OneNote…",
-    "description": "Status shown while the chat is being sent to OneNote as a new page."
+    "message": "Отримано {count} повідомлень із {site}. Надсилання в OneNote…"
   },
   "statusOpenedOnenote": {
-    "message": "Відкрито сторінку OneNote у новій вкладці.",
-    "description": "Status shown after the OneNote upload succeeds and the new page opens."
+    "message": "Відкрито сторінку OneNote у новій вкладці."
   },
   "statusSaved": {
-    "message": "Збережено {filename}",
-    "description": "Success message after the file is saved."
+    "message": "Збережено {filename}"
   },
   "errorContentScriptNotLoaded": {
-    "message": "Скрипт вмісту не завантажено. Оновіть цю вкладку (F5) і спробуйте ще раз.",
-    "description": "Error when the popup cannot reach the content script."
+    "message": "Скрипт вмісту не завантажено. Оновіть цю вкладку (F5) і спробуйте ще раз."
   },
   "errorExtractionFailed": {
-    "message": "Не вдалося витягти дані. Чи це підтримувана сторінка чату ШІ?",
-    "description": "Generic extraction failure error."
+    "message": "Не вдалося витягти дані. Чи це підтримувана сторінка чату ШІ?"
   },
   "errorNoActiveTab": {
-    "message": "Немає активної вкладки.",
-    "description": "Error when no active tab is found."
+    "message": "Немає активної вкладки."
   },
   "errorPrintTab": {
-    "message": "Не вдалося відкрити вкладку друку.",
-    "description": "Error when opening the print tab failed."
+    "message": "Не вдалося відкрити вкладку друку."
   },
   "errorDownloadFailed": {
-    "message": "Не вдалося завантажити.",
-    "description": "Error when the download cannot start."
+    "message": "Не вдалося завантажити."
   },
   "optionsTitle": {
-    "message": "{app} - Налаштування",
-    "description": "<title> of the settings page."
+    "message": "{app} - Налаштування"
   },
   "optionsHeading": {
-    "message": "Налаштування",
-    "description": "Top heading of the settings page."
+    "message": "Налаштування"
   },
   "optionsTabGeneral": {
-    "message": "Загальні",
-    "description": "Sidebar nav item for the General settings page (language)."
+    "message": "Загальні"
   },
   "optionsTabStyle": {
-    "message": "Стиль",
-    "description": "Sidebar nav item for the Style settings page (fonts, body text size, preview)."
+    "message": "Стиль"
   },
   "optionsInlineButtonsHeading": {
-    "message": "Кнопки в чаті",
-    "description": "Sub-heading on the General settings page above the three per-message inline-button visibility toggles."
+    "message": "Кнопки в чаті"
   },
   "optionsInlineExportMenuLabel": {
-    "message": "Меню експорту файлів",
-    "description": "Settings checkbox label - show the per-message export-format hover menu inside the AI chat page."
+    "message": "Меню експорту файлів"
   },
   "optionsInlineCopyMdLabel": {
-    "message": "Кнопка «Копіювати як Markdown»",
-    "description": "Settings checkbox label - show the per-message 'Copy as Markdown' button inside the AI chat page."
+    "message": "Кнопка «Копіювати як Markdown»"
   },
   "optionsInlineCopyHtmlLabel": {
-    "message": "Кнопка «Копіювати як HTML»",
-    "description": "Settings checkbox label - show the per-message 'Copy as HTML' button inside the AI chat page."
+    "message": "Кнопка «Копіювати як HTML»"
   },
   "optionsTabSites": {
-    "message": "Сайти ШІ",
-    "description": "Sidebar nav item for the AI Sites settings page (visibility, order)."
+    "message": "Сайти ШІ"
   },
   "optionsTabNotion": {
-    "message": "Notion",
-    "description": "Sidebar nav item for the Notion settings page (connect, parent page picker)."
+    "message": "Notion"
   },
   "optionsNotionIntro": {
-    "message": "Підключіть свій робочий простір Notion, щоб експортувати чати як власні сторінки Notion. {app} може бачити та змінювати лише ті сторінки, до яких ви явно надаєте доступ.",
-    "description": "Intro paragraph at the top of the Notion settings page."
+    "message": "Підключіть свій робочий простір Notion, щоб експортувати чати як власні сторінки Notion. {app} може бачити та змінювати лише ті сторінки, до яких ви явно надаєте доступ."
   },
   "optionsNotionConnect": {
-    "message": "Підключити Notion",
-    "description": "Button label that starts the Notion OAuth flow."
+    "message": "Підключити Notion"
   },
   "optionsNotionConnecting": {
-    "message": "Підключення до Notion…",
-    "description": "Status shown while the Notion OAuth round-trip is in progress."
+    "message": "Підключення до Notion…"
   },
   "optionsNotionDisconnect": {
-    "message": "Відключити",
-    "description": "Button label that clears the stored Notion access token."
+    "message": "Відключити"
   },
   "optionsNotionWorkspaceLabel": {
-    "message": "Робочий простір",
-    "description": "Label next to the Notion workspace name once connected."
+    "message": "Робочий простір"
   },
   "optionsNotionParentLabel": {
-    "message": "Батьківська сторінка",
-    "description": "Label for the dropdown that picks which Notion page new exports land in."
+    "message": "Батьківська сторінка"
   },
   "optionsNotionParentHint": {
-    "message": "Нові сторінки чатів будуть створюватися як дочірні сторінки цієї сторінки. Щоб надати доступ до інших сторінок: відкрийте сторінку в Notion → меню «…» → Підключення → інтеграція {app}.",
-    "description": "Helper text under the parent page picker, explaining how to grant access to more pages."
+    "message": "Нові сторінки чатів будуть створюватися як дочірні сторінки цієї сторінки. Щоб надати доступ до інших сторінок: відкрийте сторінку в Notion → меню «…» → Підключення → інтеграція {app}."
   },
   "optionsNotionRefresh": {
-    "message": "Оновити",
-    "description": "Button that re-fetches the list of accessible Notion pages."
+    "message": "Оновити"
   },
   "optionsNotionLoadingPages": {
-    "message": "Завантаження сторінок…",
-    "description": "Placeholder option in the parent page dropdown while pages are being fetched."
+    "message": "Завантаження сторінок…"
   },
   "optionsNotionNoPages": {
-    "message": "Немає сторінок – поділіться принаймні однією сторінкою Notion з інтеграцією {app}",
-    "description": "Placeholder option when the Notion search returned no accessible pages."
+    "message": "Немає сторінок – поділіться принаймні однією сторінкою Notion з інтеграцією {app}"
   },
   "optionsNotionPagesFailed": {
-    "message": "Не вдалося завантажити сторінки",
-    "description": "Placeholder option when the Notion search call failed."
+    "message": "Не вдалося завантажити сторінки"
   },
   "optionsTabMicrosoft": {
-    "message": "Microsoft 365",
-    "description": "Sidebar nav item for the Microsoft 365 settings page (connect, account)."
+    "message": "Microsoft 365"
   },
   "optionsMicrosoftIntro": {
-    "message": "Підключіть свій обліковий запис Microsoft, щоб експортувати чати як файли .docx у Word Online. Файли зберігаються у вашому OneDrive, у папці програми в розділі «Програми».",
-    "description": "Intro paragraph at the top of the Microsoft 365 settings page."
+    "message": "Підключіть свій обліковий запис Microsoft, щоб експортувати чати як файли .docx у Word Online. Файли зберігаються у вашому OneDrive, у папці програми в розділі «Програми»."
   },
   "optionsMicrosoftConnect": {
-    "message": "Підключити Microsoft 365",
-    "description": "Button label that starts the Microsoft OAuth flow."
+    "message": "Підключити Microsoft 365"
   },
   "optionsMicrosoftConnecting": {
-    "message": "Підключення до Microsoft 365…",
-    "description": "Status shown while the Microsoft OAuth round-trip is in progress."
+    "message": "Підключення до Microsoft 365…"
   },
   "optionsMicrosoftDisconnect": {
-    "message": "Відключити",
-    "description": "Button label that clears the stored Microsoft tokens."
+    "message": "Відключити"
   },
   "optionsMicrosoftAccountLabel": {
-    "message": "Обліковий запис",
-    "description": "Label next to the signed-in Microsoft account email."
+    "message": "Обліковий запис"
   },
   "optionsMicrosoftHint": {
-    "message": "Експортовані файли з'являються в OneDrive у розділі «Програми» (у папці програми) та відкриваються у Word Online в новій вкладці.",
-    "description": "Helper text under the Microsoft 365 connection panel."
+    "message": "Експортовані файли з'являються в OneDrive у розділі «Програми» (у папці програми) та відкриваються у Word Online в новій вкладці."
   },
   "optionsTabNextcloud": {
-    "message": "Nextcloud",
-    "description": "Sidebar nav item for the Nextcloud settings page."
+    "message": "Nextcloud"
   },
   "optionsNextcloudIntro": {
-    "message": "Зберігайте чати на власному сервері Nextcloud через WebDAV. {app} використовує пароль програми (Nextcloud → Налаштування → Безпека → «Створити новий пароль програми») – ваш справжній пароль облікового запису ніколи не залишає ваш браузер.",
-    "description": "Intro paragraph at the top of the Nextcloud settings page."
+    "message": "Зберігайте чати на власному сервері Nextcloud через WebDAV. {app} використовує пароль програми (Nextcloud → Налаштування → Безпека → «Створити новий пароль програми») – ваш справжній пароль облікового запису ніколи не залишає ваш браузер."
   },
   "optionsNextcloudServerLabel": {
-    "message": "URL-адреса сервера",
-    "description": "Label for the Nextcloud server URL input."
+    "message": "URL-адреса сервера"
   },
   "optionsNextcloudUserLabel": {
-    "message": "Ім'я користувача",
-    "description": "Label for the Nextcloud username input."
+    "message": "Ім'я користувача"
   },
   "optionsNextcloudPasswordLabel": {
-    "message": "Пароль програми",
-    "description": "Label for the Nextcloud app-password input."
+    "message": "Пароль програми"
   },
   "optionsNextcloudFolderLabel": {
-    "message": "Папка",
-    "description": "Label for the Nextcloud target folder input."
+    "message": "Папка"
   },
   "optionsNextcloudFormatLabel": {
-    "message": "Формат за замовчуванням",
-    "description": "Label for the dropdown that picks which file format gets uploaded to Nextcloud."
+    "message": "Формат за замовчуванням"
   },
   "optionsNextcloudTest": {
-    "message": "Перевірити з'єднання",
-    "description": "Button label that probes the Nextcloud credentials with a PROPFIND request."
+    "message": "Перевірити з'єднання"
   },
   "optionsNextcloudSave": {
-    "message": "Зберегти",
-    "description": "Button label that persists the Nextcloud credentials."
+    "message": "Зберегти"
   },
   "optionsNextcloudClear": {
-    "message": "Очистити",
-    "description": "Button label that wipes the stored Nextcloud credentials."
+    "message": "Очистити"
   },
   "optionsNextcloudTesting": {
-    "message": "Перевірка з'єднання…",
-    "description": "Status shown while the extension is probing the Nextcloud server with a PROPFIND."
+    "message": "Перевірка з'єднання…"
   },
   "optionsNextcloudTestOk": {
-    "message": "З'єднання успішне.",
-    "description": "Status shown when the Nextcloud PROPFIND probe succeeds."
+    "message": "З'єднання успішне."
   },
   "optionsNextcloudFillFirst": {
-    "message": "Спочатку заповніть URL-адресу сервера, ім'я користувача та пароль програми.",
-    "description": "Error shown when the user clicks Test or Save with empty fields."
+    "message": "Спочатку заповніть URL-адресу сервера, ім'я користувача та пароль програми."
   },
   "optionsNextcloudCleared": {
-    "message": "Облікові дані Nextcloud очищено.",
-    "description": "Status shown after the user clicks Clear."
+    "message": "Облікові дані Nextcloud очищено."
   },
   "optionsLanguageLabel": {
-    "message": "Мова",
-    "description": "Label for the language dropdown."
+    "message": "Мова"
   },
   "optionsLanguageAuto": {
-    "message": "Використовувати мову браузера",
-    "description": "Default option in the language dropdown - picks the browser UI language."
+    "message": "Використовувати мову браузера"
   },
   "optionsHtmlTitleFontLabel": {
-    "message": "Шрифт заголовка",
-    "description": "Label for the dropdown that picks the heading font used in HTML / PDF exports."
+    "message": "Шрифт заголовка"
   },
   "optionsHtmlTextFontLabel": {
-    "message": "Шрифт тексту",
-    "description": "Label for the dropdown that picks the body font used in HTML / PDF exports."
+    "message": "Шрифт тексту"
   },
   "optionsFontSystem": {
-    "message": "Системний (за замовчуванням)",
-    "description": "First option in both font dropdowns - the OS default font, no Google Fonts fetch."
+    "message": "Системний (за замовчуванням)"
   },
   "optionsHtmlMathLabel": {
-    "message": "Відображення математичних формул (KaTeX)",
-    "description": "Label for the toggle that enables math rendering in HTML / PDF exports via the KaTeX library."
+    "message": "Відображення математичних формул (KaTeX)"
   },
   "optionsSavedNotice": {
-    "message": "Збережено.",
-    "description": "Notice shown when settings are saved."
+    "message": "Збережено."
   },
   "optionsVisibleSitesHint": {
-    "message": "Перетягніть, щоб змінити порядок. Зніміть прапорець, щоб приховати плитку зі спливаючого вікна.",
-    "description": "Helper text under the visible sites checklist."
+    "message": "Перетягніть, щоб змінити порядок. Зніміть прапорець, щоб приховати плитку зі спливаючого вікна."
   },
   "optionsSelectAll": {
-    "message": "Вибрати все",
-    "description": "Button that checks every site in the visibility list."
+    "message": "Вибрати все"
   },
   "optionsSelectNone": {
-    "message": "Скасувати вибір",
-    "description": "Button that unchecks every site in the visibility list."
+    "message": "Скасувати вибір"
   },
   "exportJsonTitle": {
-    "message": "Експортувати як JSON (.json)",
-    "description": "Tooltip on the JSON export button - a flat { role, content } message array for developers."
+    "message": "Експортувати як JSON (.json)"
   },
   "exportDebugTitle": {
-    "message": "Експортувати налагоджувальний пакет (.json)",
-    "description": "Tooltip on the Developer-mode Debug export button - saves a diagnostic file with the raw API capture, the extracted conversation, and the rendered outputs."
+    "message": "Експортувати налагоджувальний пакет (.json)"
   },
   "optionsDevModeLabel": {
-    "message": "Режим розробника",
-    "description": "Settings checkbox that reveals the Debug-bundle export button in the popup."
+    "message": "Режим розробника"
   },
   "optionsAdvancedHeading": {
-    "message": "Розширені",
-    "description": "Heading of the Advanced block at the end of Settings - General (currently holds the Developer mode toggle)."
+    "message": "Розширені"
   },
   "errorSiteNotSupported": {
-    "message": "Цей сайт не підтримується. Відкрийте один із наведених нижче сайтів ШІ та спробуйте ще раз.",
-    "description": "Popup error when the active tab's domain matches none of the supported AI sites (refreshing cannot help there)."
+    "message": "Цей сайт не підтримується. Відкрийте один із наведених нижче сайтів ШІ та спробуйте ще раз."
   },
   "popupMediaTitle": {
-    "message": "Медіа",
-    "description": "Popup button — opens the media page for the current conversation."
+    "message": "Медіа"
   },
   "mediaPageTitle": {
-    "message": "Зображення",
-    "description": "Browser tab title of the media page."
+    "message": "Зображення"
   },
   "mediaHeading": {
-    "message": "Зображення в цій розмові",
-    "description": "Heading of the media page."
+    "message": "Зображення в цій розмові"
   },
   "mediaSelectAll": {
-    "message": "Усі",
-    "description": "Media page — select every image."
+    "message": "Усі"
   },
   "mediaSelectNone": {
-    "message": "Жодного",
-    "description": "Media page — clear the selection."
+    "message": "Жодного"
   },
   "mediaDownload": {
-    "message": "Завантажити",
-    "description": "Media page — download the selected images."
+    "message": "Завантажити"
   },
   "mediaMeta": {
-    "message": "Вибрано {selected} з {count}",
-    "description": "Media page counter. {selected} and {count} are numbers."
+    "message": "Вибрано {selected} з {count}"
   },
   "mediaEmpty": {
-    "message": "Ця розмова не містить зображень.",
-    "description": "Media page — shown when the conversation contains no pictures."
+    "message": "Ця розмова не містить зображень."
   },
   "mediaLoadError": {
-    "message": "Не вдалося прочитати розмову. Закрийте цю вкладку та спробуйте ще раз зі спливаючого вікна.",
-    "description": "Media page — the stashed conversation was missing."
+    "message": "Не вдалося прочитати розмову. Закрийте цю вкладку та спробуйте ще раз зі спливаючого вікна."
   },
   "mediaRoleUser": {
-    "message": "Ви",
-    "description": "Media page tile label — the image came from the user's message."
+    "message": "Ви"
   },
   "mediaRoleAssistant": {
-    "message": "ШІ",
-    "description": "Media page tile label — the image came from the AI's reply."
+    "message": "ШІ"
   },
   "mediaDownloadDone": {
-    "message": "Завантажено: {done}, не вдалося: {failed}",
-    "description": "Media page result. {done} and {failed} are numbers."
+    "message": "Завантажено: {done}, не вдалося: {failed}"
   },
   "popupCustomExportSub": {
-    "message": "Виберіть повідомлення, які ви хочете експортувати.",
-    "description": "Tooltip on the popup's Custom Export button."
+    "message": "Виберіть повідомлення, які ви хочете експортувати."
   },
   "popupMediaSub": {
-    "message": "Переглядайте та завантажуйте зображення з цього чату.",
-    "description": "Tooltip on the popup's Media button."
+    "message": "Переглядайте та завантажуйте зображення з цього чату."
   }
 }

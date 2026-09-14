@@ -1,538 +1,404 @@
 {
   "extDescription": {
-    "message": "Eksporter AI-chats fra ChatGPT, Gemini, Claude. 32 AI-sider, 9 formater, 5 cloud-destinationer.",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
+    "message": "Eksporter AI-chats fra ChatGPT, Gemini, Claude. 32 AI-sider, 9 formater, 5 cloud-destinationer."
   },
   "exportMarkdownTitle": {
-    "message": "Eksporter som Markdown (.md)",
-    "description": "Tooltip on the Markdown export button."
+    "message": "Eksporter som Markdown (.md)"
   },
   "exportHtmlTitle": {
-    "message": "Eksporter som HTML (.html)",
-    "description": "Tooltip on the HTML export button."
+    "message": "Eksporter som HTML (.html)"
   },
   "exportTxtTitle": {
-    "message": "Eksporter som almindelig tekst (.txt)",
-    "description": "Tooltip on the plain-text export button."
+    "message": "Eksporter som almindelig tekst (.txt)"
   },
   "exportDocxTitle": {
-    "message": "Eksporter som Word (.docx)",
-    "description": "Tooltip on the Word export button."
+    "message": "Eksporter som Word (.docx)"
   },
   "exportOdtTitle": {
-    "message": "Eksporter som OpenDocument (.odt)",
-    "description": "Tooltip on the OpenDocument export button."
+    "message": "Eksporter som OpenDocument (.odt)"
   },
   "exportPdfTitle": {
-    "message": "Eksporter som PDF (via udskriftsdialog)",
-    "description": "Tooltip on the PDF export button."
+    "message": "Eksporter som PDF (via udskriftsdialog)"
   },
   "exportImageTitle": {
-    "message": "Eksporter som PNG-billede",
-    "description": "Tooltip on the Image export button - renders the conversation to a single tall PNG file."
+    "message": "Eksporter som PNG-billede"
   },
   "exportGdocTitle": {
-    "message": "Åbn i Google Docs",
-    "description": "Tooltip on the Google Docs export button - uploads the chat to the user's Google Drive as a native Google Doc."
+    "message": "Åbn i Google Docs"
   },
   "exportNotionTitle": {
-    "message": "Eksporter til Notion",
-    "description": "Tooltip on the Notion export button - uploads the chat to the user's Notion workspace as a native Notion page."
+    "message": "Eksporter til Notion"
   },
   "exportMswordTitle": {
-    "message": "Åbn i Word Online",
-    "description": "Tooltip on the Word Online export button - uploads the chat as a .docx to OneDrive and opens it in Word Online."
+    "message": "Åbn i Word Online"
   },
   "exportNextcloudTitle": {
-    "message": "Gem til Nextcloud",
-    "description": "Tooltip on the Nextcloud export button - uploads the chat to the user's Nextcloud server via WebDAV."
+    "message": "Gem til Nextcloud"
   },
   "exportOnenoteTitle": {
-    "message": "Send til OneNote",
-    "description": "Tooltip on the OneNote export button - creates a new page in the user's OneNote default notebook."
+    "message": "Send til OneNote"
   },
   "settingsButtonTitle": {
-    "message": "Indstillinger",
-    "description": "Tooltip on the gear icon that opens the settings page."
+    "message": "Indstillinger"
   },
   "popupCustomExportTitle": {
-    "message": "Brugerdefineret eksport",
-    "description": "Title of the prominent button below the export icons in the popup. Opens the message selection page."
+    "message": "Brugerdefineret eksport"
   },
   "selectPageTitle": {
-    "message": "{app} - Vælg beskeder",
-    "description": "<title> of the selection page (browser tab title)."
+    "message": "{app} - Vælg beskeder"
   },
   "selectHeading": {
-    "message": "Vælg meddelelser til eksport",
-    "description": "Top heading of the selection page."
+    "message": "Vælg meddelelser til eksport"
   },
   "selectStatusCount": {
-    "message": "{n} af {total} valgt",
-    "description": "Status line on the selection page showing how many messages are checked."
+    "message": "{n} af {total} valgt"
   },
   "selectErrorNoSelection": {
-    "message": "Vælg mindst én meddelelse.",
-    "description": "Error shown when the user clicks an export button with no messages selected."
+    "message": "Vælg mindst én meddelelse."
   },
   "selectErrorNoMessages": {
-    "message": "Ingen meddelelser fundet i denne samtale.",
-    "description": "Error shown when the selection page opens but the chat has no extractable messages."
+    "message": "Ingen meddelelser fundet i denne samtale."
   },
   "selectErrorLoadFailed": {
-    "message": "Kunne ikke læse samtalen. Genåbn chatfanen og prøv igen.",
-    "description": "Error shown when the selection page can't read the stashed conversation."
+    "message": "Kunne ikke læse samtalen. Genåbn chatfanen og prøv igen."
   },
   "selectRoleUser": {
-    "message": "Bruger",
-    "description": "Role badge for user messages on the selection page."
+    "message": "Bruger"
   },
   "selectRoleAssistant": {
-    "message": "Assistent",
-    "description": "Role badge for assistant messages on the selection page."
+    "message": "Assistent"
   },
   "selectFontSizeLabel": {
-    "message": "Størrelse",
-    "description": "Label preceding the font-size dropdown in the selection page toolbar."
+    "message": "Størrelse"
   },
   "selectFontSizeSmall": {
-    "message": "Lille",
-    "description": "Smallest body-text option in the size dropdown."
+    "message": "Lille"
   },
   "selectFontSizeMedium": {
-    "message": "Mellem",
-    "description": "Default body-text option in the size dropdown."
+    "message": "Mellem"
   },
   "selectFontSizeLarge": {
-    "message": "Stor",
-    "description": "Largest body-text option in the size dropdown."
+    "message": "Stor"
   },
   "selectShowTimeLabel": {
-    "message": "Tid",
-    "description": "Compact label next to the show-chat-time checkbox in the selection page toolbar."
+    "message": "Tid"
   },
   "selectShowSourceLabel": {
-    "message": "Kilde",
-    "description": "Compact label next to the show-source checkbox in the selection page toolbar."
+    "message": "Kilde"
   },
   "optionsHtmlSizeLabel": {
-    "message": "Brødtekststørrelse",
-    "description": "Settings → General label for the body text size dropdown (HTML / PDF exports)."
+    "message": "Brødtekststørrelse"
   },
   "optionsHtmlShowTimeLabel": {
-    "message": "Vis chattid",
-    "description": "Settings → General label for the toggle that includes per-message timestamps in HTML / PDF exports."
+    "message": "Vis chattid"
   },
   "optionsHtmlShowSourceLabel": {
-    "message": "Vis kildelink",
-    "description": "Settings → General label for the toggle that includes the \"Source: <link>\" line at the top of HTML / PDF exports."
+    "message": "Vis kildelink"
   },
   "optionsHtmlShowThinkingLabel": {
-    "message": "Vis tænkning",
-    "description": "Settings → General label for the toggle that keeps the model's thinking blockquotes in HTML / PDF exports."
+    "message": "Vis tænkning"
   },
   "optionsFilenamePatternLabel": {
-    "message": "Filnavnsmønster",
-    "description": "Settings → General label for the export filename template input."
+    "message": "Filnavnsmønster"
   },
   "optionsFilenamePatternHint": {
-    "message": "Tilgængelige felter:",
-    "description": "Helper text under the filename pattern input, followed by the literal placeholder list."
+    "message": "Tilgængelige felter:"
   },
   "selectShowThinkingLabel": {
-    "message": "Tænkning",
-    "description": "Compact label next to the show-thinking checkbox in the selection page toolbar."
+    "message": "Tænkning"
   },
   "selectTitleFontLabel": {
-    "message": "Titel",
-    "description": "Compact label preceding the title-font dropdown in the selection page toolbar."
+    "message": "Titel"
   },
   "selectTextFontLabel": {
-    "message": "Tekst",
-    "description": "Compact label preceding the text-font dropdown in the selection page toolbar."
+    "message": "Tekst"
   },
   "dragHint": {
-    "message": "Træk for at omarrangere",
-    "description": "Helper text under the AI sites grid."
+    "message": "Træk for at omarrangere"
   },
   "popupViewLauncherTitle": {
-    "message": "Gå til et AI-websted",
-    "description": "Tooltip on the header toggle that switches the popup from the export view to the AI-site launcher grid."
+    "message": "Gå til et AI-websted"
   },
   "popupViewExportTitle": {
-    "message": "Tilbage til eksport",
-    "description": "Tooltip on the header toggle that switches the popup from the AI-site launcher back to the export view."
+    "message": "Tilbage til eksport"
   },
   "popupPagePrevTitle": {
-    "message": "Forrige side",
-    "description": "Tooltip on the launcher pager button that shows the previous page of AI sites."
+    "message": "Forrige side"
   },
   "popupPageNextTitle": {
-    "message": "Næste side",
-    "description": "Tooltip on the launcher pager button that shows the next page of AI sites."
+    "message": "Næste side"
   },
   "statusExtracting": {
-    "message": "Udpakker…",
-    "description": "Status shown while the extension is reading the chat."
+    "message": "Udpakker…"
   },
   "statusGotMessagesSaving": {
-    "message": "Fik {count} meddelelser fra {site}. Gemmer…",
-    "description": "Status shown after extraction, before the file is saved."
+    "message": "Fik {count} meddelelser fra {site}. Gemmer…"
   },
   "statusGotMessagesPrinting": {
-    "message": "Fik {count} meddelelser fra {site}. Åbner udskriftsdialog…",
-    "description": "Status shown when exporting to PDF, before the print tab opens."
+    "message": "Fik {count} meddelelser fra {site}. Åbner udskriftsdialog…"
   },
   "statusOpenedPrintTab": {
-    "message": "Åbnede udskriftsfane - vælg \"Gem som PDF\"",
-    "description": "Status shown after the print tab is opened for PDF export."
+    "message": "Åbnede udskriftsfane - vælg \"Gem som PDF\""
   },
   "statusGotMessagesUploadingGdoc": {
-    "message": "Fik {count} meddelelser fra {site}. Uploader til Google Docs…",
-    "description": "Status shown while the chat is being uploaded to Google Drive as a Google Doc."
+    "message": "Fik {count} meddelelser fra {site}. Uploader til Google Docs…"
   },
   "statusOpenedGdoc": {
-    "message": "Åbnede Google Doc i en ny fane.",
-    "description": "Status shown after the Google Docs upload succeeds and the new doc opens."
+    "message": "Åbnede Google Doc i en ny fane."
   },
   "statusGotMessagesUploadingNotion": {
-    "message": "Fik {count} meddelelser fra {site}. Uploader til Notion…",
-    "description": "Status shown while the chat is being uploaded to Notion as a native page."
+    "message": "Fik {count} meddelelser fra {site}. Uploader til Notion…"
   },
   "statusOpenedNotion": {
-    "message": "Åbnede Notion-side i en ny fane.",
-    "description": "Status shown after the Notion upload succeeds and the new page opens."
+    "message": "Åbnede Notion-side i en ny fane."
   },
   "statusGotMessagesUploadingMsword": {
-    "message": "Fik {count} meddelelser fra {site}. Uploader til Word Online…",
-    "description": "Status shown while the chat is being uploaded to OneDrive for Word Online."
+    "message": "Fik {count} meddelelser fra {site}. Uploader til Word Online…"
   },
   "statusOpenedMsword": {
-    "message": "Åbnede Word Online-dokument i en ny fane.",
-    "description": "Status shown after the Word Online upload succeeds and the document opens."
+    "message": "Åbnede Word Online-dokument i en ny fane."
   },
   "statusGotMessagesUploadingNextcloud": {
-    "message": "Fik {count} meddelelser fra {site}. Uploader til Nextcloud…",
-    "description": "Status shown while the chat is being uploaded to Nextcloud."
+    "message": "Fik {count} meddelelser fra {site}. Uploader til Nextcloud…"
   },
   "statusOpenedNextcloud": {
-    "message": "Åbnede Nextcloud-fil i en ny fane.",
-    "description": "Status shown after the Nextcloud upload succeeds and the file opens."
+    "message": "Åbnede Nextcloud-fil i en ny fane."
   },
   "statusGotMessagesUploadingOnenote": {
-    "message": "Fik {count} meddelelser fra {site}. Sender til OneNote…",
-    "description": "Status shown while the chat is being sent to OneNote as a new page."
+    "message": "Fik {count} meddelelser fra {site}. Sender til OneNote…"
   },
   "statusOpenedOnenote": {
-    "message": "Åbnede OneNote-side i en ny fane.",
-    "description": "Status shown after the OneNote upload succeeds and the new page opens."
+    "message": "Åbnede OneNote-side i en ny fane."
   },
   "statusSaved": {
-    "message": "Gemt {filename}",
-    "description": "Success message after the file is saved."
+    "message": "Gemt {filename}"
   },
   "errorContentScriptNotLoaded": {
-    "message": "Indholdsscript ikke indlæst. Genindlæs denne fane (F5) og prøv igen.",
-    "description": "Error when the popup cannot reach the content script."
+    "message": "Indholdsscript ikke indlæst. Genindlæs denne fane (F5) og prøv igen."
   },
   "errorExtractionFailed": {
-    "message": "Udpakning mislykkedes. Er dette en understøttet AI-chat-side?",
-    "description": "Generic extraction failure error."
+    "message": "Udpakning mislykkedes. Er dette en understøttet AI-chat-side?"
   },
   "errorNoActiveTab": {
-    "message": "Ingen aktiv fane.",
-    "description": "Error when no active tab is found."
+    "message": "Ingen aktiv fane."
   },
   "errorPrintTab": {
-    "message": "Kunne ikke åbne udskriftsfane.",
-    "description": "Error when opening the print tab failed."
+    "message": "Kunne ikke åbne udskriftsfane."
   },
   "errorDownloadFailed": {
-    "message": "Download mislykkedes.",
-    "description": "Error when the download cannot start."
+    "message": "Download mislykkedes."
   },
   "optionsTitle": {
-    "message": "{app} - Indstillinger",
-    "description": "<title> of the settings page."
+    "message": "{app} - Indstillinger"
   },
   "optionsHeading": {
-    "message": "Indstillinger",
-    "description": "Top heading of the settings page."
+    "message": "Indstillinger"
   },
   "optionsTabGeneral": {
-    "message": "Generelt",
-    "description": "Sidebar nav item for the General settings page (language)."
+    "message": "Generelt"
   },
   "optionsTabStyle": {
-    "message": "Stil",
-    "description": "Sidebar nav item for the Style settings page (fonts, body text size, preview)."
+    "message": "Stil"
   },
   "optionsInlineButtonsHeading": {
-    "message": "Knapper i chatten",
-    "description": "Sub-heading on the General settings page above the three per-message inline-button visibility toggles."
+    "message": "Knapper i chatten"
   },
   "optionsInlineExportMenuLabel": {
-    "message": "Eksportfilmenu",
-    "description": "Settings checkbox label - show the per-message export-format hover menu inside the AI chat page."
+    "message": "Eksportfilmenu"
   },
   "optionsInlineCopyMdLabel": {
-    "message": "Kopiér som Markdown-knap",
-    "description": "Settings checkbox label - show the per-message 'Copy as Markdown' button inside the AI chat page."
+    "message": "Kopiér som Markdown-knap"
   },
   "optionsInlineCopyHtmlLabel": {
-    "message": "Kopiér som HTML-knap",
-    "description": "Settings checkbox label - show the per-message 'Copy as HTML' button inside the AI chat page."
+    "message": "Kopiér som HTML-knap"
   },
   "optionsTabSites": {
-    "message": "AI-sider",
-    "description": "Sidebar nav item for the AI Sites settings page (visibility, order)."
+    "message": "AI-sider"
   },
   "optionsTabNotion": {
-    "message": "Notion",
-    "description": "Sidebar nav item for the Notion settings page (connect, parent page picker)."
+    "message": "Notion"
   },
   "optionsNotionIntro": {
-    "message": "Forbind dit Notion-arbejdsområde for at eksportere chats som native Notion-sider. {app} kan kun se og ændre sider, du eksplicit giver adgang til.",
-    "description": "Intro paragraph at the top of the Notion settings page."
+    "message": "Forbind dit Notion-arbejdsområde for at eksportere chats som native Notion-sider. {app} kan kun se og ændre sider, du eksplicit giver adgang til."
   },
   "optionsNotionConnect": {
-    "message": "Forbind Notion",
-    "description": "Button label that starts the Notion OAuth flow."
+    "message": "Forbind Notion"
   },
   "optionsNotionConnecting": {
-    "message": "Forbinder til Notion…",
-    "description": "Status shown while the Notion OAuth round-trip is in progress."
+    "message": "Forbinder til Notion…"
   },
   "optionsNotionDisconnect": {
-    "message": "Frakobl",
-    "description": "Button label that clears the stored Notion access token."
+    "message": "Frakobl"
   },
   "optionsNotionWorkspaceLabel": {
-    "message": "Arbejdsområde",
-    "description": "Label next to the Notion workspace name once connected."
+    "message": "Arbejdsområde"
   },
   "optionsNotionParentLabel": {
-    "message": "Overordnet side",
-    "description": "Label for the dropdown that picks which Notion page new exports land in."
+    "message": "Overordnet side"
   },
   "optionsNotionParentHint": {
-    "message": "Nye chatsider oprettes som undersider til denne side. For at give adgang til flere sider: åbn siden i Notion → \"…\" menu → Forbindelser → {app}-integrationen.",
-    "description": "Helper text under the parent page picker, explaining how to grant access to more pages."
+    "message": "Nye chatsider oprettes som undersider til denne side. For at give adgang til flere sider: åbn siden i Notion → \"…\" menu → Forbindelser → {app}-integrationen."
   },
   "optionsNotionRefresh": {
-    "message": "Opdater",
-    "description": "Button that re-fetches the list of accessible Notion pages."
+    "message": "Opdater"
   },
   "optionsNotionLoadingPages": {
-    "message": "Indlæser sider…",
-    "description": "Placeholder option in the parent page dropdown while pages are being fetched."
+    "message": "Indlæser sider…"
   },
   "optionsNotionNoPages": {
-    "message": "Ingen sider - del mindst én Notion-side med {app}-integrationen",
-    "description": "Placeholder option when the Notion search returned no accessible pages."
+    "message": "Ingen sider - del mindst én Notion-side med {app}-integrationen"
   },
   "optionsNotionPagesFailed": {
-    "message": "Kunne ikke indlæse sider",
-    "description": "Placeholder option when the Notion search call failed."
+    "message": "Kunne ikke indlæse sider"
   },
   "optionsTabMicrosoft": {
-    "message": "Microsoft 365",
-    "description": "Sidebar nav item for the Microsoft 365 settings page (connect, account)."
+    "message": "Microsoft 365"
   },
   "optionsMicrosoftIntro": {
-    "message": "Tilslut din Microsoft-konto for at eksportere chats som .docx-filer i Word Online. Filer gemmes i din OneDrive, i appens mappe under Apps.",
-    "description": "Intro paragraph at the top of the Microsoft 365 settings page."
+    "message": "Tilslut din Microsoft-konto for at eksportere chats som .docx-filer i Word Online. Filer gemmes i din OneDrive, i appens mappe under Apps."
   },
   "optionsMicrosoftConnect": {
-    "message": "Forbind Microsoft 365",
-    "description": "Button label that starts the Microsoft OAuth flow."
+    "message": "Forbind Microsoft 365"
   },
   "optionsMicrosoftConnecting": {
-    "message": "Forbinder til Microsoft 365…",
-    "description": "Status shown while the Microsoft OAuth round-trip is in progress."
+    "message": "Forbinder til Microsoft 365…"
   },
   "optionsMicrosoftDisconnect": {
-    "message": "Frakobl",
-    "description": "Button label that clears the stored Microsoft tokens."
+    "message": "Frakobl"
   },
   "optionsMicrosoftAccountLabel": {
-    "message": "Konto",
-    "description": "Label next to the signed-in Microsoft account email."
+    "message": "Konto"
   },
   "optionsMicrosoftHint": {
-    "message": "Eksporterede filer vises i OneDrive under Apps (i appens mappe) og åbnes i Word Online i en ny fane.",
-    "description": "Helper text under the Microsoft 365 connection panel."
+    "message": "Eksporterede filer vises i OneDrive under Apps (i appens mappe) og åbnes i Word Online i en ny fane."
   },
   "optionsTabNextcloud": {
-    "message": "Nextcloud",
-    "description": "Sidebar nav item for the Nextcloud settings page."
+    "message": "Nextcloud"
   },
   "optionsNextcloudIntro": {
-    "message": "Gem chats på din egen Nextcloud-server via WebDAV. {app} bruger en app-adgangskode (Nextcloud → Indstillinger → Sikkerhed → \"Opret ny app-adgangskode\") – din rigtige kontoadgangskode forlader aldrig din browser.",
-    "description": "Intro paragraph at the top of the Nextcloud settings page."
+    "message": "Gem chats på din egen Nextcloud-server via WebDAV. {app} bruger en app-adgangskode (Nextcloud → Indstillinger → Sikkerhed → \"Opret ny app-adgangskode\") – din rigtige kontoadgangskode forlader aldrig din browser."
   },
   "optionsNextcloudServerLabel": {
-    "message": "Server-URL",
-    "description": "Label for the Nextcloud server URL input."
+    "message": "Server-URL"
   },
   "optionsNextcloudUserLabel": {
-    "message": "Brugernavn",
-    "description": "Label for the Nextcloud username input."
+    "message": "Brugernavn"
   },
   "optionsNextcloudPasswordLabel": {
-    "message": "App-adgangskode",
-    "description": "Label for the Nextcloud app-password input."
+    "message": "App-adgangskode"
   },
   "optionsNextcloudFolderLabel": {
-    "message": "Mappe",
-    "description": "Label for the Nextcloud target folder input."
+    "message": "Mappe"
   },
   "optionsNextcloudFormatLabel": {
-    "message": "Standardformat",
-    "description": "Label for the dropdown that picks which file format gets uploaded to Nextcloud."
+    "message": "Standardformat"
   },
   "optionsNextcloudTest": {
-    "message": "Test forbindelse",
-    "description": "Button label that probes the Nextcloud credentials with a PROPFIND request."
+    "message": "Test forbindelse"
   },
   "optionsNextcloudSave": {
-    "message": "Gem",
-    "description": "Button label that persists the Nextcloud credentials."
+    "message": "Gem"
   },
   "optionsNextcloudClear": {
-    "message": "Ryd",
-    "description": "Button label that wipes the stored Nextcloud credentials."
+    "message": "Ryd"
   },
   "optionsNextcloudTesting": {
-    "message": "Tester forbindelse…",
-    "description": "Status shown while the extension is probing the Nextcloud server with a PROPFIND."
+    "message": "Tester forbindelse…"
   },
   "optionsNextcloudTestOk": {
-    "message": "Forbindelse oprettet.",
-    "description": "Status shown when the Nextcloud PROPFIND probe succeeds."
+    "message": "Forbindelse oprettet."
   },
   "optionsNextcloudFillFirst": {
-    "message": "Udfyld først server-URL, brugernavn og app-adgangskode.",
-    "description": "Error shown when the user clicks Test or Save with empty fields."
+    "message": "Udfyld først server-URL, brugernavn og app-adgangskode."
   },
   "optionsNextcloudCleared": {
-    "message": "Nextcloud-legitimationsoplysninger ryddet.",
-    "description": "Status shown after the user clicks Clear."
+    "message": "Nextcloud-legitimationsoplysninger ryddet."
   },
   "optionsLanguageLabel": {
-    "message": "Sprog",
-    "description": "Label for the language dropdown."
+    "message": "Sprog"
   },
   "optionsLanguageAuto": {
-    "message": "Brug browsersprog",
-    "description": "Default option in the language dropdown - picks the browser UI language."
+    "message": "Brug browsersprog"
   },
   "optionsHtmlTitleFontLabel": {
-    "message": "Titelskrifttype",
-    "description": "Label for the dropdown that picks the heading font used in HTML / PDF exports."
+    "message": "Titelskrifttype"
   },
   "optionsHtmlTextFontLabel": {
-    "message": "Tekstskrifttype",
-    "description": "Label for the dropdown that picks the body font used in HTML / PDF exports."
+    "message": "Tekstskrifttype"
   },
   "optionsFontSystem": {
-    "message": "System (standard)",
-    "description": "First option in both font dropdowns - the OS default font, no Google Fonts fetch."
+    "message": "System (standard)"
   },
   "optionsHtmlMathLabel": {
-    "message": "Matematikgengivelse (KaTeX)",
-    "description": "Label for the toggle that enables math rendering in HTML / PDF exports via the KaTeX library."
+    "message": "Matematikgengivelse (KaTeX)"
   },
   "optionsSavedNotice": {
-    "message": "Gemt.",
-    "description": "Notice shown when settings are saved."
+    "message": "Gemt."
   },
   "optionsVisibleSitesHint": {
-    "message": "Træk for at omarrangere. Fjern markering for at skjule en flise fra pop op-vinduet.",
-    "description": "Helper text under the visible sites checklist."
+    "message": "Træk for at omarrangere. Fjern markering for at skjule en flise fra pop op-vinduet."
   },
   "optionsSelectAll": {
-    "message": "Vælg alle",
-    "description": "Button that checks every site in the visibility list."
+    "message": "Vælg alle"
   },
   "optionsSelectNone": {
-    "message": "Vælg ingen",
-    "description": "Button that unchecks every site in the visibility list."
+    "message": "Vælg ingen"
   },
   "exportJsonTitle": {
-    "message": "Eksporter som JSON (.json)",
-    "description": "Tooltip on the JSON export button - a flat { role, content } message array for developers."
+    "message": "Eksporter som JSON (.json)"
   },
   "exportDebugTitle": {
-    "message": "Eksporter fejlfindingspakke (.json)",
-    "description": "Tooltip on the Developer-mode Debug export button - saves a diagnostic file with the raw API capture, the extracted conversation, and the rendered outputs."
+    "message": "Eksporter fejlfindingspakke (.json)"
   },
   "optionsDevModeLabel": {
-    "message": "Udviklertilstand",
-    "description": "Settings checkbox that reveals the Debug-bundle export button in the popup."
+    "message": "Udviklertilstand"
   },
   "optionsAdvancedHeading": {
-    "message": "Avanceret",
-    "description": "Heading of the Advanced block at the end of Settings - General (currently holds the Developer mode toggle)."
+    "message": "Avanceret"
   },
   "errorSiteNotSupported": {
-    "message": "Dette websted understøttes ikke. Åbn et af de AI-websteder, der er angivet nedenfor, og prøv igen.",
-    "description": "Popup error when the active tab's domain matches none of the supported AI sites (refreshing cannot help there)."
+    "message": "Dette websted understøttes ikke. Åbn et af de AI-websteder, der er angivet nedenfor, og prøv igen."
   },
   "popupMediaTitle": {
-    "message": "Medier",
-    "description": "Popup button — opens the media page for the current conversation."
+    "message": "Medier"
   },
   "mediaPageTitle": {
-    "message": "Billeder",
-    "description": "Browser tab title of the media page."
+    "message": "Billeder"
   },
   "mediaHeading": {
-    "message": "Billeder i denne samtale",
-    "description": "Heading of the media page."
+    "message": "Billeder i denne samtale"
   },
   "mediaSelectAll": {
-    "message": "Alle",
-    "description": "Media page — select every image."
+    "message": "Alle"
   },
   "mediaSelectNone": {
-    "message": "Ingen",
-    "description": "Media page — clear the selection."
+    "message": "Ingen"
   },
   "mediaDownload": {
-    "message": "Download",
-    "description": "Media page — download the selected images."
+    "message": "Download"
   },
   "mediaMeta": {
-    "message": "{selected} af {count} valgt",
-    "description": "Media page counter. {selected} and {count} are numbers."
+    "message": "{selected} af {count} valgt"
   },
   "mediaEmpty": {
-    "message": "Denne samtale indeholder ingen billeder.",
-    "description": "Media page — shown when the conversation contains no pictures."
+    "message": "Denne samtale indeholder ingen billeder."
   },
   "mediaLoadError": {
-    "message": "Kunne ikke læse samtalen. Luk denne fane og prøv igen fra pop op-vinduet.",
-    "description": "Media page — the stashed conversation was missing."
+    "message": "Kunne ikke læse samtalen. Luk denne fane og prøv igen fra pop op-vinduet."
   },
   "mediaRoleUser": {
-    "message": "Dig",
-    "description": "Media page tile label — the image came from the user's message."
+    "message": "Dig"
   },
   "mediaRoleAssistant": {
-    "message": "AI",
-    "description": "Media page tile label — the image came from the AI's reply."
+    "message": "AI"
   },
   "mediaDownloadDone": {
-    "message": "{done} downloadet, {failed} mislykkedes",
-    "description": "Media page result. {done} and {failed} are numbers."
+    "message": "{done} downloadet, {failed} mislykkedes"
   },
   "popupCustomExportSub": {
-    "message": "Vælg de meddelelser, du vil eksportere.",
-    "description": "Tooltip on the popup's Custom Export button."
+    "message": "Vælg de meddelelser, du vil eksportere."
   },
   "popupMediaSub": {
-    "message": "Gennemse og download billederne i denne chat.",
-    "description": "Tooltip on the popup's Media button."
+    "message": "Gennemse og download billederne i denne chat."
   }
 }

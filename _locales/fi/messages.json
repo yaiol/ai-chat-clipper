@@ -1,538 +1,404 @@
 {
   "extDescription": {
-    "message": "Vie tekoälykeskusteluja ChatGPT:stä, Geministä, Claudesta. 32 tekoälysivustoa, 9 muotoa, 5 pilvikohtaa.",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
+    "message": "Vie tekoälykeskusteluja ChatGPT:stä, Geministä, Claudesta. 32 tekoälysivustoa, 9 muotoa, 5 pilvikohtaa."
   },
   "exportMarkdownTitle": {
-    "message": "Vie Markdown-muodossa (.md)",
-    "description": "Tooltip on the Markdown export button."
+    "message": "Vie Markdown-muodossa (.md)"
   },
   "exportHtmlTitle": {
-    "message": "Vie HTML-muodossa (.html)",
-    "description": "Tooltip on the HTML export button."
+    "message": "Vie HTML-muodossa (.html)"
   },
   "exportTxtTitle": {
-    "message": "Vie pelkkänä tekstinä (.txt)",
-    "description": "Tooltip on the plain-text export button."
+    "message": "Vie pelkkänä tekstinä (.txt)"
   },
   "exportDocxTitle": {
-    "message": "Vie Word-muodossa (.docx)",
-    "description": "Tooltip on the Word export button."
+    "message": "Vie Word-muodossa (.docx)"
   },
   "exportOdtTitle": {
-    "message": "Vie OpenDocument-muodossa (.odt)",
-    "description": "Tooltip on the OpenDocument export button."
+    "message": "Vie OpenDocument-muodossa (.odt)"
   },
   "exportPdfTitle": {
-    "message": "Vie PDF-muodossa (tulostusikkunan kautta)",
-    "description": "Tooltip on the PDF export button."
+    "message": "Vie PDF-muodossa (tulostusikkunan kautta)"
   },
   "exportImageTitle": {
-    "message": "Vie PNG-kuvana",
-    "description": "Tooltip on the Image export button - renders the conversation to a single tall PNG file."
+    "message": "Vie PNG-kuvana"
   },
   "exportGdocTitle": {
-    "message": "Avaa Google Docsissa",
-    "description": "Tooltip on the Google Docs export button - uploads the chat to the user's Google Drive as a native Google Doc."
+    "message": "Avaa Google Docsissa"
   },
   "exportNotionTitle": {
-    "message": "Vie Notioniin",
-    "description": "Tooltip on the Notion export button - uploads the chat to the user's Notion workspace as a native Notion page."
+    "message": "Vie Notioniin"
   },
   "exportMswordTitle": {
-    "message": "Avaa Word Onlinessa",
-    "description": "Tooltip on the Word Online export button - uploads the chat as a .docx to OneDrive and opens it in Word Online."
+    "message": "Avaa Word Onlinessa"
   },
   "exportNextcloudTitle": {
-    "message": "Tallenna Nextcloudiin",
-    "description": "Tooltip on the Nextcloud export button - uploads the chat to the user's Nextcloud server via WebDAV."
+    "message": "Tallenna Nextcloudiin"
   },
   "exportOnenoteTitle": {
-    "message": "Lähetä OneNoteen",
-    "description": "Tooltip on the OneNote export button - creates a new page in the user's OneNote default notebook."
+    "message": "Lähetä OneNoteen"
   },
   "settingsButtonTitle": {
-    "message": "Asetukset",
-    "description": "Tooltip on the gear icon that opens the settings page."
+    "message": "Asetukset"
   },
   "popupCustomExportTitle": {
-    "message": "Mukautettu vienti",
-    "description": "Title of the prominent button below the export icons in the popup. Opens the message selection page."
+    "message": "Mukautettu vienti"
   },
   "selectPageTitle": {
-    "message": "{app} - Valitse viestit",
-    "description": "<title> of the selection page (browser tab title)."
+    "message": "{app} - Valitse viestit"
   },
   "selectHeading": {
-    "message": "Valitse vietävät viestit",
-    "description": "Top heading of the selection page."
+    "message": "Valitse vietävät viestit"
   },
   "selectStatusCount": {
-    "message": "{n} / {total} valittu",
-    "description": "Status line on the selection page showing how many messages are checked."
+    "message": "{n} / {total} valittu"
   },
   "selectErrorNoSelection": {
-    "message": "Valitse vähintään yksi viesti.",
-    "description": "Error shown when the user clicks an export button with no messages selected."
+    "message": "Valitse vähintään yksi viesti."
   },
   "selectErrorNoMessages": {
-    "message": "Keskustelusta ei löytynyt viestejä.",
-    "description": "Error shown when the selection page opens but the chat has no extractable messages."
+    "message": "Keskustelusta ei löytynyt viestejä."
   },
   "selectErrorLoadFailed": {
-    "message": "Keskustelua ei voitu lukea. Avaa keskusteluvälilehti uudelleen ja yritä.",
-    "description": "Error shown when the selection page can't read the stashed conversation."
+    "message": "Keskustelua ei voitu lukea. Avaa keskusteluvälilehti uudelleen ja yritä."
   },
   "selectRoleUser": {
-    "message": "Käyttäjä",
-    "description": "Role badge for user messages on the selection page."
+    "message": "Käyttäjä"
   },
   "selectRoleAssistant": {
-    "message": "Avustaja",
-    "description": "Role badge for assistant messages on the selection page."
+    "message": "Avustaja"
   },
   "selectFontSizeLabel": {
-    "message": "Koko",
-    "description": "Label preceding the font-size dropdown in the selection page toolbar."
+    "message": "Koko"
   },
   "selectFontSizeSmall": {
-    "message": "Pieni",
-    "description": "Smallest body-text option in the size dropdown."
+    "message": "Pieni"
   },
   "selectFontSizeMedium": {
-    "message": "Keskikoko",
-    "description": "Default body-text option in the size dropdown."
+    "message": "Keskikoko"
   },
   "selectFontSizeLarge": {
-    "message": "Suuri",
-    "description": "Largest body-text option in the size dropdown."
+    "message": "Suuri"
   },
   "selectShowTimeLabel": {
-    "message": "Aika",
-    "description": "Compact label next to the show-chat-time checkbox in the selection page toolbar."
+    "message": "Aika"
   },
   "selectShowSourceLabel": {
-    "message": "Lähde",
-    "description": "Compact label next to the show-source checkbox in the selection page toolbar."
+    "message": "Lähde"
   },
   "optionsHtmlSizeLabel": {
-    "message": "Leipätekstin koko",
-    "description": "Settings → General label for the body text size dropdown (HTML / PDF exports)."
+    "message": "Leipätekstin koko"
   },
   "optionsHtmlShowTimeLabel": {
-    "message": "Näytä keskustelun aika",
-    "description": "Settings → General label for the toggle that includes per-message timestamps in HTML / PDF exports."
+    "message": "Näytä keskustelun aika"
   },
   "optionsHtmlShowSourceLabel": {
-    "message": "Näytä lähdelinkki",
-    "description": "Settings → General label for the toggle that includes the \"Source: <link>\" line at the top of HTML / PDF exports."
+    "message": "Näytä lähdelinkki"
   },
   "optionsHtmlShowThinkingLabel": {
-    "message": "Näytä ajattelu",
-    "description": "Settings → General label for the toggle that keeps the model's thinking blockquotes in HTML / PDF exports."
+    "message": "Näytä ajattelu"
   },
   "optionsFilenamePatternLabel": {
-    "message": "Tiedostonimen malli",
-    "description": "Settings → General label for the export filename template input."
+    "message": "Tiedostonimen malli"
   },
   "optionsFilenamePatternHint": {
-    "message": "Käytettävissä olevat kentät:",
-    "description": "Helper text under the filename pattern input, followed by the literal placeholder list."
+    "message": "Käytettävissä olevat kentät:"
   },
   "selectShowThinkingLabel": {
-    "message": "Ajattelu",
-    "description": "Compact label next to the show-thinking checkbox in the selection page toolbar."
+    "message": "Ajattelu"
   },
   "selectTitleFontLabel": {
-    "message": "Otsikko",
-    "description": "Compact label preceding the title-font dropdown in the selection page toolbar."
+    "message": "Otsikko"
   },
   "selectTextFontLabel": {
-    "message": "Teksti",
-    "description": "Compact label preceding the text-font dropdown in the selection page toolbar."
+    "message": "Teksti"
   },
   "dragHint": {
-    "message": "Vedä järjestääksesi uudelleen",
-    "description": "Helper text under the AI sites grid."
+    "message": "Vedä järjestääksesi uudelleen"
   },
   "popupViewLauncherTitle": {
-    "message": "Siirry tekoälysivustolle",
-    "description": "Tooltip on the header toggle that switches the popup from the export view to the AI-site launcher grid."
+    "message": "Siirry tekoälysivustolle"
   },
   "popupViewExportTitle": {
-    "message": "Takaisin vientiin",
-    "description": "Tooltip on the header toggle that switches the popup from the AI-site launcher back to the export view."
+    "message": "Takaisin vientiin"
   },
   "popupPagePrevTitle": {
-    "message": "Edellinen sivu",
-    "description": "Tooltip on the launcher pager button that shows the previous page of AI sites."
+    "message": "Edellinen sivu"
   },
   "popupPageNextTitle": {
-    "message": "Seuraava sivu",
-    "description": "Tooltip on the launcher pager button that shows the next page of AI sites."
+    "message": "Seuraava sivu"
   },
   "statusExtracting": {
-    "message": "Poimitaan…",
-    "description": "Status shown while the extension is reading the chat."
+    "message": "Poimitaan…"
   },
   "statusGotMessagesSaving": {
-    "message": "Haettu {count} viestiä sivustolta {site}. Tallennetaan…",
-    "description": "Status shown after extraction, before the file is saved."
+    "message": "Haettu {count} viestiä sivustolta {site}. Tallennetaan…"
   },
   "statusGotMessagesPrinting": {
-    "message": "Haettu {count} viestiä sivustolta {site}. Avataan tulostusikkunaa…",
-    "description": "Status shown when exporting to PDF, before the print tab opens."
+    "message": "Haettu {count} viestiä sivustolta {site}. Avataan tulostusikkunaa…"
   },
   "statusOpenedPrintTab": {
-    "message": "Tulostusvälilehti avattu - valitse \"Tallenna PDF:nä\"",
-    "description": "Status shown after the print tab is opened for PDF export."
+    "message": "Tulostusvälilehti avattu - valitse \"Tallenna PDF:nä\""
   },
   "statusGotMessagesUploadingGdoc": {
-    "message": "Haettu {count} viestiä sivustolta {site}. Ladataan Google Docsiin…",
-    "description": "Status shown while the chat is being uploaded to Google Drive as a Google Doc."
+    "message": "Haettu {count} viestiä sivustolta {site}. Ladataan Google Docsiin…"
   },
   "statusOpenedGdoc": {
-    "message": "Google Doc avattu uudessa välilehdessä.",
-    "description": "Status shown after the Google Docs upload succeeds and the new doc opens."
+    "message": "Google Doc avattu uudessa välilehdessä."
   },
   "statusGotMessagesUploadingNotion": {
-    "message": "Haettu {count} viestiä sivustolta {site}. Ladataan Notioniin…",
-    "description": "Status shown while the chat is being uploaded to Notion as a native page."
+    "message": "Haettu {count} viestiä sivustolta {site}. Ladataan Notioniin…"
   },
   "statusOpenedNotion": {
-    "message": "Notion-sivu avattu uudessa välilehdessä.",
-    "description": "Status shown after the Notion upload succeeds and the new page opens."
+    "message": "Notion-sivu avattu uudessa välilehdessä."
   },
   "statusGotMessagesUploadingMsword": {
-    "message": "Haettu {count} viestiä sivustolta {site}. Ladataan Word Onlineen…",
-    "description": "Status shown while the chat is being uploaded to OneDrive for Word Online."
+    "message": "Haettu {count} viestiä sivustolta {site}. Ladataan Word Onlineen…"
   },
   "statusOpenedMsword": {
-    "message": "Word Online -asiakirja avattu uudessa välilehdessä.",
-    "description": "Status shown after the Word Online upload succeeds and the document opens."
+    "message": "Word Online -asiakirja avattu uudessa välilehdessä."
   },
   "statusGotMessagesUploadingNextcloud": {
-    "message": "Haettu {count} viestiä sivustolta {site}. Ladataan Nextcloudiin…",
-    "description": "Status shown while the chat is being uploaded to Nextcloud."
+    "message": "Haettu {count} viestiä sivustolta {site}. Ladataan Nextcloudiin…"
   },
   "statusOpenedNextcloud": {
-    "message": "Nextcloud-tiedosto avattu uudessa välilehdessä.",
-    "description": "Status shown after the Nextcloud upload succeeds and the file opens."
+    "message": "Nextcloud-tiedosto avattu uudessa välilehdessä."
   },
   "statusGotMessagesUploadingOnenote": {
-    "message": "Haettu {count} viestiä sivustolta {site}. Lähetetään OneNoteen…",
-    "description": "Status shown while the chat is being sent to OneNote as a new page."
+    "message": "Haettu {count} viestiä sivustolta {site}. Lähetetään OneNoteen…"
   },
   "statusOpenedOnenote": {
-    "message": "OneNote-sivu avattu uudessa välilehdessä.",
-    "description": "Status shown after the OneNote upload succeeds and the new page opens."
+    "message": "OneNote-sivu avattu uudessa välilehdessä."
   },
   "statusSaved": {
-    "message": "Tallennettu: {filename}",
-    "description": "Success message after the file is saved."
+    "message": "Tallennettu: {filename}"
   },
   "errorContentScriptNotLoaded": {
-    "message": "Sisältöskriptiä ei ladattu. Päivitä tämä välilehti (F5) ja yritä uudelleen.",
-    "description": "Error when the popup cannot reach the content script."
+    "message": "Sisältöskriptiä ei ladattu. Päivitä tämä välilehti (F5) ja yritä uudelleen."
   },
   "errorExtractionFailed": {
-    "message": "Poiminta epäonnistui. Onko tämä tuettu tekoälykeskustelusivu?",
-    "description": "Generic extraction failure error."
+    "message": "Poiminta epäonnistui. Onko tämä tuettu tekoälykeskustelusivu?"
   },
   "errorNoActiveTab": {
-    "message": "Ei aktiivista välilehteä.",
-    "description": "Error when no active tab is found."
+    "message": "Ei aktiivista välilehteä."
   },
   "errorPrintTab": {
-    "message": "Tulostusvälilehteä ei voitu avata.",
-    "description": "Error when opening the print tab failed."
+    "message": "Tulostusvälilehteä ei voitu avata."
   },
   "errorDownloadFailed": {
-    "message": "Lataus epäonnistui.",
-    "description": "Error when the download cannot start."
+    "message": "Lataus epäonnistui."
   },
   "optionsTitle": {
-    "message": "{app} - Asetukset",
-    "description": "<title> of the settings page."
+    "message": "{app} - Asetukset"
   },
   "optionsHeading": {
-    "message": "Asetukset",
-    "description": "Top heading of the settings page."
+    "message": "Asetukset"
   },
   "optionsTabGeneral": {
-    "message": "Yleiset",
-    "description": "Sidebar nav item for the General settings page (language)."
+    "message": "Yleiset"
   },
   "optionsTabStyle": {
-    "message": "Tyyli",
-    "description": "Sidebar nav item for the Style settings page (fonts, body text size, preview)."
+    "message": "Tyyli"
   },
   "optionsInlineButtonsHeading": {
-    "message": "Keskustelun sisäiset painikkeet",
-    "description": "Sub-heading on the General settings page above the three per-message inline-button visibility toggles."
+    "message": "Keskustelun sisäiset painikkeet"
   },
   "optionsInlineExportMenuLabel": {
-    "message": "Vie tiedosto -valikko",
-    "description": "Settings checkbox label - show the per-message export-format hover menu inside the AI chat page."
+    "message": "Vie tiedosto -valikko"
   },
   "optionsInlineCopyMdLabel": {
-    "message": "Kopioi Markdownina -painike",
-    "description": "Settings checkbox label - show the per-message 'Copy as Markdown' button inside the AI chat page."
+    "message": "Kopioi Markdownina -painike"
   },
   "optionsInlineCopyHtmlLabel": {
-    "message": "Kopioi HTML:nä -painike",
-    "description": "Settings checkbox label - show the per-message 'Copy as HTML' button inside the AI chat page."
+    "message": "Kopioi HTML:nä -painike"
   },
   "optionsTabSites": {
-    "message": "Tekoälysivustot",
-    "description": "Sidebar nav item for the AI Sites settings page (visibility, order)."
+    "message": "Tekoälysivustot"
   },
   "optionsTabNotion": {
-    "message": "Notion",
-    "description": "Sidebar nav item for the Notion settings page (connect, parent page picker)."
+    "message": "Notion"
   },
   "optionsNotionIntro": {
-    "message": "Yhdistä Notion-työtilasi viedäksesi keskustelut alkuperäisinä Notion-sivuina. {app} voi nähdä ja muokata vain sivuja, joihin annat sille nimenomaisesti pääsyn.",
-    "description": "Intro paragraph at the top of the Notion settings page."
+    "message": "Yhdistä Notion-työtilasi viedäksesi keskustelut alkuperäisinä Notion-sivuina. {app} voi nähdä ja muokata vain sivuja, joihin annat sille nimenomaisesti pääsyn."
   },
   "optionsNotionConnect": {
-    "message": "Yhdistä Notioniin",
-    "description": "Button label that starts the Notion OAuth flow."
+    "message": "Yhdistä Notioniin"
   },
   "optionsNotionConnecting": {
-    "message": "Yhdistetään Notioniin…",
-    "description": "Status shown while the Notion OAuth round-trip is in progress."
+    "message": "Yhdistetään Notioniin…"
   },
   "optionsNotionDisconnect": {
-    "message": "Katkaise yhteys",
-    "description": "Button label that clears the stored Notion access token."
+    "message": "Katkaise yhteys"
   },
   "optionsNotionWorkspaceLabel": {
-    "message": "Työtila",
-    "description": "Label next to the Notion workspace name once connected."
+    "message": "Työtila"
   },
   "optionsNotionParentLabel": {
-    "message": "Yläsivu",
-    "description": "Label for the dropdown that picks which Notion page new exports land in."
+    "message": "Yläsivu"
   },
   "optionsNotionParentHint": {
-    "message": "Uudet chat-sivut luodaan tämän sivun alasivuiksi. Antaaksesi pääsyn useammille sivuille: avaa sivu Notionissa → \"…\" -valikko → Yhteydet → {app}-integraatio.",
-    "description": "Helper text under the parent page picker, explaining how to grant access to more pages."
+    "message": "Uudet chat-sivut luodaan tämän sivun alasivuiksi. Antaaksesi pääsyn useammille sivuille: avaa sivu Notionissa → \"…\" -valikko → Yhteydet → {app}-integraatio."
   },
   "optionsNotionRefresh": {
-    "message": "Päivitä",
-    "description": "Button that re-fetches the list of accessible Notion pages."
+    "message": "Päivitä"
   },
   "optionsNotionLoadingPages": {
-    "message": "Ladataan sivuja…",
-    "description": "Placeholder option in the parent page dropdown while pages are being fetched."
+    "message": "Ladataan sivuja…"
   },
   "optionsNotionNoPages": {
-    "message": "Ei sivuja – jaa vähintään yksi Notion-sivu {app}-integraation kanssa",
-    "description": "Placeholder option when the Notion search returned no accessible pages."
+    "message": "Ei sivuja – jaa vähintään yksi Notion-sivu {app}-integraation kanssa"
   },
   "optionsNotionPagesFailed": {
-    "message": "Sivuja ei voitu ladata",
-    "description": "Placeholder option when the Notion search call failed."
+    "message": "Sivuja ei voitu ladata"
   },
   "optionsTabMicrosoft": {
-    "message": "Microsoft 365",
-    "description": "Sidebar nav item for the Microsoft 365 settings page (connect, account)."
+    "message": "Microsoft 365"
   },
   "optionsMicrosoftIntro": {
-    "message": "Yhdistä Microsoft-tilisi viedäksesi keskusteluja .docx-tiedostoina Word Onlineen. Tiedostot tallennetaan OneDriveen, sovelluksen kansioon kohtaan Sovellukset.",
-    "description": "Intro paragraph at the top of the Microsoft 365 settings page."
+    "message": "Yhdistä Microsoft-tilisi viedäksesi keskusteluja .docx-tiedostoina Word Onlineen. Tiedostot tallennetaan OneDriveen, sovelluksen kansioon kohtaan Sovellukset."
   },
   "optionsMicrosoftConnect": {
-    "message": "Yhdistä Microsoft 365:een",
-    "description": "Button label that starts the Microsoft OAuth flow."
+    "message": "Yhdistä Microsoft 365:een"
   },
   "optionsMicrosoftConnecting": {
-    "message": "Yhdistetään Microsoft 365:een…",
-    "description": "Status shown while the Microsoft OAuth round-trip is in progress."
+    "message": "Yhdistetään Microsoft 365:een…"
   },
   "optionsMicrosoftDisconnect": {
-    "message": "Katkaise yhteys",
-    "description": "Button label that clears the stored Microsoft tokens."
+    "message": "Katkaise yhteys"
   },
   "optionsMicrosoftAccountLabel": {
-    "message": "Tili",
-    "description": "Label next to the signed-in Microsoft account email."
+    "message": "Tili"
   },
   "optionsMicrosoftHint": {
-    "message": "Viedyt tiedostot näkyvät OneDrivessa kohdassa Sovellukset (sovelluksen kansiossa) ja avautuvat Word Onlinessa uudessa välilehdessä.",
-    "description": "Helper text under the Microsoft 365 connection panel."
+    "message": "Viedyt tiedostot näkyvät OneDrivessa kohdassa Sovellukset (sovelluksen kansiossa) ja avautuvat Word Onlinessa uudessa välilehdessä."
   },
   "optionsTabNextcloud": {
-    "message": "Nextcloud",
-    "description": "Sidebar nav item for the Nextcloud settings page."
+    "message": "Nextcloud"
   },
   "optionsNextcloudIntro": {
-    "message": "Tallenna keskustelut omalle Nextcloud-palvelimellesi WebDAVin kautta. {app} käyttää sovellussalasanaa (Nextcloud → Asetukset → Turvallisuus → ”Luo uusi sovellussalasana”) – todellinen tilisi salasana ei koskaan poistu selaimestasi.",
-    "description": "Intro paragraph at the top of the Nextcloud settings page."
+    "message": "Tallenna keskustelut omalle Nextcloud-palvelimellesi WebDAVin kautta. {app} käyttää sovellussalasanaa (Nextcloud → Asetukset → Turvallisuus → ”Luo uusi sovellussalasana”) – todellinen tilisi salasana ei koskaan poistu selaimestasi."
   },
   "optionsNextcloudServerLabel": {
-    "message": "Palvelimen URL-osoite",
-    "description": "Label for the Nextcloud server URL input."
+    "message": "Palvelimen URL-osoite"
   },
   "optionsNextcloudUserLabel": {
-    "message": "Käyttäjätunnus",
-    "description": "Label for the Nextcloud username input."
+    "message": "Käyttäjätunnus"
   },
   "optionsNextcloudPasswordLabel": {
-    "message": "Sovellussalasana",
-    "description": "Label for the Nextcloud app-password input."
+    "message": "Sovellussalasana"
   },
   "optionsNextcloudFolderLabel": {
-    "message": "Kansio",
-    "description": "Label for the Nextcloud target folder input."
+    "message": "Kansio"
   },
   "optionsNextcloudFormatLabel": {
-    "message": "Oletusmuoto",
-    "description": "Label for the dropdown that picks which file format gets uploaded to Nextcloud."
+    "message": "Oletusmuoto"
   },
   "optionsNextcloudTest": {
-    "message": "Testaa yhteys",
-    "description": "Button label that probes the Nextcloud credentials with a PROPFIND request."
+    "message": "Testaa yhteys"
   },
   "optionsNextcloudSave": {
-    "message": "Tallenna",
-    "description": "Button label that persists the Nextcloud credentials."
+    "message": "Tallenna"
   },
   "optionsNextcloudClear": {
-    "message": "Tyhjennä",
-    "description": "Button label that wipes the stored Nextcloud credentials."
+    "message": "Tyhjennä"
   },
   "optionsNextcloudTesting": {
-    "message": "Testataan yhteyttä…",
-    "description": "Status shown while the extension is probing the Nextcloud server with a PROPFIND."
+    "message": "Testataan yhteyttä…"
   },
   "optionsNextcloudTestOk": {
-    "message": "Yhteys onnistui.",
-    "description": "Status shown when the Nextcloud PROPFIND probe succeeds."
+    "message": "Yhteys onnistui."
   },
   "optionsNextcloudFillFirst": {
-    "message": "Täytä ensin palvelimen URL-osoite, käyttäjätunnus ja sovellussalasana.",
-    "description": "Error shown when the user clicks Test or Save with empty fields."
+    "message": "Täytä ensin palvelimen URL-osoite, käyttäjätunnus ja sovellussalasana."
   },
   "optionsNextcloudCleared": {
-    "message": "Nextcloud-tunnistetiedot tyhjennetty.",
-    "description": "Status shown after the user clicks Clear."
+    "message": "Nextcloud-tunnistetiedot tyhjennetty."
   },
   "optionsLanguageLabel": {
-    "message": "Kieli",
-    "description": "Label for the language dropdown."
+    "message": "Kieli"
   },
   "optionsLanguageAuto": {
-    "message": "Käytä selaimen kieltä",
-    "description": "Default option in the language dropdown - picks the browser UI language."
+    "message": "Käytä selaimen kieltä"
   },
   "optionsHtmlTitleFontLabel": {
-    "message": "Otsikon fontti",
-    "description": "Label for the dropdown that picks the heading font used in HTML / PDF exports."
+    "message": "Otsikon fontti"
   },
   "optionsHtmlTextFontLabel": {
-    "message": "Tekstin fontti",
-    "description": "Label for the dropdown that picks the body font used in HTML / PDF exports."
+    "message": "Tekstin fontti"
   },
   "optionsFontSystem": {
-    "message": "Järjestelmä (oletus)",
-    "description": "First option in both font dropdowns - the OS default font, no Google Fonts fetch."
+    "message": "Järjestelmä (oletus)"
   },
   "optionsHtmlMathLabel": {
-    "message": "Matematiikan renderöinti (KaTeX)",
-    "description": "Label for the toggle that enables math rendering in HTML / PDF exports via the KaTeX library."
+    "message": "Matematiikan renderöinti (KaTeX)"
   },
   "optionsSavedNotice": {
-    "message": "Tallennettu.",
-    "description": "Notice shown when settings are saved."
+    "message": "Tallennettu."
   },
   "optionsVisibleSitesHint": {
-    "message": "Vedä järjestääksesi uudelleen. Poista valinta piilottaaksesi ruudun ponnahdusikkunasta.",
-    "description": "Helper text under the visible sites checklist."
+    "message": "Vedä järjestääksesi uudelleen. Poista valinta piilottaaksesi ruudun ponnahdusikkunasta."
   },
   "optionsSelectAll": {
-    "message": "Valitse kaikki",
-    "description": "Button that checks every site in the visibility list."
+    "message": "Valitse kaikki"
   },
   "optionsSelectNone": {
-    "message": "Älä valitse mitään",
-    "description": "Button that unchecks every site in the visibility list."
+    "message": "Älä valitse mitään"
   },
   "exportJsonTitle": {
-    "message": "Vie JSON-muodossa (.json)",
-    "description": "Tooltip on the JSON export button - a flat { role, content } message array for developers."
+    "message": "Vie JSON-muodossa (.json)"
   },
   "exportDebugTitle": {
-    "message": "Vie virheenkorjauspaketti (.json)",
-    "description": "Tooltip on the Developer-mode Debug export button - saves a diagnostic file with the raw API capture, the extracted conversation, and the rendered outputs."
+    "message": "Vie virheenkorjauspaketti (.json)"
   },
   "optionsDevModeLabel": {
-    "message": "Kehittäjätila",
-    "description": "Settings checkbox that reveals the Debug-bundle export button in the popup."
+    "message": "Kehittäjätila"
   },
   "optionsAdvancedHeading": {
-    "message": "Lisäasetukset",
-    "description": "Heading of the Advanced block at the end of Settings - General (currently holds the Developer mode toggle)."
+    "message": "Lisäasetukset"
   },
   "errorSiteNotSupported": {
-    "message": "Tätä sivustoa ei tueta. Avaa jokin alla luetelluista tekoälysivustoista ja yritä uudelleen.",
-    "description": "Popup error when the active tab's domain matches none of the supported AI sites (refreshing cannot help there)."
+    "message": "Tätä sivustoa ei tueta. Avaa jokin alla luetelluista tekoälysivustoista ja yritä uudelleen."
   },
   "popupMediaTitle": {
-    "message": "Media",
-    "description": "Popup button — opens the media page for the current conversation."
+    "message": "Media"
   },
   "mediaPageTitle": {
-    "message": "Kuvat",
-    "description": "Browser tab title of the media page."
+    "message": "Kuvat"
   },
   "mediaHeading": {
-    "message": "Kuvat tässä keskustelussa",
-    "description": "Heading of the media page."
+    "message": "Kuvat tässä keskustelussa"
   },
   "mediaSelectAll": {
-    "message": "Kaikki",
-    "description": "Media page — select every image."
+    "message": "Kaikki"
   },
   "mediaSelectNone": {
-    "message": "Ei mitään",
-    "description": "Media page — clear the selection."
+    "message": "Ei mitään"
   },
   "mediaDownload": {
-    "message": "Lataa",
-    "description": "Media page — download the selected images."
+    "message": "Lataa"
   },
   "mediaMeta": {
-    "message": "{selected} / {count} valittu",
-    "description": "Media page counter. {selected} and {count} are numbers."
+    "message": "{selected} / {count} valittu"
   },
   "mediaEmpty": {
-    "message": "Tässä keskustelussa ei ole kuvia.",
-    "description": "Media page — shown when the conversation contains no pictures."
+    "message": "Tässä keskustelussa ei ole kuvia."
   },
   "mediaLoadError": {
-    "message": "Keskustelua ei voitu lukea. Sulje tämä välilehti ja yritä uudelleen ponnahdusikkunasta.",
-    "description": "Media page — the stashed conversation was missing."
+    "message": "Keskustelua ei voitu lukea. Sulje tämä välilehti ja yritä uudelleen ponnahdusikkunasta."
   },
   "mediaRoleUser": {
-    "message": "Sinä",
-    "description": "Media page tile label — the image came from the user's message."
+    "message": "Sinä"
   },
   "mediaRoleAssistant": {
-    "message": "AI",
-    "description": "Media page tile label — the image came from the AI's reply."
+    "message": "AI"
   },
   "mediaDownloadDone": {
-    "message": "{done} ladattu, {failed} epäonnistui",
-    "description": "Media page result. {done} and {failed} are numbers."
+    "message": "{done} ladattu, {failed} epäonnistui"
   },
   "popupCustomExportSub": {
-    "message": "Valitse viestit, jotka haluat viedä.",
-    "description": "Tooltip on the popup's Custom Export button."
+    "message": "Valitse viestit, jotka haluat viedä."
   },
   "popupMediaSub": {
-    "message": "Selaa ja lataa tämän chatin kuvia.",
-    "description": "Tooltip on the popup's Media button."
+    "message": "Selaa ja lataa tämän chatin kuvia."
   }
 }

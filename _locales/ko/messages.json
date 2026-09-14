@@ -1,538 +1,404 @@
 {
   "extDescription": {
-    "message": "ChatGPT, Gemini, Claude에서 AI 채팅 내보내기. 32개 AI 사이트, 9개 형식, 5개 클라우드 저장소.",
-    "description": "Browser store description; 132 chars max IN EVERY LOCALE, so keep EN under ~95. No enumerated site/format lists. (see CLAUDE.md → Store copy)"
+    "message": "ChatGPT, Gemini, Claude에서 AI 채팅 내보내기. 32개 AI 사이트, 9개 형식, 5개 클라우드 저장소."
   },
   "exportMarkdownTitle": {
-    "message": "Markdown(.md)으로 내보내기",
-    "description": "Tooltip on the Markdown export button."
+    "message": "Markdown(.md)으로 내보내기"
   },
   "exportHtmlTitle": {
-    "message": "HTML(.html)로 내보내기",
-    "description": "Tooltip on the HTML export button."
+    "message": "HTML(.html)로 내보내기"
   },
   "exportTxtTitle": {
-    "message": "일반 텍스트(.txt)로 내보내기",
-    "description": "Tooltip on the plain-text export button."
+    "message": "일반 텍스트(.txt)로 내보내기"
   },
   "exportDocxTitle": {
-    "message": "Word(.docx)로 내보내기",
-    "description": "Tooltip on the Word export button."
+    "message": "Word(.docx)로 내보내기"
   },
   "exportOdtTitle": {
-    "message": "OpenDocument(.odt)로 내보내기",
-    "description": "Tooltip on the OpenDocument export button."
+    "message": "OpenDocument(.odt)로 내보내기"
   },
   "exportPdfTitle": {
-    "message": "PDF로 내보내기(인쇄 대화상자 사용)",
-    "description": "Tooltip on the PDF export button."
+    "message": "PDF로 내보내기(인쇄 대화상자 사용)"
   },
   "exportImageTitle": {
-    "message": "PNG 이미지로 내보내기",
-    "description": "Tooltip on the Image export button - renders the conversation to a single tall PNG file."
+    "message": "PNG 이미지로 내보내기"
   },
   "exportGdocTitle": {
-    "message": "Google Docs에서 열기",
-    "description": "Tooltip on the Google Docs export button - uploads the chat to the user's Google Drive as a native Google Doc."
+    "message": "Google Docs에서 열기"
   },
   "exportNotionTitle": {
-    "message": "Notion으로 내보내기",
-    "description": "Tooltip on the Notion export button - uploads the chat to the user's Notion workspace as a native Notion page."
+    "message": "Notion으로 내보내기"
   },
   "exportMswordTitle": {
-    "message": "Word Online에서 열기",
-    "description": "Tooltip on the Word Online export button - uploads the chat as a .docx to OneDrive and opens it in Word Online."
+    "message": "Word Online에서 열기"
   },
   "exportNextcloudTitle": {
-    "message": "Nextcloud에 저장",
-    "description": "Tooltip on the Nextcloud export button - uploads the chat to the user's Nextcloud server via WebDAV."
+    "message": "Nextcloud에 저장"
   },
   "exportOnenoteTitle": {
-    "message": "OneNote로 보내기",
-    "description": "Tooltip on the OneNote export button - creates a new page in the user's OneNote default notebook."
+    "message": "OneNote로 보내기"
   },
   "settingsButtonTitle": {
-    "message": "설정",
-    "description": "Tooltip on the gear icon that opens the settings page."
+    "message": "설정"
   },
   "popupCustomExportTitle": {
-    "message": "사용자 지정 내보내기",
-    "description": "Title of the prominent button below the export icons in the popup. Opens the message selection page."
+    "message": "사용자 지정 내보내기"
   },
   "selectPageTitle": {
-    "message": "{app} - 메시지 선택",
-    "description": "<title> of the selection page (browser tab title)."
+    "message": "{app} - 메시지 선택"
   },
   "selectHeading": {
-    "message": "내보낼 메시지 선택",
-    "description": "Top heading of the selection page."
+    "message": "내보낼 메시지 선택"
   },
   "selectStatusCount": {
-    "message": "{total}개 중 {n}개 선택됨",
-    "description": "Status line on the selection page showing how many messages are checked."
+    "message": "{total}개 중 {n}개 선택됨"
   },
   "selectErrorNoSelection": {
-    "message": "메시지를 하나 이상 선택하세요.",
-    "description": "Error shown when the user clicks an export button with no messages selected."
+    "message": "메시지를 하나 이상 선택하세요."
   },
   "selectErrorNoMessages": {
-    "message": "이 대화에 메시지가 없습니다.",
-    "description": "Error shown when the selection page opens but the chat has no extractable messages."
+    "message": "이 대화에 메시지가 없습니다."
   },
   "selectErrorLoadFailed": {
-    "message": "대화를 읽을 수 없습니다. 탭을 다시 열고 시도하세요.",
-    "description": "Error shown when the selection page can't read the stashed conversation."
+    "message": "대화를 읽을 수 없습니다. 탭을 다시 열고 시도하세요."
   },
   "selectRoleUser": {
-    "message": "사용자",
-    "description": "Role badge for user messages on the selection page."
+    "message": "사용자"
   },
   "selectRoleAssistant": {
-    "message": "어시스턴트",
-    "description": "Role badge for assistant messages on the selection page."
+    "message": "어시스턴트"
   },
   "selectFontSizeLabel": {
-    "message": "크기",
-    "description": "Label preceding the font-size dropdown in the selection page toolbar."
+    "message": "크기"
   },
   "selectFontSizeSmall": {
-    "message": "작게",
-    "description": "Smallest body-text option in the size dropdown."
+    "message": "작게"
   },
   "selectFontSizeMedium": {
-    "message": "중간",
-    "description": "Default body-text option in the size dropdown."
+    "message": "중간"
   },
   "selectFontSizeLarge": {
-    "message": "크게",
-    "description": "Largest body-text option in the size dropdown."
+    "message": "크게"
   },
   "selectShowTimeLabel": {
-    "message": "시간",
-    "description": "Compact label next to the show-chat-time checkbox in the selection page toolbar."
+    "message": "시간"
   },
   "selectShowSourceLabel": {
-    "message": "출처",
-    "description": "Compact label next to the show-source checkbox in the selection page toolbar."
+    "message": "출처"
   },
   "optionsHtmlSizeLabel": {
-    "message": "본문 크기",
-    "description": "Settings → General label for the body text size dropdown (HTML / PDF exports)."
+    "message": "본문 크기"
   },
   "optionsHtmlShowTimeLabel": {
-    "message": "채팅 시간 표시",
-    "description": "Settings → General label for the toggle that includes per-message timestamps in HTML / PDF exports."
+    "message": "채팅 시간 표시"
   },
   "optionsHtmlShowSourceLabel": {
-    "message": "원본 링크 표시",
-    "description": "Settings → General label for the toggle that includes the \"Source: <link>\" line at the top of HTML / PDF exports."
+    "message": "원본 링크 표시"
   },
   "optionsHtmlShowThinkingLabel": {
-    "message": "추론 과정 표시",
-    "description": "Settings → General label for the toggle that keeps the model's thinking blockquotes in HTML / PDF exports."
+    "message": "추론 과정 표시"
   },
   "optionsFilenamePatternLabel": {
-    "message": "파일 이름 패턴",
-    "description": "Settings → General label for the export filename template input."
+    "message": "파일 이름 패턴"
   },
   "optionsFilenamePatternHint": {
-    "message": "사용 가능한 필드:",
-    "description": "Helper text under the filename pattern input, followed by the literal placeholder list."
+    "message": "사용 가능한 필드:"
   },
   "selectShowThinkingLabel": {
-    "message": "추론",
-    "description": "Compact label next to the show-thinking checkbox in the selection page toolbar."
+    "message": "추론"
   },
   "selectTitleFontLabel": {
-    "message": "제목",
-    "description": "Compact label preceding the title-font dropdown in the selection page toolbar."
+    "message": "제목"
   },
   "selectTextFontLabel": {
-    "message": "본문",
-    "description": "Compact label preceding the text-font dropdown in the selection page toolbar."
+    "message": "본문"
   },
   "dragHint": {
-    "message": "끌어서 순서 변경",
-    "description": "Helper text under the AI sites grid."
+    "message": "끌어서 순서 변경"
   },
   "popupViewLauncherTitle": {
-    "message": "AI 사이트로 이동",
-    "description": "Tooltip on the header toggle that switches the popup from the export view to the AI-site launcher grid."
+    "message": "AI 사이트로 이동"
   },
   "popupViewExportTitle": {
-    "message": "내보내기로 돌아가기",
-    "description": "Tooltip on the header toggle that switches the popup from the AI-site launcher back to the export view."
+    "message": "내보내기로 돌아가기"
   },
   "popupPagePrevTitle": {
-    "message": "이전 페이지",
-    "description": "Tooltip on the launcher pager button that shows the previous page of AI sites."
+    "message": "이전 페이지"
   },
   "popupPageNextTitle": {
-    "message": "다음 페이지",
-    "description": "Tooltip on the launcher pager button that shows the next page of AI sites."
+    "message": "다음 페이지"
   },
   "statusExtracting": {
-    "message": "추출 중…",
-    "description": "Status shown while the extension is reading the chat."
+    "message": "추출 중…"
   },
   "statusGotMessagesSaving": {
-    "message": "{site}에서 {count}개의 메시지를 가져왔습니다. 저장 중…",
-    "description": "Status shown after extraction, before the file is saved."
+    "message": "{site}에서 {count}개의 메시지를 가져왔습니다. 저장 중…"
   },
   "statusGotMessagesPrinting": {
-    "message": "{site}에서 {count}개의 메시지를 가져왔습니다. 인쇄 대화상자를 여는 중…",
-    "description": "Status shown when exporting to PDF, before the print tab opens."
+    "message": "{site}에서 {count}개의 메시지를 가져왔습니다. 인쇄 대화상자를 여는 중…"
   },
   "statusOpenedPrintTab": {
-    "message": "인쇄 탭이 열렸습니다 - 「PDF로 저장」을 선택하세요",
-    "description": "Status shown after the print tab is opened for PDF export."
+    "message": "인쇄 탭이 열렸습니다 - 「PDF로 저장」을 선택하세요"
   },
   "statusGotMessagesUploadingGdoc": {
-    "message": "{site}에서 메시지 {count}개를 가져왔습니다. Google Docs에 업로드 중…",
-    "description": "Status shown while the chat is being uploaded to Google Drive as a Google Doc."
+    "message": "{site}에서 메시지 {count}개를 가져왔습니다. Google Docs에 업로드 중…"
   },
   "statusOpenedGdoc": {
-    "message": "새 탭에서 Google Doc을 열었습니다.",
-    "description": "Status shown after the Google Docs upload succeeds and the new doc opens."
+    "message": "새 탭에서 Google Doc을 열었습니다."
   },
   "statusGotMessagesUploadingNotion": {
-    "message": "{site}에서 메시지 {count}개를 가져왔습니다. Notion에 업로드 중…",
-    "description": "Status shown while the chat is being uploaded to Notion as a native page."
+    "message": "{site}에서 메시지 {count}개를 가져왔습니다. Notion에 업로드 중…"
   },
   "statusOpenedNotion": {
-    "message": "새 탭에서 Notion 페이지를 열었습니다.",
-    "description": "Status shown after the Notion upload succeeds and the new page opens."
+    "message": "새 탭에서 Notion 페이지를 열었습니다."
   },
   "statusGotMessagesUploadingMsword": {
-    "message": "{site}에서 {count}개 메시지를 받았습니다. Word Online에 업로드 중…",
-    "description": "Status shown while the chat is being uploaded to OneDrive for Word Online."
+    "message": "{site}에서 {count}개 메시지를 받았습니다. Word Online에 업로드 중…"
   },
   "statusOpenedMsword": {
-    "message": "새 탭에서 Word Online 문서를 열었습니다.",
-    "description": "Status shown after the Word Online upload succeeds and the document opens."
+    "message": "새 탭에서 Word Online 문서를 열었습니다."
   },
   "statusGotMessagesUploadingNextcloud": {
-    "message": "{site}에서 {count}개 메시지를 받았습니다. Nextcloud에 업로드 중…",
-    "description": "Status shown while the chat is being uploaded to Nextcloud."
+    "message": "{site}에서 {count}개 메시지를 받았습니다. Nextcloud에 업로드 중…"
   },
   "statusOpenedNextcloud": {
-    "message": "새 탭에서 Nextcloud 파일을 열었습니다.",
-    "description": "Status shown after the Nextcloud upload succeeds and the file opens."
+    "message": "새 탭에서 Nextcloud 파일을 열었습니다."
   },
   "statusGotMessagesUploadingOnenote": {
-    "message": "{site}에서 메시지 {count}개 수신. OneNote로 전송 중…",
-    "description": "Status shown while the chat is being sent to OneNote as a new page."
+    "message": "{site}에서 메시지 {count}개 수신. OneNote로 전송 중…"
   },
   "statusOpenedOnenote": {
-    "message": "새 탭에서 OneNote 페이지를 열었습니다.",
-    "description": "Status shown after the OneNote upload succeeds and the new page opens."
+    "message": "새 탭에서 OneNote 페이지를 열었습니다."
   },
   "statusSaved": {
-    "message": "저장됨: {filename}",
-    "description": "Success message after the file is saved."
+    "message": "저장됨: {filename}"
   },
   "errorContentScriptNotLoaded": {
-    "message": "콘텐츠 스크립트가 로드되지 않았습니다. 탭을 새로 고침(F5)한 후 다시 시도하세요.",
-    "description": "Error when the popup cannot reach the content script."
+    "message": "콘텐츠 스크립트가 로드되지 않았습니다. 탭을 새로 고침(F5)한 후 다시 시도하세요."
   },
   "errorExtractionFailed": {
-    "message": "추출에 실패했습니다. 지원되는 AI 채팅 페이지인가요?",
-    "description": "Generic extraction failure error."
+    "message": "추출에 실패했습니다. 지원되는 AI 채팅 페이지인가요?"
   },
   "errorNoActiveTab": {
-    "message": "활성 탭이 없습니다.",
-    "description": "Error when no active tab is found."
+    "message": "활성 탭이 없습니다."
   },
   "errorPrintTab": {
-    "message": "인쇄 탭을 열 수 없습니다.",
-    "description": "Error when opening the print tab failed."
+    "message": "인쇄 탭을 열 수 없습니다."
   },
   "errorDownloadFailed": {
-    "message": "다운로드에 실패했습니다.",
-    "description": "Error when the download cannot start."
+    "message": "다운로드에 실패했습니다."
   },
   "optionsTitle": {
-    "message": "{app} - 설정",
-    "description": "<title> of the settings page."
+    "message": "{app} - 설정"
   },
   "optionsHeading": {
-    "message": "설정",
-    "description": "Top heading of the settings page."
+    "message": "설정"
   },
   "optionsTabGeneral": {
-    "message": "일반",
-    "description": "Sidebar nav item for the General settings page (language)."
+    "message": "일반"
   },
   "optionsTabStyle": {
-    "message": "스타일",
-    "description": "Sidebar nav item for the Style settings page (fonts, body text size, preview)."
+    "message": "스타일"
   },
   "optionsInlineButtonsHeading": {
-    "message": "채팅 버튼",
-    "description": "Sub-heading on the General settings page above the three per-message inline-button visibility toggles."
+    "message": "채팅 버튼"
   },
   "optionsInlineExportMenuLabel": {
-    "message": "파일 내보내기 메뉴",
-    "description": "Settings checkbox label - show the per-message export-format hover menu inside the AI chat page."
+    "message": "파일 내보내기 메뉴"
   },
   "optionsInlineCopyMdLabel": {
-    "message": "Markdown으로 복사 버튼",
-    "description": "Settings checkbox label - show the per-message 'Copy as Markdown' button inside the AI chat page."
+    "message": "Markdown으로 복사 버튼"
   },
   "optionsInlineCopyHtmlLabel": {
-    "message": "HTML로 복사 버튼",
-    "description": "Settings checkbox label - show the per-message 'Copy as HTML' button inside the AI chat page."
+    "message": "HTML로 복사 버튼"
   },
   "optionsTabSites": {
-    "message": "AI 사이트",
-    "description": "Sidebar nav item for the AI Sites settings page (visibility, order)."
+    "message": "AI 사이트"
   },
   "optionsTabNotion": {
-    "message": "Notion",
-    "description": "Sidebar nav item for the Notion settings page (connect, parent page picker)."
+    "message": "Notion"
   },
   "optionsNotionIntro": {
-    "message": "Notion 워크스페이스를 연결하여 채팅을 Notion 기본 페이지로 내보내세요. {app}은(는) 명시적으로 액세스 권한을 부여한 페이지만 보고 수정할 수 있습니다.",
-    "description": "Intro paragraph at the top of the Notion settings page."
+    "message": "Notion 워크스페이스를 연결하여 채팅을 Notion 기본 페이지로 내보내세요. {app}은(는) 명시적으로 액세스 권한을 부여한 페이지만 보고 수정할 수 있습니다."
   },
   "optionsNotionConnect": {
-    "message": "Notion 연결",
-    "description": "Button label that starts the Notion OAuth flow."
+    "message": "Notion 연결"
   },
   "optionsNotionConnecting": {
-    "message": "Notion에 연결 중…",
-    "description": "Status shown while the Notion OAuth round-trip is in progress."
+    "message": "Notion에 연결 중…"
   },
   "optionsNotionDisconnect": {
-    "message": "연결 해제",
-    "description": "Button label that clears the stored Notion access token."
+    "message": "연결 해제"
   },
   "optionsNotionWorkspaceLabel": {
-    "message": "작업 공간",
-    "description": "Label next to the Notion workspace name once connected."
+    "message": "작업 공간"
   },
   "optionsNotionParentLabel": {
-    "message": "상위 페이지",
-    "description": "Label for the dropdown that picks which Notion page new exports land in."
+    "message": "상위 페이지"
   },
   "optionsNotionParentHint": {
-    "message": "새 채팅 페이지는 이 페이지의 하위 페이지로 생성됩니다. 더 많은 페이지에 액세스 권한을 부여하려면: Notion에서 페이지 열기 → \"…\" 메뉴 → 연결 → {app} 통합.",
-    "description": "Helper text under the parent page picker, explaining how to grant access to more pages."
+    "message": "새 채팅 페이지는 이 페이지의 하위 페이지로 생성됩니다. 더 많은 페이지에 액세스 권한을 부여하려면: Notion에서 페이지 열기 → \"…\" 메뉴 → 연결 → {app} 통합."
   },
   "optionsNotionRefresh": {
-    "message": "새로 고침",
-    "description": "Button that re-fetches the list of accessible Notion pages."
+    "message": "새로 고침"
   },
   "optionsNotionLoadingPages": {
-    "message": "페이지 로딩 중…",
-    "description": "Placeholder option in the parent page dropdown while pages are being fetched."
+    "message": "페이지 로딩 중…"
   },
   "optionsNotionNoPages": {
-    "message": "페이지 없음 - {app} 통합과 Notion 페이지를 하나 이상 공유하세요",
-    "description": "Placeholder option when the Notion search returned no accessible pages."
+    "message": "페이지 없음 - {app} 통합과 Notion 페이지를 하나 이상 공유하세요"
   },
   "optionsNotionPagesFailed": {
-    "message": "페이지를 불러올 수 없습니다",
-    "description": "Placeholder option when the Notion search call failed."
+    "message": "페이지를 불러올 수 없습니다"
   },
   "optionsTabMicrosoft": {
-    "message": "Microsoft 365",
-    "description": "Sidebar nav item for the Microsoft 365 settings page (connect, account)."
+    "message": "Microsoft 365"
   },
   "optionsMicrosoftIntro": {
-    "message": "Microsoft 계정을 연결하여 Word Online에서 채팅을 .docx 파일로 내보내세요. 파일은 OneDrive의 앱 폴더 내 '앱' 아래에 저장됩니다.",
-    "description": "Intro paragraph at the top of the Microsoft 365 settings page."
+    "message": "Microsoft 계정을 연결하여 Word Online에서 채팅을 .docx 파일로 내보내세요. 파일은 OneDrive의 앱 폴더 내 '앱' 아래에 저장됩니다."
   },
   "optionsMicrosoftConnect": {
-    "message": "Microsoft 365 연결",
-    "description": "Button label that starts the Microsoft OAuth flow."
+    "message": "Microsoft 365 연결"
   },
   "optionsMicrosoftConnecting": {
-    "message": "Microsoft 365에 연결 중…",
-    "description": "Status shown while the Microsoft OAuth round-trip is in progress."
+    "message": "Microsoft 365에 연결 중…"
   },
   "optionsMicrosoftDisconnect": {
-    "message": "연결 해제",
-    "description": "Button label that clears the stored Microsoft tokens."
+    "message": "연결 해제"
   },
   "optionsMicrosoftAccountLabel": {
-    "message": "계정",
-    "description": "Label next to the signed-in Microsoft account email."
+    "message": "계정"
   },
   "optionsMicrosoftHint": {
-    "message": "내보낸 파일은 OneDrive의 '앱' 아래(앱 폴더 내)에 나타나며, Word Online에서 새 탭으로 열립니다.",
-    "description": "Helper text under the Microsoft 365 connection panel."
+    "message": "내보낸 파일은 OneDrive의 '앱' 아래(앱 폴더 내)에 나타나며, Word Online에서 새 탭으로 열립니다."
   },
   "optionsTabNextcloud": {
-    "message": "Nextcloud",
-    "description": "Sidebar nav item for the Nextcloud settings page."
+    "message": "Nextcloud"
   },
   "optionsNextcloudIntro": {
-    "message": "WebDAV를 통해 채팅을 자신만의 Nextcloud 서버에 저장하세요. {app}은(는) 앱 비밀번호를 사용합니다 (Nextcloud → 설정 → 보안 → \"새 앱 비밀번호 생성\") – 실제 계정 비밀번호는 브라우저를 벗어나지 않습니다.",
-    "description": "Intro paragraph at the top of the Nextcloud settings page."
+    "message": "WebDAV를 통해 채팅을 자신만의 Nextcloud 서버에 저장하세요. {app}은(는) 앱 비밀번호를 사용합니다 (Nextcloud → 설정 → 보안 → \"새 앱 비밀번호 생성\") – 실제 계정 비밀번호는 브라우저를 벗어나지 않습니다."
   },
   "optionsNextcloudServerLabel": {
-    "message": "서버 URL",
-    "description": "Label for the Nextcloud server URL input."
+    "message": "서버 URL"
   },
   "optionsNextcloudUserLabel": {
-    "message": "사용자 이름",
-    "description": "Label for the Nextcloud username input."
+    "message": "사용자 이름"
   },
   "optionsNextcloudPasswordLabel": {
-    "message": "앱 비밀번호",
-    "description": "Label for the Nextcloud app-password input."
+    "message": "앱 비밀번호"
   },
   "optionsNextcloudFolderLabel": {
-    "message": "폴더",
-    "description": "Label for the Nextcloud target folder input."
+    "message": "폴더"
   },
   "optionsNextcloudFormatLabel": {
-    "message": "기본 형식",
-    "description": "Label for the dropdown that picks which file format gets uploaded to Nextcloud."
+    "message": "기본 형식"
   },
   "optionsNextcloudTest": {
-    "message": "연결 테스트",
-    "description": "Button label that probes the Nextcloud credentials with a PROPFIND request."
+    "message": "연결 테스트"
   },
   "optionsNextcloudSave": {
-    "message": "저장",
-    "description": "Button label that persists the Nextcloud credentials."
+    "message": "저장"
   },
   "optionsNextcloudClear": {
-    "message": "지우기",
-    "description": "Button label that wipes the stored Nextcloud credentials."
+    "message": "지우기"
   },
   "optionsNextcloudTesting": {
-    "message": "연결 테스트 중…",
-    "description": "Status shown while the extension is probing the Nextcloud server with a PROPFIND."
+    "message": "연결 테스트 중…"
   },
   "optionsNextcloudTestOk": {
-    "message": "연결 성공.",
-    "description": "Status shown when the Nextcloud PROPFIND probe succeeds."
+    "message": "연결 성공."
   },
   "optionsNextcloudFillFirst": {
-    "message": "먼저 서버 URL, 사용자 이름, 앱 비밀번호를 입력하세요.",
-    "description": "Error shown when the user clicks Test or Save with empty fields."
+    "message": "먼저 서버 URL, 사용자 이름, 앱 비밀번호를 입력하세요."
   },
   "optionsNextcloudCleared": {
-    "message": "Nextcloud 자격 증명이 지워졌습니다.",
-    "description": "Status shown after the user clicks Clear."
+    "message": "Nextcloud 자격 증명이 지워졌습니다."
   },
   "optionsLanguageLabel": {
-    "message": "언어",
-    "description": "Label for the language dropdown."
+    "message": "언어"
   },
   "optionsLanguageAuto": {
-    "message": "브라우저 언어 사용",
-    "description": "Default option in the language dropdown - picks the browser UI language."
+    "message": "브라우저 언어 사용"
   },
   "optionsHtmlTitleFontLabel": {
-    "message": "제목 글꼴",
-    "description": "Label for the dropdown that picks the heading font used in HTML / PDF exports."
+    "message": "제목 글꼴"
   },
   "optionsHtmlTextFontLabel": {
-    "message": "본문 글꼴",
-    "description": "Label for the dropdown that picks the body font used in HTML / PDF exports."
+    "message": "본문 글꼴"
   },
   "optionsFontSystem": {
-    "message": "시스템(기본값)",
-    "description": "First option in both font dropdowns - the OS default font, no Google Fonts fetch."
+    "message": "시스템(기본값)"
   },
   "optionsHtmlMathLabel": {
-    "message": "수식 렌더링(KaTeX)",
-    "description": "Label for the toggle that enables math rendering in HTML / PDF exports via the KaTeX library."
+    "message": "수식 렌더링(KaTeX)"
   },
   "optionsSavedNotice": {
-    "message": "저장되었습니다.",
-    "description": "Notice shown when settings are saved."
+    "message": "저장되었습니다."
   },
   "optionsVisibleSitesHint": {
-    "message": "끌어서 순서를 변경하세요. 체크를 해제하면 팝업에서 타일이 숨겨집니다.",
-    "description": "Helper text under the visible sites checklist."
+    "message": "끌어서 순서를 변경하세요. 체크를 해제하면 팝업에서 타일이 숨겨집니다."
   },
   "optionsSelectAll": {
-    "message": "모두 선택",
-    "description": "Button that checks every site in the visibility list."
+    "message": "모두 선택"
   },
   "optionsSelectNone": {
-    "message": "모두 해제",
-    "description": "Button that unchecks every site in the visibility list."
+    "message": "모두 해제"
   },
   "exportJsonTitle": {
-    "message": "JSON으로 내보내기 (.json)",
-    "description": "Tooltip on the JSON export button - a flat { role, content } message array for developers."
+    "message": "JSON으로 내보내기 (.json)"
   },
   "exportDebugTitle": {
-    "message": "디버그 번들 내보내기 (.json)",
-    "description": "Tooltip on the Developer-mode Debug export button - saves a diagnostic file with the raw API capture, the extracted conversation, and the rendered outputs."
+    "message": "디버그 번들 내보내기 (.json)"
   },
   "optionsDevModeLabel": {
-    "message": "개발자 모드",
-    "description": "Settings checkbox that reveals the Debug-bundle export button in the popup."
+    "message": "개발자 모드"
   },
   "optionsAdvancedHeading": {
-    "message": "고급",
-    "description": "Heading of the Advanced block at the end of Settings - General (currently holds the Developer mode toggle)."
+    "message": "고급"
   },
   "errorSiteNotSupported": {
-    "message": "이 사이트는 지원되지 않습니다. 아래 나열된 AI 사이트 중 하나를 열고 다시 시도하세요.",
-    "description": "Popup error when the active tab's domain matches none of the supported AI sites (refreshing cannot help there)."
+    "message": "이 사이트는 지원되지 않습니다. 아래 나열된 AI 사이트 중 하나를 열고 다시 시도하세요."
   },
   "popupMediaTitle": {
-    "message": "미디어",
-    "description": "Popup button — opens the media page for the current conversation."
+    "message": "미디어"
   },
   "mediaPageTitle": {
-    "message": "이미지",
-    "description": "Browser tab title of the media page."
+    "message": "이미지"
   },
   "mediaHeading": {
-    "message": "이 대화의 이미지",
-    "description": "Heading of the media page."
+    "message": "이 대화의 이미지"
   },
   "mediaSelectAll": {
-    "message": "모두",
-    "description": "Media page — select every image."
+    "message": "모두"
   },
   "mediaSelectNone": {
-    "message": "없음",
-    "description": "Media page — clear the selection."
+    "message": "없음"
   },
   "mediaDownload": {
-    "message": "다운로드",
-    "description": "Media page — download the selected images."
+    "message": "다운로드"
   },
   "mediaMeta": {
-    "message": "{count}개 중 {selected}개 선택됨",
-    "description": "Media page counter. {selected} and {count} are numbers."
+    "message": "{count}개 중 {selected}개 선택됨"
   },
   "mediaEmpty": {
-    "message": "이 대화에는 이미지가 없습니다.",
-    "description": "Media page — shown when the conversation contains no pictures."
+    "message": "이 대화에는 이미지가 없습니다."
   },
   "mediaLoadError": {
-    "message": "대화를 읽을 수 없습니다. 이 탭을 닫고 팝업에서 다시 시도하세요.",
-    "description": "Media page — the stashed conversation was missing."
+    "message": "대화를 읽을 수 없습니다. 이 탭을 닫고 팝업에서 다시 시도하세요."
   },
   "mediaRoleUser": {
-    "message": "당신",
-    "description": "Media page tile label — the image came from the user's message."
+    "message": "당신"
   },
   "mediaRoleAssistant": {
-    "message": "AI",
-    "description": "Media page tile label — the image came from the AI's reply."
+    "message": "AI"
   },
   "mediaDownloadDone": {
-    "message": "{done}개 다운로드, {failed}개 실패",
-    "description": "Media page result. {done} and {failed} are numbers."
+    "message": "{done}개 다운로드, {failed}개 실패"
   },
   "popupCustomExportSub": {
-    "message": "내보낼 메시지를 선택하세요.",
-    "description": "Tooltip on the popup's Custom Export button."
+    "message": "내보낼 메시지를 선택하세요."
   },
   "popupMediaSub": {
-    "message": "이 채팅의 사진을 찾아보고 다운로드하세요.",
-    "description": "Tooltip on the popup's Media button."
+    "message": "이 채팅의 사진을 찾아보고 다운로드하세요."
   }
 }
