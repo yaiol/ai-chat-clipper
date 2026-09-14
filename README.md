@@ -14,12 +14,12 @@
 <!-- readme:nav -->
 
 <div align="center">
-  <a href="../../releases/latest"><img src="https://img.shields.io/github/v/release/yaiol/ai-chat-clipper?color=5a4fff&label=release&style=flat-square" alt="Release"></a>
-  <a href="../../releases"><img src="https://img.shields.io/github/downloads/yaiol/ai-chat-clipper/total?color=5a4fff&label=downloads&style=flat-square" alt="Downloads"></a>
+  <a href="https://chromewebstore.google.com/detail/ai-chat-clipper/nihgeenggelaghahbefbhongioljgbnj"><img src="https://img.shields.io/chrome-web-store/v/nihgeenggelaghahbefbhongioljgbnj?color=5a4fff&label=chrome%20web%20store&style=flat-square" alt="Chrome Web Store"></a>
+  <a href="https://chromewebstore.google.com/detail/ai-chat-clipper/nihgeenggelaghahbefbhongioljgbnj"><img src="https://img.shields.io/chrome-web-store/users/nihgeenggelaghahbefbhongioljgbnj?color=5a4fff&label=users&style=flat-square" alt="Users"></a>
 </div>
 
 <h3 align="center">
-  <a href="https://apps.yaiol.com/en/p/ai-chat-clipper/">Website</a>
+  <a href="https://apps.yaiol.com/p/ai-chat-clipper/">Website</a>
   <span>&nbsp;·&nbsp;</span>
   <a href="#install">Install</a>
   <span>&nbsp;·&nbsp;</span>
@@ -31,7 +31,7 @@
 </h3>
 
 <div align="center">
-  <sub><a href="https://apps.yaiol.com/en/p/ai-chat-clipper/help/"><b>Help in 28 languages</b></a></sub>
+  <sub><a href="https://apps.yaiol.com/p/ai-chat-clipper/help/"><b>Help in 28 languages</b></a></sub>
 </div>
 
 <!-- /readme:nav -->
@@ -78,9 +78,9 @@ AI Chat Clipper is a Chrome / Edge / Firefox (MV3) browser extension that turns 
 
 | | |
 |---|---|
-| **User manual** | [Read it online](https://apps.yaiol.com/en/p/ai-chat-clipper/help/) |
-| **What's new** | [Release notes](https://apps.yaiol.com/en/p/ai-chat-clipper/help/releases/) |
-| **Product page** | [apps.yaiol.com](https://apps.yaiol.com/en/p/ai-chat-clipper/) |
+| **User manual** | [Read it online](https://apps.yaiol.com/p/ai-chat-clipper/help/) |
+| **What's new** | [Release notes](https://apps.yaiol.com/p/ai-chat-clipper/help/releases/) |
+| **Product page** | [apps.yaiol.com](https://apps.yaiol.com/p/ai-chat-clipper/) |
 
 ---
 
