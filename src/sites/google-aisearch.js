@@ -138,6 +138,9 @@
       const root = turn.querySelector('[data-container-id="main-col"]') || turn;
       const clone = root.cloneNode(true);
       this.inlineMath(clone);
+      // Our own inline buttons carry aria-labels too; drop them FIRST so the
+      // parent-removal rule below can never take an answer container with them.
+      for (const b of [...clone.querySelectorAll(".adx-btn, .adx-menu")]) b.remove();
       for (const b of [...clone.querySelectorAll("button[aria-label]")]) if (b.parentElement && b.parentElement !== clone) b.parentElement.remove();
       // ⚠ CLAUDE: do NOT strip .n6owBd — it's Google's PROSE-PARAGRAPH class
       // (intro/transition/closing paragraphs), NOT a math dup. Removing it
@@ -218,10 +221,27 @@
       const proxy = turn.querySelector('[id*="shrproxy"]');
       const share = proxy && (proxy.closest("button") || proxy.querySelector("button") || proxy);
       if (!share) return null;
+      // ⚠ Verified live 2026-10-23: the row's direct children are wrapper
+      // DIVs, and only 3 of them hold a `button[aria-label]` (copy, share,
+      // 👍/👎 pair) — the "more" button has no aria-label, and the share/menu
+      // wrappers also hold hidden (0×0) popup buttons. So the old "≥4 children
+      // with button[aria-label]" test never matched the row, climbed on, and
+      // stopped at the ANSWER BODY (whose children include the citation chips).
+      // Buttons were then prepended above the image carousel, and — worse —
+      // answerMarkdown()'s "drop the parent of every labelled button" rule
+      // removed that body through our own buttons' parent, so every copy and
+      // export came back empty ("Empty message").
+      // Now: count VISIBLE children that are/hold any button (ours excluded),
+      // and refuse to climb into anything that holds answer content.
+      const ANSWER = '.n6owBd, ul, ol, table, [data-container-id], [data-subtree="aimc"]';
+      const holdsButton = (c) => !c.classList.contains("adx-btn")
+        && (c.matches('button, [role="button"]') || !!c.querySelector('button, [role="button"]'));
+      const visible = (c) => { const r = c.getBoundingClientRect(); return r.width > 0 && r.height > 0; };
       let box = share.parentElement;
-      for (let d = 0; d < 10 && box; d++) {
-        const own = [...box.children].filter((c) => c.matches("button[aria-label]") || c.querySelector("button[aria-label]")).length;
-        if (own >= 4) return box;
+      for (let d = 0; d < 10 && box && box !== turn; d++) {
+        if (box.querySelector(ANSWER)) return null;
+        const own = [...box.children].filter((c) => holdsButton(c) && visible(c)).length;
+        if (own >= 3) return box;
         box = box.parentElement;
       }
       return null;
@@ -254,7 +274,11 @@
       const out = [];
       if (!this.isAiMode()) return out;
       for (const turn of this.turns()) {
-        const bar = this.actionRow(turn) || turn.querySelector('[data-container-id="main-col"]');
+        const row = this.actionRow(turn);
+        // Once the real row exists, drop buttons left in the streaming-time
+        // fallback (or anywhere else in the turn) so they are not doubled.
+        if (row) for (const b of [...turn.querySelectorAll(".adx-btn")]) if (b.parentElement !== row) b.remove();
+        const bar = row || turn.querySelector('[data-container-id="main-col"]');
         if (bar) out.push({ bar, msg: turn });
       }
       return out;

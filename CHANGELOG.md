@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Google AI Mode: Copy as Markdown, Copy as HTML and per-message export came back empty ("Empty message") or with only the images and sources. Google's action row under an answer no longer has four labelled buttons as direct children, so the row was never found and the inline buttons were dropped at the top of the answer body instead; the answer cleaner then removed that whole body together with our own buttons. The row is now found by its visible button groups without climbing into the answer, our buttons are stripped before cleaning, and leftover buttons from the streaming-time fallback are removed once the row appears
+
 ## 1.0.3 — 2026-09-14
 
 - Stop duplicating the English translator notes into the other 27 locale files. The `description` field is context about a string, never a translated value — Chrome ignores it at runtime and every tooling script reads it from English — so the copies were write-only. The locale files are roughly half the size; no translated text changed
