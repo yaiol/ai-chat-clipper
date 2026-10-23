@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "Jelajahi dan unduh gambar di obrolan ini."
+  },
+  "popupCopyMd": {
+    "message": "Salin sebagai MD"
+  },
+  "popupCopyMdTitle": {
+    "message": "Salin percakapan sebagai Markdown ke papan klip"
+  },
+  "popupCopyHtml": {
+    "message": "Salin sebagai HTML"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "Salin percakapan sebagai HTML kaya (tempel ke Gmail, Docs...)"
+  },
+  "popupCopySnapshot": {
+    "message": "Salin cuplikan konteks"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "Salin ringkasan obrolan ini, siap ditempelkan ke AI lain untuk melanjutkan di sana."
+  },
+  "selectCopySnapshotTitle": {
+    "message": "Salin ringkasan pesan yang dipilih, siap ditempelkan ke AI lain untuk melanjutkan di sana."
+  },
+  "statusCopied": {
+    "message": "Disalin!"
   }
 }

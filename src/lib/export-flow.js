@@ -215,6 +215,11 @@
       }
       case "json":
         return { content: NS.toJson(convo), filename: baseName + ".json", mime: "application/json" };
+      // Context Snapshot — the handoff payload (instruction + fenced transcript).
+      // A format rather than a popup routine so the selection page gets it from
+      // the same code, which is what lets a user hand off PART of a thread.
+      case "snapshot":
+        return { content: NS.toSnapshot(convo), filename: baseName + "-snapshot.md", mime: "text/markdown" };
       case "markdown":
       default:
         return { content: NS.toMarkdown(convo), filename: baseName + ".md", mime: "text/markdown" };

@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "Selaa ja lataa tämän chatin kuvia."
+  },
+  "popupCopyMd": {
+    "message": "Kopioi MD:nä"
+  },
+  "popupCopyMdTitle": {
+    "message": "Kopioi keskustelu Markdownina leikepöydälle"
+  },
+  "popupCopyHtml": {
+    "message": "Kopioi HTML:nä"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "Kopioi keskustelu rikkaana HTML:nä (liitä Gmailiin, Docsiin...)"
+  },
+  "popupCopySnapshot": {
+    "message": "Kopioi kontekstikuva"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "Kopioi yhteenveto tästä keskustelusta, valmiina liitettäväksi toiseen tekoälyyn jatkamista varten."
+  },
+  "selectCopySnapshotTitle": {
+    "message": "Kopioi yhteenveto valituista viesteistä, valmiina liitettäväksi toiseen tekoälyyn jatkamista varten."
+  },
+  "statusCopied": {
+    "message": "Kopioitu!"
   }
 }

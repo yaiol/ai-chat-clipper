@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "瀏覽並下載此聊天中的圖片。"
+  },
+  "popupCopyMd": {
+    "message": "複製為 MD"
+  },
+  "popupCopyMdTitle": {
+    "message": "將對話以 Markdown 格式複製到剪貼簿"
+  },
+  "popupCopyHtml": {
+    "message": "複製為 HTML"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "將對話以富文本 HTML 格式複製（貼上到 Gmail、文件等）"
+  },
+  "popupCopySnapshot": {
+    "message": "複製上下文快照"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "複製此聊天的摘要，可貼上到其他 AI 中繼續。"
+  },
+  "selectCopySnapshotTitle": {
+    "message": "複製所選訊息的摘要，可貼上到其他 AI 中繼續。"
+  },
+  "statusCopied": {
+    "message": "已複製！"
   }
 }

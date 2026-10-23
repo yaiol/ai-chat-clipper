@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "Böngéssze és töltse le a képeket ebből a csevegésből."
+  },
+  "popupCopyMd": {
+    "message": "Másolás MD-ként"
+  },
+  "popupCopyMdTitle": {
+    "message": "Beszélgetés másolása Markdownként a vágólapra"
+  },
+  "popupCopyHtml": {
+    "message": "Másolás HTML-ként"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "Beszélgetés másolása gazdag HTML-ként (beillesztés Gmailbe, Docsba...)"
+  },
+  "popupCopySnapshot": {
+    "message": "Környezeti pillanatkép másolása"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "Másolja ki a csevegés összefoglalóját, készen arra, hogy beillessze egy másik AI-ba a folytatáshoz."
+  },
+  "selectCopySnapshotTitle": {
+    "message": "Másolja ki a kiválasztott üzenetek összefoglalóját, készen arra, hogy beillessze egy másik AI-ba a folytatáshoz."
+  },
+  "statusCopied": {
+    "message": "Másolva!"
   }
 }

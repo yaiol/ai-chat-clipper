@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "इस चैट में तस्वीरें ब्राउज़ करें और डाउनलोड करें।"
+  },
+  "popupCopyMd": {
+    "message": "MD के रूप में कॉपी करें"
+  },
+  "popupCopyMdTitle": {
+    "message": "बातचीत को Markdown के रूप में क्लिपबोर्ड पर कॉपी करें"
+  },
+  "popupCopyHtml": {
+    "message": "HTML के रूप में कॉपी करें"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "बातचीत को रिच HTML के रूप में कॉपी करें (Gmail, Docs में पेस्ट करें...)"
+  },
+  "popupCopySnapshot": {
+    "message": "संदर्भ स्नैपशॉट कॉपी करें"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "इस चैट का एक संक्षिप्त विवरण कॉपी करें, जिसे किसी अन्य AI में पेस्ट करके वहां जारी रखा जा सके।"
+  },
+  "selectCopySnapshotTitle": {
+    "message": "चयनित संदेशों का एक संक्षिप्त विवरण कॉपी करें, जिसे किसी अन्य AI में पेस्ट करके वहां जारी रखा जा सके।"
+  },
+  "statusCopied": {
+    "message": "कॉपी किया गया!"
   }
 }

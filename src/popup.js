@@ -22,7 +22,8 @@ const btnNextcloud = document.getElementById("export-nextcloud");
 const btnOnenote = document.getElementById("export-onenote");
 const btnCopyMd = document.getElementById("copy-md");
 const btnCopyHtml = document.getElementById("copy-html");
-const exportBtns = [btnMd, btnHtml, btnTxt, btnDocx, btnOdt, btnPdf, btnImage, btnJson, btnDebug, btnGdoc, btnMsword, btnNotion, btnNextcloud, btnOnenote, btnCopyMd, btnCopyHtml];
+const btnCopySnapshot = document.getElementById("copy-snapshot");
+const exportBtns = [btnMd, btnHtml, btnTxt, btnDocx, btnOdt, btnPdf, btnImage, btnJson, btnDebug, btnGdoc, btnMsword, btnNotion, btnNextcloud, btnOnenote, btnCopyMd, btnCopyHtml, btnCopySnapshot];
 const status = document.getElementById("status");
 const sitesEl = document.getElementById("sites");
 
@@ -482,7 +483,9 @@ async function runCopy(format) {
   try {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     if (!tab?.id) throw new Error(i18n.t("errorNoActiveTab"));
-    const type = format === "html" ? "adx:export-html" : "adx:export-markdown";
+    const type = format === "html"     ? "adx:export-html"
+               : format === "snapshot" ? "adx:export-snapshot"
+               : "adx:export-markdown";
     let res;
     try {
       res = await chrome.tabs.sendMessage(tab.id, { type });
@@ -523,7 +526,7 @@ async function runCopy(format) {
     } else {
       await navigator.clipboard.writeText(res.content);
     }
-    set("Copied!", "ok");
+    set(i18n.t("statusCopied"), "ok");
   } catch (err) {
     set(String(err.message || err), "err");
   } finally {
@@ -533,6 +536,7 @@ async function runCopy(format) {
 
 btnCopyMd.addEventListener("click", () => runCopy("markdown"));
 btnCopyHtml.addEventListener("click", () => runCopy("html"));
+btnCopySnapshot.addEventListener("click", () => runCopy("snapshot"));
 
 btnMd.addEventListener("click", () => runExport("markdown"));
 btnHtml.addEventListener("click", () => runExport("html"));

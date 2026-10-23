@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "Sfoglia e scarica le immagini di questa chat."
+  },
+  "popupCopyMd": {
+    "message": "Copia come MD"
+  },
+  "popupCopyMdTitle": {
+    "message": "Copia la conversazione come Markdown negli appunti"
+  },
+  "popupCopyHtml": {
+    "message": "Copia come HTML"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "Copia la conversazione come HTML ricco (incolla in Gmail, Documenti...)"
+  },
+  "popupCopySnapshot": {
+    "message": "Copia istantanea del contesto"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "Copia un riepilogo di questa chat, pronto per essere incollato in un'altra IA per continuare lì."
+  },
+  "selectCopySnapshotTitle": {
+    "message": "Copia un riepilogo dei messaggi selezionati, pronto per essere incollato in un'altra IA per continuare lì."
+  },
+  "statusCopied": {
+    "message": "Copiato!"
   }
 }

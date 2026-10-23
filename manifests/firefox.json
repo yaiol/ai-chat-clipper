@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "AI Chat Clipper",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "__MSG_extDescription__",
   "default_locale": "en",
   "options_ui": {
@@ -195,6 +195,7 @@
         "sites/arena.js",
         "sites/registry.js",
         "exporters/markdown.js",
+        "exporters/snapshot.js",
         "exporters/html.js",
         "exporters/text.js",
         "exporters/json.js",

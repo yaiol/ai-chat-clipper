@@ -20,11 +20,16 @@
     /* Copy-to-clipboard row sits above the format grid. Two equal-width
        buttons - Markdown writes text/plain, HTML writes a ClipboardItem
        carrying text/html (+ plain-text fallback) so a single paste into
-       Gmail / Docs / Notion / Slack lands as formatted text. */
+       Gmail / Docs / Notion / Slack lands as formatted text.
+       The Context Snapshot button rides the SAME grid and spans both columns
+       rather than turning the row into three narrow tiles - at 280px a third
+       column leaves ~55px of text, which none of the three labels survive.
+       Geometry is therefore defined once, for all three. */
     .copy-row {
       display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
       margin-bottom: 8px;
     }
+    #copy-snapshot { grid-column: 1 / -1; }
     .copy-row button {
       display: flex; align-items: center; justify-content: center; gap: 6px;
       padding: 8px 10px;
@@ -138,13 +143,17 @@
   <div id="views">
   <div id="export-view">
   <div class="copy-row">
-    <button id="copy-md" title="Copy conversation as Markdown to clipboard">
+    <button id="copy-md" data-i18n-title="popupCopyMdTitle" title="Copy conversation as Markdown to clipboard">
       <svg data-icon="yaiol:copy-markdown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/><path d="M12.025 18.025h1.25v-4.75H14.6v3.175h1.25v-3.175h1.5v4.75h1.25v-5q0-.35-.325-.675T17.6 12.025h-4.575q-.35 0-.675.325t-.325.675z" fill="currentColor" stroke="none"/></svg>
-      <span>Copy as MD</span>
+      <span data-i18n="popupCopyMd">Copy as MD</span>
     </button>
-    <button id="copy-html" title="Copy conversation as rich HTML (paste into Gmail, Docs…)">
+    <button id="copy-html" data-i18n-title="popupCopyHtmlTitle" title="Copy conversation as rich HTML (paste into Gmail, Docs…)">
       <svg data-icon="yaiol:copy-html" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/><path d="m12.99 18.114-3.056-3.056 3.082-3.082.547.548-2.534 2.534 2.509 2.509zm4.049.025-.547-.547 2.534-2.534-2.509-2.509.548-.547 3.056 3.056z" fill="currentColor" stroke="none"/></svg>
-      <span>Copy as HTML</span>
+      <span data-i18n="popupCopyHtml">Copy as HTML</span>
+    </button>
+    <button id="copy-snapshot" data-i18n-title="popupCopySnapshotTitle" title="Copy a briefing of this chat, ready to paste into another AI to continue there.">
+      <svg data-icon="yaiol:copy-snapshot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/><path d="M11.8 15.05h4.8v-1.85l3 2.4-3 2.4v-1.85h-4.8z" fill="currentColor" stroke="none"/></svg>
+      <span data-i18n="popupCopySnapshot">Copy context snapshot</span>
     </button>
   </div>
   <div class="export-grid">

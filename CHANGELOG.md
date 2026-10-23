@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.4 — 2026-10-23
+
+- Copy context snapshot: a new button in the popup and on the message-selection page copies a briefing of the chat (or of just the selected messages), ready to paste into another AI so you can continue the discussion there. The prompt asks the receiving AI to write the summary itself, in the chat's language, so the extension does no summarizing and needs no API key
+- Google AI Mode: exports no longer come out with your questions and the Sources list but not one answer paragraph, which happened on long live threads. Our own inline buttons were being treated as clutter, and the answer text was removed with them
+- Google AI Mode: the inline buttons no longer appear twice on an answer, and they move to Google's action row once the answer has finished streaming, instead of staying at the top
+- The popup's Copy as MD and Copy as HTML buttons and the Copied! confirmation are now translated in all 28 languages
+
 ## 1.0.3 — 2026-09-14
 
 - Stop duplicating the English translator notes into the other 27 locale files. The `description` field is context about a string, never a translated value — Chrome ignores it at runtime and every tooling script reads it from English — so the copies were write-only. The locale files are roughly half the size; no translated text changed

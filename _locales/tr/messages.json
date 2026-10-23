@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "Bu sohbetteki resimlere göz atın ve indirin."
+  },
+  "popupCopyMd": {
+    "message": "MD olarak kopyala"
+  },
+  "popupCopyMdTitle": {
+    "message": "Konuşmayı Markdown olarak panoya kopyala"
+  },
+  "popupCopyHtml": {
+    "message": "HTML olarak kopyala"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "Konuşmayı zengin HTML olarak kopyala (Gmail, Docs vb. yerlere yapıştır)"
+  },
+  "popupCopySnapshot": {
+    "message": "Bağlam anlık görüntüsünü kopyala"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "Bu sohbetin bir özetini kopyala, başka bir yapay zekaya yapıştırıp oradan devam etmek için hazır."
+  },
+  "selectCopySnapshotTitle": {
+    "message": "Seçili mesajların bir özetini kopyala, başka bir yapay zekaya yapıştırıp oradan devam etmek için hazır."
+  },
+  "statusCopied": {
+    "message": "Kopyalandı!"
   }
 }

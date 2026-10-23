@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "Parcourir et télécharger les images de cette discussion."
+  },
+  "popupCopyMd": {
+    "message": "Copier en MD"
+  },
+  "popupCopyMdTitle": {
+    "message": "Copier la conversation en Markdown dans le presse-papiers"
+  },
+  "popupCopyHtml": {
+    "message": "Copier en HTML"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "Copier la conversation en HTML enrichi (coller dans Gmail, Docs...)"
+  },
+  "popupCopySnapshot": {
+    "message": "Copier l'instantané du contexte"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "Copier un résumé de cette conversation, prêt à être collé dans une autre IA pour continuer."
+  },
+  "selectCopySnapshotTitle": {
+    "message": "Copier un résumé des messages sélectionnés, prêt à être collé dans une autre IA pour continuer."
+  },
+  "statusCopied": {
+    "message": "Copié !"
   }
 }

@@ -465,13 +465,14 @@
       } else {
         await navigator.clipboard.writeText(out.content || "");
       }
-      flashNotice("Copied!", true);
+      flashNotice(i18n.t("statusCopied"), true);
     } catch (err) {
       flashNotice(String(err?.message || err), false);
     }
   }
   document.getElementById("copy-md").addEventListener("click", () => doCopy("markdown"));
   document.getElementById("copy-html").addEventListener("click", () => doCopy("html"));
+  document.getElementById("copy-snapshot").addEventListener("click", () => doCopy("snapshot"));
 
   renderRows();
 })();

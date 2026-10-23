@@ -534,5 +534,37 @@
   "popupMediaSub": {
     "message": "Browse and download the pictures in this chat.",
     "description": "Tooltip on the popup's Media button."
+  },
+  "popupCopyMd": {
+    "message": "Copy as MD",
+    "description": "Popup button label - copy the conversation to the clipboard as Markdown. Keep it very short: the button is about 110 pixels wide."
+  },
+  "popupCopyMdTitle": {
+    "message": "Copy conversation as Markdown to clipboard",
+    "description": "Tooltip on the popup's Copy as MD button."
+  },
+  "popupCopyHtml": {
+    "message": "Copy as HTML",
+    "description": "Popup button label - copy the conversation to the clipboard as rich HTML. Keep it very short: the button is about 110 pixels wide."
+  },
+  "popupCopyHtmlTitle": {
+    "message": "Copy conversation as rich HTML (paste into Gmail, Docs...)",
+    "description": "Tooltip on the popup's Copy as HTML button."
+  },
+  "popupCopySnapshot": {
+    "message": "Copy context snapshot",
+    "description": "Popup button label - copies a ready-to-paste briefing of the conversation so the user can continue the same discussion in a different AI assistant. 'Context snapshot' is the feature name; translate it as a meaningful phrase, not word by word."
+  },
+  "popupCopySnapshotTitle": {
+    "message": "Copy a briefing of this chat, ready to paste into another AI to continue there.",
+    "description": "Tooltip on the popup's Copy context snapshot button."
+  },
+  "selectCopySnapshotTitle": {
+    "message": "Copy a briefing of the selected messages, ready to paste into another AI to continue there.",
+    "description": "Tooltip on the selection page's Copy context snapshot button."
+  },
+  "statusCopied": {
+    "message": "Copied!",
+    "description": "Status message shown after any copy-to-clipboard button succeeds."
   }
 }

@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "Przeglądaj i pobieraj zdjęcia z tego czatu."
+  },
+  "popupCopyMd": {
+    "message": "Kopiuj jako MD"
+  },
+  "popupCopyMdTitle": {
+    "message": "Kopiuj konwersację jako Markdown do schowka"
+  },
+  "popupCopyHtml": {
+    "message": "Kopiuj jako HTML"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "Kopiuj konwersację jako bogaty HTML (wklej do Gmaila, Dokumentów...)"
+  },
+  "popupCopySnapshot": {
+    "message": "Kopiuj migawkę kontekstu"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "Kopiuj streszczenie tego czatu, gotowe do wklejenia do innej AI, aby tam kontynuować."
+  },
+  "selectCopySnapshotTitle": {
+    "message": "Kopiuj streszczenie wybranych wiadomości, gotowe do wklejenia do innej AI, aby tam kontynuować."
+  },
+  "statusCopied": {
+    "message": "Skopiowano!"
   }
 }

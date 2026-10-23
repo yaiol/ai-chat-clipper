@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "Blader en download de afbeeldingen in deze chat."
+  },
+  "popupCopyMd": {
+    "message": "Kopiëren als MD"
+  },
+  "popupCopyMdTitle": {
+    "message": "Kopieer gesprek als Markdown naar klembord"
+  },
+  "popupCopyHtml": {
+    "message": "Kopiëren als HTML"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "Kopieer gesprek als rich HTML (plakken in Gmail, Docs...)"
+  },
+  "popupCopySnapshot": {
+    "message": "Kopieer contextmomentopname"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "Kopieer een samenvatting van deze chat, klaar om in een andere AI te plakken om daar verder te gaan."
+  },
+  "selectCopySnapshotTitle": {
+    "message": "Kopieer een samenvatting van de geselecteerde berichten, klaar om in een andere AI te plakken om daar verder te gaan."
+  },
+  "statusCopied": {
+    "message": "Gekopieerd!"
   }
 }

@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "Procházet a stahovat obrázky v tomto chatu."
+  },
+  "popupCopyMd": {
+    "message": "Kopírovat jako MD"
+  },
+  "popupCopyMdTitle": {
+    "message": "Zkopírovat konverzaci jako Markdown do schránky"
+  },
+  "popupCopyHtml": {
+    "message": "Kopírovat jako HTML"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "Zkopírovat konverzaci jako bohaté HTML (vložit do Gmailu, Dokumentů...)"
+  },
+  "popupCopySnapshot": {
+    "message": "Kopírovat snímek kontextu"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "Zkopírovat shrnutí tohoto chatu, připravené k vložení do jiné AI pro pokračování."
+  },
+  "selectCopySnapshotTitle": {
+    "message": "Zkopírovat shrnutí vybraných zpráv, připravené k vložení do jiné AI pro pokračování."
+  },
+  "statusCopied": {
+    "message": "Zkopírováno!"
   }
 }

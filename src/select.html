@@ -160,6 +160,9 @@
         <button id="copy-html" type="button" title="Copy selection as rich HTML (paste into Gmail, Docs…)">
           <svg data-icon="yaiol:copy-html" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/><path d="m12.99 18.114-3.056-3.056 3.082-3.082.547.548-2.534 2.534 2.509 2.509zm4.049.025-.547-.547 2.534-2.534-2.509-2.509.548-.547 3.056 3.056z" fill="currentColor" stroke="none"/></svg>
         </button>
+        <button id="copy-snapshot" type="button" data-i18n-title="selectCopySnapshotTitle" title="Copy a briefing of the selected messages, ready to paste into another AI to continue there.">
+          <svg data-icon="yaiol:copy-snapshot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/><path d="M11.8 15.05h4.8v-1.85l3 2.4-3 2.4v-1.85h-4.8z" fill="currentColor" stroke="none"/></svg>
+        </button>
         <span class="sep" aria-hidden="true"></span>
         <button id="export-md"   type="button" data-i18n-title="exportMarkdownTitle">
           <svg data-icon="yaiol:file-markdown" viewBox="0 -960 960 960" fill="currentColor"><path d="M220-80q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h361l219 219v521q0 24-18 42t-42 18H220Zm331-554v-186H220v680h520v-494H551ZM220-820v186-186 680-680Z"/><path d="M348.5-280h50v-190h53v127h50v-127h60v190h50v-200q0-14-13-27t-27-13H388.5q-14 0-27 13t-13 27z"/></svg>
@@ -223,6 +226,7 @@
   <script src="lib/zip.js"></script>
   <script src="lib/md-to-html.js"></script>
   <script src="exporters/markdown.js"></script>
+  <script src="exporters/snapshot.js"></script>
   <script src="exporters/text.js"></script>
   <script src="exporters/html.js"></script>
   <script src="exporters/docx.js"></script>

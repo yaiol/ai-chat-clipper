@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "เรียกดูและดาวน์โหลดรูปภาพในการแชทนี้"
+  },
+  "popupCopyMd": {
+    "message": "คัดลอกเป็น MD"
+  },
+  "popupCopyMdTitle": {
+    "message": "คัดลอกการสนทนาเป็น Markdown ไปยังคลิปบอร์ด"
+  },
+  "popupCopyHtml": {
+    "message": "คัดลอกเป็น HTML"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "คัดลอกการสนทนาเป็น HTML แบบสมบูรณ์ (วางใน Gmail, Docs...)"
+  },
+  "popupCopySnapshot": {
+    "message": "คัดลอกสแนปช็อตบริบท"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "คัดลอกสรุปของการสนทนานี้ พร้อมที่จะวางลงใน AI อื่นเพื่อดำเนินการต่อ"
+  },
+  "selectCopySnapshotTitle": {
+    "message": "คัดลอกสรุปของข้อความที่เลือก พร้อมที่จะวางลงใน AI อื่นเพื่อดำเนินการต่อ"
+  },
+  "statusCopied": {
+    "message": "คัดลอกแล้ว!"
   }
 }

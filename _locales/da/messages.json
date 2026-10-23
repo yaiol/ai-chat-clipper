@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "Gennemse og download billederne i denne chat."
+  },
+  "popupCopyMd": {
+    "message": "Kopiér som MD"
+  },
+  "popupCopyMdTitle": {
+    "message": "Kopiér samtale som Markdown til udklipsholder"
+  },
+  "popupCopyHtml": {
+    "message": "Kopiér som HTML"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "Kopiér samtale som rig HTML (indsæt i Gmail, Docs...)"
+  },
+  "popupCopySnapshot": {
+    "message": "Kopiér kontekstøjebliksbillede"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "Kopiér en opsummering af denne chat, klar til at indsætte i en anden AI for at fortsætte der."
+  },
+  "selectCopySnapshotTitle": {
+    "message": "Kopiér en opsummering af de valgte beskeder, klar til at indsætte i en anden AI for at fortsætte der."
+  },
+  "statusCopied": {
+    "message": "Kopieret!"
   }
 }

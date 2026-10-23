@@ -318,14 +318,25 @@
 
   function mountInlineButtons(adapter) {
     if (!adapter.findMountPoints) return;
+    // The buttons we placed for each message. A site that re-wraps its markup
+    // moves our nodes off the bar's direct children, so the `:scope >` test
+    // below stops seeing them and a SECOND set got inserted beside the first
+    // (Google AI Mode, 2026-10-05). Remembering them per message keeps one set,
+    // and lets it MOVE when a better bar appears (the native action row shows
+    // up only once an answer has finished streaming).
+    const mounted = new WeakMap();
     const inject = () => {
       // Nothing to render if all three toggles are off.
       if (!inlineSettings.exportMenu && !inlineSettings.copyMd && !inlineSettings.copyHtml) return;
 
       for (const { bar, msg } of adapter.findMountPoints()) {
+        const prev = mounted.get(msg);
+        if (prev?.[0]?.isConnected) {
+          if (bar.contains(prev[0])) continue;       // still inside the bar, even if re-wrapped
+          prev.forEach((n) => n.remove());           // the bar changed: move the set, never double it
         // Use button presence (not a data-flag) so we re-inject if React or
         // a similar framework removes our buttons on its next render cycle.
-        if (bar.querySelector(":scope > .adx-btn")) continue;
+        } else if (bar.querySelector(":scope > .adx-btn")) continue;
 
         // Build the buttons honouring the three visibility toggles. We
         // insert each one at the bar's front edge in reverse visual order
@@ -387,6 +398,7 @@
         // Insert each in reverse order at the bar's start so they appear
         // left → right in declaration order above.
         for (let i = nodes.length - 1; i >= 0; i--) bar.insertBefore(nodes[i], bar.firstChild);
+        mounted.set(msg, nodes);
       }
     };
     // Expose for the settings-change listener so we can wipe + re-inject
@@ -415,6 +427,7 @@
   // Full-conversation export (from popup) - supports markdown, html, txt, doc
   const EXPORT_TYPES = {
     "adx:export-markdown": "markdown",
+    "adx:export-snapshot": "snapshot",
     "adx:export-debug":    "debug",
     "adx:export-json":     "json",
     "adx:export-html":     "html",

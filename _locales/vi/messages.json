@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "Duyệt và tải xuống hình ảnh trong cuộc trò chuyện này."
+  },
+  "popupCopyMd": {
+    "message": "Sao chép dưới dạng MD"
+  },
+  "popupCopyMdTitle": {
+    "message": "Sao chép cuộc trò chuyện dưới dạng Markdown vào khay nhớ tạm"
+  },
+  "popupCopyHtml": {
+    "message": "Sao chép dưới dạng HTML"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "Sao chép cuộc trò chuyện dưới dạng HTML phong phú (dán vào Gmail, Docs...)"
+  },
+  "popupCopySnapshot": {
+    "message": "Sao chép ảnh chụp nhanh ngữ cảnh"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "Sao chép bản tóm tắt cuộc trò chuyện này, sẵn sàng dán vào một AI khác để tiếp tục."
+  },
+  "selectCopySnapshotTitle": {
+    "message": "Sao chép bản tóm tắt các tin nhắn đã chọn, sẵn sàng dán vào một AI khác để tiếp tục."
+  },
+  "statusCopied": {
+    "message": "Đã sao chép!"
   }
 }

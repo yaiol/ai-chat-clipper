@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "Bläddra och ladda ner bilderna i den här chatten."
+  },
+  "popupCopyMd": {
+    "message": "Kopiera som MD"
+  },
+  "popupCopyMdTitle": {
+    "message": "Kopiera konversation som Markdown till urklipp"
+  },
+  "popupCopyHtml": {
+    "message": "Kopiera som HTML"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "Kopiera konversation som rik HTML (klistra in i Gmail, Docs...)"
+  },
+  "popupCopySnapshot": {
+    "message": "Kopiera kontextögonblicksbild"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "Kopiera en sammanfattning av denna chatt, redo att klistras in i en annan AI för att fortsätta där."
+  },
+  "selectCopySnapshotTitle": {
+    "message": "Kopiera en sammanfattning av de valda meddelandena, redo att klistras in i en annan AI för att fortsätta där."
+  },
+  "statusCopied": {
+    "message": "Kopierat!"
   }
 }

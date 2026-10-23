@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "このチャットの画像を閲覧・ダウンロードします。"
+  },
+  "popupCopyMd": {
+    "message": "MDとしてコピー"
+  },
+  "popupCopyMdTitle": {
+    "message": "会話をMarkdownとしてクリップボードにコピー"
+  },
+  "popupCopyHtml": {
+    "message": "HTMLとしてコピー"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "会話をリッチHTMLとしてコピー（Gmail、Docsなどに貼り付け）"
+  },
+  "popupCopySnapshot": {
+    "message": "コンテキストスナップショットをコピー"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "このチャットの概要をコピーし、別のAIに貼り付けてそこで続行できるようにします。"
+  },
+  "selectCopySnapshotTitle": {
+    "message": "選択したメッセージの概要をコピーし、別のAIに貼り付けてそこで続行できるようにします。"
+  },
+  "statusCopied": {
+    "message": "コピーしました！"
   }
 }

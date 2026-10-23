@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "Переглядайте та завантажуйте зображення з цього чату."
+  },
+  "popupCopyMd": {
+    "message": "Копіювати як MD"
+  },
+  "popupCopyMdTitle": {
+    "message": "Копіювати розмову як Markdown до буфера обміну"
+  },
+  "popupCopyHtml": {
+    "message": "Копіювати як HTML"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "Копіювати розмову як розширений HTML (вставити в Gmail, Документи...)"
+  },
+  "popupCopySnapshot": {
+    "message": "Копіювати знімок контексту"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "Копіювати короткий опис цього чату, готовий для вставки в інший ШІ для продовження."
+  },
+  "selectCopySnapshotTitle": {
+    "message": "Копіювати короткий опис вибраних повідомлень, готовий для вставки в інший ШІ для продовження."
+  },
+  "statusCopied": {
+    "message": "Скопійовано!"
   }
 }

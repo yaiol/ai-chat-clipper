@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "Περιηγηθείτε και κατεβάστε τις εικόνες σε αυτή τη συνομιλία."
+  },
+  "popupCopyMd": {
+    "message": "Αντιγραφή ως MD"
+  },
+  "popupCopyMdTitle": {
+    "message": "Αντιγραφή συνομιλίας ως Markdown στο πρόχειρο"
+  },
+  "popupCopyHtml": {
+    "message": "Αντιγραφή ως HTML"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "Αντιγραφή συνομιλίας ως εμπλουτισμένο HTML (επικόλληση σε Gmail, Έγγραφα...)"
+  },
+  "popupCopySnapshot": {
+    "message": "Αντιγραφή στιγμιότυπου περιβάλλοντος"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "Αντιγραφή μιας σύνοψης αυτής της συνομιλίας, έτοιμη για επικόλληση σε άλλη AI για συνέχεια εκεί."
+  },
+  "selectCopySnapshotTitle": {
+    "message": "Αντιγραφή μιας σύνοψης των επιλεγμένων μηνυμάτων, έτοιμη για επικόλληση σε άλλη AI για συνέχεια εκεί."
+  },
+  "statusCopied": {
+    "message": "Αντιγράφηκε!"
   }
 }

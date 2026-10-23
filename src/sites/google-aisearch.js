@@ -134,17 +134,59 @@
       return out;
     },
 
-    answerMarkdown(turn) {
-      const root = turn.querySelector('[data-container-id="main-col"]') || turn;
+    // ⚠ CLAUDE: `main-col` is NOT guaranteed to hold the answer text. Reported
+    // 2026-10-03 on a live AI Mode thread: every export carried the user's
+    // queries and the rhs-col Sources list but NOT ONE answer paragraph (28
+    // turns, 0 answers) — the same page reloaded fresh extracts fine, so the
+    // markup differs by session state and main-col came back with nothing the
+    // cleanup could keep. Candidates: every main-col in the turn, then the
+    // `aimc` content subtree (the root AI Exporter 4.4.x falls back to for the
+    // same reason); answerMarkdown() keeps the one with the most prose.
+    // The turn itself is NOT a candidate — it holds the query bubble.
+    answerRoots(turn) {
+      const out = [...turn.querySelectorAll('[data-container-id="main-col"]')];
+      for (const sub of turn.querySelectorAll('[data-subtree="aimc"]')) out.push(sub);
+      // The classic-page AI Overview (google-search.js) passes its own element,
+      // which holds neither marker — that element IS the answer root.
+      if (!out.length) out.push(turn);
+      return out;
+    },
+
+    cleanToMarkdown(root) {
       const clone = root.cloneNode(true);
+      // ⚠ CLAUDE: the sources side panel ("Partagé / 0 fichier / Tout afficher"
+      // + the source chips) must never reach the answer text. In a live session
+      // (reported 2026-10-03) the first `main-col` held exactly that panel and
+      // nothing else, so the export was that junk repeated per turn. The Sources
+      // list is built separately by extractSources() from rhs-col.
+      for (const n of [...clone.querySelectorAll('[data-container-id="rhs-col"]')]) n.remove();
+      // aimc fallback only: its "Réponse du Mode IA pour …" h1–h3 caption sits
+      // OUTSIDE every [data-container-id]; the answer's own headings are
+      // role="heading" divs inside one, so this leaves them alone.
+      if (root.matches('[data-subtree="aimc"]')) for (const h of [...clone.querySelectorAll("h1, h2, h3")]) if (!h.closest("[data-container-id]")) h.remove();
       this.inlineMath(clone);
-      for (const b of [...clone.querySelectorAll("button[aria-label]")]) if (b.parentElement && b.parentElement !== clone) b.parentElement.remove();
+      // ⚠ CLAUDE: THE bug behind "queries + Sources, not one answer paragraph"
+      // (found 2026-10-03 by running the real extension in Chrome and stepping
+      // the cleanup: 6696 chars in, 0 out). Our OWN inline buttons are mounted
+      // inside main-col when Google's action row isn't there, as direct
+      // children of the wrapper that holds the whole answer. The "drop a
+      // labelled button's wrapper" step below then removed THAT wrapper — the
+      // answer with it. It only ever failed with the extension installed, which
+      // is why the same page extracted fine in a browser without it. Remove our
+      // own chrome first; then a button's wrapper is dropped only if it is a
+      // small tooltip/label holder, never a container of real text. Dialogs go
+      // first so the share dialog's text can't make its wrapper look "big".
+      for (const n of [...clone.querySelectorAll('.adx-btn, .adx-menu, [role="dialog"]')]) n.remove();
+      for (const b of [...clone.querySelectorAll("button[aria-label]")]) {
+        const p = b.parentElement;
+        if (p && p !== clone && (p.textContent || "").replace(/\s+/g, " ").trim().length <= 40) p.remove();
+      }
       // ⚠ CLAUDE: do NOT strip .n6owBd — it's Google's PROSE-PARAGRAPH class
       // (intro/transition/closing paragraphs), NOT a math dup. Removing it
       // deleted every prose paragraph (kept only headings + bullets). Math
       // dedup is handled by the data-xpm-latex replacement above, so .n6owBd
       // removal is neither needed nor safe.
-      for (const n of [...clone.querySelectorAll('button, style, script, noscript, svg, [hidden], [aria-hidden="true"], [style*="display:none"], [style*="display: none"]')]) n.remove();
+      for (const n of [...clone.querySelectorAll('button, style, script, noscript, svg, [role="dialog"], [role="status"], [role="alert"], [hidden], [aria-hidden="true"], [style*="display:none"], [style*="display: none"]')]) n.remove();
       // Choppy fix: inline-only <div> → <span> so bold runs flow into sentences.
       for (const div of [...clone.querySelectorAll("div")]) {
         if (![...div.querySelectorAll("*")].some((c) => BLOCK.has(c.tagName) && c !== div)) {
@@ -167,6 +209,18 @@
         if (/^#+\s*$/.test(t)) return false;   // empty heading
         return !UI_LINE.test(t);
       }).join("\n").replace(/[ \t]+\n/g, "\n").replace(/\n{3,}/g, "\n\n").trim();
+      return md;
+    },
+
+    answerMarkdown(turn) {
+      // Most prose wins, not first non-empty: a candidate holding only chrome
+      // is non-empty too. An earlier candidate keeps the win unless a later one
+      // is clearly bigger, so a normal page still reads from main-col.
+      let md = "";
+      for (const root of this.answerRoots(turn)) {
+        const cand = this.cleanToMarkdown(root);
+        if (cand.length > md.length + 80) md = cand;
+      }
       // Prepend the answer's image strip (the Next/Suivant carousel) — the frog
       // photos live here, not in main-col, but they ARE answer content.
       const strip = this.carouselImages(turn);
@@ -220,7 +274,12 @@
       if (!share) return null;
       let box = share.parentElement;
       for (let d = 0; d < 10 && box; d++) {
-        const own = [...box.children].filter((c) => c.matches("button[aria-label]") || c.querySelector("button[aria-label]")).length;
+        // ⚠ `[role="button"]` counts too: Google's ⋯ (more) control is a
+        // `div[role=button]`, not a <button> (seen 2026-10-05). Counting only
+        // <button> left the row at 3 — under the threshold — so the climb walked
+        // past it and the buttons fell back to the TOP of the answer.
+        const BTN = 'button[aria-label], [role="button"][aria-label]';
+        const own = [...box.children].filter((c) => c.matches(BTN) || c.querySelector(BTN)).length;
         if (own >= 4) return box;
         box = box.parentElement;
       }

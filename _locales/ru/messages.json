@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "Просматривайте и загружайте изображения из этого чата."
+  },
+  "popupCopyMd": {
+    "message": "Копировать как MD"
+  },
+  "popupCopyMdTitle": {
+    "message": "Скопировать беседу как Markdown в буфер обмена"
+  },
+  "popupCopyHtml": {
+    "message": "Копировать как HTML"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "Скопировать беседу как форматированный HTML (вставить в Gmail, Документы...)"
+  },
+  "popupCopySnapshot": {
+    "message": "Копировать снимок контекста"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "Скопировать краткое изложение этого чата, готовое для вставки в другой ИИ для продолжения."
+  },
+  "selectCopySnapshotTitle": {
+    "message": "Скопировать краткое изложение выбранных сообщений, готовое для вставки в другой ИИ для продолжения."
+  },
+  "statusCopied": {
+    "message": "Скопировано!"
   }
 }

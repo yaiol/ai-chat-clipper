@@ -400,5 +400,29 @@
   },
   "popupMediaSub": {
     "message": "تصفح وحمل الصور في هذه المحادثة."
+  },
+  "popupCopyMd": {
+    "message": "نسخ كـ MD"
+  },
+  "popupCopyMdTitle": {
+    "message": "انسخ المحادثة كـ Markdown إلى الحافظة"
+  },
+  "popupCopyHtml": {
+    "message": "نسخ كـ HTML"
+  },
+  "popupCopyHtmlTitle": {
+    "message": "انسخ المحادثة كـ HTML غني (الصق في Gmail، المستندات...)"
+  },
+  "popupCopySnapshot": {
+    "message": "نسخ لقطة السياق"
+  },
+  "popupCopySnapshotTitle": {
+    "message": "انسخ ملخصًا لهذه الدردشة، جاهزًا للصق في ذكاء اصطناعي آخر للمتابعة هناك."
+  },
+  "selectCopySnapshotTitle": {
+    "message": "انسخ ملخصًا للرسائل المحددة، جاهزًا للصق في ذكاء اصطناعي آخر للمتابعة هناك."
+  },
+  "statusCopied": {
+    "message": "تم النسخ!"
   }
 }
